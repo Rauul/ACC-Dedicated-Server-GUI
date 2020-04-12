@@ -8,7 +8,6 @@ namespace ACC_Dedicated_Server_GUI
 {
     class Event
     {
-
         public class EventObject
         {
             public string track { get; set; }
@@ -18,7 +17,7 @@ namespace ACC_Dedicated_Server_GUI
             public float cloudLevel { get; set; }
             public float rain { get; set; }
             public int weatherRandomness { get; set; }
-            public Session[] sessions { get; set; }
+            public List<Session> sessions { get; set; }
             public int configVersion { get; set; }
         }
 
@@ -30,6 +29,5 @@ namespace ACC_Dedicated_Server_GUI
             public string sessionType { get; set; }
             public int sessionDurationMinutes { get; set; }
         }
-
     }
 }

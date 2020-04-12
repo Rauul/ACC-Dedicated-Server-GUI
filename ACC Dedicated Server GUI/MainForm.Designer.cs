@@ -67,7 +67,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.weatherRandomnessTrackBar = new System.Windows.Forms.TrackBar();
             this.label33 = new System.Windows.Forms.Label();
@@ -87,8 +86,7 @@
             this.label31 = new System.Windows.Forms.Label();
             this.overTimeLabel = new System.Windows.Forms.Label();
             this.waitTimeTrackBar = new System.Windows.Forms.TrackBar();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.rPanel = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.rSundayRadioButton = new System.Windows.Forms.RadioButton();
             this.rSaturdayRadioButton = new System.Windows.Forms.RadioButton();
@@ -102,7 +100,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.rTimeScaleLabel = new System.Windows.Forms.Label();
             this.rStartTimeTrackBar = new System.Windows.Forms.TrackBar();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.qPanel = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.qSundayRadioButton = new System.Windows.Forms.RadioButton();
             this.qSaturdayRadioButton = new System.Windows.Forms.RadioButton();
@@ -116,9 +114,8 @@
             this.label22 = new System.Windows.Forms.Label();
             this.qTimeScaleLabel = new System.Windows.Forms.Label();
             this.qStartTimeTrackBar = new System.Windows.Forms.TrackBar();
-            this.label13 = new System.Windows.Forms.Label();
             this.tracksListBox = new System.Windows.Forms.ListBox();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pPanel = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pSundayRadioButton = new System.Windows.Forms.RadioButton();
             this.pSaturdayRadioButton = new System.Windows.Forms.RadioButton();
@@ -134,6 +131,9 @@
             this.pStartTimeTrackBar = new System.Windows.Forms.TrackBar();
             this.launchServerButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.pCheckBox = new System.Windows.Forms.CheckBox();
+            this.qCheckBox = new System.Windows.Forms.CheckBox();
+            this.rCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.TRRequirementsTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SARequirementTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxCarsTrackBar)).BeginInit();
@@ -149,17 +149,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.tempTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.overTimeTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.waitTimeTrackBar)).BeginInit();
-            this.panel6.SuspendLayout();
+            this.rPanel.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rDurationTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rTimeScaleTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rStartTimeTrackBar)).BeginInit();
-            this.panel5.SuspendLayout();
+            this.qPanel.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qDurationTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qTimeScaleTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qStartTimeTrackBar)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.pPanel.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pDurationTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pTimeScaleTrackBar)).BeginInit();
@@ -211,6 +211,7 @@
             // 
             this.SARequirementTrackBar.Location = new System.Drawing.Point(112, 175);
             this.SARequirementTrackBar.Maximum = 99;
+            this.SARequirementTrackBar.Minimum = -1;
             this.SARequirementTrackBar.Name = "SARequirementTrackBar";
             this.SARequirementTrackBar.Size = new System.Drawing.Size(182, 45);
             this.SARequirementTrackBar.TabIndex = 6;
@@ -235,6 +236,7 @@
             // 
             this.RCRequirementTrackBar.Location = new System.Drawing.Point(112, 201);
             this.RCRequirementTrackBar.Maximum = 99;
+            this.RCRequirementTrackBar.Minimum = -1;
             this.RCRequirementTrackBar.Name = "RCRequirementTrackBar";
             this.RCRequirementTrackBar.Size = new System.Drawing.Size(182, 45);
             this.RCRequirementTrackBar.TabIndex = 10;
@@ -562,15 +564,15 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.rCheckBox);
+            this.panel3.Controls.Add(this.qCheckBox);
+            this.panel3.Controls.Add(this.pCheckBox);
             this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.label24);
             this.panel3.Controls.Add(this.panel11);
-            this.panel3.Controls.Add(this.label17);
-            this.panel3.Controls.Add(this.panel6);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.rPanel);
+            this.panel3.Controls.Add(this.qPanel);
             this.panel3.Controls.Add(this.tracksListBox);
-            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.pPanel);
             this.panel3.Location = new System.Drawing.Point(363, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(512, 600);
@@ -584,15 +586,6 @@
             this.label20.Size = new System.Drawing.Size(74, 13);
             this.label20.TabIndex = 35;
             this.label20.Text = "Miscellaneous";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(169, 283);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(33, 13);
-            this.label24.TabIndex = 33;
-            this.label24.Text = "Race";
             // 
             // panel11
             // 
@@ -817,33 +810,25 @@
             this.waitTimeTrackBar.Scroll += new System.EventHandler(this.waitTimeTrackBar_Scroll);
             this.waitTimeTrackBar.ValueChanged += new System.EventHandler(this.waitTimeTrackBar_Scroll);
             // 
-            // label17
+            // rPanel
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(169, 146);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 13);
-            this.label17.TabIndex = 23;
-            this.label17.Text = "Qualifying";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.Control;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.panel9);
-            this.panel6.Controls.Add(this.rDurationTrackBar);
-            this.panel6.Controls.Add(this.label25);
-            this.panel6.Controls.Add(this.rDurationLabel);
-            this.panel6.Controls.Add(this.rStartTimeLabel);
-            this.panel6.Controls.Add(this.label28);
-            this.panel6.Controls.Add(this.rTimeScaleTrackBar);
-            this.panel6.Controls.Add(this.label29);
-            this.panel6.Controls.Add(this.rTimeScaleLabel);
-            this.panel6.Controls.Add(this.rStartTimeTrackBar);
-            this.panel6.Location = new System.Drawing.Point(157, 289);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(340, 116);
-            this.panel6.TabIndex = 32;
+            this.rPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.rPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rPanel.Controls.Add(this.panel9);
+            this.rPanel.Controls.Add(this.rDurationTrackBar);
+            this.rPanel.Controls.Add(this.label25);
+            this.rPanel.Controls.Add(this.rDurationLabel);
+            this.rPanel.Controls.Add(this.rStartTimeLabel);
+            this.rPanel.Controls.Add(this.label28);
+            this.rPanel.Controls.Add(this.rTimeScaleTrackBar);
+            this.rPanel.Controls.Add(this.label29);
+            this.rPanel.Controls.Add(this.rTimeScaleLabel);
+            this.rPanel.Controls.Add(this.rStartTimeTrackBar);
+            this.rPanel.Enabled = false;
+            this.rPanel.Location = new System.Drawing.Point(157, 289);
+            this.rPanel.Name = "rPanel";
+            this.rPanel.Size = new System.Drawing.Size(340, 116);
+            this.rPanel.TabIndex = 32;
             // 
             // panel9
             // 
@@ -868,10 +853,12 @@
             // rSaturdayRadioButton
             // 
             this.rSaturdayRadioButton.AutoSize = true;
+            this.rSaturdayRadioButton.Checked = true;
             this.rSaturdayRadioButton.Location = new System.Drawing.Point(118, 3);
             this.rSaturdayRadioButton.Name = "rSaturdayRadioButton";
             this.rSaturdayRadioButton.Size = new System.Drawing.Size(67, 17);
             this.rSaturdayRadioButton.TabIndex = 1;
+            this.rSaturdayRadioButton.TabStop = true;
             this.rSaturdayRadioButton.Text = "Saturday";
             this.rSaturdayRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -895,6 +882,7 @@
             this.rDurationTrackBar.TabIndex = 29;
             this.rDurationTrackBar.TabStop = false;
             this.rDurationTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.rDurationTrackBar.Value = 12;
             this.rDurationTrackBar.Scroll += new System.EventHandler(this.rDurationTrackBar_Scroll);
             this.rDurationTrackBar.ValueChanged += new System.EventHandler(this.rDurationTrackBar_Scroll);
             // 
@@ -915,7 +903,7 @@
             this.rDurationLabel.Name = "rDurationLabel";
             this.rDurationLabel.Size = new System.Drawing.Size(44, 20);
             this.rDurationLabel.TabIndex = 31;
-            this.rDurationLabel.Text = "0";
+            this.rDurationLabel.Text = "60";
             this.rDurationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // rStartTimeLabel
@@ -925,7 +913,7 @@
             this.rStartTimeLabel.Name = "rStartTimeLabel";
             this.rStartTimeLabel.Size = new System.Drawing.Size(44, 20);
             this.rStartTimeLabel.TabIndex = 25;
-            this.rStartTimeLabel.Text = "00:00";
+            this.rStartTimeLabel.Text = "15:00";
             this.rStartTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label28
@@ -948,6 +936,7 @@
             this.rTimeScaleTrackBar.TabIndex = 26;
             this.rTimeScaleTrackBar.TabStop = false;
             this.rTimeScaleTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.rTimeScaleTrackBar.Value = 1;
             this.rTimeScaleTrackBar.Scroll += new System.EventHandler(this.rTimeScaleTrackBar_Scroll);
             this.rTimeScaleTrackBar.ValueChanged += new System.EventHandler(this.rTimeScaleTrackBar_Scroll);
             // 
@@ -968,7 +957,7 @@
             this.rTimeScaleLabel.Name = "rTimeScaleLabel";
             this.rTimeScaleLabel.Size = new System.Drawing.Size(44, 20);
             this.rTimeScaleLabel.TabIndex = 28;
-            this.rTimeScaleLabel.Text = "0";
+            this.rTimeScaleLabel.Text = "1";
             this.rTimeScaleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // rStartTimeTrackBar
@@ -981,27 +970,29 @@
             this.rStartTimeTrackBar.TabIndex = 23;
             this.rStartTimeTrackBar.TabStop = false;
             this.rStartTimeTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.rStartTimeTrackBar.Value = 15;
             this.rStartTimeTrackBar.Scroll += new System.EventHandler(this.rStartTimeTrackBar_Scroll);
             this.rStartTimeTrackBar.ValueChanged += new System.EventHandler(this.rStartTimeTrackBar_Scroll);
             // 
-            // panel5
+            // qPanel
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.Control;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.panel8);
-            this.panel5.Controls.Add(this.qDurationTrackBar);
-            this.panel5.Controls.Add(this.label18);
-            this.panel5.Controls.Add(this.qDurationLabel);
-            this.panel5.Controls.Add(this.qStartTimeLabel);
-            this.panel5.Controls.Add(this.label21);
-            this.panel5.Controls.Add(this.qTimeScaleTrackBar);
-            this.panel5.Controls.Add(this.label22);
-            this.panel5.Controls.Add(this.qTimeScaleLabel);
-            this.panel5.Controls.Add(this.qStartTimeTrackBar);
-            this.panel5.Location = new System.Drawing.Point(157, 152);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(340, 116);
-            this.panel5.TabIndex = 22;
+            this.qPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.qPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.qPanel.Controls.Add(this.panel8);
+            this.qPanel.Controls.Add(this.qDurationTrackBar);
+            this.qPanel.Controls.Add(this.label18);
+            this.qPanel.Controls.Add(this.qDurationLabel);
+            this.qPanel.Controls.Add(this.qStartTimeLabel);
+            this.qPanel.Controls.Add(this.label21);
+            this.qPanel.Controls.Add(this.qTimeScaleTrackBar);
+            this.qPanel.Controls.Add(this.label22);
+            this.qPanel.Controls.Add(this.qTimeScaleLabel);
+            this.qPanel.Controls.Add(this.qStartTimeTrackBar);
+            this.qPanel.Enabled = false;
+            this.qPanel.Location = new System.Drawing.Point(157, 152);
+            this.qPanel.Name = "qPanel";
+            this.qPanel.Size = new System.Drawing.Size(340, 116);
+            this.qPanel.TabIndex = 22;
             // 
             // panel8
             // 
@@ -1026,10 +1017,12 @@
             // qSaturdayRadioButton
             // 
             this.qSaturdayRadioButton.AutoSize = true;
+            this.qSaturdayRadioButton.Checked = true;
             this.qSaturdayRadioButton.Location = new System.Drawing.Point(118, 3);
             this.qSaturdayRadioButton.Name = "qSaturdayRadioButton";
             this.qSaturdayRadioButton.Size = new System.Drawing.Size(67, 17);
             this.qSaturdayRadioButton.TabIndex = 1;
+            this.qSaturdayRadioButton.TabStop = true;
             this.qSaturdayRadioButton.Text = "Saturday";
             this.qSaturdayRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -1053,6 +1046,7 @@
             this.qDurationTrackBar.TabIndex = 29;
             this.qDurationTrackBar.TabStop = false;
             this.qDurationTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.qDurationTrackBar.Value = 4;
             this.qDurationTrackBar.Scroll += new System.EventHandler(this.qDurationTrackBar_Scroll);
             this.qDurationTrackBar.ValueChanged += new System.EventHandler(this.qDurationTrackBar_Scroll);
             // 
@@ -1073,7 +1067,7 @@
             this.qDurationLabel.Name = "qDurationLabel";
             this.qDurationLabel.Size = new System.Drawing.Size(44, 20);
             this.qDurationLabel.TabIndex = 31;
-            this.qDurationLabel.Text = "0";
+            this.qDurationLabel.Text = "20";
             this.qDurationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // qStartTimeLabel
@@ -1083,7 +1077,7 @@
             this.qStartTimeLabel.Name = "qStartTimeLabel";
             this.qStartTimeLabel.Size = new System.Drawing.Size(44, 20);
             this.qStartTimeLabel.TabIndex = 25;
-            this.qStartTimeLabel.Text = "00:00";
+            this.qStartTimeLabel.Text = "13:00";
             this.qStartTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label21
@@ -1106,6 +1100,7 @@
             this.qTimeScaleTrackBar.TabIndex = 26;
             this.qTimeScaleTrackBar.TabStop = false;
             this.qTimeScaleTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.qTimeScaleTrackBar.Value = 1;
             this.qTimeScaleTrackBar.Scroll += new System.EventHandler(this.qTimeScaleTrackBar_Scroll);
             this.qTimeScaleTrackBar.ValueChanged += new System.EventHandler(this.qTimeScaleTrackBar_Scroll);
             // 
@@ -1126,7 +1121,7 @@
             this.qTimeScaleLabel.Name = "qTimeScaleLabel";
             this.qTimeScaleLabel.Size = new System.Drawing.Size(44, 20);
             this.qTimeScaleLabel.TabIndex = 28;
-            this.qTimeScaleLabel.Text = "0";
+            this.qTimeScaleLabel.Text = "1";
             this.qTimeScaleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // qStartTimeTrackBar
@@ -1139,18 +1134,9 @@
             this.qStartTimeTrackBar.TabIndex = 23;
             this.qStartTimeTrackBar.TabStop = false;
             this.qStartTimeTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.qStartTimeTrackBar.Value = 13;
             this.qStartTimeTrackBar.Scroll += new System.EventHandler(this.qStartTimeTrackBar_Scroll);
             this.qStartTimeTrackBar.ValueChanged += new System.EventHandler(this.qStartTimeTrackBar_Scroll);
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(169, 7);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 13);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Practice";
             // 
             // tracksListBox
             // 
@@ -1189,24 +1175,25 @@
             this.tracksListBox.TabIndex = 1;
             this.tracksListBox.TabStop = false;
             // 
-            // panel4
+            // pPanel
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.pDurationTrackBar);
-            this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.pDurationLabel);
-            this.panel4.Controls.Add(this.pStartTimeLabel);
-            this.panel4.Controls.Add(this.label16);
-            this.panel4.Controls.Add(this.pTimeScaleTrackBar);
-            this.panel4.Controls.Add(this.label15);
-            this.panel4.Controls.Add(this.pTimeScaleLabel);
-            this.panel4.Controls.Add(this.pStartTimeTrackBar);
-            this.panel4.Location = new System.Drawing.Point(157, 13);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(340, 116);
-            this.panel4.TabIndex = 20;
+            this.pPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.pPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pPanel.Controls.Add(this.panel7);
+            this.pPanel.Controls.Add(this.pDurationTrackBar);
+            this.pPanel.Controls.Add(this.label14);
+            this.pPanel.Controls.Add(this.pDurationLabel);
+            this.pPanel.Controls.Add(this.pStartTimeLabel);
+            this.pPanel.Controls.Add(this.label16);
+            this.pPanel.Controls.Add(this.pTimeScaleTrackBar);
+            this.pPanel.Controls.Add(this.label15);
+            this.pPanel.Controls.Add(this.pTimeScaleLabel);
+            this.pPanel.Controls.Add(this.pStartTimeTrackBar);
+            this.pPanel.Enabled = false;
+            this.pPanel.Location = new System.Drawing.Point(157, 13);
+            this.pPanel.Name = "pPanel";
+            this.pPanel.Size = new System.Drawing.Size(340, 116);
+            this.pPanel.TabIndex = 20;
             // 
             // panel7
             // 
@@ -1260,6 +1247,7 @@
             this.pDurationTrackBar.TabIndex = 29;
             this.pDurationTrackBar.TabStop = false;
             this.pDurationTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.pDurationTrackBar.Value = 12;
             this.pDurationTrackBar.Scroll += new System.EventHandler(this.practiceDurationTrackBar_Scroll);
             this.pDurationTrackBar.ValueChanged += new System.EventHandler(this.practiceDurationTrackBar_Scroll);
             // 
@@ -1280,7 +1268,7 @@
             this.pDurationLabel.Name = "pDurationLabel";
             this.pDurationLabel.Size = new System.Drawing.Size(44, 20);
             this.pDurationLabel.TabIndex = 31;
-            this.pDurationLabel.Text = "0";
+            this.pDurationLabel.Text = "60";
             this.pDurationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pStartTimeLabel
@@ -1290,7 +1278,7 @@
             this.pStartTimeLabel.Name = "pStartTimeLabel";
             this.pStartTimeLabel.Size = new System.Drawing.Size(44, 20);
             this.pStartTimeLabel.TabIndex = 25;
-            this.pStartTimeLabel.Text = "00:00";
+            this.pStartTimeLabel.Text = "10:00";
             this.pStartTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label16
@@ -1313,6 +1301,7 @@
             this.pTimeScaleTrackBar.TabIndex = 26;
             this.pTimeScaleTrackBar.TabStop = false;
             this.pTimeScaleTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.pTimeScaleTrackBar.Value = 1;
             this.pTimeScaleTrackBar.Scroll += new System.EventHandler(this.practiceTimeScaleTrackBar_Scroll);
             this.pTimeScaleTrackBar.ValueChanged += new System.EventHandler(this.practiceTimeScaleTrackBar_Scroll);
             // 
@@ -1333,7 +1322,7 @@
             this.pTimeScaleLabel.Name = "pTimeScaleLabel";
             this.pTimeScaleLabel.Size = new System.Drawing.Size(44, 20);
             this.pTimeScaleLabel.TabIndex = 28;
-            this.pTimeScaleLabel.Text = "0";
+            this.pTimeScaleLabel.Text = "1";
             this.pTimeScaleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pStartTimeTrackBar
@@ -1346,6 +1335,7 @@
             this.pStartTimeTrackBar.TabIndex = 23;
             this.pStartTimeTrackBar.TabStop = false;
             this.pStartTimeTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.pStartTimeTrackBar.Value = 10;
             this.pStartTimeTrackBar.Scroll += new System.EventHandler(this.practiceStartTimeTrackBar_Scroll);
             this.pStartTimeTrackBar.ValueChanged += new System.EventHandler(this.practiceStartTimeTrackBar_Scroll);
             // 
@@ -1358,7 +1348,7 @@
             this.launchServerButton.Size = new System.Drawing.Size(340, 116);
             this.launchServerButton.TabIndex = 0;
             this.launchServerButton.TabStop = false;
-            this.launchServerButton.Text = "Launch Server";
+            this.launchServerButton.Text = "Start/Stop Server";
             this.launchServerButton.UseVisualStyleBackColor = false;
             this.launchServerButton.Click += new System.EventHandler(this.launchServerButton_Click);
             // 
@@ -1374,6 +1364,39 @@
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // pCheckBox
+            // 
+            this.pCheckBox.AutoSize = true;
+            this.pCheckBox.Location = new System.Drawing.Point(170, 7);
+            this.pCheckBox.Name = "pCheckBox";
+            this.pCheckBox.Size = new System.Drawing.Size(65, 17);
+            this.pCheckBox.TabIndex = 32;
+            this.pCheckBox.Text = "Practice";
+            this.pCheckBox.UseVisualStyleBackColor = true;
+            this.pCheckBox.CheckedChanged += new System.EventHandler(this.practiceCheckBox_CheckedChanged);
+            // 
+            // qCheckBox
+            // 
+            this.qCheckBox.AutoSize = true;
+            this.qCheckBox.Location = new System.Drawing.Point(170, 146);
+            this.qCheckBox.Name = "qCheckBox";
+            this.qCheckBox.Size = new System.Drawing.Size(72, 17);
+            this.qCheckBox.TabIndex = 36;
+            this.qCheckBox.Text = "Qualifying";
+            this.qCheckBox.UseVisualStyleBackColor = true;
+            this.qCheckBox.CheckedChanged += new System.EventHandler(this.qualifyingCheckBox_CheckedChanged);
+            // 
+            // rCheckBox
+            // 
+            this.rCheckBox.AutoSize = true;
+            this.rCheckBox.Location = new System.Drawing.Point(170, 283);
+            this.rCheckBox.Name = "rCheckBox";
+            this.rCheckBox.Size = new System.Drawing.Size(52, 17);
+            this.rCheckBox.TabIndex = 37;
+            this.rCheckBox.Text = "Race";
+            this.rCheckBox.UseVisualStyleBackColor = true;
+            this.rCheckBox.CheckedChanged += new System.EventHandler(this.raceCheckBox_CheckedChanged);
             // 
             // MainForm
             // 
@@ -1394,7 +1417,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "ACC Dedicated Server GUI";
+            this.Text = "ACC Dedicated Server GUI V1.1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TRRequirementsTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SARequirementTrackBar)).EndInit();
@@ -1415,22 +1438,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.tempTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.overTimeTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.waitTimeTrackBar)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.rPanel.ResumeLayout(false);
+            this.rPanel.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rDurationTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rTimeScaleTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rStartTimeTrackBar)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.qPanel.ResumeLayout(false);
+            this.qPanel.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qDurationTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qTimeScaleTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qStartTimeTrackBar)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.pPanel.ResumeLayout(false);
+            this.pPanel.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pDurationTrackBar)).EndInit();
@@ -1490,11 +1513,8 @@
         private System.Windows.Forms.TrackBar pDurationTrackBar;
         private System.Windows.Forms.Label pDurationLabel;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pPanel;
+        private System.Windows.Forms.Panel rPanel;
         private System.Windows.Forms.TrackBar rDurationTrackBar;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label rDurationLabel;
@@ -1504,7 +1524,7 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label rTimeScaleLabel;
         private System.Windows.Forms.TrackBar rStartTimeTrackBar;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel qPanel;
         private System.Windows.Forms.TrackBar qDurationTrackBar;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label qDurationLabel;
@@ -1548,6 +1568,9 @@
         private System.Windows.Forms.TrackBar waitTimeTrackBar;
         private System.Windows.Forms.Button launchServerButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.CheckBox pCheckBox;
+        private System.Windows.Forms.CheckBox rCheckBox;
+        private System.Windows.Forms.CheckBox qCheckBox;
     }
 }
 

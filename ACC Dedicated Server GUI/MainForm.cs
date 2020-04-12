@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -142,6 +143,15 @@ namespace ACC_Dedicated_Server_GUI
             weatherRandomnessLabel.Text = weatherRandomnessTrackBar.Value.ToString();
         }
 
+        private int InTrackBarRange(int value, TrackBar trackBar)
+        {
+            if (value < trackBar.Minimum)
+                return trackBar.Minimum;
+            if (value > trackBar.Maximum)
+                return trackBar.Maximum;
+            return value;
+        }
+
         private void LoadConfig()
         {
             string rawJSON = File.ReadAllText(@"cfg\settings.json");
@@ -151,17 +161,17 @@ namespace ACC_Dedicated_Server_GUI
             rawJSON = File.ReadAllText(@"cfg\event.json");
             eventObject = JsonConvert.DeserializeObject<EventObject>(rawJSON);
 
-
+            // settings.json
             serverNameTextBox.Text = settings.serverName;
             adminPasswordTextBox.Text = settings.adminPassword;
             joinPasswordTextBox.Text = settings.password;
             spectatorPasswordTextBox.Text = settings.spectatorPassword;
-            maxCarsTrackBar.Value = settings.maxCarSlots;
-            TRRequirementsTrackBar.Value = settings.trackMedalsRequirement;
-            SARequirementTrackBar.Value = settings.safetyRatingRequirement;
-            RCRequirementTrackBar.Value = settings.racecraftRatingRequirement;
+            maxCarsTrackBar.Value = InTrackBarRange(settings.maxCarSlots, maxCarsTrackBar);
+            TRRequirementsTrackBar.Value = InTrackBarRange(settings.trackMedalsRequirement, TRRequirementsTrackBar);
+            SARequirementTrackBar.Value = InTrackBarRange(settings.safetyRatingRequirement, SARequirementTrackBar);
+            RCRequirementTrackBar.Value = InTrackBarRange(settings.racecraftRatingRequirement, RCRequirementTrackBar);
 
-
+            // assistRules.json
             idealLineCheckBox.Checked = assist.disableIdealLine == 0;
             autoSteeringCheckBox.Checked = assist.disableAutosteer == 0;
             autoPitLimiterCheckBox.Checked = assist.disableAutoPitLimiter == 0;
@@ -170,75 +180,90 @@ namespace ACC_Dedicated_Server_GUI
             autoWipersCheckBox.Checked = assist.disableAutoWiper == 0;
             autoLightsCheckBox.Checked = assist.disableAutoLights == 0;
             autoClutchCheckBox.Checked = assist.disableAutoClutch == 0;
-            stabilityControlLevelTrackBar.Value = assist.stabilityControlLevelMax;
+            stabilityControlLevelTrackBar.Value = InTrackBarRange(assist.stabilityControlLevelMax, stabilityControlLevelTrackBar);
 
+            // event.json
             tracksListBox.SelectedItem = eventObject.track;
+            waitTimeTrackBar.Value = InTrackBarRange(eventObject.preRaceWaitingTimeSeconds / 30, waitTimeTrackBar);
+            overTimeTrackBar.Value = InTrackBarRange(eventObject.sessionOverTimeSeconds / 30, overTimeTrackBar);
+            tempTrackBar.Value = InTrackBarRange(eventObject.ambientTemp, tempTrackBar);
+            cloudCoverageTrackBar.Value = InTrackBarRange((int)(eventObject.cloudLevel * 10), cloudCoverageTrackBar);
+            rainTrackBar.Value = InTrackBarRange((int)(eventObject.rain * 10), rainTrackBar);
+            weatherRandomnessTrackBar.Value = InTrackBarRange(eventObject.weatherRandomness, weatherRandomnessTrackBar);
 
-            pStartTimeTrackBar.Value = eventObject.sessions[0].hourOfDay;
-            pTimeScaleTrackBar.Value = eventObject.sessions[0].timeMultiplier;
-            pDurationTrackBar.Value = eventObject.sessions[0].sessionDurationMinutes / 5;
-            switch (eventObject.sessions[0].dayOfWeekend)
+            foreach (Session session in eventObject.sessions)
             {
-                case 1:
-                    pFridayRadioButton.Checked = true;
-                    break;
-                case 2:
-                    pSaturdayRadioButton.Checked = true;
-                    break;
-                case 3:
-                    pSundayRadioButton.Checked = true;
-                    break;
-                default:
-                    break;
+                switch (session.sessionType.ToUpper())
+                {
+                    case "P":
+                        pCheckBox.Checked = true;
+                        pStartTimeTrackBar.Value = InTrackBarRange(session.hourOfDay, pStartTimeTrackBar);
+                        pTimeScaleTrackBar.Value = InTrackBarRange(session.timeMultiplier, pTimeScaleTrackBar);
+                        pDurationTrackBar.Value = InTrackBarRange(session.sessionDurationMinutes / 5, pDurationTrackBar);
+                        switch (session.dayOfWeekend)
+                        {
+                            case 1:
+                                pFridayRadioButton.Checked = true;
+                                break;
+                            case 2:
+                                pSaturdayRadioButton.Checked = true;
+                                break;
+                            case 3:
+                                pSundayRadioButton.Checked = true;
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                    case "Q":
+                        qCheckBox.Checked = true;
+                        qStartTimeTrackBar.Value = InTrackBarRange(session.hourOfDay, qStartTimeTrackBar);
+                        qTimeScaleTrackBar.Value = InTrackBarRange(session.timeMultiplier, qTimeScaleTrackBar);
+                        qDurationTrackBar.Value = InTrackBarRange(session.sessionDurationMinutes / 5, qDurationTrackBar);
+                        switch (session.dayOfWeekend)
+                        {
+                            case 1:
+                                qFridayRadioButton.Checked = true;
+                                break;
+                            case 2:
+                                qSaturdayRadioButton.Checked = true;
+                                break;
+                            case 3:
+                                qSundayRadioButton.Checked = true;
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                    case "R":
+                        rCheckBox.Checked = true;
+                        rStartTimeTrackBar.Value = InTrackBarRange(session.hourOfDay, rStartTimeTrackBar);
+                        rTimeScaleTrackBar.Value = InTrackBarRange(session.timeMultiplier, rTimeScaleTrackBar);
+                        rDurationTrackBar.Value = InTrackBarRange(session.sessionDurationMinutes / 5, rDurationTrackBar);
+                        switch (session.dayOfWeekend)
+                        {
+                            case 1:
+                                rFridayRadioButton.Checked = true;
+                                break;
+                            case 2:
+                                rSaturdayRadioButton.Checked = true;
+                                break;
+                            case 3:
+                                rSundayRadioButton.Checked = true;
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
-
-            qStartTimeTrackBar.Value = eventObject.sessions[1].hourOfDay;
-            qTimeScaleTrackBar.Value = eventObject.sessions[1].timeMultiplier;
-            qDurationTrackBar.Value = eventObject.sessions[1].sessionDurationMinutes / 5;
-            switch (eventObject.sessions[1].dayOfWeekend)
-            {
-                case 1:
-                    qFridayRadioButton.Checked = true;
-                    break;
-                case 2:
-                    qSaturdayRadioButton.Checked = true;
-                    break;
-                case 3:
-                    qSundayRadioButton.Checked = true;
-                    break;
-                default:
-                    break;
-            }
-
-            rStartTimeTrackBar.Value = eventObject.sessions[2].hourOfDay;
-            rTimeScaleTrackBar.Value = eventObject.sessions[2].timeMultiplier;
-            rDurationTrackBar.Value = eventObject.sessions[2].sessionDurationMinutes / 5;
-            switch (eventObject.sessions[2].dayOfWeekend)
-            {
-                case 1:
-                    rFridayRadioButton.Checked = true;
-                    break;
-                case 2:
-                    rSaturdayRadioButton.Checked = true;
-                    break;
-                case 3:
-                    rSundayRadioButton.Checked = true;
-                    break;
-                default:
-                    break;
-            }
-
-            waitTimeTrackBar.Value = eventObject.preRaceWaitingTimeSeconds / 30;
-            overTimeTrackBar.Value = eventObject.sessionOverTimeSeconds / 30;
-            tempTrackBar.Value = eventObject.ambientTemp;
-            cloudCoverageTrackBar.Value = (int)(eventObject.cloudLevel * 10);
-            rainTrackBar.Value = (int)(eventObject.rain * 10);
-            weatherRandomnessTrackBar.Value = eventObject.weatherRandomness;
         }
 
         private void SaveConfig()
         {
-            SettingsObject newSettings = new SettingsObject();
+            // setting.json
             settings.serverName = serverNameTextBox.Text;
             settings.password = joinPasswordTextBox.Text;
             settings.adminPassword = adminPasswordTextBox.Text;
@@ -248,7 +273,7 @@ namespace ACC_Dedicated_Server_GUI
             settings.safetyRatingRequirement = SARequirementTrackBar.Value;
             settings.racecraftRatingRequirement = RCRequirementTrackBar.Value;
 
-            AssistObject newAssist = new AssistObject();
+            // assistRules.json
             assist.disableIdealLine = idealLineCheckBox.Checked ? 0 : 1;
             assist.disableAutosteer = autoSteeringCheckBox.Checked ? 0 : 1;
             assist.disableAutoPitLimiter = autoPitLimiterCheckBox.Checked ? 0 : 1;
@@ -259,7 +284,7 @@ namespace ACC_Dedicated_Server_GUI
             assist.disableAutoClutch = autoClutchCheckBox.Checked ? 0 : 1;
             assist.stabilityControlLevelMax = stabilityControlLevelTrackBar.Value;
 
-            EventObject newEventObject = new EventObject();
+            // event.json
             eventObject.track = tracksListBox.SelectedItem.ToString();
             eventObject.preRaceWaitingTimeSeconds = waitTimeTrackBar.Value * 30;
             eventObject.sessionOverTimeSeconds = overTimeTrackBar.Value * 30;
@@ -268,44 +293,61 @@ namespace ACC_Dedicated_Server_GUI
             eventObject.rain = (float)rainTrackBar.Value / 10;
             eventObject.weatherRandomness = weatherRandomnessTrackBar.Value;
 
-            // Practice
-            Session practice = new Session();
-            eventObject.sessions[0].sessionType = "P";
-            eventObject.sessions[0].hourOfDay = pStartTimeTrackBar.Value;
-            eventObject.sessions[0].timeMultiplier = pTimeScaleTrackBar.Value;
-            eventObject.sessions[0].sessionDurationMinutes = pDurationTrackBar.Value * 5;
-            if (pFridayRadioButton.Checked)
-                eventObject.sessions[0].dayOfWeekend = 1;
-            else if (pSaturdayRadioButton.Checked)
-                eventObject.sessions[0].dayOfWeekend = 2;
-            else
-                eventObject.sessions[0].dayOfWeekend = 3;
+            eventObject.sessions.Clear();
 
-            // Qualifying
-            Session qualifying = new Session();
-            eventObject.sessions[1].sessionType = "Q";
-            eventObject.sessions[1].hourOfDay = qStartTimeTrackBar.Value;
-            eventObject.sessions[1].timeMultiplier = qTimeScaleTrackBar.Value;
-            eventObject.sessions[1].sessionDurationMinutes = qDurationTrackBar.Value * 5;
-            if (qFridayRadioButton.Checked)
-                eventObject.sessions[1].dayOfWeekend = 1;
-            else if (qSaturdayRadioButton.Checked)
-                eventObject.sessions[1].dayOfWeekend = 2;
-            else
-                eventObject.sessions[1].dayOfWeekend = 3;
+            if (pCheckBox.Checked)
+            {
+                Session session = new Session();
 
-            // Race
-            Session race = new Session();
-            eventObject.sessions[2].sessionType = "R";
-            eventObject.sessions[2].hourOfDay = rStartTimeTrackBar.Value;
-            eventObject.sessions[2].timeMultiplier = rTimeScaleTrackBar.Value;
-            eventObject.sessions[2].sessionDurationMinutes = rDurationTrackBar.Value * 5;
-            if (rFridayRadioButton.Checked)
-                eventObject.sessions[2].dayOfWeekend = 1;
-            else if (rSaturdayRadioButton.Checked)
-                eventObject.sessions[2].dayOfWeekend = 2;
-            else
-                eventObject.sessions[2].dayOfWeekend = 3;
+                session.sessionType = "P";
+                session.hourOfDay = pStartTimeTrackBar.Value;
+                session.timeMultiplier = pTimeScaleTrackBar.Value;
+                session.sessionDurationMinutes = pDurationTrackBar.Value * 5;
+                if (pFridayRadioButton.Checked)
+                    session.dayOfWeekend = 1;
+                else if (pSaturdayRadioButton.Checked)
+                    session.dayOfWeekend = 2;
+                else
+                    session.dayOfWeekend = 3;
+
+                eventObject.sessions.Add(session);
+            }
+
+            if (qCheckBox.Checked)
+            {
+                Session session = new Session();
+
+                session.sessionType = "Q";
+                session.hourOfDay = qStartTimeTrackBar.Value;
+                session.timeMultiplier = qTimeScaleTrackBar.Value;
+                session.sessionDurationMinutes = qDurationTrackBar.Value * 5;
+                if (qFridayRadioButton.Checked)
+                    session.dayOfWeekend = 1;
+                else if (qSaturdayRadioButton.Checked)
+                    session.dayOfWeekend = 2;
+                else
+                    session.dayOfWeekend = 3;
+
+                eventObject.sessions.Add(session);
+            }
+
+            if (rCheckBox.Checked)
+            {
+                Session session = new Session();
+
+                session.sessionType = "R";
+                session.hourOfDay = rStartTimeTrackBar.Value;
+                session.timeMultiplier = rTimeScaleTrackBar.Value;
+                session.sessionDurationMinutes = rDurationTrackBar.Value * 5;
+                if (rFridayRadioButton.Checked)
+                    session.dayOfWeekend = 1;
+                else if (rSaturdayRadioButton.Checked)
+                    session.dayOfWeekend = 2;
+                else
+                    session.dayOfWeekend = 3;
+
+                eventObject.sessions.Add(session);
+            }
 
             File.WriteAllText(@"cfg\settings.json", JsonConvert.SerializeObject(settings, Formatting.Indented));
             File.WriteAllText(@"cfg\assistRules.json", JsonConvert.SerializeObject(assist, Formatting.Indented));
@@ -314,6 +356,11 @@ namespace ACC_Dedicated_Server_GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (!File.Exists("accServer.exe"))
+            {
+                MessageBox.Show("File 'accServer.exe' not found. Please make sure you installed this program to your 'Assetto Corsa Competizione\\server' folder.\n\nClosing...", "ACC Dedicated Server GUI Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
             try
             {
                 LoadConfig();
@@ -328,13 +375,38 @@ namespace ACC_Dedicated_Server_GUI
         {
             try
             {
-                SaveConfig();
-                Process.Start("accServer.exe");
+                if (Process.GetProcessesByName("accServer").Length == 0)
+                {
+                    SaveConfig();
+                    Process.Start("accServer.exe");
+                }
+                else
+                {
+                    foreach (Process process in Process.GetProcessesByName("accServer"))
+                    {
+                        process.Kill();
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void practiceCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            pPanel.Enabled = pCheckBox.Checked;
+        }
+
+        private void qualifyingCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            qPanel.Enabled = qCheckBox.Checked;
+        }
+
+        private void raceCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            rPanel.Enabled = rCheckBox.Checked;
         }
     }
 }
