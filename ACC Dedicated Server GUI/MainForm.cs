@@ -68,7 +68,21 @@ namespace ACC_Dedicated_Server_GUI
 
         private void practiceDurationTrackBar_Scroll(object sender, EventArgs e)
         {
-            pDurationLabel.Text = (pDurationTrackBar.Value * 5).ToString();
+            if (ModifierKeys == Keys.Shift)
+            {
+                pDurationTrackBar.Value = (int)Math.Round((double)pDurationTrackBar.Value / 15) * 15;
+            }
+            else if (ModifierKeys == Keys.Alt)
+            {
+                pDurationTrackBar.Value = pDurationTrackBar.Value;
+            }
+            else
+            {
+                pDurationTrackBar.Value = (int)Math.Round((double)pDurationTrackBar.Value / 5) * 5;
+            }
+            TimeSpan tSpan = TimeSpan.FromMinutes(pDurationTrackBar.Value);
+            pDurationLabel.Text = (int)tSpan.TotalHours + ":" + tSpan.ToString("mm");
+            //pDurationLabel.Text = (pDurationTrackBar.Value * 5).ToString();
         }
 
         private void qStartTimeTrackBar_Scroll(object sender, EventArgs e)
@@ -86,7 +100,21 @@ namespace ACC_Dedicated_Server_GUI
 
         private void qDurationTrackBar_Scroll(object sender, EventArgs e)
         {
-            qDurationLabel.Text = (qDurationTrackBar.Value * 5).ToString();
+            if (ModifierKeys == Keys.Shift)
+            {
+                qDurationTrackBar.Value = (int)Math.Round((double)qDurationTrackBar.Value / 15) * 15;
+            }
+            else if (ModifierKeys == Keys.Alt)
+            {
+                qDurationTrackBar.Value = qDurationTrackBar.Value;
+            }
+            else
+            {
+                qDurationTrackBar.Value = (int)Math.Round((double)qDurationTrackBar.Value / 5) * 5;
+            }
+            TimeSpan tSpan = TimeSpan.FromMinutes(qDurationTrackBar.Value);
+            qDurationLabel.Text = (int)tSpan.TotalHours + ":" + tSpan.ToString("mm");
+            //qDurationLabel.Text = (qDurationTrackBar.Value * 5).ToString();
         }
 
         private void rStartTimeTrackBar_Scroll(object sender, EventArgs e)
@@ -104,7 +132,21 @@ namespace ACC_Dedicated_Server_GUI
 
         private void rDurationTrackBar_Scroll(object sender, EventArgs e)
         {
-            rDurationLabel.Text = (rDurationTrackBar.Value * 5).ToString();
+            if (ModifierKeys == Keys.Shift)
+            {
+                rDurationTrackBar.Value = (int)Math.Round((double)rDurationTrackBar.Value / 15) * 15;
+            }
+            else if (ModifierKeys == Keys.Alt)
+            {
+                rDurationTrackBar.Value = rDurationTrackBar.Value;
+            }
+            else
+            {
+                rDurationTrackBar.Value = (int)Math.Round((double)rDurationTrackBar.Value / 5) * 5;
+            }
+            TimeSpan tSpan = TimeSpan.FromMinutes(rDurationTrackBar.Value);
+            rDurationLabel.Text = (int)tSpan.TotalHours + ":" + tSpan.ToString("mm");
+            //rDurationLabel.Text = (rDurationTrackBar.Value * 5).ToString();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -115,12 +157,16 @@ namespace ACC_Dedicated_Server_GUI
 
         private void waitTimeTrackBar_Scroll(object sender, EventArgs e)
         {
-            waitTimeLabel.Text = (waitTimeTrackBar.Value * 30).ToString();
+            if (!(ModifierKeys == Keys.Alt))
+                waitTimeTrackBar.Value = (int)Math.Round((double)waitTimeTrackBar.Value / 10) * 10;
+            waitTimeLabel.Text = waitTimeTrackBar.Value.ToString();
         }
 
         private void overTimeTrackBar_Scroll(object sender, EventArgs e)
         {
-            overTimeLabel.Text = (overTimeTrackBar.Value * 30).ToString();
+            if (!(ModifierKeys == Keys.Alt))
+                overTimeTrackBar.Value = (int)Math.Round((double)overTimeTrackBar.Value / 10) * 10;
+            overTimeLabel.Text = overTimeTrackBar.Value.ToString();
         }
 
         private void tempTrackBar_Scroll(object sender, EventArgs e)
@@ -184,8 +230,8 @@ namespace ACC_Dedicated_Server_GUI
 
             // event.json
             tracksListBox.SelectedItem = eventObject.track;
-            waitTimeTrackBar.Value = InTrackBarRange(eventObject.preRaceWaitingTimeSeconds / 30, waitTimeTrackBar);
-            overTimeTrackBar.Value = InTrackBarRange(eventObject.sessionOverTimeSeconds / 30, overTimeTrackBar);
+            waitTimeTrackBar.Value = InTrackBarRange(eventObject.preRaceWaitingTimeSeconds, waitTimeTrackBar);
+            overTimeTrackBar.Value = InTrackBarRange(eventObject.sessionOverTimeSeconds, overTimeTrackBar);
             tempTrackBar.Value = InTrackBarRange(eventObject.ambientTemp, tempTrackBar);
             cloudCoverageTrackBar.Value = InTrackBarRange((int)(eventObject.cloudLevel * 10), cloudCoverageTrackBar);
             rainTrackBar.Value = InTrackBarRange((int)(eventObject.rain * 10), rainTrackBar);
@@ -199,7 +245,7 @@ namespace ACC_Dedicated_Server_GUI
                         pCheckBox.Checked = true;
                         pStartTimeTrackBar.Value = InTrackBarRange(session.hourOfDay, pStartTimeTrackBar);
                         pTimeScaleTrackBar.Value = InTrackBarRange(session.timeMultiplier, pTimeScaleTrackBar);
-                        pDurationTrackBar.Value = InTrackBarRange(session.sessionDurationMinutes / 5, pDurationTrackBar);
+                        pDurationTrackBar.Value = InTrackBarRange(session.sessionDurationMinutes, pDurationTrackBar);
                         switch (session.dayOfWeekend)
                         {
                             case 1:
@@ -219,7 +265,7 @@ namespace ACC_Dedicated_Server_GUI
                         qCheckBox.Checked = true;
                         qStartTimeTrackBar.Value = InTrackBarRange(session.hourOfDay, qStartTimeTrackBar);
                         qTimeScaleTrackBar.Value = InTrackBarRange(session.timeMultiplier, qTimeScaleTrackBar);
-                        qDurationTrackBar.Value = InTrackBarRange(session.sessionDurationMinutes / 5, qDurationTrackBar);
+                        qDurationTrackBar.Value = InTrackBarRange(session.sessionDurationMinutes, qDurationTrackBar);
                         switch (session.dayOfWeekend)
                         {
                             case 1:
@@ -239,7 +285,7 @@ namespace ACC_Dedicated_Server_GUI
                         rCheckBox.Checked = true;
                         rStartTimeTrackBar.Value = InTrackBarRange(session.hourOfDay, rStartTimeTrackBar);
                         rTimeScaleTrackBar.Value = InTrackBarRange(session.timeMultiplier, rTimeScaleTrackBar);
-                        rDurationTrackBar.Value = InTrackBarRange(session.sessionDurationMinutes / 5, rDurationTrackBar);
+                        rDurationTrackBar.Value = InTrackBarRange(session.sessionDurationMinutes, rDurationTrackBar);
                         switch (session.dayOfWeekend)
                         {
                             case 1:
@@ -286,8 +332,8 @@ namespace ACC_Dedicated_Server_GUI
 
             // event.json
             eventObject.track = tracksListBox.SelectedItem.ToString();
-            eventObject.preRaceWaitingTimeSeconds = waitTimeTrackBar.Value * 30;
-            eventObject.sessionOverTimeSeconds = overTimeTrackBar.Value * 30;
+            eventObject.preRaceWaitingTimeSeconds = waitTimeTrackBar.Value;
+            eventObject.sessionOverTimeSeconds = overTimeTrackBar.Value;
             eventObject.ambientTemp = tempTrackBar.Value;
             eventObject.cloudLevel = (float)cloudCoverageTrackBar.Value / 10;
             eventObject.rain = (float)rainTrackBar.Value / 10;
@@ -302,7 +348,7 @@ namespace ACC_Dedicated_Server_GUI
                 session.sessionType = "P";
                 session.hourOfDay = pStartTimeTrackBar.Value;
                 session.timeMultiplier = pTimeScaleTrackBar.Value;
-                session.sessionDurationMinutes = pDurationTrackBar.Value * 5;
+                session.sessionDurationMinutes = pDurationTrackBar.Value;
                 if (pFridayRadioButton.Checked)
                     session.dayOfWeekend = 1;
                 else if (pSaturdayRadioButton.Checked)
@@ -320,7 +366,7 @@ namespace ACC_Dedicated_Server_GUI
                 session.sessionType = "Q";
                 session.hourOfDay = qStartTimeTrackBar.Value;
                 session.timeMultiplier = qTimeScaleTrackBar.Value;
-                session.sessionDurationMinutes = qDurationTrackBar.Value * 5;
+                session.sessionDurationMinutes = qDurationTrackBar.Value;
                 if (qFridayRadioButton.Checked)
                     session.dayOfWeekend = 1;
                 else if (qSaturdayRadioButton.Checked)
@@ -338,7 +384,7 @@ namespace ACC_Dedicated_Server_GUI
                 session.sessionType = "R";
                 session.hourOfDay = rStartTimeTrackBar.Value;
                 session.timeMultiplier = rTimeScaleTrackBar.Value;
-                session.sessionDurationMinutes = rDurationTrackBar.Value * 5;
+                session.sessionDurationMinutes = rDurationTrackBar.Value;
                 if (rFridayRadioButton.Checked)
                     session.dayOfWeekend = 1;
                 else if (rSaturdayRadioButton.Checked)
@@ -356,11 +402,13 @@ namespace ACC_Dedicated_Server_GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+#if !DEBUG
             if (!File.Exists("accServer.exe"))
             {
                 MessageBox.Show("File 'accServer.exe' not found. Please make sure you installed this program to your 'Assetto Corsa Competizione\\server' folder.\n\nClosing...", "ACC Dedicated Server GUI Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
+#endif
             try
             {
                 LoadConfig();
