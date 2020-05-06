@@ -68,7 +68,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssistRules.cs" />
+    <Compile Include="BoP.cs" />
+    <Compile Include="BoPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoPForm.Designer.cs">
+      <DependentUpon>BoPForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntriesForm.Designer.cs">
+      <DependentUpon>EntriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryList.cs" />
     <Compile Include="Event.cs" />
+    <Compile Include="EventRules.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +93,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="BoPForm.resx">
+      <DependentUpon>BoPForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntriesForm.resx">
+      <DependentUpon>EntriesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +110,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -105,7 +127,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="icons8-f1-car-50i.png" />
+    <None Include="icons8-f1-car-50.png" />
+    <None Include="bop-50.png" />
+    <None Include="bop-50s.png" />
+    <None Include="bop-50si.png" />
     <Content Include="icon.ico" />
+    <None Include="icons8-race-car-50.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

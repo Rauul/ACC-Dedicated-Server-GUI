@@ -66,9 +66,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.TrackComboBox = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.preRaceWaitTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.overTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.pCheckBox = new System.Windows.Forms.CheckBox();
             this.rCheckBox = new System.Windows.Forms.CheckBox();
             this.qCheckBox = new System.Windows.Forms.CheckBox();
-            this.pCheckBox = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.weatherRandomnessTrackBar = new System.Windows.Forms.TrackBar();
@@ -81,59 +89,63 @@
             this.rainLabel = new System.Windows.Forms.Label();
             this.cloudCoverageTrackBar = new System.Windows.Forms.TrackBar();
             this.tempTrackBar = new System.Windows.Forms.TrackBar();
-            this.label23 = new System.Windows.Forms.Label();
             this.tempLabel = new System.Windows.Forms.Label();
-            this.waitTimeLabel = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.overTimeTrackBar = new System.Windows.Forms.TrackBar();
-            this.label31 = new System.Windows.Forms.Label();
-            this.overTimeLabel = new System.Windows.Forms.Label();
-            this.waitTimeTrackBar = new System.Windows.Forms.TrackBar();
             this.rPanel = new System.Windows.Forms.Panel();
+            this.rDurationNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.rTimeScaleNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.rStartTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel9 = new System.Windows.Forms.Panel();
             this.rSundayRadioButton = new System.Windows.Forms.RadioButton();
             this.rSaturdayRadioButton = new System.Windows.Forms.RadioButton();
             this.rFridayRadioButton = new System.Windows.Forms.RadioButton();
-            this.rDurationTrackBar = new System.Windows.Forms.TrackBar();
             this.label25 = new System.Windows.Forms.Label();
-            this.rDurationLabel = new System.Windows.Forms.Label();
-            this.rStartTimeLabel = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.rTimeScaleTrackBar = new System.Windows.Forms.TrackBar();
             this.label29 = new System.Windows.Forms.Label();
-            this.rTimeScaleLabel = new System.Windows.Forms.Label();
-            this.rStartTimeTrackBar = new System.Windows.Forms.TrackBar();
             this.qPanel = new System.Windows.Forms.Panel();
+            this.qDurationNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.qTimeScaleNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.qStartTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel8 = new System.Windows.Forms.Panel();
             this.qSundayRadioButton = new System.Windows.Forms.RadioButton();
             this.qSaturdayRadioButton = new System.Windows.Forms.RadioButton();
             this.qFridayRadioButton = new System.Windows.Forms.RadioButton();
-            this.qDurationTrackBar = new System.Windows.Forms.TrackBar();
             this.label18 = new System.Windows.Forms.Label();
-            this.qDurationLabel = new System.Windows.Forms.Label();
-            this.qStartTimeLabel = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.qTimeScaleTrackBar = new System.Windows.Forms.TrackBar();
             this.label22 = new System.Windows.Forms.Label();
-            this.qTimeScaleLabel = new System.Windows.Forms.Label();
-            this.qStartTimeTrackBar = new System.Windows.Forms.TrackBar();
-            this.tracksListBox = new System.Windows.Forms.ListBox();
             this.pPanel = new System.Windows.Forms.Panel();
+            this.pDurationNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.pTimeScaleNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.pStartTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pSundayRadioButton = new System.Windows.Forms.RadioButton();
             this.pSaturdayRadioButton = new System.Windows.Forms.RadioButton();
             this.pFridayRadioButton = new System.Windows.Forms.RadioButton();
-            this.pDurationTrackBar = new System.Windows.Forms.TrackBar();
             this.label14 = new System.Windows.Forms.Label();
-            this.pDurationLabel = new System.Windows.Forms.Label();
-            this.pStartTimeLabel = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.pTimeScaleTrackBar = new System.Windows.Forms.TrackBar();
             this.label15 = new System.Windows.Forms.Label();
-            this.pTimeScaleLabel = new System.Windows.Forms.Label();
-            this.pStartTimeTrackBar = new System.Windows.Forms.TrackBar();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.maxDriversCountNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label24 = new System.Windows.Forms.Label();
+            this.driverSwapRequiredCheckBox = new System.Windows.Forms.CheckBox();
+            this.tyreChangeRequiredCheckBox = new System.Windows.Forms.CheckBox();
+            this.refuellingRequiredCheckBox = new System.Windows.Forms.CheckBox();
+            this.refuellingTimeFixedCheckBox = new System.Windows.Forms.CheckBox();
+            this.refuellingAllowedCheckBox = new System.Windows.Forms.CheckBox();
+            this.maxTotalDrivingTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.mandatoryPitStopCountNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.driverStintTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.pitWindowsLengthNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.launchServerButton = new System.Windows.Forms.Button();
-            this.exitButton = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.EntriesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.BoPToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.entryListButton = new System.Windows.Forms.Button();
+            this.BopButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TRRequirementsTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SARequirementTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxCarsTrackBar)).BeginInit();
@@ -142,28 +154,36 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.preRaceWaitTimeNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.overTimeNumericUpDown)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weatherRandomnessTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rainTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloudCoverageTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tempTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.overTimeTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.waitTimeTrackBar)).BeginInit();
             this.rPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rDurationNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rTimeScaleNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rStartTimeNumericUpDown)).BeginInit();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rDurationTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rTimeScaleTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rStartTimeTrackBar)).BeginInit();
             this.qPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qDurationNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qTimeScaleNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qStartTimeNumericUpDown)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qDurationTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qTimeScaleTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qStartTimeTrackBar)).BeginInit();
             this.pPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pDurationNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pTimeScaleNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pStartTimeNumericUpDown)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pDurationTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pTimeScaleTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pStartTimeTrackBar)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maxDriversCountNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxTotalDrivingTimeNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mandatoryPitStopCountNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // serverNameTextBox
@@ -508,7 +528,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 33);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(340, 234);
             this.panel1.TabIndex = 14;
@@ -516,7 +536,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 6);
+            this.label10.Location = new System.Drawing.Point(17, 26);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 13);
             this.label10.TabIndex = 15;
@@ -525,7 +545,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(24, 250);
+            this.label11.Location = new System.Drawing.Point(17, 271);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 13);
             this.label11.TabIndex = 17;
@@ -546,7 +566,7 @@
             this.panel2.Controls.Add(this.autoStartEngineCheckBox);
             this.panel2.Controls.Add(this.autoClutchCheckBox);
             this.panel2.Controls.Add(this.autoPitLimiterCheckBox);
-            this.panel2.Location = new System.Drawing.Point(12, 256);
+            this.panel2.Location = new System.Drawing.Point(12, 277);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(340, 176);
             this.panel2.TabIndex = 16;
@@ -554,7 +574,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(375, 6);
+            this.label12.Location = new System.Drawing.Point(375, 27);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 13);
             this.label12.TabIndex = 19;
@@ -564,620 +584,38 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label32);
+            this.panel3.Controls.Add(this.TrackComboBox);
+            this.panel3.Controls.Add(this.label19);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.pCheckBox);
             this.panel3.Controls.Add(this.rCheckBox);
             this.panel3.Controls.Add(this.qCheckBox);
-            this.panel3.Controls.Add(this.pCheckBox);
             this.panel3.Controls.Add(this.label20);
             this.panel3.Controls.Add(this.panel11);
             this.panel3.Controls.Add(this.rPanel);
             this.panel3.Controls.Add(this.qPanel);
-            this.panel3.Controls.Add(this.tracksListBox);
             this.panel3.Controls.Add(this.pPanel);
-            this.panel3.Location = new System.Drawing.Point(363, 12);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Location = new System.Drawing.Point(363, 33);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(512, 600);
+            this.panel3.Size = new System.Drawing.Size(368, 545);
             this.panel3.TabIndex = 18;
             // 
-            // rCheckBox
-            // 
-            this.rCheckBox.AutoSize = true;
-            this.rCheckBox.Location = new System.Drawing.Point(170, 283);
-            this.rCheckBox.Name = "rCheckBox";
-            this.rCheckBox.Size = new System.Drawing.Size(52, 17);
-            this.rCheckBox.TabIndex = 37;
-            this.rCheckBox.Text = "Race";
-            this.rCheckBox.UseVisualStyleBackColor = true;
-            this.rCheckBox.CheckedChanged += new System.EventHandler(this.raceCheckBox_CheckedChanged);
-            // 
-            // qCheckBox
-            // 
-            this.qCheckBox.AutoSize = true;
-            this.qCheckBox.Location = new System.Drawing.Point(170, 146);
-            this.qCheckBox.Name = "qCheckBox";
-            this.qCheckBox.Size = new System.Drawing.Size(72, 17);
-            this.qCheckBox.TabIndex = 36;
-            this.qCheckBox.Text = "Qualifying";
-            this.qCheckBox.UseVisualStyleBackColor = true;
-            this.qCheckBox.CheckedChanged += new System.EventHandler(this.qualifyingCheckBox_CheckedChanged);
-            // 
-            // pCheckBox
-            // 
-            this.pCheckBox.AutoSize = true;
-            this.pCheckBox.Location = new System.Drawing.Point(170, 7);
-            this.pCheckBox.Name = "pCheckBox";
-            this.pCheckBox.Size = new System.Drawing.Size(65, 17);
-            this.pCheckBox.TabIndex = 32;
-            this.pCheckBox.Text = "Practice";
-            this.pCheckBox.UseVisualStyleBackColor = true;
-            this.pCheckBox.CheckedChanged += new System.EventHandler(this.practiceCheckBox_CheckedChanged);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(26, 408);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(74, 13);
-            this.label20.TabIndex = 35;
-            this.label20.Text = "Miscellaneous";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.SystemColors.Control;
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.weatherRandomnessTrackBar);
-            this.panel11.Controls.Add(this.label33);
-            this.panel11.Controls.Add(this.weatherRandomnessLabel);
-            this.panel11.Controls.Add(this.cloudCoverageLabel);
-            this.panel11.Controls.Add(this.label36);
-            this.panel11.Controls.Add(this.rainTrackBar);
-            this.panel11.Controls.Add(this.label37);
-            this.panel11.Controls.Add(this.rainLabel);
-            this.panel11.Controls.Add(this.cloudCoverageTrackBar);
-            this.panel11.Controls.Add(this.tempTrackBar);
-            this.panel11.Controls.Add(this.label23);
-            this.panel11.Controls.Add(this.tempLabel);
-            this.panel11.Controls.Add(this.waitTimeLabel);
-            this.panel11.Controls.Add(this.label30);
-            this.panel11.Controls.Add(this.overTimeTrackBar);
-            this.panel11.Controls.Add(this.label31);
-            this.panel11.Controls.Add(this.overTimeLabel);
-            this.panel11.Controls.Add(this.waitTimeTrackBar);
-            this.panel11.Location = new System.Drawing.Point(14, 414);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(483, 170);
-            this.panel11.TabIndex = 34;
-            // 
-            // weatherRandomnessTrackBar
-            // 
-            this.weatherRandomnessTrackBar.LargeChange = 1;
-            this.weatherRandomnessTrackBar.Location = new System.Drawing.Point(122, 137);
-            this.weatherRandomnessTrackBar.Maximum = 7;
-            this.weatherRandomnessTrackBar.Name = "weatherRandomnessTrackBar";
-            this.weatherRandomnessTrackBar.Size = new System.Drawing.Size(298, 45);
-            this.weatherRandomnessTrackBar.TabIndex = 38;
-            this.weatherRandomnessTrackBar.TabStop = false;
-            this.weatherRandomnessTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.weatherRandomnessTrackBar.Scroll += new System.EventHandler(this.weatherRandomnessTrackBar_Scroll);
-            this.weatherRandomnessTrackBar.ValueChanged += new System.EventHandler(this.weatherRandomnessTrackBar_Scroll);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(3, 91);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(83, 13);
-            this.label33.TabIndex = 33;
-            this.label33.Text = "Cloud Coverage";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // weatherRandomnessLabel
-            // 
-            this.weatherRandomnessLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.weatherRandomnessLabel.Location = new System.Drawing.Point(426, 137);
-            this.weatherRandomnessLabel.Name = "weatherRandomnessLabel";
-            this.weatherRandomnessLabel.Size = new System.Drawing.Size(44, 20);
-            this.weatherRandomnessLabel.TabIndex = 40;
-            this.weatherRandomnessLabel.Text = "0";
-            this.weatherRandomnessLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cloudCoverageLabel
-            // 
-            this.cloudCoverageLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cloudCoverageLabel.Location = new System.Drawing.Point(426, 87);
-            this.cloudCoverageLabel.Name = "cloudCoverageLabel";
-            this.cloudCoverageLabel.Size = new System.Drawing.Size(44, 20);
-            this.cloudCoverageLabel.TabIndex = 34;
-            this.cloudCoverageLabel.Text = "0";
-            this.cloudCoverageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(3, 141);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(113, 13);
-            this.label36.TabIndex = 39;
-            this.label36.Text = "Weather Randomness";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // rainTrackBar
-            // 
-            this.rainTrackBar.LargeChange = 1;
-            this.rainTrackBar.Location = new System.Drawing.Point(122, 112);
-            this.rainTrackBar.Name = "rainTrackBar";
-            this.rainTrackBar.Size = new System.Drawing.Size(298, 45);
-            this.rainTrackBar.TabIndex = 35;
-            this.rainTrackBar.TabStop = false;
-            this.rainTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.rainTrackBar.Scroll += new System.EventHandler(this.rainTrackBar_Scroll);
-            this.rainTrackBar.ValueChanged += new System.EventHandler(this.rainTrackBar_Scroll);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(3, 116);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(58, 13);
-            this.label37.TabIndex = 36;
-            this.label37.Text = "Rain Level";
-            this.label37.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // rainLabel
-            // 
-            this.rainLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rainLabel.Location = new System.Drawing.Point(426, 112);
-            this.rainLabel.Name = "rainLabel";
-            this.rainLabel.Size = new System.Drawing.Size(44, 20);
-            this.rainLabel.TabIndex = 37;
-            this.rainLabel.Text = "0";
-            this.rainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cloudCoverageTrackBar
-            // 
-            this.cloudCoverageTrackBar.LargeChange = 1;
-            this.cloudCoverageTrackBar.Location = new System.Drawing.Point(122, 87);
-            this.cloudCoverageTrackBar.Name = "cloudCoverageTrackBar";
-            this.cloudCoverageTrackBar.Size = new System.Drawing.Size(298, 45);
-            this.cloudCoverageTrackBar.TabIndex = 32;
-            this.cloudCoverageTrackBar.TabStop = false;
-            this.cloudCoverageTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.cloudCoverageTrackBar.Scroll += new System.EventHandler(this.cloudCoverageTrackBar_Scroll);
-            this.cloudCoverageTrackBar.ValueChanged += new System.EventHandler(this.cloudCoverageTrackBar_Scroll);
-            // 
-            // tempTrackBar
-            // 
-            this.tempTrackBar.LargeChange = 1;
-            this.tempTrackBar.Location = new System.Drawing.Point(122, 62);
-            this.tempTrackBar.Maximum = 35;
-            this.tempTrackBar.Minimum = 10;
-            this.tempTrackBar.Name = "tempTrackBar";
-            this.tempTrackBar.Size = new System.Drawing.Size(298, 45);
-            this.tempTrackBar.TabIndex = 29;
-            this.tempTrackBar.TabStop = false;
-            this.tempTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.tempTrackBar.Value = 10;
-            this.tempTrackBar.Scroll += new System.EventHandler(this.tempTrackBar_Scroll);
-            this.tempTrackBar.ValueChanged += new System.EventHandler(this.tempTrackBar_Scroll);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(3, 16);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(103, 13);
-            this.label23.TabIndex = 24;
-            this.label23.Text = "Pre Race Wait Time";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // tempLabel
-            // 
-            this.tempLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tempLabel.Location = new System.Drawing.Point(426, 62);
-            this.tempLabel.Name = "tempLabel";
-            this.tempLabel.Size = new System.Drawing.Size(44, 20);
-            this.tempLabel.TabIndex = 31;
-            this.tempLabel.Text = "0";
-            this.tempLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // waitTimeLabel
-            // 
-            this.waitTimeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.waitTimeLabel.Location = new System.Drawing.Point(426, 12);
-            this.waitTimeLabel.Name = "waitTimeLabel";
-            this.waitTimeLabel.Size = new System.Drawing.Size(44, 20);
-            this.waitTimeLabel.TabIndex = 25;
-            this.waitTimeLabel.Text = "0";
-            this.waitTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(3, 66);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(100, 13);
-            this.label30.TabIndex = 30;
-            this.label30.Text = "Avg. Ambient Temp";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // overTimeTrackBar
-            // 
-            this.overTimeTrackBar.LargeChange = 1;
-            this.overTimeTrackBar.Location = new System.Drawing.Point(122, 37);
-            this.overTimeTrackBar.Maximum = 600;
-            this.overTimeTrackBar.Name = "overTimeTrackBar";
-            this.overTimeTrackBar.Size = new System.Drawing.Size(298, 45);
-            this.overTimeTrackBar.TabIndex = 26;
-            this.overTimeTrackBar.TabStop = false;
-            this.overTimeTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.overTimeTrackBar.Scroll += new System.EventHandler(this.overTimeTrackBar_Scroll);
-            this.overTimeTrackBar.ValueChanged += new System.EventHandler(this.overTimeTrackBar_Scroll);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(3, 41);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(56, 13);
-            this.label31.TabIndex = 27;
-            this.label31.Text = "Over Time";
-            this.label31.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // overTimeLabel
-            // 
-            this.overTimeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.overTimeLabel.Location = new System.Drawing.Point(426, 37);
-            this.overTimeLabel.Name = "overTimeLabel";
-            this.overTimeLabel.Size = new System.Drawing.Size(44, 20);
-            this.overTimeLabel.TabIndex = 28;
-            this.overTimeLabel.Text = "0";
-            this.overTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // waitTimeTrackBar
-            // 
-            this.waitTimeTrackBar.LargeChange = 1;
-            this.waitTimeTrackBar.Location = new System.Drawing.Point(122, 12);
-            this.waitTimeTrackBar.Maximum = 600;
-            this.waitTimeTrackBar.Name = "waitTimeTrackBar";
-            this.waitTimeTrackBar.Size = new System.Drawing.Size(298, 45);
-            this.waitTimeTrackBar.TabIndex = 23;
-            this.waitTimeTrackBar.TabStop = false;
-            this.waitTimeTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.waitTimeTrackBar.Scroll += new System.EventHandler(this.waitTimeTrackBar_Scroll);
-            this.waitTimeTrackBar.ValueChanged += new System.EventHandler(this.waitTimeTrackBar_Scroll);
-            // 
-            // rPanel
-            // 
-            this.rPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.rPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rPanel.Controls.Add(this.panel9);
-            this.rPanel.Controls.Add(this.rDurationTrackBar);
-            this.rPanel.Controls.Add(this.label25);
-            this.rPanel.Controls.Add(this.rDurationLabel);
-            this.rPanel.Controls.Add(this.rStartTimeLabel);
-            this.rPanel.Controls.Add(this.label28);
-            this.rPanel.Controls.Add(this.rTimeScaleTrackBar);
-            this.rPanel.Controls.Add(this.label29);
-            this.rPanel.Controls.Add(this.rTimeScaleLabel);
-            this.rPanel.Controls.Add(this.rStartTimeTrackBar);
-            this.rPanel.Enabled = false;
-            this.rPanel.Location = new System.Drawing.Point(157, 289);
-            this.rPanel.Name = "rPanel";
-            this.rPanel.Size = new System.Drawing.Size(340, 116);
-            this.rPanel.TabIndex = 32;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.rSundayRadioButton);
-            this.panel9.Controls.Add(this.rSaturdayRadioButton);
-            this.panel9.Controls.Add(this.rFridayRadioButton);
-            this.panel9.Location = new System.Drawing.Point(14, 87);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(313, 25);
-            this.panel9.TabIndex = 22;
-            // 
-            // rSundayRadioButton
-            // 
-            this.rSundayRadioButton.AutoSize = true;
-            this.rSundayRadioButton.Location = new System.Drawing.Point(249, 3);
-            this.rSundayRadioButton.Name = "rSundayRadioButton";
-            this.rSundayRadioButton.Size = new System.Drawing.Size(61, 17);
-            this.rSundayRadioButton.TabIndex = 2;
-            this.rSundayRadioButton.Text = "Sunday";
-            this.rSundayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // rSaturdayRadioButton
-            // 
-            this.rSaturdayRadioButton.AutoSize = true;
-            this.rSaturdayRadioButton.Checked = true;
-            this.rSaturdayRadioButton.Location = new System.Drawing.Point(118, 3);
-            this.rSaturdayRadioButton.Name = "rSaturdayRadioButton";
-            this.rSaturdayRadioButton.Size = new System.Drawing.Size(67, 17);
-            this.rSaturdayRadioButton.TabIndex = 1;
-            this.rSaturdayRadioButton.TabStop = true;
-            this.rSaturdayRadioButton.Text = "Saturday";
-            this.rSaturdayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // rFridayRadioButton
-            // 
-            this.rFridayRadioButton.AutoSize = true;
-            this.rFridayRadioButton.Location = new System.Drawing.Point(3, 3);
-            this.rFridayRadioButton.Name = "rFridayRadioButton";
-            this.rFridayRadioButton.Size = new System.Drawing.Size(53, 17);
-            this.rFridayRadioButton.TabIndex = 0;
-            this.rFridayRadioButton.Text = "Friday";
-            this.rFridayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // rDurationTrackBar
-            // 
-            this.rDurationTrackBar.LargeChange = 1;
-            this.rDurationTrackBar.Location = new System.Drawing.Point(95, 61);
-            this.rDurationTrackBar.Maximum = 360;
-            this.rDurationTrackBar.Name = "rDurationTrackBar";
-            this.rDurationTrackBar.Size = new System.Drawing.Size(182, 45);
-            this.rDurationTrackBar.TabIndex = 29;
-            this.rDurationTrackBar.TabStop = false;
-            this.rDurationTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.rDurationTrackBar.Value = 90;
-            this.rDurationTrackBar.Scroll += new System.EventHandler(this.rDurationTrackBar_Scroll);
-            this.rDurationTrackBar.ValueChanged += new System.EventHandler(this.rDurationTrackBar_Scroll);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(4, 15);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(55, 13);
-            this.label25.TabIndex = 24;
-            this.label25.Text = "Start Time";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // rDurationLabel
-            // 
-            this.rDurationLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rDurationLabel.Location = new System.Drawing.Point(283, 61);
-            this.rDurationLabel.Name = "rDurationLabel";
-            this.rDurationLabel.Size = new System.Drawing.Size(44, 20);
-            this.rDurationLabel.TabIndex = 31;
-            this.rDurationLabel.Text = "1:30";
-            this.rDurationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // rStartTimeLabel
-            // 
-            this.rStartTimeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rStartTimeLabel.Location = new System.Drawing.Point(283, 11);
-            this.rStartTimeLabel.Name = "rStartTimeLabel";
-            this.rStartTimeLabel.Size = new System.Drawing.Size(44, 20);
-            this.rStartTimeLabel.TabIndex = 25;
-            this.rStartTimeLabel.Text = "15:00";
-            this.rStartTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(4, 65);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(47, 13);
-            this.label28.TabIndex = 30;
-            this.label28.Text = "Duration";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // rTimeScaleTrackBar
-            // 
-            this.rTimeScaleTrackBar.LargeChange = 1;
-            this.rTimeScaleTrackBar.Location = new System.Drawing.Point(95, 36);
-            this.rTimeScaleTrackBar.Maximum = 24;
-            this.rTimeScaleTrackBar.Name = "rTimeScaleTrackBar";
-            this.rTimeScaleTrackBar.Size = new System.Drawing.Size(182, 45);
-            this.rTimeScaleTrackBar.TabIndex = 26;
-            this.rTimeScaleTrackBar.TabStop = false;
-            this.rTimeScaleTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.rTimeScaleTrackBar.Value = 1;
-            this.rTimeScaleTrackBar.Scroll += new System.EventHandler(this.rTimeScaleTrackBar_Scroll);
-            this.rTimeScaleTrackBar.ValueChanged += new System.EventHandler(this.rTimeScaleTrackBar_Scroll);
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(4, 40);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(60, 13);
-            this.label29.TabIndex = 27;
-            this.label29.Text = "Time Scale";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // rTimeScaleLabel
-            // 
-            this.rTimeScaleLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rTimeScaleLabel.Location = new System.Drawing.Point(283, 36);
-            this.rTimeScaleLabel.Name = "rTimeScaleLabel";
-            this.rTimeScaleLabel.Size = new System.Drawing.Size(44, 20);
-            this.rTimeScaleLabel.TabIndex = 28;
-            this.rTimeScaleLabel.Text = "1";
-            this.rTimeScaleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // rStartTimeTrackBar
-            // 
-            this.rStartTimeTrackBar.LargeChange = 1;
-            this.rStartTimeTrackBar.Location = new System.Drawing.Point(95, 11);
-            this.rStartTimeTrackBar.Maximum = 23;
-            this.rStartTimeTrackBar.Name = "rStartTimeTrackBar";
-            this.rStartTimeTrackBar.Size = new System.Drawing.Size(182, 45);
-            this.rStartTimeTrackBar.TabIndex = 23;
-            this.rStartTimeTrackBar.TabStop = false;
-            this.rStartTimeTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.rStartTimeTrackBar.Value = 15;
-            this.rStartTimeTrackBar.Scroll += new System.EventHandler(this.rStartTimeTrackBar_Scroll);
-            this.rStartTimeTrackBar.ValueChanged += new System.EventHandler(this.rStartTimeTrackBar_Scroll);
-            // 
-            // qPanel
-            // 
-            this.qPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.qPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.qPanel.Controls.Add(this.panel8);
-            this.qPanel.Controls.Add(this.qDurationTrackBar);
-            this.qPanel.Controls.Add(this.label18);
-            this.qPanel.Controls.Add(this.qDurationLabel);
-            this.qPanel.Controls.Add(this.qStartTimeLabel);
-            this.qPanel.Controls.Add(this.label21);
-            this.qPanel.Controls.Add(this.qTimeScaleTrackBar);
-            this.qPanel.Controls.Add(this.label22);
-            this.qPanel.Controls.Add(this.qTimeScaleLabel);
-            this.qPanel.Controls.Add(this.qStartTimeTrackBar);
-            this.qPanel.Enabled = false;
-            this.qPanel.Location = new System.Drawing.Point(157, 152);
-            this.qPanel.Name = "qPanel";
-            this.qPanel.Size = new System.Drawing.Size(340, 116);
-            this.qPanel.TabIndex = 22;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.qSundayRadioButton);
-            this.panel8.Controls.Add(this.qSaturdayRadioButton);
-            this.panel8.Controls.Add(this.qFridayRadioButton);
-            this.panel8.Location = new System.Drawing.Point(14, 87);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(313, 25);
-            this.panel8.TabIndex = 21;
-            // 
-            // qSundayRadioButton
-            // 
-            this.qSundayRadioButton.AutoSize = true;
-            this.qSundayRadioButton.Location = new System.Drawing.Point(249, 3);
-            this.qSundayRadioButton.Name = "qSundayRadioButton";
-            this.qSundayRadioButton.Size = new System.Drawing.Size(61, 17);
-            this.qSundayRadioButton.TabIndex = 2;
-            this.qSundayRadioButton.Text = "Sunday";
-            this.qSundayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // qSaturdayRadioButton
-            // 
-            this.qSaturdayRadioButton.AutoSize = true;
-            this.qSaturdayRadioButton.Checked = true;
-            this.qSaturdayRadioButton.Location = new System.Drawing.Point(118, 3);
-            this.qSaturdayRadioButton.Name = "qSaturdayRadioButton";
-            this.qSaturdayRadioButton.Size = new System.Drawing.Size(67, 17);
-            this.qSaturdayRadioButton.TabIndex = 1;
-            this.qSaturdayRadioButton.TabStop = true;
-            this.qSaturdayRadioButton.Text = "Saturday";
-            this.qSaturdayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // qFridayRadioButton
-            // 
-            this.qFridayRadioButton.AutoSize = true;
-            this.qFridayRadioButton.Location = new System.Drawing.Point(3, 3);
-            this.qFridayRadioButton.Name = "qFridayRadioButton";
-            this.qFridayRadioButton.Size = new System.Drawing.Size(53, 17);
-            this.qFridayRadioButton.TabIndex = 0;
-            this.qFridayRadioButton.Text = "Friday";
-            this.qFridayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // qDurationTrackBar
-            // 
-            this.qDurationTrackBar.LargeChange = 1;
-            this.qDurationTrackBar.Location = new System.Drawing.Point(95, 61);
-            this.qDurationTrackBar.Maximum = 360;
-            this.qDurationTrackBar.Name = "qDurationTrackBar";
-            this.qDurationTrackBar.Size = new System.Drawing.Size(182, 45);
-            this.qDurationTrackBar.TabIndex = 29;
-            this.qDurationTrackBar.TabStop = false;
-            this.qDurationTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.qDurationTrackBar.Value = 20;
-            this.qDurationTrackBar.Scroll += new System.EventHandler(this.qDurationTrackBar_Scroll);
-            this.qDurationTrackBar.ValueChanged += new System.EventHandler(this.qDurationTrackBar_Scroll);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(4, 15);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(55, 13);
-            this.label18.TabIndex = 24;
-            this.label18.Text = "Start Time";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // qDurationLabel
-            // 
-            this.qDurationLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.qDurationLabel.Location = new System.Drawing.Point(283, 61);
-            this.qDurationLabel.Name = "qDurationLabel";
-            this.qDurationLabel.Size = new System.Drawing.Size(44, 20);
-            this.qDurationLabel.TabIndex = 31;
-            this.qDurationLabel.Text = "0:20";
-            this.qDurationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // qStartTimeLabel
-            // 
-            this.qStartTimeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.qStartTimeLabel.Location = new System.Drawing.Point(283, 11);
-            this.qStartTimeLabel.Name = "qStartTimeLabel";
-            this.qStartTimeLabel.Size = new System.Drawing.Size(44, 20);
-            this.qStartTimeLabel.TabIndex = 25;
-            this.qStartTimeLabel.Text = "13:00";
-            this.qStartTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(4, 65);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(47, 13);
-            this.label21.TabIndex = 30;
-            this.label21.Text = "Duration";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // qTimeScaleTrackBar
-            // 
-            this.qTimeScaleTrackBar.LargeChange = 1;
-            this.qTimeScaleTrackBar.Location = new System.Drawing.Point(95, 36);
-            this.qTimeScaleTrackBar.Maximum = 24;
-            this.qTimeScaleTrackBar.Name = "qTimeScaleTrackBar";
-            this.qTimeScaleTrackBar.Size = new System.Drawing.Size(182, 45);
-            this.qTimeScaleTrackBar.TabIndex = 26;
-            this.qTimeScaleTrackBar.TabStop = false;
-            this.qTimeScaleTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.qTimeScaleTrackBar.Value = 1;
-            this.qTimeScaleTrackBar.Scroll += new System.EventHandler(this.qTimeScaleTrackBar_Scroll);
-            this.qTimeScaleTrackBar.ValueChanged += new System.EventHandler(this.qTimeScaleTrackBar_Scroll);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(4, 40);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(60, 13);
-            this.label22.TabIndex = 27;
-            this.label22.Text = "Time Scale";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // qTimeScaleLabel
-            // 
-            this.qTimeScaleLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.qTimeScaleLabel.Location = new System.Drawing.Point(283, 36);
-            this.qTimeScaleLabel.Name = "qTimeScaleLabel";
-            this.qTimeScaleLabel.Size = new System.Drawing.Size(44, 20);
-            this.qTimeScaleLabel.TabIndex = 28;
-            this.qTimeScaleLabel.Text = "1";
-            this.qTimeScaleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // qStartTimeTrackBar
-            // 
-            this.qStartTimeTrackBar.LargeChange = 1;
-            this.qStartTimeTrackBar.Location = new System.Drawing.Point(95, 11);
-            this.qStartTimeTrackBar.Maximum = 23;
-            this.qStartTimeTrackBar.Name = "qStartTimeTrackBar";
-            this.qStartTimeTrackBar.Size = new System.Drawing.Size(182, 45);
-            this.qStartTimeTrackBar.TabIndex = 23;
-            this.qStartTimeTrackBar.TabStop = false;
-            this.qStartTimeTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.qStartTimeTrackBar.Value = 13;
-            this.qStartTimeTrackBar.Scroll += new System.EventHandler(this.qStartTimeTrackBar_Scroll);
-            this.qStartTimeTrackBar.ValueChanged += new System.EventHandler(this.qStartTimeTrackBar_Scroll);
-            // 
-            // tracksListBox
-            // 
-            this.tracksListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tracksListBox.FormattingEnabled = true;
-            this.tracksListBox.Items.AddRange(new object[] {
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(18, 38);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(39, 13);
+            this.label32.TabIndex = 3;
+            this.label32.Text = "Pitstop";
+            // 
+            // TrackComboBox
+            // 
+            this.TrackComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TrackComboBox.FormattingEnabled = true;
+            this.TrackComboBox.Items.AddRange(new object[] {
             "monza",
             "zolder",
             "brands_hatch",
@@ -1204,60 +642,600 @@
             "mount_panorama_2019",
             "suzuka_2019",
             "laguna_seca_2019"});
-            this.tracksListBox.Location = new System.Drawing.Point(14, 13);
-            this.tracksListBox.Name = "tracksListBox";
-            this.tracksListBox.Size = new System.Drawing.Size(135, 392);
-            this.tracksListBox.TabIndex = 1;
-            this.tracksListBox.TabStop = false;
+            this.TrackComboBox.Location = new System.Drawing.Point(14, 16);
+            this.TrackComboBox.Name = "TrackComboBox";
+            this.TrackComboBox.Size = new System.Drawing.Size(180, 21);
+            this.TrackComboBox.TabIndex = 41;
+            this.TrackComboBox.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(18, 317);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(74, 13);
+            this.label19.TabIndex = 40;
+            this.label19.Text = "Miscellaneous";
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label23);
+            this.panel5.Controls.Add(this.label31);
+            this.panel5.Controls.Add(this.preRaceWaitTimeNumericUpDown);
+            this.panel5.Controls.Add(this.overTimeNumericUpDown);
+            this.panel5.Location = new System.Drawing.Point(14, 324);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(180, 67);
+            this.panel5.TabIndex = 1;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(3, 12);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(103, 13);
+            this.label23.TabIndex = 24;
+            this.label23.Text = "Pre Race Wait Time";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(3, 37);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(56, 13);
+            this.label31.TabIndex = 27;
+            this.label31.Text = "Over Time";
+            this.label31.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // preRaceWaitTimeNumericUpDown
+            // 
+            this.preRaceWaitTimeNumericUpDown.Location = new System.Drawing.Point(131, 10);
+            this.preRaceWaitTimeNumericUpDown.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.preRaceWaitTimeNumericUpDown.Name = "preRaceWaitTimeNumericUpDown";
+            this.preRaceWaitTimeNumericUpDown.Size = new System.Drawing.Size(44, 20);
+            this.preRaceWaitTimeNumericUpDown.TabIndex = 0;
+            this.preRaceWaitTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // overTimeNumericUpDown
+            // 
+            this.overTimeNumericUpDown.Location = new System.Drawing.Point(131, 35);
+            this.overTimeNumericUpDown.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.overTimeNumericUpDown.Name = "overTimeNumericUpDown";
+            this.overTimeNumericUpDown.Size = new System.Drawing.Size(44, 20);
+            this.overTimeNumericUpDown.TabIndex = 1;
+            this.overTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // pCheckBox
+            // 
+            this.pCheckBox.AutoSize = true;
+            this.pCheckBox.Location = new System.Drawing.Point(213, 7);
+            this.pCheckBox.Name = "pCheckBox";
+            this.pCheckBox.Size = new System.Drawing.Size(65, 17);
+            this.pCheckBox.TabIndex = 32;
+            this.pCheckBox.TabStop = false;
+            this.pCheckBox.Text = "Practice";
+            this.pCheckBox.UseVisualStyleBackColor = true;
+            this.pCheckBox.CheckedChanged += new System.EventHandler(this.practiceCheckBox_CheckedChanged);
+            // 
+            // rCheckBox
+            // 
+            this.rCheckBox.AutoSize = true;
+            this.rCheckBox.Location = new System.Drawing.Point(213, 269);
+            this.rCheckBox.Name = "rCheckBox";
+            this.rCheckBox.Size = new System.Drawing.Size(52, 17);
+            this.rCheckBox.TabIndex = 37;
+            this.rCheckBox.TabStop = false;
+            this.rCheckBox.Text = "Race";
+            this.rCheckBox.UseVisualStyleBackColor = true;
+            this.rCheckBox.CheckedChanged += new System.EventHandler(this.raceCheckBox_CheckedChanged);
+            // 
+            // qCheckBox
+            // 
+            this.qCheckBox.AutoSize = true;
+            this.qCheckBox.Location = new System.Drawing.Point(213, 139);
+            this.qCheckBox.Name = "qCheckBox";
+            this.qCheckBox.Size = new System.Drawing.Size(72, 17);
+            this.qCheckBox.TabIndex = 36;
+            this.qCheckBox.TabStop = false;
+            this.qCheckBox.Text = "Qualifying";
+            this.qCheckBox.UseVisualStyleBackColor = true;
+            this.qCheckBox.CheckedChanged += new System.EventHandler(this.qualifyingCheckBox_CheckedChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(18, 399);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(48, 13);
+            this.label20.TabIndex = 35;
+            this.label20.Text = "Weather";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.SystemColors.Control;
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.weatherRandomnessTrackBar);
+            this.panel11.Controls.Add(this.label33);
+            this.panel11.Controls.Add(this.weatherRandomnessLabel);
+            this.panel11.Controls.Add(this.cloudCoverageLabel);
+            this.panel11.Controls.Add(this.label36);
+            this.panel11.Controls.Add(this.rainTrackBar);
+            this.panel11.Controls.Add(this.label37);
+            this.panel11.Controls.Add(this.rainLabel);
+            this.panel11.Controls.Add(this.cloudCoverageTrackBar);
+            this.panel11.Controls.Add(this.tempTrackBar);
+            this.panel11.Controls.Add(this.tempLabel);
+            this.panel11.Controls.Add(this.label30);
+            this.panel11.Location = new System.Drawing.Point(14, 406);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(339, 122);
+            this.panel11.TabIndex = 34;
+            // 
+            // weatherRandomnessTrackBar
+            // 
+            this.weatherRandomnessTrackBar.LargeChange = 1;
+            this.weatherRandomnessTrackBar.Location = new System.Drawing.Point(122, 88);
+            this.weatherRandomnessTrackBar.Maximum = 7;
+            this.weatherRandomnessTrackBar.Name = "weatherRandomnessTrackBar";
+            this.weatherRandomnessTrackBar.Size = new System.Drawing.Size(158, 45);
+            this.weatherRandomnessTrackBar.TabIndex = 38;
+            this.weatherRandomnessTrackBar.TabStop = false;
+            this.weatherRandomnessTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.weatherRandomnessTrackBar.Scroll += new System.EventHandler(this.weatherRandomnessTrackBar_Scroll);
+            this.weatherRandomnessTrackBar.ValueChanged += new System.EventHandler(this.weatherRandomnessTrackBar_Scroll);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(3, 42);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(83, 13);
+            this.label33.TabIndex = 33;
+            this.label33.Text = "Cloud Coverage";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // weatherRandomnessLabel
+            // 
+            this.weatherRandomnessLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.weatherRandomnessLabel.Location = new System.Drawing.Point(286, 88);
+            this.weatherRandomnessLabel.Name = "weatherRandomnessLabel";
+            this.weatherRandomnessLabel.Size = new System.Drawing.Size(44, 20);
+            this.weatherRandomnessLabel.TabIndex = 40;
+            this.weatherRandomnessLabel.Text = "0";
+            this.weatherRandomnessLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cloudCoverageLabel
+            // 
+            this.cloudCoverageLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cloudCoverageLabel.Location = new System.Drawing.Point(286, 38);
+            this.cloudCoverageLabel.Name = "cloudCoverageLabel";
+            this.cloudCoverageLabel.Size = new System.Drawing.Size(44, 20);
+            this.cloudCoverageLabel.TabIndex = 34;
+            this.cloudCoverageLabel.Text = "0";
+            this.cloudCoverageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(3, 92);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(113, 13);
+            this.label36.TabIndex = 39;
+            this.label36.Text = "Weather Randomness";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // rainTrackBar
+            // 
+            this.rainTrackBar.LargeChange = 1;
+            this.rainTrackBar.Location = new System.Drawing.Point(122, 63);
+            this.rainTrackBar.Name = "rainTrackBar";
+            this.rainTrackBar.Size = new System.Drawing.Size(158, 45);
+            this.rainTrackBar.TabIndex = 35;
+            this.rainTrackBar.TabStop = false;
+            this.rainTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.rainTrackBar.Scroll += new System.EventHandler(this.rainTrackBar_Scroll);
+            this.rainTrackBar.ValueChanged += new System.EventHandler(this.rainTrackBar_Scroll);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(3, 67);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(58, 13);
+            this.label37.TabIndex = 36;
+            this.label37.Text = "Rain Level";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // rainLabel
+            // 
+            this.rainLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rainLabel.Location = new System.Drawing.Point(286, 63);
+            this.rainLabel.Name = "rainLabel";
+            this.rainLabel.Size = new System.Drawing.Size(44, 20);
+            this.rainLabel.TabIndex = 37;
+            this.rainLabel.Text = "0";
+            this.rainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cloudCoverageTrackBar
+            // 
+            this.cloudCoverageTrackBar.LargeChange = 1;
+            this.cloudCoverageTrackBar.Location = new System.Drawing.Point(122, 38);
+            this.cloudCoverageTrackBar.Name = "cloudCoverageTrackBar";
+            this.cloudCoverageTrackBar.Size = new System.Drawing.Size(158, 45);
+            this.cloudCoverageTrackBar.TabIndex = 32;
+            this.cloudCoverageTrackBar.TabStop = false;
+            this.cloudCoverageTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.cloudCoverageTrackBar.Scroll += new System.EventHandler(this.cloudCoverageTrackBar_Scroll);
+            this.cloudCoverageTrackBar.ValueChanged += new System.EventHandler(this.cloudCoverageTrackBar_Scroll);
+            // 
+            // tempTrackBar
+            // 
+            this.tempTrackBar.LargeChange = 1;
+            this.tempTrackBar.Location = new System.Drawing.Point(122, 13);
+            this.tempTrackBar.Maximum = 35;
+            this.tempTrackBar.Minimum = 10;
+            this.tempTrackBar.Name = "tempTrackBar";
+            this.tempTrackBar.Size = new System.Drawing.Size(158, 45);
+            this.tempTrackBar.TabIndex = 29;
+            this.tempTrackBar.TabStop = false;
+            this.tempTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.tempTrackBar.Value = 10;
+            this.tempTrackBar.Scroll += new System.EventHandler(this.tempTrackBar_Scroll);
+            this.tempTrackBar.ValueChanged += new System.EventHandler(this.tempTrackBar_Scroll);
+            // 
+            // tempLabel
+            // 
+            this.tempLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tempLabel.Location = new System.Drawing.Point(286, 13);
+            this.tempLabel.Name = "tempLabel";
+            this.tempLabel.Size = new System.Drawing.Size(44, 20);
+            this.tempLabel.TabIndex = 31;
+            this.tempLabel.Text = "0";
+            this.tempLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(3, 17);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(100, 13);
+            this.label30.TabIndex = 30;
+            this.label30.Text = "Avg. Ambient Temp";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // rPanel
+            // 
+            this.rPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.rPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rPanel.Controls.Add(this.rDurationNumericUpDown);
+            this.rPanel.Controls.Add(this.rTimeScaleNumericUpDown);
+            this.rPanel.Controls.Add(this.rStartTimeNumericUpDown);
+            this.rPanel.Controls.Add(this.panel9);
+            this.rPanel.Controls.Add(this.label25);
+            this.rPanel.Controls.Add(this.label28);
+            this.rPanel.Controls.Add(this.label29);
+            this.rPanel.Enabled = false;
+            this.rPanel.Location = new System.Drawing.Point(200, 275);
+            this.rPanel.Name = "rPanel";
+            this.rPanel.Size = new System.Drawing.Size(153, 116);
+            this.rPanel.TabIndex = 32;
+            // 
+            // rDurationNumericUpDown
+            // 
+            this.rDurationNumericUpDown.Location = new System.Drawing.Point(97, 63);
+            this.rDurationNumericUpDown.Maximum = new decimal(new int[] {
+            1440,
+            0,
+            0,
+            0});
+            this.rDurationNumericUpDown.Name = "rDurationNumericUpDown";
+            this.rDurationNumericUpDown.Size = new System.Drawing.Size(47, 20);
+            this.rDurationNumericUpDown.TabIndex = 2;
+            this.rDurationNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // rTimeScaleNumericUpDown
+            // 
+            this.rTimeScaleNumericUpDown.Location = new System.Drawing.Point(97, 38);
+            this.rTimeScaleNumericUpDown.Name = "rTimeScaleNumericUpDown";
+            this.rTimeScaleNumericUpDown.Size = new System.Drawing.Size(47, 20);
+            this.rTimeScaleNumericUpDown.TabIndex = 1;
+            this.rTimeScaleNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // rStartTimeNumericUpDown
+            // 
+            this.rStartTimeNumericUpDown.Location = new System.Drawing.Point(97, 13);
+            this.rStartTimeNumericUpDown.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.rStartTimeNumericUpDown.Name = "rStartTimeNumericUpDown";
+            this.rStartTimeNumericUpDown.Size = new System.Drawing.Size(47, 20);
+            this.rStartTimeNumericUpDown.TabIndex = 0;
+            this.rStartTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.rSundayRadioButton);
+            this.panel9.Controls.Add(this.rSaturdayRadioButton);
+            this.panel9.Controls.Add(this.rFridayRadioButton);
+            this.panel9.Location = new System.Drawing.Point(7, 87);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(137, 25);
+            this.panel9.TabIndex = 22;
+            // 
+            // rSundayRadioButton
+            // 
+            this.rSundayRadioButton.AutoSize = true;
+            this.rSundayRadioButton.Checked = true;
+            this.rSundayRadioButton.Location = new System.Drawing.Point(88, 3);
+            this.rSundayRadioButton.Name = "rSundayRadioButton";
+            this.rSundayRadioButton.Size = new System.Drawing.Size(44, 17);
+            this.rSundayRadioButton.TabIndex = 2;
+            this.rSundayRadioButton.Text = "Sun";
+            this.rSundayRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // rSaturdayRadioButton
+            // 
+            this.rSaturdayRadioButton.AutoSize = true;
+            this.rSaturdayRadioButton.Location = new System.Drawing.Point(45, 3);
+            this.rSaturdayRadioButton.Name = "rSaturdayRadioButton";
+            this.rSaturdayRadioButton.Size = new System.Drawing.Size(41, 17);
+            this.rSaturdayRadioButton.TabIndex = 1;
+            this.rSaturdayRadioButton.Text = "Sat";
+            this.rSaturdayRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // rFridayRadioButton
+            // 
+            this.rFridayRadioButton.AutoSize = true;
+            this.rFridayRadioButton.Location = new System.Drawing.Point(3, 3);
+            this.rFridayRadioButton.Name = "rFridayRadioButton";
+            this.rFridayRadioButton.Size = new System.Drawing.Size(36, 17);
+            this.rFridayRadioButton.TabIndex = 0;
+            this.rFridayRadioButton.Text = "Fri";
+            this.rFridayRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(4, 15);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(55, 13);
+            this.label25.TabIndex = 24;
+            this.label25.Text = "Start Time";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(4, 65);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(47, 13);
+            this.label28.TabIndex = 30;
+            this.label28.Text = "Duration";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(4, 40);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(60, 13);
+            this.label29.TabIndex = 27;
+            this.label29.Text = "Time Scale";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // qPanel
+            // 
+            this.qPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.qPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.qPanel.Controls.Add(this.qDurationNumericUpDown);
+            this.qPanel.Controls.Add(this.qTimeScaleNumericUpDown);
+            this.qPanel.Controls.Add(this.qStartTimeNumericUpDown);
+            this.qPanel.Controls.Add(this.panel8);
+            this.qPanel.Controls.Add(this.label18);
+            this.qPanel.Controls.Add(this.label21);
+            this.qPanel.Controls.Add(this.label22);
+            this.qPanel.Enabled = false;
+            this.qPanel.Location = new System.Drawing.Point(200, 145);
+            this.qPanel.Name = "qPanel";
+            this.qPanel.Size = new System.Drawing.Size(153, 116);
+            this.qPanel.TabIndex = 22;
+            // 
+            // qDurationNumericUpDown
+            // 
+            this.qDurationNumericUpDown.Location = new System.Drawing.Point(97, 63);
+            this.qDurationNumericUpDown.Maximum = new decimal(new int[] {
+            1440,
+            0,
+            0,
+            0});
+            this.qDurationNumericUpDown.Name = "qDurationNumericUpDown";
+            this.qDurationNumericUpDown.Size = new System.Drawing.Size(47, 20);
+            this.qDurationNumericUpDown.TabIndex = 2;
+            this.qDurationNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // qTimeScaleNumericUpDown
+            // 
+            this.qTimeScaleNumericUpDown.Location = new System.Drawing.Point(97, 38);
+            this.qTimeScaleNumericUpDown.Name = "qTimeScaleNumericUpDown";
+            this.qTimeScaleNumericUpDown.Size = new System.Drawing.Size(47, 20);
+            this.qTimeScaleNumericUpDown.TabIndex = 1;
+            this.qTimeScaleNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // qStartTimeNumericUpDown
+            // 
+            this.qStartTimeNumericUpDown.Location = new System.Drawing.Point(97, 13);
+            this.qStartTimeNumericUpDown.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.qStartTimeNumericUpDown.Name = "qStartTimeNumericUpDown";
+            this.qStartTimeNumericUpDown.Size = new System.Drawing.Size(47, 20);
+            this.qStartTimeNumericUpDown.TabIndex = 0;
+            this.qStartTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.qSundayRadioButton);
+            this.panel8.Controls.Add(this.qSaturdayRadioButton);
+            this.panel8.Controls.Add(this.qFridayRadioButton);
+            this.panel8.Location = new System.Drawing.Point(7, 86);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(137, 25);
+            this.panel8.TabIndex = 21;
+            // 
+            // qSundayRadioButton
+            // 
+            this.qSundayRadioButton.AutoSize = true;
+            this.qSundayRadioButton.Location = new System.Drawing.Point(88, 3);
+            this.qSundayRadioButton.Name = "qSundayRadioButton";
+            this.qSundayRadioButton.Size = new System.Drawing.Size(44, 17);
+            this.qSundayRadioButton.TabIndex = 2;
+            this.qSundayRadioButton.Text = "Sun";
+            this.qSundayRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // qSaturdayRadioButton
+            // 
+            this.qSaturdayRadioButton.AutoSize = true;
+            this.qSaturdayRadioButton.Checked = true;
+            this.qSaturdayRadioButton.Location = new System.Drawing.Point(45, 3);
+            this.qSaturdayRadioButton.Name = "qSaturdayRadioButton";
+            this.qSaturdayRadioButton.Size = new System.Drawing.Size(41, 17);
+            this.qSaturdayRadioButton.TabIndex = 1;
+            this.qSaturdayRadioButton.Text = "Sat";
+            this.qSaturdayRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // qFridayRadioButton
+            // 
+            this.qFridayRadioButton.AutoSize = true;
+            this.qFridayRadioButton.Location = new System.Drawing.Point(3, 3);
+            this.qFridayRadioButton.Name = "qFridayRadioButton";
+            this.qFridayRadioButton.Size = new System.Drawing.Size(36, 17);
+            this.qFridayRadioButton.TabIndex = 0;
+            this.qFridayRadioButton.Text = "Fri";
+            this.qFridayRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(4, 15);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(55, 13);
+            this.label18.TabIndex = 24;
+            this.label18.Text = "Start Time";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(4, 65);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(47, 13);
+            this.label21.TabIndex = 30;
+            this.label21.Text = "Duration";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(4, 40);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(60, 13);
+            this.label22.TabIndex = 27;
+            this.label22.Text = "Time Scale";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // pPanel
             // 
             this.pPanel.BackColor = System.Drawing.SystemColors.Control;
             this.pPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pPanel.Controls.Add(this.pDurationNumericUpDown);
+            this.pPanel.Controls.Add(this.pTimeScaleNumericUpDown);
+            this.pPanel.Controls.Add(this.pStartTimeNumericUpDown);
             this.pPanel.Controls.Add(this.panel7);
-            this.pPanel.Controls.Add(this.pDurationTrackBar);
             this.pPanel.Controls.Add(this.label14);
-            this.pPanel.Controls.Add(this.pDurationLabel);
-            this.pPanel.Controls.Add(this.pStartTimeLabel);
             this.pPanel.Controls.Add(this.label16);
-            this.pPanel.Controls.Add(this.pTimeScaleTrackBar);
             this.pPanel.Controls.Add(this.label15);
-            this.pPanel.Controls.Add(this.pTimeScaleLabel);
-            this.pPanel.Controls.Add(this.pStartTimeTrackBar);
             this.pPanel.Enabled = false;
-            this.pPanel.Location = new System.Drawing.Point(157, 13);
+            this.pPanel.Location = new System.Drawing.Point(200, 13);
             this.pPanel.Name = "pPanel";
-            this.pPanel.Size = new System.Drawing.Size(340, 116);
-            this.pPanel.TabIndex = 20;
+            this.pPanel.Size = new System.Drawing.Size(153, 116);
+            this.pPanel.TabIndex = 2;
+            // 
+            // pDurationNumericUpDown
+            // 
+            this.pDurationNumericUpDown.Location = new System.Drawing.Point(97, 63);
+            this.pDurationNumericUpDown.Maximum = new decimal(new int[] {
+            1440,
+            0,
+            0,
+            0});
+            this.pDurationNumericUpDown.Name = "pDurationNumericUpDown";
+            this.pDurationNumericUpDown.Size = new System.Drawing.Size(47, 20);
+            this.pDurationNumericUpDown.TabIndex = 2;
+            this.pDurationNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // pTimeScaleNumericUpDown
+            // 
+            this.pTimeScaleNumericUpDown.Location = new System.Drawing.Point(97, 38);
+            this.pTimeScaleNumericUpDown.Name = "pTimeScaleNumericUpDown";
+            this.pTimeScaleNumericUpDown.Size = new System.Drawing.Size(47, 20);
+            this.pTimeScaleNumericUpDown.TabIndex = 1;
+            this.pTimeScaleNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // pStartTimeNumericUpDown
+            // 
+            this.pStartTimeNumericUpDown.Location = new System.Drawing.Point(97, 13);
+            this.pStartTimeNumericUpDown.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.pStartTimeNumericUpDown.Name = "pStartTimeNumericUpDown";
+            this.pStartTimeNumericUpDown.Size = new System.Drawing.Size(47, 20);
+            this.pStartTimeNumericUpDown.TabIndex = 0;
+            this.pStartTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.pSundayRadioButton);
             this.panel7.Controls.Add(this.pSaturdayRadioButton);
             this.panel7.Controls.Add(this.pFridayRadioButton);
-            this.panel7.Location = new System.Drawing.Point(14, 88);
+            this.panel7.Location = new System.Drawing.Point(7, 86);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(313, 25);
+            this.panel7.Size = new System.Drawing.Size(137, 25);
             this.panel7.TabIndex = 20;
             // 
             // pSundayRadioButton
             // 
             this.pSundayRadioButton.AutoSize = true;
-            this.pSundayRadioButton.Location = new System.Drawing.Point(249, 3);
+            this.pSundayRadioButton.Location = new System.Drawing.Point(92, 3);
             this.pSundayRadioButton.Name = "pSundayRadioButton";
-            this.pSundayRadioButton.Size = new System.Drawing.Size(61, 17);
+            this.pSundayRadioButton.Size = new System.Drawing.Size(44, 17);
             this.pSundayRadioButton.TabIndex = 2;
-            this.pSundayRadioButton.Text = "Sunday";
+            this.pSundayRadioButton.Text = "Sun";
             this.pSundayRadioButton.UseVisualStyleBackColor = true;
             // 
             // pSaturdayRadioButton
             // 
             this.pSaturdayRadioButton.AutoSize = true;
-            this.pSaturdayRadioButton.Location = new System.Drawing.Point(118, 3);
+            this.pSaturdayRadioButton.Location = new System.Drawing.Point(45, 3);
             this.pSaturdayRadioButton.Name = "pSaturdayRadioButton";
-            this.pSaturdayRadioButton.Size = new System.Drawing.Size(67, 17);
+            this.pSaturdayRadioButton.Size = new System.Drawing.Size(41, 17);
             this.pSaturdayRadioButton.TabIndex = 1;
-            this.pSaturdayRadioButton.Text = "Saturday";
+            this.pSaturdayRadioButton.Text = "Sat";
             this.pSaturdayRadioButton.UseVisualStyleBackColor = true;
             // 
             // pFridayRadioButton
@@ -1266,25 +1244,10 @@
             this.pFridayRadioButton.Checked = true;
             this.pFridayRadioButton.Location = new System.Drawing.Point(3, 3);
             this.pFridayRadioButton.Name = "pFridayRadioButton";
-            this.pFridayRadioButton.Size = new System.Drawing.Size(53, 17);
+            this.pFridayRadioButton.Size = new System.Drawing.Size(36, 17);
             this.pFridayRadioButton.TabIndex = 0;
-            this.pFridayRadioButton.TabStop = true;
-            this.pFridayRadioButton.Text = "Friday";
+            this.pFridayRadioButton.Text = "Fri";
             this.pFridayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // pDurationTrackBar
-            // 
-            this.pDurationTrackBar.LargeChange = 1;
-            this.pDurationTrackBar.Location = new System.Drawing.Point(95, 61);
-            this.pDurationTrackBar.Maximum = 360;
-            this.pDurationTrackBar.Name = "pDurationTrackBar";
-            this.pDurationTrackBar.Size = new System.Drawing.Size(182, 45);
-            this.pDurationTrackBar.TabIndex = 29;
-            this.pDurationTrackBar.TabStop = false;
-            this.pDurationTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.pDurationTrackBar.Value = 60;
-            this.pDurationTrackBar.Scroll += new System.EventHandler(this.practiceDurationTrackBar_Scroll);
-            this.pDurationTrackBar.ValueChanged += new System.EventHandler(this.practiceDurationTrackBar_Scroll);
             // 
             // label14
             // 
@@ -1296,26 +1259,6 @@
             this.label14.Text = "Start Time";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // pDurationLabel
-            // 
-            this.pDurationLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pDurationLabel.Location = new System.Drawing.Point(283, 61);
-            this.pDurationLabel.Name = "pDurationLabel";
-            this.pDurationLabel.Size = new System.Drawing.Size(44, 20);
-            this.pDurationLabel.TabIndex = 31;
-            this.pDurationLabel.Text = "1:00";
-            this.pDurationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pStartTimeLabel
-            // 
-            this.pStartTimeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pStartTimeLabel.Location = new System.Drawing.Point(283, 11);
-            this.pStartTimeLabel.Name = "pStartTimeLabel";
-            this.pStartTimeLabel.Size = new System.Drawing.Size(44, 20);
-            this.pStartTimeLabel.TabIndex = 25;
-            this.pStartTimeLabel.Text = "10:00";
-            this.pStartTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -1325,20 +1268,6 @@
             this.label16.TabIndex = 30;
             this.label16.Text = "Duration";
             this.label16.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // pTimeScaleTrackBar
-            // 
-            this.pTimeScaleTrackBar.LargeChange = 1;
-            this.pTimeScaleTrackBar.Location = new System.Drawing.Point(95, 36);
-            this.pTimeScaleTrackBar.Maximum = 24;
-            this.pTimeScaleTrackBar.Name = "pTimeScaleTrackBar";
-            this.pTimeScaleTrackBar.Size = new System.Drawing.Size(182, 45);
-            this.pTimeScaleTrackBar.TabIndex = 26;
-            this.pTimeScaleTrackBar.TabStop = false;
-            this.pTimeScaleTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.pTimeScaleTrackBar.Value = 1;
-            this.pTimeScaleTrackBar.Scroll += new System.EventHandler(this.practiceTimeScaleTrackBar_Scroll);
-            this.pTimeScaleTrackBar.ValueChanged += new System.EventHandler(this.practiceTimeScaleTrackBar_Scroll);
             // 
             // label15
             // 
@@ -1350,76 +1279,312 @@
             this.label15.Text = "Time Scale";
             this.label15.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // pTimeScaleLabel
+            // panel4
             // 
-            this.pTimeScaleLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pTimeScaleLabel.Location = new System.Drawing.Point(283, 36);
-            this.pTimeScaleLabel.Name = "pTimeScaleLabel";
-            this.pTimeScaleLabel.Size = new System.Drawing.Size(44, 20);
-            this.pTimeScaleLabel.TabIndex = 28;
-            this.pTimeScaleLabel.Text = "1";
-            this.pTimeScaleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.maxDriversCountNumericUpDown);
+            this.panel4.Controls.Add(this.label24);
+            this.panel4.Controls.Add(this.driverSwapRequiredCheckBox);
+            this.panel4.Controls.Add(this.tyreChangeRequiredCheckBox);
+            this.panel4.Controls.Add(this.refuellingRequiredCheckBox);
+            this.panel4.Controls.Add(this.refuellingTimeFixedCheckBox);
+            this.panel4.Controls.Add(this.refuellingAllowedCheckBox);
+            this.panel4.Controls.Add(this.maxTotalDrivingTimeNumericUpDown);
+            this.panel4.Controls.Add(this.mandatoryPitStopCountNumericUpDown);
+            this.panel4.Controls.Add(this.driverStintTimeNumericUpDown);
+            this.panel4.Controls.Add(this.pitWindowsLengthNumericUpDown);
+            this.panel4.Controls.Add(this.label26);
+            this.panel4.Controls.Add(this.label27);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.label17);
+            this.panel4.Location = new System.Drawing.Point(14, 44);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(180, 266);
+            this.panel4.TabIndex = 0;
             // 
-            // pStartTimeTrackBar
+            // maxDriversCountNumericUpDown
             // 
-            this.pStartTimeTrackBar.LargeChange = 1;
-            this.pStartTimeTrackBar.Location = new System.Drawing.Point(95, 11);
-            this.pStartTimeTrackBar.Maximum = 23;
-            this.pStartTimeTrackBar.Name = "pStartTimeTrackBar";
-            this.pStartTimeTrackBar.Size = new System.Drawing.Size(182, 45);
-            this.pStartTimeTrackBar.TabIndex = 23;
-            this.pStartTimeTrackBar.TabStop = false;
-            this.pStartTimeTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.pStartTimeTrackBar.Value = 10;
-            this.pStartTimeTrackBar.Scroll += new System.EventHandler(this.practiceStartTimeTrackBar_Scroll);
-            this.pStartTimeTrackBar.ValueChanged += new System.EventHandler(this.practiceStartTimeTrackBar_Scroll);
+            this.maxDriversCountNumericUpDown.Location = new System.Drawing.Point(131, 109);
+            this.maxDriversCountNumericUpDown.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.maxDriversCountNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.maxDriversCountNumericUpDown.Name = "maxDriversCountNumericUpDown";
+            this.maxDriversCountNumericUpDown.Size = new System.Drawing.Size(44, 20);
+            this.maxDriversCountNumericUpDown.TabIndex = 4;
+            this.maxDriversCountNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maxDriversCountNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(3, 111);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(94, 13);
+            this.label24.TabIndex = 61;
+            this.label24.Text = "Max Drivers Count";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // driverSwapRequiredCheckBox
+            // 
+            this.driverSwapRequiredCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.driverSwapRequiredCheckBox.Location = new System.Drawing.Point(3, 239);
+            this.driverSwapRequiredCheckBox.Name = "driverSwapRequiredCheckBox";
+            this.driverSwapRequiredCheckBox.Size = new System.Drawing.Size(172, 24);
+            this.driverSwapRequiredCheckBox.TabIndex = 60;
+            this.driverSwapRequiredCheckBox.TabStop = false;
+            this.driverSwapRequiredCheckBox.Text = "Driver Swap Required";
+            this.driverSwapRequiredCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // tyreChangeRequiredCheckBox
+            // 
+            this.tyreChangeRequiredCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tyreChangeRequiredCheckBox.Location = new System.Drawing.Point(3, 214);
+            this.tyreChangeRequiredCheckBox.Name = "tyreChangeRequiredCheckBox";
+            this.tyreChangeRequiredCheckBox.Size = new System.Drawing.Size(172, 24);
+            this.tyreChangeRequiredCheckBox.TabIndex = 59;
+            this.tyreChangeRequiredCheckBox.TabStop = false;
+            this.tyreChangeRequiredCheckBox.Text = "Tyre Change Required";
+            this.tyreChangeRequiredCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // refuellingRequiredCheckBox
+            // 
+            this.refuellingRequiredCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.refuellingRequiredCheckBox.Location = new System.Drawing.Point(3, 189);
+            this.refuellingRequiredCheckBox.Name = "refuellingRequiredCheckBox";
+            this.refuellingRequiredCheckBox.Size = new System.Drawing.Size(172, 24);
+            this.refuellingRequiredCheckBox.TabIndex = 58;
+            this.refuellingRequiredCheckBox.TabStop = false;
+            this.refuellingRequiredCheckBox.Text = "Refuelling Required";
+            this.refuellingRequiredCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // refuellingTimeFixedCheckBox
+            // 
+            this.refuellingTimeFixedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.refuellingTimeFixedCheckBox.Location = new System.Drawing.Point(3, 164);
+            this.refuellingTimeFixedCheckBox.Name = "refuellingTimeFixedCheckBox";
+            this.refuellingTimeFixedCheckBox.Size = new System.Drawing.Size(172, 24);
+            this.refuellingTimeFixedCheckBox.TabIndex = 57;
+            this.refuellingTimeFixedCheckBox.TabStop = false;
+            this.refuellingTimeFixedCheckBox.Text = "Refuelling Time Fixed";
+            this.refuellingTimeFixedCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // refuellingAllowedCheckBox
+            // 
+            this.refuellingAllowedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.refuellingAllowedCheckBox.Location = new System.Drawing.Point(3, 139);
+            this.refuellingAllowedCheckBox.Name = "refuellingAllowedCheckBox";
+            this.refuellingAllowedCheckBox.Size = new System.Drawing.Size(172, 24);
+            this.refuellingAllowedCheckBox.TabIndex = 56;
+            this.refuellingAllowedCheckBox.TabStop = false;
+            this.refuellingAllowedCheckBox.Text = "Refuelling Allowed";
+            this.refuellingAllowedCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // maxTotalDrivingTimeNumericUpDown
+            // 
+            this.maxTotalDrivingTimeNumericUpDown.Location = new System.Drawing.Point(131, 83);
+            this.maxTotalDrivingTimeNumericUpDown.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.maxTotalDrivingTimeNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.maxTotalDrivingTimeNumericUpDown.Name = "maxTotalDrivingTimeNumericUpDown";
+            this.maxTotalDrivingTimeNumericUpDown.Size = new System.Drawing.Size(44, 20);
+            this.maxTotalDrivingTimeNumericUpDown.TabIndex = 3;
+            this.maxTotalDrivingTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // mandatoryPitStopCountNumericUpDown
+            // 
+            this.mandatoryPitStopCountNumericUpDown.Location = new System.Drawing.Point(131, 58);
+            this.mandatoryPitStopCountNumericUpDown.Name = "mandatoryPitStopCountNumericUpDown";
+            this.mandatoryPitStopCountNumericUpDown.Size = new System.Drawing.Size(44, 20);
+            this.mandatoryPitStopCountNumericUpDown.TabIndex = 2;
+            this.mandatoryPitStopCountNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // driverStintTimeNumericUpDown
+            // 
+            this.driverStintTimeNumericUpDown.Location = new System.Drawing.Point(131, 32);
+            this.driverStintTimeNumericUpDown.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.driverStintTimeNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.driverStintTimeNumericUpDown.Name = "driverStintTimeNumericUpDown";
+            this.driverStintTimeNumericUpDown.Size = new System.Drawing.Size(44, 20);
+            this.driverStintTimeNumericUpDown.TabIndex = 1;
+            this.driverStintTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // pitWindowsLengthNumericUpDown
+            // 
+            this.pitWindowsLengthNumericUpDown.Location = new System.Drawing.Point(131, 7);
+            this.pitWindowsLengthNumericUpDown.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.pitWindowsLengthNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.pitWindowsLengthNumericUpDown.Name = "pitWindowsLengthNumericUpDown";
+            this.pitWindowsLengthNumericUpDown.Size = new System.Drawing.Size(44, 20);
+            this.pitWindowsLengthNumericUpDown.TabIndex = 0;
+            this.pitWindowsLengthNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(3, 60);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(123, 13);
+            this.label26.TabIndex = 45;
+            this.label26.Text = "Mandatory Pitstop Count";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(3, 85);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(116, 13);
+            this.label27.TabIndex = 46;
+            this.label27.Text = "Max Total Driving Time";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(97, 13);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "Pit Window Length";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(3, 34);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(85, 13);
+            this.label17.TabIndex = 44;
+            this.label17.Text = "Driver Stint Time";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // launchServerButton
             // 
             this.launchServerButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.launchServerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.launchServerButton.Location = new System.Drawing.Point(12, 444);
+            this.launchServerButton.Location = new System.Drawing.Point(184, 459);
             this.launchServerButton.Name = "launchServerButton";
-            this.launchServerButton.Size = new System.Drawing.Size(340, 116);
+            this.launchServerButton.Size = new System.Drawing.Size(168, 119);
             this.launchServerButton.TabIndex = 0;
             this.launchServerButton.TabStop = false;
             this.launchServerButton.Text = "Start/Stop Server";
             this.launchServerButton.UseVisualStyleBackColor = false;
             this.launchServerButton.Click += new System.EventHandler(this.launchServerButton_Click);
             // 
-            // exitButton
+            // toolStrip1
             // 
-            this.exitButton.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.Location = new System.Drawing.Point(12, 572);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(340, 40);
-            this.exitButton.TabIndex = 1;
-            this.exitButton.TabStop = false;
-            this.exitButton.Text = "Exit";
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.EntriesToolStripButton,
+            this.BoPToolStripButton});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(744, 25);
+            this.toolStrip1.TabIndex = 20;
+            this.toolStrip1.Text = "ToolStrip";
+            // 
+            // EntriesToolStripButton
+            // 
+            this.EntriesToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.EntriesToolStripButton.Image = global::ACC_Dedicated_Server_GUI.Properties.Resources.icons8_f1_car_50;
+            this.EntriesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EntriesToolStripButton.Name = "EntriesToolStripButton";
+            this.EntriesToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.EntriesToolStripButton.Text = "Entry List";
+            this.EntriesToolStripButton.Click += new System.EventHandler(this.EntriesToolStripButton_Click);
+            // 
+            // BoPToolStripButton
+            // 
+            this.BoPToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BoPToolStripButton.Image = global::ACC_Dedicated_Server_GUI.Properties.Resources.bop_50s;
+            this.BoPToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BoPToolStripButton.Name = "BoPToolStripButton";
+            this.BoPToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.BoPToolStripButton.Text = "Additional BoP";
+            this.BoPToolStripButton.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // entryListButton
+            // 
+            this.entryListButton.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.entryListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.entryListButton.Location = new System.Drawing.Point(12, 459);
+            this.entryListButton.Name = "entryListButton";
+            this.entryListButton.Size = new System.Drawing.Size(166, 56);
+            this.entryListButton.TabIndex = 21;
+            this.entryListButton.TabStop = false;
+            this.entryListButton.Text = "Entry List";
+            this.entryListButton.UseVisualStyleBackColor = false;
+            this.entryListButton.Click += new System.EventHandler(this.entryListButton_Click);
+            // 
+            // BopButton
+            // 
+            this.BopButton.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.BopButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BopButton.Location = new System.Drawing.Point(12, 522);
+            this.BopButton.Name = "BopButton";
+            this.BopButton.Size = new System.Drawing.Size(166, 56);
+            this.BopButton.TabIndex = 22;
+            this.BopButton.TabStop = false;
+            this.BopButton.Text = "Additional BoP";
+            this.BopButton.UseVisualStyleBackColor = false;
+            this.BopButton.Click += new System.EventHandler(this.BopButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(887, 621);
-            this.Controls.Add(this.exitButton);
+            this.ClientSize = new System.Drawing.Size(744, 591);
+            this.Controls.Add(this.BopButton);
+            this.Controls.Add(this.entryListButton);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.launchServerButton);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.toolStrip1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "ACC Dedicated Server GUI V1.2";
+            this.Text = "ACC Dedicated Server GUI V2.0 Beta";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TRRequirementsTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SARequirementTrackBar)).EndInit();
@@ -1432,35 +1597,46 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.preRaceWaitTimeNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.overTimeNumericUpDown)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weatherRandomnessTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rainTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloudCoverageTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tempTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.overTimeTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.waitTimeTrackBar)).EndInit();
             this.rPanel.ResumeLayout(false);
             this.rPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rDurationNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rTimeScaleNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rStartTimeNumericUpDown)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rDurationTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rTimeScaleTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rStartTimeTrackBar)).EndInit();
             this.qPanel.ResumeLayout(false);
             this.qPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qDurationNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qTimeScaleNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qStartTimeNumericUpDown)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qDurationTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qTimeScaleTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qStartTimeTrackBar)).EndInit();
             this.pPanel.ResumeLayout(false);
             this.pPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pDurationNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pTimeScaleNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pStartTimeNumericUpDown)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pDurationTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pTimeScaleTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pStartTimeTrackBar)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maxDriversCountNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxTotalDrivingTimeNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mandatoryPitStopCountNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1505,37 +1681,18 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ListBox tracksListBox;
-        private System.Windows.Forms.TrackBar pStartTimeTrackBar;
-        private System.Windows.Forms.Label pStartTimeLabel;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TrackBar pTimeScaleTrackBar;
-        private System.Windows.Forms.Label pTimeScaleLabel;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TrackBar pDurationTrackBar;
-        private System.Windows.Forms.Label pDurationLabel;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel pPanel;
         private System.Windows.Forms.Panel rPanel;
-        private System.Windows.Forms.TrackBar rDurationTrackBar;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label rDurationLabel;
-        private System.Windows.Forms.Label rStartTimeLabel;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TrackBar rTimeScaleTrackBar;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label rTimeScaleLabel;
-        private System.Windows.Forms.TrackBar rStartTimeTrackBar;
         private System.Windows.Forms.Panel qPanel;
-        private System.Windows.Forms.TrackBar qDurationTrackBar;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label qDurationLabel;
-        private System.Windows.Forms.Label qStartTimeLabel;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TrackBar qTimeScaleTrackBar;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label qTimeScaleLabel;
-        private System.Windows.Forms.TrackBar qStartTimeTrackBar;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.RadioButton pSundayRadioButton;
         private System.Windows.Forms.RadioButton pSaturdayRadioButton;
@@ -1562,17 +1719,48 @@
         private System.Windows.Forms.TrackBar tempTrackBar;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label tempLabel;
-        private System.Windows.Forms.Label waitTimeLabel;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TrackBar overTimeTrackBar;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label overTimeLabel;
-        private System.Windows.Forms.TrackBar waitTimeTrackBar;
         private System.Windows.Forms.Button launchServerButton;
-        private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.CheckBox pCheckBox;
         private System.Windows.Forms.CheckBox rCheckBox;
         private System.Windows.Forms.CheckBox qCheckBox;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton EntriesToolStripButton;
+        private System.Windows.Forms.ToolStripButton BoPToolStripButton;
+        private System.Windows.Forms.NumericUpDown pDurationNumericUpDown;
+        private System.Windows.Forms.NumericUpDown pTimeScaleNumericUpDown;
+        private System.Windows.Forms.NumericUpDown pStartTimeNumericUpDown;
+        private System.Windows.Forms.ComboBox TrackComboBox;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.NumericUpDown preRaceWaitTimeNumericUpDown;
+        private System.Windows.Forms.NumericUpDown overTimeNumericUpDown;
+        private System.Windows.Forms.NumericUpDown rDurationNumericUpDown;
+        private System.Windows.Forms.NumericUpDown rTimeScaleNumericUpDown;
+        private System.Windows.Forms.NumericUpDown rStartTimeNumericUpDown;
+        private System.Windows.Forms.NumericUpDown qDurationNumericUpDown;
+        private System.Windows.Forms.NumericUpDown qTimeScaleNumericUpDown;
+        private System.Windows.Forms.NumericUpDown qStartTimeNumericUpDown;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.NumericUpDown maxDriversCountNumericUpDown;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.CheckBox driverSwapRequiredCheckBox;
+        private System.Windows.Forms.CheckBox tyreChangeRequiredCheckBox;
+        private System.Windows.Forms.CheckBox refuellingRequiredCheckBox;
+        private System.Windows.Forms.CheckBox refuellingTimeFixedCheckBox;
+        private System.Windows.Forms.CheckBox refuellingAllowedCheckBox;
+        private System.Windows.Forms.NumericUpDown maxTotalDrivingTimeNumericUpDown;
+        private System.Windows.Forms.NumericUpDown mandatoryPitStopCountNumericUpDown;
+        private System.Windows.Forms.NumericUpDown driverStintTimeNumericUpDown;
+        private System.Windows.Forms.NumericUpDown pitWindowsLengthNumericUpDown;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button entryListButton;
+        private System.Windows.Forms.Button BopButton;
     }
 }
 
