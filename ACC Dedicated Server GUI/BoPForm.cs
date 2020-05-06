@@ -24,11 +24,46 @@ namespace ACC_Dedicated_Server_GUI
             InitializeComponent();
         }
 
+        private int InTrackBarRange(int value, TrackBar trackBar)
+        {
+            if (value < trackBar.Minimum)
+                return trackBar.Minimum;
+            if (value > trackBar.Maximum)
+                return trackBar.Maximum;
+            return value;
+        }
+
+        public static Encoding GetEncoding(string filename)
+        {
+            // Read the BOM
+            var bom = new byte[4];
+            using (var file = new FileStream(filename, FileMode.Open, FileAccess.Read))
+            {
+                file.Read(bom, 0, 4);
+            }
+
+            // Analyze the BOM
+            if (bom[0] == 0x2b && bom[1] == 0x2f && bom[2] == 0x76) return Encoding.UTF7;
+            if (bom[0] == 0xef && bom[1] == 0xbb && bom[2] == 0xbf) return Encoding.UTF8;
+            if (bom[0] == 123 && bom[1] == 13 && bom[2] == 10) return Encoding.UTF8;
+            if (bom[0] == 0xff && bom[1] == 0xfe && bom[2] == 0 && bom[3] == 0) return Encoding.UTF32; //UTF-32LE
+            if (bom[0] == 0xff && bom[1] == 0xfe) return Encoding.Unicode; //UTF-16LE
+            if (bom[0] == 123 && bom[1] == 0) return Encoding.Unicode; //UTF-16LE
+            if (bom[0] == 0xfe && bom[1] == 0xff) return Encoding.BigEndianUnicode; //UTF-16BE
+            if (bom[0] == 0 && bom[1] == 0 && bom[2] == 0xfe && bom[3] == 0xff) return new UTF32Encoding(true, true);  //UTF-32BE
+
+            // We actually have no idea what the encoding is if we reach this point, so
+            // you may wish to return null instead of defaulting to ASCII
+            return Encoding.ASCII;
+        }
+
         private void BoPForm_Load(object sender, EventArgs e)
         {
-            if (File.Exists(@"cfg\bop.json"))
+            string file = @"cfg\bop.json";
+            if (File.Exists(file))
             {
-                string rawJSON = File.ReadAllText(@"cfg\bop.json");
+                Encoding encoding = GetEncoding(file);
+                string rawJSON = File.ReadAllText(file, encoding);
                 bop = JsonConvert.DeserializeObject<BopObject>(rawJSON);
             }
          
@@ -66,6 +101,8 @@ namespace ACC_Dedicated_Server_GUI
 
             ballastNumericUpDown.Enabled = true;
             restrictorNumericUpDown.Enabled = true;
+            ballastTrackBar.Enabled = true;
+            restrictorTrackBar.Enabled = true;
 
             string track = trackListBox.SelectedItem.ToString();
             int carModel = carListBox.SelectedIndex;
@@ -73,8 +110,8 @@ namespace ACC_Dedicated_Server_GUI
             Entry entry = new Entry();
             entry = bop.entries.Find(ent => ent.track == track && ent.carModel == carModel);
 
-            ballastNumericUpDown.Value = entry.ballast;
-            restrictorNumericUpDown.Value = entry.restrictor;
+            ballastNumericUpDown.Value = InTrackBarRange(entry.ballast, ballastTrackBar);
+            restrictorNumericUpDown.Value = InTrackBarRange(entry.restrictor, restrictorTrackBar);
         }
 
         private void carListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -87,6 +124,8 @@ namespace ACC_Dedicated_Server_GUI
 
             ballastNumericUpDown.Enabled = true;
             restrictorNumericUpDown.Enabled = true;
+            ballastTrackBar.Enabled = true;
+            restrictorTrackBar.Enabled = true;
 
             int carModel = carListBox.SelectedIndex;
             string track = trackListBox.SelectedItem.ToString();
@@ -94,8 +133,8 @@ namespace ACC_Dedicated_Server_GUI
             Entry entry = new Entry();
             entry = bop.entries.Find(ent => (ent.track == track) && (ent.carModel == carModel));
 
-            ballastNumericUpDown.Value = entry.ballast;
-            restrictorNumericUpDown.Value = entry.restrictor;
+            ballastNumericUpDown.Value = InTrackBarRange(entry.ballast, ballastTrackBar);
+            restrictorNumericUpDown.Value = InTrackBarRange(entry.restrictor, restrictorTrackBar);
         }
 
         private void ballastNumericUpDown_ValueChanged(object sender, EventArgs e)
@@ -103,6 +142,7 @@ namespace ACC_Dedicated_Server_GUI
             string track = trackListBox.Text;
             int carModel = carListBox.SelectedIndex;
 
+            ballastTrackBar.Value = (int)ballastNumericUpDown.Value;
             bop.entries.Find(ent => (ent.track == track) && (ent.carModel == carModel)).ballast = (int)ballastNumericUpDown.Value;
         }
 
@@ -111,12 +151,13 @@ namespace ACC_Dedicated_Server_GUI
             string track = trackListBox.Text;
             int carModel = carListBox.SelectedIndex;
 
+            restrictorTrackBar.Value = (int)restrictorNumericUpDown.Value;
             bop.entries.Find(ent => (ent.track == track) && (ent.carModel == carModel)).restrictor = (int)restrictorNumericUpDown.Value;
         }
         private void cleanUpAndSaveFile()
         {
             bop.entries.RemoveAll(ent => (ent.ballast == 0) && (ent.restrictor == 0));
-            File.WriteAllText(@"cfg\bop.json", JsonConvert.SerializeObject(bop, Formatting.Indented));
+            File.WriteAllText(@"cfg\bop.json", JsonConvert.SerializeObject(bop, Formatting.Indented), Encoding.Unicode);
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -136,6 +177,16 @@ namespace ACC_Dedicated_Server_GUI
                     cleanUpAndSaveFile();
                 }
             }
+        }
+
+        private void ballastTrackBar_Scroll(object sender, EventArgs e)
+        {
+            ballastNumericUpDown.Value = ballastTrackBar.Value;
+        }
+
+        private void restrictorTrackBar_Scroll(object sender, EventArgs e)
+        {
+            restrictorNumericUpDown.Value = restrictorTrackBar.Value;
         }
     }
 }

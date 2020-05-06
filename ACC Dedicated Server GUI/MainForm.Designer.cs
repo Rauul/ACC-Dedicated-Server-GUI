@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.serverNameTextBox = new System.Windows.Forms.TextBox();
             this.adminPasswordTextBox = new System.Windows.Forms.TextBox();
             this.joinPasswordTextBox = new System.Windows.Forms.TextBox();
             this.spectatorPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.TRRequirementsTrackBar = new System.Windows.Forms.TrackBar();
-            this.SARequirementTrackBar = new System.Windows.Forms.TrackBar();
-            this.maxCarsTrackBar = new System.Windows.Forms.TrackBar();
-            this.RCRequirementTrackBar = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,10 +42,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.maxCarsLabel = new System.Windows.Forms.Label();
-            this.TRRequirementLabel = new System.Windows.Forms.Label();
-            this.SARequirementLabel = new System.Windows.Forms.Label();
-            this.RCRequirementLabel = new System.Windows.Forms.Label();
             this.idealLineCheckBox = new System.Windows.Forms.CheckBox();
             this.autoSteeringCheckBox = new System.Windows.Forms.CheckBox();
             this.autoShiftingCheckBox = new System.Windows.Forms.CheckBox();
@@ -57,9 +50,7 @@
             this.autoClutchCheckBox = new System.Windows.Forms.CheckBox();
             this.autoStartEngineCheckBox = new System.Windows.Forms.CheckBox();
             this.autoLightsCheckBox = new System.Windows.Forms.CheckBox();
-            this.stabilityControlLevelTrackBar = new System.Windows.Forms.TrackBar();
             this.label9 = new System.Windows.Forms.Label();
-            this.stabilityControlLevelLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -146,11 +137,22 @@
             this.BoPToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.entryListButton = new System.Windows.Forms.Button();
             this.BopButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.TRRequirementsTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SARequirementTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maxCarsTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RCRequirementTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stabilityControlLevelTrackBar)).BeginInit();
+            this.maxCarSlotsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.TRRequirementNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.RCRequirementNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.SARequirementNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.UDPNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.TCPNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.maxConnectionsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label38 = new System.Windows.Forms.Label();
+            this.lanDiscoveryCheckBox = new System.Windows.Forms.CheckBox();
+            this.registerToLobbyCheckBox = new System.Windows.Forms.CheckBox();
+            this.maxStabilityNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.shortFormationCheckBox = new System.Windows.Forms.CheckBox();
+            this.isRaceLockedCheckBox = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -184,6 +186,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maxCarSlotsNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TRRequirementNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RCRequirementNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SARequirementNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TCPNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxStabilityNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // serverNameTextBox
@@ -213,57 +223,6 @@
             this.spectatorPasswordTextBox.Name = "spectatorPasswordTextBox";
             this.spectatorPasswordTextBox.Size = new System.Drawing.Size(216, 20);
             this.spectatorPasswordTextBox.TabIndex = 3;
-            // 
-            // TRRequirementsTrackBar
-            // 
-            this.TRRequirementsTrackBar.LargeChange = 1;
-            this.TRRequirementsTrackBar.Location = new System.Drawing.Point(112, 149);
-            this.TRRequirementsTrackBar.Maximum = 3;
-            this.TRRequirementsTrackBar.Name = "TRRequirementsTrackBar";
-            this.TRRequirementsTrackBar.Size = new System.Drawing.Size(182, 45);
-            this.TRRequirementsTrackBar.TabIndex = 4;
-            this.TRRequirementsTrackBar.TabStop = false;
-            this.TRRequirementsTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.TRRequirementsTrackBar.Scroll += new System.EventHandler(this.medalsRequirementsTrackBar_Scroll);
-            this.TRRequirementsTrackBar.ValueChanged += new System.EventHandler(this.medalsRequirementsTrackBar_Scroll);
-            // 
-            // SARequirementTrackBar
-            // 
-            this.SARequirementTrackBar.Location = new System.Drawing.Point(112, 175);
-            this.SARequirementTrackBar.Maximum = 99;
-            this.SARequirementTrackBar.Minimum = -1;
-            this.SARequirementTrackBar.Name = "SARequirementTrackBar";
-            this.SARequirementTrackBar.Size = new System.Drawing.Size(182, 45);
-            this.SARequirementTrackBar.TabIndex = 6;
-            this.SARequirementTrackBar.TabStop = false;
-            this.SARequirementTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.SARequirementTrackBar.Scroll += new System.EventHandler(this.ratingRequirementTrackBar_Scroll);
-            this.SARequirementTrackBar.ValueChanged += new System.EventHandler(this.ratingRequirementTrackBar_Scroll);
-            // 
-            // maxCarsTrackBar
-            // 
-            this.maxCarsTrackBar.Location = new System.Drawing.Point(112, 122);
-            this.maxCarsTrackBar.Maximum = 100;
-            this.maxCarsTrackBar.Name = "maxCarsTrackBar";
-            this.maxCarsTrackBar.Size = new System.Drawing.Size(182, 45);
-            this.maxCarsTrackBar.TabIndex = 8;
-            this.maxCarsTrackBar.TabStop = false;
-            this.maxCarsTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.maxCarsTrackBar.Scroll += new System.EventHandler(this.maxCarsTrackBar_Scroll);
-            this.maxCarsTrackBar.ValueChanged += new System.EventHandler(this.maxCarsTrackBar_Scroll);
-            // 
-            // RCRequirementTrackBar
-            // 
-            this.RCRequirementTrackBar.Location = new System.Drawing.Point(112, 201);
-            this.RCRequirementTrackBar.Maximum = 99;
-            this.RCRequirementTrackBar.Minimum = -1;
-            this.RCRequirementTrackBar.Name = "RCRequirementTrackBar";
-            this.RCRequirementTrackBar.Size = new System.Drawing.Size(182, 45);
-            this.RCRequirementTrackBar.TabIndex = 10;
-            this.RCRequirementTrackBar.TabStop = false;
-            this.RCRequirementTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.RCRequirementTrackBar.Scroll += new System.EventHandler(this.RCRequirementTrackBar_Scroll);
-            this.RCRequirementTrackBar.ValueChanged += new System.EventHandler(this.RCRequirementTrackBar_Scroll);
             // 
             // label1
             // 
@@ -308,7 +267,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 128);
+            this.label5.Location = new System.Drawing.Point(4, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 16;
@@ -318,7 +277,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 153);
+            this.label6.Location = new System.Drawing.Point(4, 148);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 17;
@@ -328,7 +287,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 179);
+            this.label7.Location = new System.Drawing.Point(182, 122);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 13);
             this.label7.TabIndex = 18;
@@ -338,59 +297,19 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(4, 205);
+            this.label8.Location = new System.Drawing.Point(182, 149);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 13);
             this.label8.TabIndex = 19;
             this.label8.Text = "RC Requirement";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // maxCarsLabel
-            // 
-            this.maxCarsLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.maxCarsLabel.Location = new System.Drawing.Point(300, 124);
-            this.maxCarsLabel.Name = "maxCarsLabel";
-            this.maxCarsLabel.Size = new System.Drawing.Size(28, 20);
-            this.maxCarsLabel.TabIndex = 13;
-            this.maxCarsLabel.Text = "0";
-            this.maxCarsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // TRRequirementLabel
-            // 
-            this.TRRequirementLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TRRequirementLabel.Location = new System.Drawing.Point(300, 149);
-            this.TRRequirementLabel.Name = "TRRequirementLabel";
-            this.TRRequirementLabel.Size = new System.Drawing.Size(28, 20);
-            this.TRRequirementLabel.TabIndex = 20;
-            this.TRRequirementLabel.Text = "0";
-            this.TRRequirementLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // SARequirementLabel
-            // 
-            this.SARequirementLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SARequirementLabel.Location = new System.Drawing.Point(300, 175);
-            this.SARequirementLabel.Name = "SARequirementLabel";
-            this.SARequirementLabel.Size = new System.Drawing.Size(28, 20);
-            this.SARequirementLabel.TabIndex = 21;
-            this.SARequirementLabel.Text = "0";
-            this.SARequirementLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // RCRequirementLabel
-            // 
-            this.RCRequirementLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RCRequirementLabel.Location = new System.Drawing.Point(300, 201);
-            this.RCRequirementLabel.Name = "RCRequirementLabel";
-            this.RCRequirementLabel.Size = new System.Drawing.Size(28, 20);
-            this.RCRequirementLabel.TabIndex = 22;
-            this.RCRequirementLabel.Text = "0";
-            this.RCRequirementLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // idealLineCheckBox
             // 
-            this.idealLineCheckBox.AutoSize = true;
-            this.idealLineCheckBox.Location = new System.Drawing.Point(23, 16);
+            this.idealLineCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.idealLineCheckBox.Location = new System.Drawing.Point(3, 16);
             this.idealLineCheckBox.Name = "idealLineCheckBox";
-            this.idealLineCheckBox.Size = new System.Drawing.Size(72, 17);
+            this.idealLineCheckBox.Size = new System.Drawing.Size(137, 17);
             this.idealLineCheckBox.TabIndex = 0;
             this.idealLineCheckBox.TabStop = false;
             this.idealLineCheckBox.Text = "Ideal Line";
@@ -398,10 +317,10 @@
             // 
             // autoSteeringCheckBox
             // 
-            this.autoSteeringCheckBox.AutoSize = true;
-            this.autoSteeringCheckBox.Location = new System.Drawing.Point(23, 39);
+            this.autoSteeringCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.autoSteeringCheckBox.Location = new System.Drawing.Point(3, 39);
             this.autoSteeringCheckBox.Name = "autoSteeringCheckBox";
-            this.autoSteeringCheckBox.Size = new System.Drawing.Size(90, 17);
+            this.autoSteeringCheckBox.Size = new System.Drawing.Size(137, 17);
             this.autoSteeringCheckBox.TabIndex = 1;
             this.autoSteeringCheckBox.TabStop = false;
             this.autoSteeringCheckBox.Text = "Auto Steering";
@@ -409,10 +328,10 @@
             // 
             // autoShiftingCheckBox
             // 
-            this.autoShiftingCheckBox.AutoSize = true;
-            this.autoShiftingCheckBox.Location = new System.Drawing.Point(23, 85);
+            this.autoShiftingCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.autoShiftingCheckBox.Location = new System.Drawing.Point(3, 85);
             this.autoShiftingCheckBox.Name = "autoShiftingCheckBox";
-            this.autoShiftingCheckBox.Size = new System.Drawing.Size(86, 17);
+            this.autoShiftingCheckBox.Size = new System.Drawing.Size(137, 17);
             this.autoShiftingCheckBox.TabIndex = 3;
             this.autoShiftingCheckBox.TabStop = false;
             this.autoShiftingCheckBox.Text = "Auto Shifting";
@@ -420,10 +339,10 @@
             // 
             // autoPitLimiterCheckBox
             // 
-            this.autoPitLimiterCheckBox.AutoSize = true;
-            this.autoPitLimiterCheckBox.Location = new System.Drawing.Point(23, 62);
+            this.autoPitLimiterCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.autoPitLimiterCheckBox.Location = new System.Drawing.Point(3, 62);
             this.autoPitLimiterCheckBox.Name = "autoPitLimiterCheckBox";
-            this.autoPitLimiterCheckBox.Size = new System.Drawing.Size(96, 17);
+            this.autoPitLimiterCheckBox.Size = new System.Drawing.Size(137, 17);
             this.autoPitLimiterCheckBox.TabIndex = 2;
             this.autoPitLimiterCheckBox.TabStop = false;
             this.autoPitLimiterCheckBox.Text = "Auto Pit Limiter";
@@ -431,10 +350,10 @@
             // 
             // autoWipersCheckBox
             // 
-            this.autoWipersCheckBox.AutoSize = true;
+            this.autoWipersCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.autoWipersCheckBox.Location = new System.Drawing.Point(194, 39);
             this.autoWipersCheckBox.Name = "autoWipersCheckBox";
-            this.autoWipersCheckBox.Size = new System.Drawing.Size(79, 17);
+            this.autoWipersCheckBox.Size = new System.Drawing.Size(134, 17);
             this.autoWipersCheckBox.TabIndex = 15;
             this.autoWipersCheckBox.TabStop = false;
             this.autoWipersCheckBox.Text = "Auto Wiper";
@@ -442,10 +361,10 @@
             // 
             // autoClutchCheckBox
             // 
-            this.autoClutchCheckBox.AutoSize = true;
+            this.autoClutchCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.autoClutchCheckBox.Location = new System.Drawing.Point(194, 85);
             this.autoClutchCheckBox.Name = "autoClutchCheckBox";
-            this.autoClutchCheckBox.Size = new System.Drawing.Size(81, 17);
+            this.autoClutchCheckBox.Size = new System.Drawing.Size(134, 17);
             this.autoClutchCheckBox.TabIndex = 17;
             this.autoClutchCheckBox.TabStop = false;
             this.autoClutchCheckBox.Text = "Auto Clutch";
@@ -453,10 +372,10 @@
             // 
             // autoStartEngineCheckBox
             // 
-            this.autoStartEngineCheckBox.AutoSize = true;
+            this.autoStartEngineCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.autoStartEngineCheckBox.Location = new System.Drawing.Point(194, 16);
             this.autoStartEngineCheckBox.Name = "autoStartEngineCheckBox";
-            this.autoStartEngineCheckBox.Size = new System.Drawing.Size(109, 17);
+            this.autoStartEngineCheckBox.Size = new System.Drawing.Size(134, 17);
             this.autoStartEngineCheckBox.TabIndex = 14;
             this.autoStartEngineCheckBox.TabStop = false;
             this.autoStartEngineCheckBox.Text = "Auto Start Engine";
@@ -464,59 +383,43 @@
             // 
             // autoLightsCheckBox
             // 
-            this.autoLightsCheckBox.AutoSize = true;
+            this.autoLightsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.autoLightsCheckBox.Location = new System.Drawing.Point(194, 62);
             this.autoLightsCheckBox.Name = "autoLightsCheckBox";
-            this.autoLightsCheckBox.Size = new System.Drawing.Size(79, 17);
+            this.autoLightsCheckBox.Size = new System.Drawing.Size(134, 17);
             this.autoLightsCheckBox.TabIndex = 16;
             this.autoLightsCheckBox.TabStop = false;
             this.autoLightsCheckBox.Text = "Auto Lights";
             this.autoLightsCheckBox.UseVisualStyleBackColor = true;
             // 
-            // stabilityControlLevelTrackBar
-            // 
-            this.stabilityControlLevelTrackBar.Location = new System.Drawing.Point(23, 136);
-            this.stabilityControlLevelTrackBar.Maximum = 100;
-            this.stabilityControlLevelTrackBar.Name = "stabilityControlLevelTrackBar";
-            this.stabilityControlLevelTrackBar.Size = new System.Drawing.Size(266, 45);
-            this.stabilityControlLevelTrackBar.TabIndex = 18;
-            this.stabilityControlLevelTrackBar.TabStop = false;
-            this.stabilityControlLevelTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.stabilityControlLevelTrackBar.Scroll += new System.EventHandler(this.stabilityControlLevelTrackBar_Scroll);
-            this.stabilityControlLevelTrackBar.ValueChanged += new System.EventHandler(this.stabilityControlLevelTrackBar_Scroll);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(127, 117);
+            this.label9.Location = new System.Drawing.Point(4, 110);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 13);
             this.label9.TabIndex = 19;
             this.label9.Text = "Max Stability Control";
             // 
-            // stabilityControlLevelLabel
-            // 
-            this.stabilityControlLevelLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.stabilityControlLevelLabel.Location = new System.Drawing.Point(295, 136);
-            this.stabilityControlLevelLabel.Name = "stabilityControlLevelLabel";
-            this.stabilityControlLevelLabel.Size = new System.Drawing.Size(28, 20);
-            this.stabilityControlLevelLabel.TabIndex = 23;
-            this.stabilityControlLevelLabel.Text = "0";
-            this.stabilityControlLevelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.RCRequirementTrackBar);
-            this.panel1.Controls.Add(this.SARequirementTrackBar);
-            this.panel1.Controls.Add(this.TRRequirementsTrackBar);
-            this.panel1.Controls.Add(this.RCRequirementLabel);
+            this.panel1.Controls.Add(this.isRaceLockedCheckBox);
+            this.panel1.Controls.Add(this.shortFormationCheckBox);
+            this.panel1.Controls.Add(this.registerToLobbyCheckBox);
+            this.panel1.Controls.Add(this.lanDiscoveryCheckBox);
+            this.panel1.Controls.Add(this.maxConnectionsNumericUpDown);
+            this.panel1.Controls.Add(this.label38);
+            this.panel1.Controls.Add(this.UDPNumericUpDown);
+            this.panel1.Controls.Add(this.TCPNumericUpDown);
+            this.panel1.Controls.Add(this.label34);
+            this.panel1.Controls.Add(this.label35);
+            this.panel1.Controls.Add(this.RCRequirementNumericUpDown);
+            this.panel1.Controls.Add(this.SARequirementNumericUpDown);
+            this.panel1.Controls.Add(this.TRRequirementNumericUpDown);
+            this.panel1.Controls.Add(this.maxCarSlotsNumericUpDown);
             this.panel1.Controls.Add(this.serverNameTextBox);
-            this.panel1.Controls.Add(this.SARequirementLabel);
-            this.panel1.Controls.Add(this.maxCarsTrackBar);
-            this.panel1.Controls.Add(this.TRRequirementLabel);
-            this.panel1.Controls.Add(this.maxCarsLabel);
             this.panel1.Controls.Add(this.spectatorPasswordTextBox);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
@@ -530,7 +433,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(12, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 234);
+            this.panel1.Size = new System.Drawing.Size(340, 265);
             this.panel1.TabIndex = 14;
             // 
             // label10
@@ -545,7 +448,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(17, 271);
+            this.label11.Location = new System.Drawing.Point(17, 303);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 13);
             this.label11.TabIndex = 17;
@@ -555,20 +458,19 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.stabilityControlLevelLabel);
+            this.panel2.Controls.Add(this.maxStabilityNumericUpDown);
             this.panel2.Controls.Add(this.idealLineCheckBox);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.autoSteeringCheckBox);
-            this.panel2.Controls.Add(this.stabilityControlLevelTrackBar);
             this.panel2.Controls.Add(this.autoLightsCheckBox);
             this.panel2.Controls.Add(this.autoWipersCheckBox);
             this.panel2.Controls.Add(this.autoShiftingCheckBox);
             this.panel2.Controls.Add(this.autoStartEngineCheckBox);
             this.panel2.Controls.Add(this.autoClutchCheckBox);
             this.panel2.Controls.Add(this.autoPitLimiterCheckBox);
-            this.panel2.Location = new System.Drawing.Point(12, 277);
+            this.panel2.Location = new System.Drawing.Point(12, 309);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(340, 176);
+            this.panel2.Size = new System.Drawing.Size(340, 144);
             this.panel2.TabIndex = 16;
             // 
             // label12
@@ -587,8 +489,8 @@
             this.panel3.Controls.Add(this.label32);
             this.panel3.Controls.Add(this.TrackComboBox);
             this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.pCheckBox);
+            this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.rCheckBox);
             this.panel3.Controls.Add(this.qCheckBox);
             this.panel3.Controls.Add(this.label20);
@@ -605,7 +507,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(18, 38);
+            this.label32.Location = new System.Drawing.Point(18, 119);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(39, 13);
             this.label32.TabIndex = 3;
@@ -651,7 +553,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(18, 317);
+            this.label19.Location = new System.Drawing.Point(18, 42);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(74, 13);
             this.label19.TabIndex = 40;
@@ -664,10 +566,10 @@
             this.panel5.Controls.Add(this.label31);
             this.panel5.Controls.Add(this.preRaceWaitTimeNumericUpDown);
             this.panel5.Controls.Add(this.overTimeNumericUpDown);
-            this.panel5.Location = new System.Drawing.Point(14, 324);
+            this.panel5.Location = new System.Drawing.Point(14, 49);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(180, 67);
-            this.panel5.TabIndex = 1;
+            this.panel5.TabIndex = 0;
             // 
             // label23
             // 
@@ -691,9 +593,19 @@
             // 
             // preRaceWaitTimeNumericUpDown
             // 
+            this.preRaceWaitTimeNumericUpDown.Increment = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             this.preRaceWaitTimeNumericUpDown.Location = new System.Drawing.Point(131, 10);
             this.preRaceWaitTimeNumericUpDown.Maximum = new decimal(new int[] {
             9999,
+            0,
+            0,
+            0});
+            this.preRaceWaitTimeNumericUpDown.Minimum = new decimal(new int[] {
+            30,
             0,
             0,
             0});
@@ -701,9 +613,22 @@
             this.preRaceWaitTimeNumericUpDown.Size = new System.Drawing.Size(44, 20);
             this.preRaceWaitTimeNumericUpDown.TabIndex = 0;
             this.preRaceWaitTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.preRaceWaitTimeNumericUpDown, "Preparation time before a race. Cannot be less than 30s");
+            this.preRaceWaitTimeNumericUpDown.Value = new decimal(new int[] {
+            180,
+            0,
+            0,
+            0});
+            this.preRaceWaitTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.preRaceWaitTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // overTimeNumericUpDown
             // 
+            this.overTimeNumericUpDown.Increment = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             this.overTimeNumericUpDown.Location = new System.Drawing.Point(131, 35);
             this.overTimeNumericUpDown.Maximum = new decimal(new int[] {
             9999,
@@ -714,6 +639,14 @@
             this.overTimeNumericUpDown.Size = new System.Drawing.Size(44, 20);
             this.overTimeNumericUpDown.TabIndex = 1;
             this.overTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.overTimeNumericUpDown, resources.GetString("overTimeNumericUpDown.ToolTip"));
+            this.overTimeNumericUpDown.Value = new decimal(new int[] {
+            180,
+            0,
+            0,
+            0});
+            this.overTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.overTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // pCheckBox
             // 
@@ -791,6 +724,7 @@
             this.weatherRandomnessTrackBar.TabIndex = 38;
             this.weatherRandomnessTrackBar.TabStop = false;
             this.weatherRandomnessTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.weatherRandomnessTrackBar.Value = 3;
             this.weatherRandomnessTrackBar.Scroll += new System.EventHandler(this.weatherRandomnessTrackBar_Scroll);
             this.weatherRandomnessTrackBar.ValueChanged += new System.EventHandler(this.weatherRandomnessTrackBar_Scroll);
             // 
@@ -811,7 +745,7 @@
             this.weatherRandomnessLabel.Name = "weatherRandomnessLabel";
             this.weatherRandomnessLabel.Size = new System.Drawing.Size(44, 20);
             this.weatherRandomnessLabel.TabIndex = 40;
-            this.weatherRandomnessLabel.Text = "0";
+            this.weatherRandomnessLabel.Text = "3";
             this.weatherRandomnessLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cloudCoverageLabel
@@ -821,7 +755,7 @@
             this.cloudCoverageLabel.Name = "cloudCoverageLabel";
             this.cloudCoverageLabel.Size = new System.Drawing.Size(44, 20);
             this.cloudCoverageLabel.TabIndex = 34;
-            this.cloudCoverageLabel.Text = "0";
+            this.cloudCoverageLabel.Text = "0.3";
             this.cloudCoverageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label36
@@ -843,6 +777,7 @@
             this.rainTrackBar.TabIndex = 35;
             this.rainTrackBar.TabStop = false;
             this.rainTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.rainTrackBar.Value = 4;
             this.rainTrackBar.Scroll += new System.EventHandler(this.rainTrackBar_Scroll);
             this.rainTrackBar.ValueChanged += new System.EventHandler(this.rainTrackBar_Scroll);
             // 
@@ -863,7 +798,7 @@
             this.rainLabel.Name = "rainLabel";
             this.rainLabel.Size = new System.Drawing.Size(44, 20);
             this.rainLabel.TabIndex = 37;
-            this.rainLabel.Text = "0";
+            this.rainLabel.Text = "0.4";
             this.rainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cloudCoverageTrackBar
@@ -875,6 +810,7 @@
             this.cloudCoverageTrackBar.TabIndex = 32;
             this.cloudCoverageTrackBar.TabStop = false;
             this.cloudCoverageTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.cloudCoverageTrackBar.Value = 3;
             this.cloudCoverageTrackBar.Scroll += new System.EventHandler(this.cloudCoverageTrackBar_Scroll);
             this.cloudCoverageTrackBar.ValueChanged += new System.EventHandler(this.cloudCoverageTrackBar_Scroll);
             // 
@@ -889,7 +825,7 @@
             this.tempTrackBar.TabIndex = 29;
             this.tempTrackBar.TabStop = false;
             this.tempTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.tempTrackBar.Value = 10;
+            this.tempTrackBar.Value = 25;
             this.tempTrackBar.Scroll += new System.EventHandler(this.tempTrackBar_Scroll);
             this.tempTrackBar.ValueChanged += new System.EventHandler(this.tempTrackBar_Scroll);
             // 
@@ -900,7 +836,7 @@
             this.tempLabel.Name = "tempLabel";
             this.tempLabel.Size = new System.Drawing.Size(44, 20);
             this.tempLabel.TabIndex = 31;
-            this.tempLabel.Text = "0";
+            this.tempLabel.Text = "25";
             this.tempLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label30
@@ -932,6 +868,11 @@
             // 
             // rDurationNumericUpDown
             // 
+            this.rDurationNumericUpDown.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.rDurationNumericUpDown.Location = new System.Drawing.Point(97, 63);
             this.rDurationNumericUpDown.Maximum = new decimal(new int[] {
             1440,
@@ -942,14 +883,33 @@
             this.rDurationNumericUpDown.Size = new System.Drawing.Size(47, 20);
             this.rDurationNumericUpDown.TabIndex = 2;
             this.rDurationNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.rDurationNumericUpDown.Value = new decimal(new int[] {
+            90,
+            0,
+            0,
+            0});
+            this.rDurationNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.rDurationNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // rTimeScaleNumericUpDown
             // 
             this.rTimeScaleNumericUpDown.Location = new System.Drawing.Point(97, 38);
+            this.rTimeScaleNumericUpDown.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
             this.rTimeScaleNumericUpDown.Name = "rTimeScaleNumericUpDown";
             this.rTimeScaleNumericUpDown.Size = new System.Drawing.Size(47, 20);
             this.rTimeScaleNumericUpDown.TabIndex = 1;
             this.rTimeScaleNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.rTimeScaleNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.rTimeScaleNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.rTimeScaleNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // rStartTimeNumericUpDown
             // 
@@ -963,6 +923,13 @@
             this.rStartTimeNumericUpDown.Size = new System.Drawing.Size(47, 20);
             this.rStartTimeNumericUpDown.TabIndex = 0;
             this.rStartTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.rStartTimeNumericUpDown.Value = new decimal(new int[] {
+            14,
+            0,
+            0,
+            0});
+            this.rStartTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.rStartTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // panel9
             // 
@@ -1054,6 +1021,11 @@
             // 
             // qDurationNumericUpDown
             // 
+            this.qDurationNumericUpDown.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.qDurationNumericUpDown.Location = new System.Drawing.Point(97, 63);
             this.qDurationNumericUpDown.Maximum = new decimal(new int[] {
             1440,
@@ -1064,14 +1036,33 @@
             this.qDurationNumericUpDown.Size = new System.Drawing.Size(47, 20);
             this.qDurationNumericUpDown.TabIndex = 2;
             this.qDurationNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.qDurationNumericUpDown.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.qDurationNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.qDurationNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // qTimeScaleNumericUpDown
             // 
             this.qTimeScaleNumericUpDown.Location = new System.Drawing.Point(97, 38);
+            this.qTimeScaleNumericUpDown.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
             this.qTimeScaleNumericUpDown.Name = "qTimeScaleNumericUpDown";
             this.qTimeScaleNumericUpDown.Size = new System.Drawing.Size(47, 20);
             this.qTimeScaleNumericUpDown.TabIndex = 1;
             this.qTimeScaleNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.qTimeScaleNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.qTimeScaleNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.qTimeScaleNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // qStartTimeNumericUpDown
             // 
@@ -1085,6 +1076,13 @@
             this.qStartTimeNumericUpDown.Size = new System.Drawing.Size(47, 20);
             this.qStartTimeNumericUpDown.TabIndex = 0;
             this.qStartTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.qStartTimeNumericUpDown.Value = new decimal(new int[] {
+            11,
+            0,
+            0,
+            0});
+            this.qStartTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.qStartTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // panel8
             // 
@@ -1176,6 +1174,11 @@
             // 
             // pDurationNumericUpDown
             // 
+            this.pDurationNumericUpDown.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.pDurationNumericUpDown.Location = new System.Drawing.Point(97, 63);
             this.pDurationNumericUpDown.Maximum = new decimal(new int[] {
             1440,
@@ -1186,14 +1189,33 @@
             this.pDurationNumericUpDown.Size = new System.Drawing.Size(47, 20);
             this.pDurationNumericUpDown.TabIndex = 2;
             this.pDurationNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.pDurationNumericUpDown.Value = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            this.pDurationNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.pDurationNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // pTimeScaleNumericUpDown
             // 
             this.pTimeScaleNumericUpDown.Location = new System.Drawing.Point(97, 38);
+            this.pTimeScaleNumericUpDown.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
             this.pTimeScaleNumericUpDown.Name = "pTimeScaleNumericUpDown";
             this.pTimeScaleNumericUpDown.Size = new System.Drawing.Size(47, 20);
             this.pTimeScaleNumericUpDown.TabIndex = 1;
             this.pTimeScaleNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.pTimeScaleNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.pTimeScaleNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.pTimeScaleNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // pStartTimeNumericUpDown
             // 
@@ -1207,6 +1229,13 @@
             this.pStartTimeNumericUpDown.Size = new System.Drawing.Size(47, 20);
             this.pStartTimeNumericUpDown.TabIndex = 0;
             this.pStartTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.pStartTimeNumericUpDown.Value = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.pStartTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.pStartTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // panel7
             // 
@@ -1297,10 +1326,10 @@
             this.panel4.Controls.Add(this.label27);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.label17);
-            this.panel4.Location = new System.Drawing.Point(14, 44);
+            this.panel4.Location = new System.Drawing.Point(14, 125);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(180, 266);
-            this.panel4.TabIndex = 0;
+            this.panel4.TabIndex = 1;
             // 
             // maxDriversCountNumericUpDown
             // 
@@ -1319,11 +1348,14 @@
             this.maxDriversCountNumericUpDown.Size = new System.Drawing.Size(44, 20);
             this.maxDriversCountNumericUpDown.TabIndex = 4;
             this.maxDriversCountNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.maxDriversCountNumericUpDown, resources.GetString("maxDriversCountNumericUpDown.ToolTip"));
             this.maxDriversCountNumericUpDown.Value = new decimal(new int[] {
-            1,
+            3,
             0,
             0,
             0});
+            this.maxDriversCountNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.maxDriversCountNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // label24
             // 
@@ -1344,6 +1376,9 @@
             this.driverSwapRequiredCheckBox.TabIndex = 60;
             this.driverSwapRequiredCheckBox.TabStop = false;
             this.driverSwapRequiredCheckBox.Text = "Driver Swap Required";
+            this.toolTip.SetToolTip(this.driverSwapRequiredCheckBox, "Defines if a mandatory pitstop requires a driver\r\nswap. Will only be effective fo" +
+        "r cars in driver swap\r\nsituations; even in a mixed field this will be\r\nskipped f" +
+        "or cars with a team size of 1 driver.");
             this.driverSwapRequiredCheckBox.UseVisualStyleBackColor = true;
             // 
             // tyreChangeRequiredCheckBox
@@ -1392,6 +1427,11 @@
             // 
             // maxTotalDrivingTimeNumericUpDown
             // 
+            this.maxTotalDrivingTimeNumericUpDown.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.maxTotalDrivingTimeNumericUpDown.Location = new System.Drawing.Point(131, 83);
             this.maxTotalDrivingTimeNumericUpDown.Maximum = new decimal(new int[] {
             9999,
@@ -1407,6 +1447,14 @@
             this.maxTotalDrivingTimeNumericUpDown.Size = new System.Drawing.Size(44, 20);
             this.maxTotalDrivingTimeNumericUpDown.TabIndex = 3;
             this.maxTotalDrivingTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.maxTotalDrivingTimeNumericUpDown, resources.GetString("maxTotalDrivingTimeNumericUpDown.ToolTip"));
+            this.maxTotalDrivingTimeNumericUpDown.Value = new decimal(new int[] {
+            240,
+            0,
+            0,
+            0});
+            this.maxTotalDrivingTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.maxTotalDrivingTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // mandatoryPitStopCountNumericUpDown
             // 
@@ -1415,9 +1463,17 @@
             this.mandatoryPitStopCountNumericUpDown.Size = new System.Drawing.Size(44, 20);
             this.mandatoryPitStopCountNumericUpDown.TabIndex = 2;
             this.mandatoryPitStopCountNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.mandatoryPitStopCountNumericUpDown, resources.GetString("mandatoryPitStopCountNumericUpDown.ToolTip"));
+            this.mandatoryPitStopCountNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.mandatoryPitStopCountNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // driverStintTimeNumericUpDown
             // 
+            this.driverStintTimeNumericUpDown.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.driverStintTimeNumericUpDown.Location = new System.Drawing.Point(131, 32);
             this.driverStintTimeNumericUpDown.Maximum = new decimal(new int[] {
             9999,
@@ -1433,9 +1489,22 @@
             this.driverStintTimeNumericUpDown.Size = new System.Drawing.Size(44, 20);
             this.driverStintTimeNumericUpDown.TabIndex = 1;
             this.driverStintTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.driverStintTimeNumericUpDown, resources.GetString("driverStintTimeNumericUpDown.ToolTip"));
+            this.driverStintTimeNumericUpDown.Value = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.driverStintTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.driverStintTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // pitWindowsLengthNumericUpDown
             // 
+            this.pitWindowsLengthNumericUpDown.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.pitWindowsLengthNumericUpDown.Location = new System.Drawing.Point(131, 7);
             this.pitWindowsLengthNumericUpDown.Maximum = new decimal(new int[] {
             9999,
@@ -1451,6 +1520,16 @@
             this.pitWindowsLengthNumericUpDown.Size = new System.Drawing.Size(44, 20);
             this.pitWindowsLengthNumericUpDown.TabIndex = 0;
             this.pitWindowsLengthNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.pitWindowsLengthNumericUpDown, "Defines a pit window at the middle of the race.\r\nObviously covers the Sprint seri" +
+        "es format. -1 will\r\ndisable the pit window. Use this combined with a\r\nmandatoryP" +
+        "itstopCount = 1.");
+            this.pitWindowsLengthNumericUpDown.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.pitWindowsLengthNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.pitWindowsLengthNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // label26
             // 
@@ -1563,6 +1642,275 @@
             this.BopButton.UseVisualStyleBackColor = false;
             this.BopButton.Click += new System.EventHandler(this.BopButton_Click);
             // 
+            // maxCarSlotsNumericUpDown
+            // 
+            this.maxCarSlotsNumericUpDown.Location = new System.Drawing.Point(112, 120);
+            this.maxCarSlotsNumericUpDown.Name = "maxCarSlotsNumericUpDown";
+            this.maxCarSlotsNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.maxCarSlotsNumericUpDown.TabIndex = 4;
+            this.maxCarSlotsNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.maxCarSlotsNumericUpDown, resources.GetString("maxCarSlotsNumericUpDown.ToolTip"));
+            this.maxCarSlotsNumericUpDown.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.maxCarSlotsNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.maxCarSlotsNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            // 
+            // TRRequirementNumericUpDown
+            // 
+            this.TRRequirementNumericUpDown.Location = new System.Drawing.Point(112, 146);
+            this.TRRequirementNumericUpDown.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.TRRequirementNumericUpDown.Name = "TRRequirementNumericUpDown";
+            this.TRRequirementNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.TRRequirementNumericUpDown.TabIndex = 5;
+            this.TRRequirementNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TRRequirementNumericUpDown.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.TRRequirementNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.TRRequirementNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            // 
+            // RCRequirementNumericUpDown
+            // 
+            this.RCRequirementNumericUpDown.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.RCRequirementNumericUpDown.Location = new System.Drawing.Point(280, 146);
+            this.RCRequirementNumericUpDown.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.RCRequirementNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.RCRequirementNumericUpDown.Name = "RCRequirementNumericUpDown";
+            this.RCRequirementNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.RCRequirementNumericUpDown.TabIndex = 10;
+            this.RCRequirementNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.RCRequirementNumericUpDown.Value = new decimal(new int[] {
+            75,
+            0,
+            0,
+            0});
+            this.RCRequirementNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.RCRequirementNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            // 
+            // SARequirementNumericUpDown
+            // 
+            this.SARequirementNumericUpDown.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.SARequirementNumericUpDown.Location = new System.Drawing.Point(280, 120);
+            this.SARequirementNumericUpDown.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.SARequirementNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.SARequirementNumericUpDown.Name = "SARequirementNumericUpDown";
+            this.SARequirementNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.SARequirementNumericUpDown.TabIndex = 9;
+            this.SARequirementNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SARequirementNumericUpDown.Value = new decimal(new int[] {
+            90,
+            0,
+            0,
+            0});
+            this.SARequirementNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.SARequirementNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            // 
+            // UDPNumericUpDown
+            // 
+            this.UDPNumericUpDown.Location = new System.Drawing.Point(112, 209);
+            this.UDPNumericUpDown.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.UDPNumericUpDown.Name = "UDPNumericUpDown";
+            this.UDPNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.UDPNumericUpDown.TabIndex = 7;
+            this.UDPNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.UDPNumericUpDown.Value = new decimal(new int[] {
+            9231,
+            0,
+            0,
+            0});
+            this.UDPNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.UDPNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            // 
+            // TCPNumericUpDown
+            // 
+            this.TCPNumericUpDown.Location = new System.Drawing.Point(112, 235);
+            this.TCPNumericUpDown.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.TCPNumericUpDown.Name = "TCPNumericUpDown";
+            this.TCPNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.TCPNumericUpDown.TabIndex = 8;
+            this.TCPNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TCPNumericUpDown.Value = new decimal(new int[] {
+            9232,
+            0,
+            0,
+            0});
+            this.TCPNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.TCPNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(4, 211);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(52, 13);
+            this.label34.TabIndex = 25;
+            this.label34.Text = "UDP Port";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(4, 237);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(50, 13);
+            this.label35.TabIndex = 24;
+            this.label35.Text = "TCP Port";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // maxConnectionsNumericUpDown
+            // 
+            this.maxConnectionsNumericUpDown.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.maxConnectionsNumericUpDown.Location = new System.Drawing.Point(112, 184);
+            this.maxConnectionsNumericUpDown.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.maxConnectionsNumericUpDown.Name = "maxConnectionsNumericUpDown";
+            this.maxConnectionsNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.maxConnectionsNumericUpDown.TabIndex = 6;
+            this.maxConnectionsNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.maxConnectionsNumericUpDown, resources.GetString("maxConnectionsNumericUpDown.ToolTip"));
+            this.maxConnectionsNumericUpDown.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.maxConnectionsNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.maxConnectionsNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(4, 186);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(89, 13);
+            this.label38.TabIndex = 28;
+            this.label38.Text = "Max Connections";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lanDiscoveryCheckBox
+            // 
+            this.lanDiscoveryCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lanDiscoveryCheckBox.Location = new System.Drawing.Point(181, 236);
+            this.lanDiscoveryCheckBox.Name = "lanDiscoveryCheckBox";
+            this.lanDiscoveryCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.lanDiscoveryCheckBox.TabIndex = 30;
+            this.lanDiscoveryCheckBox.TabStop = false;
+            this.lanDiscoveryCheckBox.Text = "Lan Discovery";
+            this.toolTip.SetToolTip(this.lanDiscoveryCheckBox, "Defines if the server will listen to LAN discovery requests. Can be turned \r\noff " +
+        "for dedicated servers.");
+            this.lanDiscoveryCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // registerToLobbyCheckBox
+            // 
+            this.registerToLobbyCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.registerToLobbyCheckBox.Checked = true;
+            this.registerToLobbyCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.registerToLobbyCheckBox.Location = new System.Drawing.Point(181, 216);
+            this.registerToLobbyCheckBox.Name = "registerToLobbyCheckBox";
+            this.registerToLobbyCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.registerToLobbyCheckBox.TabIndex = 31;
+            this.registerToLobbyCheckBox.TabStop = false;
+            this.registerToLobbyCheckBox.Text = "Register To Lobby";
+            this.toolTip.SetToolTip(this.registerToLobbyCheckBox, "When off, this server won’t register to the backend. Is useful for LAN\r\nsessions." +
+        " If unchecked, the server is declared “Private Multiplayer”.");
+            this.registerToLobbyCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // maxStabilityNumericUpDown
+            // 
+            this.maxStabilityNumericUpDown.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.maxStabilityNumericUpDown.Location = new System.Drawing.Point(185, 108);
+            this.maxStabilityNumericUpDown.Name = "maxStabilityNumericUpDown";
+            this.maxStabilityNumericUpDown.Size = new System.Drawing.Size(143, 20);
+            this.maxStabilityNumericUpDown.TabIndex = 20;
+            this.maxStabilityNumericUpDown.TabStop = false;
+            this.maxStabilityNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // toolTip
+            // 
+            this.toolTip.AutoPopDelay = 25000;
+            this.toolTip.InitialDelay = 500;
+            this.toolTip.ReshowDelay = 100;
+            // 
+            // shortFormationCheckBox
+            // 
+            this.shortFormationCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.shortFormationCheckBox.Location = new System.Drawing.Point(181, 196);
+            this.shortFormationCheckBox.Name = "shortFormationCheckBox";
+            this.shortFormationCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.shortFormationCheckBox.TabIndex = 32;
+            this.shortFormationCheckBox.TabStop = false;
+            this.shortFormationCheckBox.Text = "Short Formation Lap";
+            this.toolTip.SetToolTip(this.shortFormationCheckBox, "Toggles the short and long formation lap. Long formation is\r\nonly usable on priva" +
+        "te servers.");
+            this.shortFormationCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // isRaceLockedCheckBox
+            // 
+            this.isRaceLockedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.isRaceLockedCheckBox.Checked = true;
+            this.isRaceLockedCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.isRaceLockedCheckBox.Location = new System.Drawing.Point(181, 176);
+            this.isRaceLockedCheckBox.Name = "isRaceLockedCheckBox";
+            this.isRaceLockedCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.isRaceLockedCheckBox.TabIndex = 33;
+            this.isRaceLockedCheckBox.TabStop = false;
+            this.isRaceLockedCheckBox.Text = "Race Locked";
+            this.toolTip.SetToolTip(this.isRaceLockedCheckBox, "If set to 0, the server will allow joining during a race session. Is\r\nnot useful " +
+        "in “Public Multiplayer”, as the user-server matching\r\nwill ignore ongoing race s" +
+        "essions.");
+            this.isRaceLockedCheckBox.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1584,13 +1932,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "ACC Dedicated Server GUI V2.0 Beta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ACC Dedicated Server GUI V1.2";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.TRRequirementsTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SARequirementTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maxCarsTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RCRequirementTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stabilityControlLevelTrackBar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1637,6 +1981,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maxCarSlotsNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TRRequirementNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RCRequirementNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SARequirementNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TCPNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxStabilityNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1648,10 +2000,6 @@
         private System.Windows.Forms.TextBox adminPasswordTextBox;
         private System.Windows.Forms.TextBox joinPasswordTextBox;
         private System.Windows.Forms.TextBox spectatorPasswordTextBox;
-        private System.Windows.Forms.TrackBar TRRequirementsTrackBar;
-        private System.Windows.Forms.TrackBar SARequirementTrackBar;
-        private System.Windows.Forms.TrackBar maxCarsTrackBar;
-        private System.Windows.Forms.TrackBar RCRequirementTrackBar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -1660,13 +2008,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label RCRequirementLabel;
-        private System.Windows.Forms.Label SARequirementLabel;
-        private System.Windows.Forms.Label TRRequirementLabel;
-        private System.Windows.Forms.Label maxCarsLabel;
-        private System.Windows.Forms.Label stabilityControlLevelLabel;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TrackBar stabilityControlLevelTrackBar;
         private System.Windows.Forms.CheckBox autoWipersCheckBox;
         private System.Windows.Forms.CheckBox idealLineCheckBox;
         private System.Windows.Forms.CheckBox autoClutchCheckBox;
@@ -1761,6 +2103,22 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Button entryListButton;
         private System.Windows.Forms.Button BopButton;
+        private System.Windows.Forms.CheckBox registerToLobbyCheckBox;
+        private System.Windows.Forms.CheckBox lanDiscoveryCheckBox;
+        private System.Windows.Forms.NumericUpDown maxConnectionsNumericUpDown;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.NumericUpDown UDPNumericUpDown;
+        private System.Windows.Forms.NumericUpDown TCPNumericUpDown;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.NumericUpDown RCRequirementNumericUpDown;
+        private System.Windows.Forms.NumericUpDown SARequirementNumericUpDown;
+        private System.Windows.Forms.NumericUpDown TRRequirementNumericUpDown;
+        private System.Windows.Forms.NumericUpDown maxCarSlotsNumericUpDown;
+        private System.Windows.Forms.NumericUpDown maxStabilityNumericUpDown;
+        private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.CheckBox isRaceLockedCheckBox;
+        private System.Windows.Forms.CheckBox shortFormationCheckBox;
     }
 }
 

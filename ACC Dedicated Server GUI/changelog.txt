@@ -1,0 +1,13 @@
+V1.2
+Major rewrite of the code
+Some controls changed to better suit their purpose
+Added support for more options including 'EntryList' and 'Additional BoP' but still a few to go
+Added support for UTF7, UTF-16LE, UTF-16BE, UTF-32LE and UTF-32BE
+----------------------------------------------------------------------
+V1.1
+Fixed an issue to handle values that were out of track bar range
+Added check boxes to enable/disable each session. This also makes the application not expect one of each session in the event.json file
+Changed the 'Launch Server' button to a 'Start/Stop Server' button
+----------------------------------------------------------------------
+V1.0
+First release

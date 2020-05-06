@@ -24,6 +24,30 @@ namespace ACC_Dedicated_Server_GUI
             InitializeComponent();
         }
 
+        public static Encoding GetEncoding(string filename)
+        {
+            // Read the BOM
+            var bom = new byte[4];
+            using (var file = new FileStream(filename, FileMode.Open, FileAccess.Read))
+            {
+                file.Read(bom, 0, 4);
+            }
+
+            // Analyze the BOM
+            if (bom[0] == 0x2b && bom[1] == 0x2f && bom[2] == 0x76) return Encoding.UTF7;
+            if (bom[0] == 0xef && bom[1] == 0xbb && bom[2] == 0xbf) return Encoding.UTF8;
+            if (bom[0] == 123 && bom[1] == 13 && bom[2] == 10) return Encoding.UTF8;
+            if (bom[0] == 0xff && bom[1] == 0xfe && bom[2] == 0 && bom[3] == 0) return Encoding.UTF32; //UTF-32LE
+            if (bom[0] == 0xff && bom[1] == 0xfe) return Encoding.Unicode; //UTF-16LE
+            if (bom[0] == 123 && bom[1] == 0) return Encoding.Unicode; //UTF-16LE
+            if (bom[0] == 0xfe && bom[1] == 0xff) return Encoding.BigEndianUnicode; //UTF-16BE
+            if (bom[0] == 0 && bom[1] == 0 && bom[2] == 0xfe && bom[3] == 0xff) return new UTF32Encoding(true, true);  //UTF-32BE
+
+            // We actually have no idea what the encoding is if we reach this point, so
+            // you may wish to return null instead of defaulting to ASCII
+            return Encoding.ASCII;
+        }
+
         private void EntriesForm_Load(object sender, EventArgs e)
         {
             TreeNode entriesTreeNode = new TreeNode();
@@ -31,9 +55,11 @@ namespace ACC_Dedicated_Server_GUI
             entriesTreeNode.Tag = entrylist;
             entriesTreeView.Nodes.Add(entriesTreeNode);
 
-            if (File.Exists(@"cfg\entrylist.json"))
+            string file = @"cfg\entrylist.json";
+            if (File.Exists(file))
             {
-                string rawJSON = File.ReadAllText(@"cfg\entrylist.json");
+                Encoding encoding = GetEncoding(file);
+                string rawJSON = File.ReadAllText(file, encoding);
                 entrylist = JsonConvert.DeserializeObject<EntryListObject>(rawJSON);
                 LoadTreeView(entrylist);
                 forceEntryListCheckBox.Checked = entrylist.forceEntryList == 1 ? true : false;
@@ -42,9 +68,9 @@ namespace ACC_Dedicated_Server_GUI
             if (Directory.Exists(@"cfg\cars\"))
             {
                 var fileNames = Directory.GetFiles(@"cfg\cars\", "*.json").Select(f => Path.GetFileName(f));
-                foreach (string file in fileNames)
+                foreach (string filen in fileNames)
                 {
-                    customCarComboBox.Items.Add(file);
+                    customCarComboBox.Items.Add(filen);
                 }
             }
         }
@@ -129,15 +155,24 @@ namespace ACC_Dedicated_Server_GUI
             Entry entry = (Entry)selectedNode.Tag;
 
             carNumberNumericUpDown.Value = entry.raceNumber;
-            forcedCarModelComboBox.SelectedIndex = entry.forcedCarModel < 1 ? 0 : entry.forcedCarModel;
+            forcedCarModelComboBox.SelectedIndex = entry.forcedCarModel + 1;
             customCarComboBox.SelectedIndex = 0;
             customCarComboBox.SelectedItem = entry.customCar;
-            overrideCarModelComboBox.SelectedIndex = entry.overrideCarModelForCustomCar < 1 ? 0 : entry.overrideCarModelForCustomCar;
+            overrideCarModelComboBox.SelectedIndex = entry.overrideCarModelForCustomCar + 1;
             gridPositionNumericUpDown.Value = entry.defaultGridPosition;
             ballastNumericUpDown.Value = entry.ballastKg;
             restrictorNumericUpDown.Value = entry.restrictor;
             adminCheckBox.Checked = entry.isServerAdmin == 1 ? true : false;
-            overrideDriverInfoCheckBox.Checked = entry.overrideDriverInfo == 1 ? true : false;
+            if (selectedNode.Nodes.Count > 1)
+            {
+                overrideDriverInfoCheckBox.Checked = true;
+                overrideDriverInfoCheckBox.Enabled = false;
+            }
+            else
+            {
+                overrideDriverInfoCheckBox.Enabled = true;
+                overrideDriverInfoCheckBox.Checked = entry.overrideDriverInfo == 1 ? true : false;
+            }
         }
 
         private void forcedCarModelComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -331,7 +366,7 @@ namespace ACC_Dedicated_Server_GUI
                 nEntryList.entries.Add(entry);
             }
 
-            File.WriteAllText(@"cfg\entrylist.json", JsonConvert.SerializeObject(nEntryList, Formatting.Indented));
+            File.WriteAllText(@"cfg\entrylist.json", JsonConvert.SerializeObject(nEntryList, Formatting.Indented), Encoding.Unicode);
         }
 
         private void entriesTreeView_MouseDown(object sender, MouseEventArgs e)

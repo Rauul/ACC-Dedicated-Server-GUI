@@ -117,8 +117,75 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="overTimeNumericUpDown.ToolTip" xml:space="preserve">
+    <value>Time after that a session is forcibly closing after the timer
+reached 0:00. Something like 107% of the expected laptime is
+recommended (careful: default 2 minutes does not properly
+cover tracks like Spa or Silverstone).</value>
+  </data>
+  <data name="maxDriversCountNumericUpDown.ToolTip" xml:space="preserve">
+    <value>In driver swap situations, set this to the maximum
+number of drivers on a car. When an entry has
+fewer drivers than maxDriversCount,
+maxTotalDrivingTime is automatically
+compensated so that those "smaller" entries are
+also able to complete the race
+Example: 3H race length, 65 minutes
+driverStintTimeSec and 65 minutes
+maxTotalDrivingTime will result in 65 minutes of
+maxTotalDrivingTime for entries of 3 and 105 (!)
+minutes for entries of 2.</value>
+  </data>
+  <data name="maxTotalDrivingTimeNumericUpDown.ToolTip" xml:space="preserve">
+    <value>Restricts the maximum driving time for a single
+driver. Is only useful for driver swap situations and
+allows to enforce a minimum driving time for each
+driver (IRL this is used to make sure mixed teams
+like Pro/Am have a fair distributions of the slower
+drivers). -1 disables the feature.
+Will set the maximum driving time for the team
+size defined by “maxDriversCount”, always make
+sure both are set.</value>
+  </data>
+  <data name="mandatoryPitStopCountNumericUpDown.ToolTip" xml:space="preserve">
+    <value>Defines the basic mandatory pit stops. If the value
+is greater zero, any car that did not execute the
+mandatory pitstops will be disqualified at the end
+of the race. The necessary actions can be further
+configured using the
+“isMandatoryPitstopXYRequired” properties. A 
+value of zero disables the feature.</value>
+  </data>
+  <data name="driverStintTimeNumericUpDown.ToolTip" xml:space="preserve">
+    <value>Defines the maximum time a driver can stay out
+without getting a penalty. Can be used to balance
+fuel efficient cars in endurance races. The stint
+time resets in the pitlane, no real stop is required.
+-1 will disable the stint times.</value>
+  </data>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <data name="maxCarSlotsNumericUpDown.ToolTip" xml:space="preserve">
+    <value>Replaces “maxClientsOverride” and “spectatorSlots”. Defines
+the amount of car slots the server can occupy; this value is
+overridden if the pit count of the track is lower, or with 30 for
+public MP. The gap between maxCarSlots and maxConnections
+defines how many spectators or other irregular connections (ie
+entry list entries) can be on the server.</value>
+  </data>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>122, 17</value>
+  </metadata>
+  <data name="maxConnectionsNumericUpDown.ToolTip" xml:space="preserve">
+    <value>Replaces “maxClients”. The maximum amount of connections a server will
+accept at a time. If you own the hardware server, you can just set any high
+number you want. If you rented a 16 or 24 slot server, your Hosting Provider
+probably has set this here and doesn’t give you write-access to this
+configuration file.</value>
+  </data>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>122, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

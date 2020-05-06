@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -75,6 +75,7 @@
     <Compile Include="BoPForm.Designer.cs">
       <DependentUpon>BoPForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Configuration.cs" />
     <Compile Include="EntriesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +133,7 @@
     <None Include="bop-50.png" />
     <None Include="bop-50s.png" />
     <None Include="bop-50si.png" />
+    <Content Include="changelog.txt" />
     <Content Include="icon.ico" />
     <None Include="icons8-race-car-50.png" />
   </ItemGroup>

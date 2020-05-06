@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static ACC_Dedicated_Server_GUI.AssistRules;
+using static ACC_Dedicated_Server_GUI.Configuration;
 using static ACC_Dedicated_Server_GUI.Event;
 using static ACC_Dedicated_Server_GUI.EventRules;
 using static ACC_Dedicated_Server_GUI.Settings;
@@ -24,149 +25,18 @@ namespace ACC_Dedicated_Server_GUI
         AssistObject assist = new AssistObject();
         EventObject eventObject = new EventObject();
         EventRulesObject eventRules = new EventRulesObject();
+        ConfigurationObject configuration = new ConfigurationObject();
 
         public MainForm()
         {
             InitializeComponent();
         }
 
-        private void medalsRequirementsTrackBar_Scroll(object sender, EventArgs e)
-        {
-            TRRequirementLabel.Text = TRRequirementsTrackBar.Value.ToString();
-        }
-
-        private void ratingRequirementTrackBar_Scroll(object sender, EventArgs e)
-        {
-            SARequirementLabel.Text = SARequirementTrackBar.Value.ToString();
-        }
-
-        private void maxCarsTrackBar_Scroll(object sender, EventArgs e)
-        {
-            maxCarsLabel.Text = maxCarsTrackBar.Value.ToString();
-        }
-
-        private void RCRequirementTrackBar_Scroll(object sender, EventArgs e)
-        {
-            RCRequirementLabel.Text = RCRequirementTrackBar.Value.ToString();
-        }
-
-        private void stabilityControlLevelTrackBar_Scroll(object sender, EventArgs e)
-        {
-            stabilityControlLevelLabel.Text = stabilityControlLevelTrackBar.Value.ToString();
-        }
-
-        //private void practiceStartTimeTrackBar_Scroll(object sender, EventArgs e)
-        //{
-        //    if (pStartTimeTrackBar.Value < 10)
-        //        pStartTimeLabel.Text = "0" + pStartTimeTrackBar.Value.ToString() + ":00";
-        //    else
-        //        pStartTimeLabel.Text = pStartTimeTrackBar.Value.ToString() + ":00";
-        //}
-
-        //private void practiceTimeScaleTrackBar_Scroll(object sender, EventArgs e)
-        //{
-        //    pTimeScaleLabel.Text = pTimeScaleTrackBar.Value.ToString();
-        //}
-
-        //private void practiceDurationTrackBar_Scroll(object sender, EventArgs e)
-        //{
-        //    if (ModifierKeys == Keys.Shift)
-        //    {
-        //        pDurationTrackBar.Value = (int)Math.Round((double)pDurationTrackBar.Value / 15) * 15;
-        //    }
-        //    else if (ModifierKeys == Keys.Alt)
-        //    {
-        //        pDurationTrackBar.Value = pDurationTrackBar.Value;
-        //    }
-        //    else
-        //    {
-        //        pDurationTrackBar.Value = (int)Math.Round((double)pDurationTrackBar.Value / 5) * 5;
-        //    }
-        //    TimeSpan tSpan = TimeSpan.FromMinutes(pDurationTrackBar.Value);
-        //    pDurationLabel.Text = (int)tSpan.TotalHours + ":" + tSpan.ToString("mm");
-        //}
-
-        //private void qStartTimeTrackBar_Scroll(object sender, EventArgs e)
-        //{
-        //    if (qStartTimeTrackBar.Value < 10)
-        //        qStartTimeLabel.Text = "0" + qStartTimeTrackBar.Value.ToString() + ":00";
-        //    else
-        //        qStartTimeLabel.Text = qStartTimeTrackBar.Value.ToString() + ":00";
-        //}
-
-        //private void qTimeScaleTrackBar_Scroll(object sender, EventArgs e)
-        //{
-        //    qTimeScaleLabel.Text = qTimeScaleTrackBar.Value.ToString();
-        //}
-
-        //private void qDurationTrackBar_Scroll(object sender, EventArgs e)
-        //{
-        //    if (ModifierKeys == Keys.Shift)
-        //    {
-        //        qDurationTrackBar.Value = (int)Math.Round((double)qDurationTrackBar.Value / 15) * 15;
-        //    }
-        //    else if (ModifierKeys == Keys.Alt)
-        //    {
-        //        qDurationTrackBar.Value = qDurationTrackBar.Value;
-        //    }
-        //    else
-        //    {
-        //        qDurationTrackBar.Value = (int)Math.Round((double)qDurationTrackBar.Value / 5) * 5;
-        //    }
-        //    TimeSpan tSpan = TimeSpan.FromMinutes(qDurationTrackBar.Value);
-        //    qDurationLabel.Text = (int)tSpan.TotalHours + ":" + tSpan.ToString("mm");
-        //}
-
-        //private void rStartTimeTrackBar_Scroll(object sender, EventArgs e)
-        //{
-        //    if (rStartTimeTrackBar.Value < 10)
-        //        rStartTimeLabel.Text = "0" + rStartTimeTrackBar.Value.ToString() + ":00";
-        //    else
-        //        rStartTimeLabel.Text = rStartTimeTrackBar.Value.ToString() + ":00";
-        //}
-
-        //private void rTimeScaleTrackBar_Scroll(object sender, EventArgs e)
-        //{
-        //    rTimeScaleLabel.Text = rTimeScaleTrackBar.Value.ToString();
-        //}
-
-        //private void rDurationTrackBar_Scroll(object sender, EventArgs e)
-        //{
-        //    if (ModifierKeys == Keys.Shift)
-        //    {
-        //        rDurationTrackBar.Value = (int)Math.Round((double)rDurationTrackBar.Value / 15) * 15;
-        //    }
-        //    else if (ModifierKeys == Keys.Alt)
-        //    {
-        //        rDurationTrackBar.Value = rDurationTrackBar.Value;
-        //    }
-        //    else
-        //    {
-        //        rDurationTrackBar.Value = (int)Math.Round((double)rDurationTrackBar.Value / 5) * 5;
-        //    }
-        //    TimeSpan tSpan = TimeSpan.FromMinutes(rDurationTrackBar.Value);
-        //    rDurationLabel.Text = (int)tSpan.TotalHours + ":" + tSpan.ToString("mm");
-        //}
-
         private void exitButton_Click(object sender, EventArgs e)
         {
             SaveConfig();
             Application.Exit();
         }
-
-        //private void waitTimeTrackBar_Scroll(object sender, EventArgs e)
-        //{
-        //    if (!(ModifierKeys == Keys.Alt))
-        //        waitTimeTrackBar.Value = (int)Math.Round((double)waitTimeTrackBar.Value / 10) * 10;
-        //    waitTimeLabel.Text = waitTimeTrackBar.Value.ToString();
-        //}
-
-        //private void overTimeTrackBar_Scroll(object sender, EventArgs e)
-        //{
-        //    if (!(ModifierKeys == Keys.Alt))
-        //        overTimeTrackBar.Value = (int)Math.Round((double)overTimeTrackBar.Value / 10) * 10;
-        //    overTimeLabel.Text = overTimeTrackBar.Value.ToString();
-        //}
 
         private void tempTrackBar_Scroll(object sender, EventArgs e)
         {
@@ -197,33 +67,63 @@ namespace ACC_Dedicated_Server_GUI
             return value;
         }
 
+        public static Encoding GetEncoding(string filename)
+        {
+            // Read the BOM
+            var bom = new byte[4];
+            using (var file = new FileStream(filename, FileMode.Open, FileAccess.Read))
+            {
+                file.Read(bom, 0, 4);
+            }
+
+            // Analyze the BOM
+            if (bom[0] == 0x2b && bom[1] == 0x2f && bom[2] == 0x76) return Encoding.UTF7;
+            if (bom[0] == 0xef && bom[1] == 0xbb && bom[2] == 0xbf) return Encoding.UTF8;
+            if (bom[0] == 123 && bom[1] == 13 && bom[2] == 10) return Encoding.UTF8;
+            if (bom[0] == 0xff && bom[1] == 0xfe && bom[2] == 0 && bom[3] == 0) return Encoding.UTF32; //UTF-32LE
+            if (bom[0] == 0xff && bom[1] == 0xfe) return Encoding.Unicode; //UTF-16LE
+            if (bom[0] == 123 && bom[1] == 0) return Encoding.Unicode; //UTF-16LE
+            if (bom[0] == 0xfe && bom[1] == 0xff) return Encoding.BigEndianUnicode; //UTF-16BE
+            if (bom[0] == 0 && bom[1] == 0 && bom[2] == 0xfe && bom[3] == 0xff) return new UTF32Encoding(true, true);  //UTF-32BE
+
+            // We actually have no idea what the encoding is if we reach this point, so
+            // you may wish to return null instead of defaulting to ASCII
+            return Encoding.ASCII;
+        }
+
         private void LoadConfig()
         {
             if (!Directory.Exists(@"cfg\"))
                 Directory.CreateDirectory(@"cfg\");
 
             string rawJSON;
+            string file = @"cfg\settings.json";
 
-            if (File.Exists(@"cfg\settings.json"))
+            if (File.Exists(file))
             {
                 // settings.json
-                rawJSON = File.ReadAllText(@"cfg\settings.json");
+                Encoding encoding = GetEncoding(file);
+                rawJSON = File.ReadAllText(file, encoding);
                 settings = JsonConvert.DeserializeObject<SettingsObject>(rawJSON);
 
                 serverNameTextBox.Text = settings.serverName;
                 adminPasswordTextBox.Text = settings.adminPassword;
                 joinPasswordTextBox.Text = settings.password;
                 spectatorPasswordTextBox.Text = settings.spectatorPassword;
-                maxCarsTrackBar.Value = InTrackBarRange(settings.maxCarSlots, maxCarsTrackBar);
-                TRRequirementsTrackBar.Value = InTrackBarRange(settings.trackMedalsRequirement, TRRequirementsTrackBar);
-                SARequirementTrackBar.Value = InTrackBarRange(settings.safetyRatingRequirement, SARequirementTrackBar);
-                RCRequirementTrackBar.Value = InTrackBarRange(settings.racecraftRatingRequirement, RCRequirementTrackBar);
+                maxCarSlotsNumericUpDown.Value = settings.maxCarSlots;
+                TRRequirementNumericUpDown.Value = settings.trackMedalsRequirement;
+                SARequirementNumericUpDown.Value = settings.safetyRatingRequirement;
+                RCRequirementNumericUpDown.Value = settings.racecraftRatingRequirement;
+                isRaceLockedCheckBox.Checked = settings.isRaceLocked == 1 ? true : false;
+                shortFormationCheckBox.Checked = settings.shortFormationLap == 1 ? true : false;
             }
 
-            if (File.Exists(@"cfg\assistRules.json"))
+            file = @"cfg\assistRules.json";
+            if (File.Exists(file))
             {
                 // assistRules.json
-                rawJSON = File.ReadAllText(@"cfg\assistRules.json");
+                Encoding encoding = GetEncoding(file);
+                rawJSON = File.ReadAllText(file, encoding);
                 assist = JsonConvert.DeserializeObject<AssistObject>(rawJSON);
 
                 idealLineCheckBox.Checked = assist.disableIdealLine == 0;
@@ -234,13 +134,15 @@ namespace ACC_Dedicated_Server_GUI
                 autoWipersCheckBox.Checked = assist.disableAutoWiper == 0;
                 autoLightsCheckBox.Checked = assist.disableAutoLights == 0;
                 autoClutchCheckBox.Checked = assist.disableAutoClutch == 0;
-                stabilityControlLevelTrackBar.Value = InTrackBarRange(assist.stabilityControlLevelMax, stabilityControlLevelTrackBar);
+                maxStabilityNumericUpDown.Value = assist.stabilityControlLevelMax;
             }
 
-            if (File.Exists(@"cfg\event.json"))
+            file = @"cfg\event.json";
+            if (File.Exists(file))
             {
                 // event.json
-                rawJSON = File.ReadAllText(@"cfg\event.json");
+                Encoding encoding = GetEncoding(file);
+                rawJSON = File.ReadAllText(file, encoding);
                 eventObject = JsonConvert.DeserializeObject<EventObject>(rawJSON);
 
                 TrackComboBox.SelectedItem = eventObject.track;
@@ -257,6 +159,9 @@ namespace ACC_Dedicated_Server_GUI
                     {
                         case "P":
                             pCheckBox.Checked = true;
+                            pStartTimeNumericUpDown.Value = session.hourOfDay;
+                            pTimeScaleNumericUpDown.Value = session.timeMultiplier;
+                            pDurationNumericUpDown.Value = session.sessionDurationMinutes;
                             switch (session.dayOfWeekend)
                             {
                                 case 1:
@@ -274,6 +179,9 @@ namespace ACC_Dedicated_Server_GUI
                             break;
                         case "Q":
                             qCheckBox.Checked = true;
+                            qStartTimeNumericUpDown.Value = session.hourOfDay;
+                            qTimeScaleNumericUpDown.Value = session.timeMultiplier;
+                            qDurationNumericUpDown.Value = session.sessionDurationMinutes;
                             switch (session.dayOfWeekend)
                             {
                                 case 1:
@@ -291,6 +199,9 @@ namespace ACC_Dedicated_Server_GUI
                             break;
                         case "R":
                             rCheckBox.Checked = true;
+                            rStartTimeNumericUpDown.Value = session.hourOfDay;
+                            rTimeScaleNumericUpDown.Value = session.timeMultiplier;
+                            rDurationNumericUpDown.Value = session.sessionDurationMinutes;
                             switch (session.dayOfWeekend)
                             {
                                 case 1:
@@ -312,9 +223,12 @@ namespace ACC_Dedicated_Server_GUI
                 }
             }
 
-            if (File.Exists(@"cfg\eventRules.json"))
+            file = @"cfg\eventRules.json";
+            if (File.Exists(file))
             {
-                rawJSON = File.ReadAllText(@"cfg\eventRules.json");
+                // eventRules.json
+                Encoding encoding = GetEncoding(file);
+                rawJSON = File.ReadAllText(file, encoding);
                 eventRules = JsonConvert.DeserializeObject<EventRulesObject>(rawJSON);
 
                 pitWindowsLengthNumericUpDown.Value = eventRules.pitWindowLengthSec;
@@ -328,6 +242,21 @@ namespace ACC_Dedicated_Server_GUI
                 tyreChangeRequiredCheckBox.Checked = eventRules.isMandatoryPitstopTyreChangeRequired;
                 driverSwapRequiredCheckBox.Checked = eventRules.isMandatoryPitstopSwapDriverRequired;
             }
+
+            file = @"cfg\configuration.json";
+            if (File.Exists(file))
+            {
+                // configuration.json
+                Encoding encoding = GetEncoding(file);
+                rawJSON = File.ReadAllText(file, encoding);
+                configuration = JsonConvert.DeserializeObject<ConfigurationObject>(rawJSON);
+
+                UDPNumericUpDown.Value = configuration.udpPort;
+                TCPNumericUpDown.Value = configuration.tcpPort;
+                maxConnectionsNumericUpDown.Value = configuration.maxConnections;
+                lanDiscoveryCheckBox.Checked = configuration.lanDiscovery == 1 ? true : false;
+                registerToLobbyCheckBox.Checked = configuration.registerToLobby == 1 ? true : false;
+            }
         }
 
         private void SaveConfig()
@@ -337,10 +266,13 @@ namespace ACC_Dedicated_Server_GUI
             settings.password = joinPasswordTextBox.Text;
             settings.adminPassword = adminPasswordTextBox.Text;
             settings.spectatorPassword = spectatorPasswordTextBox.Text;
-            settings.maxCarSlots = maxCarsTrackBar.Value;
-            settings.trackMedalsRequirement = TRRequirementsTrackBar.Value;
-            settings.safetyRatingRequirement = SARequirementTrackBar.Value;
-            settings.racecraftRatingRequirement = RCRequirementTrackBar.Value;
+            settings.maxCarSlots = (int)maxCarSlotsNumericUpDown.Value;
+            settings.trackMedalsRequirement = (int)TRRequirementNumericUpDown.Value;
+            settings.safetyRatingRequirement = (int)SARequirementNumericUpDown.Value;
+            settings.racecraftRatingRequirement = (int)RCRequirementNumericUpDown.Value;
+            settings.isRaceLocked = isRaceLockedCheckBox.Checked ? 1 : 0;
+            settings.shortFormationLap = shortFormationCheckBox.Checked ? 1 : 0;
+            settings.configVersion = 1;
 
             // assistRules.json
             assist.disableIdealLine = idealLineCheckBox.Checked ? 0 : 1;
@@ -351,7 +283,7 @@ namespace ACC_Dedicated_Server_GUI
             assist.disableAutoWiper = autoWipersCheckBox.Checked ? 0 : 1;
             assist.disableAutoLights = autoLightsCheckBox.Checked ? 0 : 1;
             assist.disableAutoClutch = autoClutchCheckBox.Checked ? 0 : 1;
-            assist.stabilityControlLevelMax = stabilityControlLevelTrackBar.Value;
+            assist.stabilityControlLevelMax = (int)maxStabilityNumericUpDown.Value;
 
             // event.json
             eventObject.track = TrackComboBox.Text;
@@ -361,6 +293,7 @@ namespace ACC_Dedicated_Server_GUI
             eventObject.cloudLevel = (float)cloudCoverageTrackBar.Value / 10;
             eventObject.rain = (float)rainTrackBar.Value / 10;
             eventObject.weatherRandomness = weatherRandomnessTrackBar.Value;
+            eventObject.configVersion = 1;
 
             if (eventObject.sessions == null)
                 eventObject.sessions = new List<Session>();
@@ -420,7 +353,7 @@ namespace ACC_Dedicated_Server_GUI
                 eventObject.sessions.Add(session);
             }
 
-            //eventRules.json
+            // eventRules.json
             eventRules.qualifyStandingType = 1;
             eventRules.pitWindowLengthSec = (int)pitWindowsLengthNumericUpDown.Value;
             eventRules.driverStintTimeSec = (int)driverStintTimeNumericUpDown.Value;
@@ -433,10 +366,19 @@ namespace ACC_Dedicated_Server_GUI
             eventRules.isMandatoryPitstopTyreChangeRequired = tyreChangeRequiredCheckBox.Checked;
             eventRules.isMandatoryPitstopSwapDriverRequired = driverSwapRequiredCheckBox.Checked;
 
-            File.WriteAllText(@"cfg\settings.json", JsonConvert.SerializeObject(settings, Formatting.Indented));
-            File.WriteAllText(@"cfg\assistRules.json", JsonConvert.SerializeObject(assist, Formatting.Indented));
-            File.WriteAllText(@"cfg\event.json", JsonConvert.SerializeObject(eventObject, Formatting.Indented));
-            File.WriteAllText(@"cfg\eventRules.json", JsonConvert.SerializeObject(eventRules, Formatting.Indented));
+            // configuration.json
+            configuration.udpPort = (int)UDPNumericUpDown.Value;
+            configuration.tcpPort = (int)TCPNumericUpDown.Value;
+            configuration.maxConnections = (int)maxConnectionsNumericUpDown.Value;
+            configuration.lanDiscovery = lanDiscoveryCheckBox.Checked ? 1 : 0;
+            configuration.registerToLobby = registerToLobbyCheckBox.Checked ? 1 : 0;
+            configuration.configVersion = 1;
+
+            File.WriteAllText(@"cfg\settings.json", JsonConvert.SerializeObject(settings, Formatting.Indented), Encoding.Unicode);
+            File.WriteAllText(@"cfg\assistRules.json", JsonConvert.SerializeObject(assist, Formatting.Indented), Encoding.Unicode);
+            File.WriteAllText(@"cfg\event.json", JsonConvert.SerializeObject(eventObject, Formatting.Indented), Encoding.Unicode);
+            File.WriteAllText(@"cfg\eventRules.json", JsonConvert.SerializeObject(eventRules, Formatting.Indented), Encoding.Unicode);
+            File.WriteAllText(@"cfg\configuration.json", JsonConvert.SerializeObject(configuration, Formatting.Indented), Encoding.Unicode);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -466,6 +408,7 @@ namespace ACC_Dedicated_Server_GUI
                 if (Process.GetProcessesByName("accServer").Length == 0)
                 {
                     SaveConfig();
+#if !DEBUG
                     Process.Start("accServer.exe");
                 }
                 else
@@ -474,6 +417,7 @@ namespace ACC_Dedicated_Server_GUI
                     {
                         process.Kill();
                     }
+#endif
                 }
             }
             catch (Exception ex)
@@ -519,6 +463,29 @@ namespace ACC_Dedicated_Server_GUI
         {
             BoPForm boPForm = new BoPForm();
             boPForm.Show();
+        }
+
+        bool selectByMouse = false;
+
+        private void quickBoxs_Enter(object sender, EventArgs e)
+        {
+            NumericUpDown curBox = sender as NumericUpDown;
+            curBox.Select();
+            curBox.Select(0, curBox.Text.Length);
+            if (MouseButtons == MouseButtons.Left)
+            {
+                selectByMouse = true;
+            }
+        }
+
+        private void quickBoxs_MouseDown(object sender, MouseEventArgs e)
+        {
+            NumericUpDown curBox = sender as NumericUpDown;
+            if (selectByMouse)
+            {
+                curBox.Select(0, curBox.Text.Length);
+                selectByMouse = false;
+            }
         }
     }
 }

@@ -605,13 +605,15 @@
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.forceEntryListCheckBox);
             this.Controls.Add(this.entriesTreeView);
-            this.Controls.Add(this.driverSettingsPanel);
             this.Controls.Add(this.carSettingsPanel);
+            this.Controls.Add(this.driverSettingsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "EntriesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entries";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EntriesForm_FormClosing);
             this.Load += new System.EventHandler(this.EntriesForm_Load);
             this.carSettingsPanel.ResumeLayout(false);

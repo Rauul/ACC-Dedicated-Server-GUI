@@ -18,6 +18,8 @@ namespace ACC_Dedicated_Server_GUI
             public int racecraftRatingRequirement { get; set; }
             public string password { get; set; }
             public int maxCarSlots { get; set; }
+            public int isRaceLocked { get; set; }
+            public int shortFormationLap { get; set; }
             public string spectatorPassword { get; set; }
             public int configVersion { get; set; }
         }
