@@ -52,20 +52,35 @@
             this.autoLightsCheckBox = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.isRaceLockedCheckBox = new System.Windows.Forms.CheckBox();
+            this.shortFormationCheckBox = new System.Windows.Forms.CheckBox();
+            this.registerToLobbyCheckBox = new System.Windows.Forms.CheckBox();
+            this.lanDiscoveryCheckBox = new System.Windows.Forms.CheckBox();
+            this.maxConnectionsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label38 = new System.Windows.Forms.Label();
+            this.UDPNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.TCPNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.RCRequirementNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.SARequirementNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.TRRequirementNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.maxCarSlotsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.maxStabilityNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label32 = new System.Windows.Forms.Label();
             this.TrackComboBox = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.pCheckBox = new System.Windows.Forms.CheckBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.preRaceWaitTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.overTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.pCheckBox = new System.Windows.Forms.CheckBox();
             this.rCheckBox = new System.Windows.Forms.CheckBox();
             this.qCheckBox = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -137,24 +152,17 @@
             this.BoPToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.entryListButton = new System.Windows.Forms.Button();
             this.BopButton = new System.Windows.Forms.Button();
-            this.maxCarSlotsNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.TRRequirementNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.RCRequirementNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.SARequirementNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.UDPNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.TCPNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.maxConnectionsNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label38 = new System.Windows.Forms.Label();
-            this.lanDiscoveryCheckBox = new System.Windows.Forms.CheckBox();
-            this.registerToLobbyCheckBox = new System.Windows.Forms.CheckBox();
-            this.maxStabilityNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.shortFormationCheckBox = new System.Windows.Forms.CheckBox();
-            this.isRaceLockedCheckBox = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TCPNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RCRequirementNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SARequirementNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TRRequirementNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxCarSlotsNumericUpDown)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maxStabilityNumericUpDown)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.preRaceWaitTimeNumericUpDown)).BeginInit();
@@ -186,14 +194,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.maxCarSlotsNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TRRequirementNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RCRequirementNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SARequirementNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TCPNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maxStabilityNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // serverNameTextBox
@@ -436,6 +436,255 @@
             this.panel1.Size = new System.Drawing.Size(340, 265);
             this.panel1.TabIndex = 14;
             // 
+            // isRaceLockedCheckBox
+            // 
+            this.isRaceLockedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.isRaceLockedCheckBox.Checked = true;
+            this.isRaceLockedCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.isRaceLockedCheckBox.Location = new System.Drawing.Point(181, 176);
+            this.isRaceLockedCheckBox.Name = "isRaceLockedCheckBox";
+            this.isRaceLockedCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.isRaceLockedCheckBox.TabIndex = 33;
+            this.isRaceLockedCheckBox.TabStop = false;
+            this.isRaceLockedCheckBox.Text = "Race Locked";
+            this.toolTip.SetToolTip(this.isRaceLockedCheckBox, "If set to 0, the server will allow joining during a race session. Is\r\nnot useful " +
+        "in “Public Multiplayer”, as the user-server matching\r\nwill ignore ongoing race s" +
+        "essions.");
+            this.isRaceLockedCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // shortFormationCheckBox
+            // 
+            this.shortFormationCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.shortFormationCheckBox.Location = new System.Drawing.Point(181, 196);
+            this.shortFormationCheckBox.Name = "shortFormationCheckBox";
+            this.shortFormationCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.shortFormationCheckBox.TabIndex = 32;
+            this.shortFormationCheckBox.TabStop = false;
+            this.shortFormationCheckBox.Text = "Short Formation Lap";
+            this.toolTip.SetToolTip(this.shortFormationCheckBox, "Toggles the short and long formation lap. Long formation is\r\nonly usable on priva" +
+        "te servers.");
+            this.shortFormationCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // registerToLobbyCheckBox
+            // 
+            this.registerToLobbyCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.registerToLobbyCheckBox.Checked = true;
+            this.registerToLobbyCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.registerToLobbyCheckBox.Location = new System.Drawing.Point(181, 216);
+            this.registerToLobbyCheckBox.Name = "registerToLobbyCheckBox";
+            this.registerToLobbyCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.registerToLobbyCheckBox.TabIndex = 31;
+            this.registerToLobbyCheckBox.TabStop = false;
+            this.registerToLobbyCheckBox.Text = "Register To Lobby";
+            this.toolTip.SetToolTip(this.registerToLobbyCheckBox, "When off, this server won’t register to the backend. Is useful for LAN\r\nsessions." +
+        " If unchecked, the server is declared “Private Multiplayer”.");
+            this.registerToLobbyCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // lanDiscoveryCheckBox
+            // 
+            this.lanDiscoveryCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lanDiscoveryCheckBox.Location = new System.Drawing.Point(181, 236);
+            this.lanDiscoveryCheckBox.Name = "lanDiscoveryCheckBox";
+            this.lanDiscoveryCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.lanDiscoveryCheckBox.TabIndex = 30;
+            this.lanDiscoveryCheckBox.TabStop = false;
+            this.lanDiscoveryCheckBox.Text = "Lan Discovery";
+            this.toolTip.SetToolTip(this.lanDiscoveryCheckBox, "Defines if the server will listen to LAN discovery requests. Can be turned \r\noff " +
+        "for dedicated servers.");
+            this.lanDiscoveryCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // maxConnectionsNumericUpDown
+            // 
+            this.maxConnectionsNumericUpDown.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.maxConnectionsNumericUpDown.Location = new System.Drawing.Point(112, 184);
+            this.maxConnectionsNumericUpDown.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.maxConnectionsNumericUpDown.Name = "maxConnectionsNumericUpDown";
+            this.maxConnectionsNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.maxConnectionsNumericUpDown.TabIndex = 6;
+            this.maxConnectionsNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.maxConnectionsNumericUpDown, resources.GetString("maxConnectionsNumericUpDown.ToolTip"));
+            this.maxConnectionsNumericUpDown.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.maxConnectionsNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.maxConnectionsNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(4, 186);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(89, 13);
+            this.label38.TabIndex = 28;
+            this.label38.Text = "Max Connections";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // UDPNumericUpDown
+            // 
+            this.UDPNumericUpDown.Location = new System.Drawing.Point(112, 209);
+            this.UDPNumericUpDown.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.UDPNumericUpDown.Name = "UDPNumericUpDown";
+            this.UDPNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.UDPNumericUpDown.TabIndex = 7;
+            this.UDPNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.UDPNumericUpDown.Value = new decimal(new int[] {
+            9231,
+            0,
+            0,
+            0});
+            this.UDPNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.UDPNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            // 
+            // TCPNumericUpDown
+            // 
+            this.TCPNumericUpDown.Location = new System.Drawing.Point(112, 235);
+            this.TCPNumericUpDown.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.TCPNumericUpDown.Name = "TCPNumericUpDown";
+            this.TCPNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.TCPNumericUpDown.TabIndex = 8;
+            this.TCPNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TCPNumericUpDown.Value = new decimal(new int[] {
+            9232,
+            0,
+            0,
+            0});
+            this.TCPNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.TCPNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(4, 211);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(52, 13);
+            this.label34.TabIndex = 25;
+            this.label34.Text = "UDP Port";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(4, 237);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(50, 13);
+            this.label35.TabIndex = 24;
+            this.label35.Text = "TCP Port";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // RCRequirementNumericUpDown
+            // 
+            this.RCRequirementNumericUpDown.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.RCRequirementNumericUpDown.Location = new System.Drawing.Point(280, 146);
+            this.RCRequirementNumericUpDown.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.RCRequirementNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.RCRequirementNumericUpDown.Name = "RCRequirementNumericUpDown";
+            this.RCRequirementNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.RCRequirementNumericUpDown.TabIndex = 10;
+            this.RCRequirementNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.RCRequirementNumericUpDown.Value = new decimal(new int[] {
+            75,
+            0,
+            0,
+            0});
+            this.RCRequirementNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.RCRequirementNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            // 
+            // SARequirementNumericUpDown
+            // 
+            this.SARequirementNumericUpDown.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.SARequirementNumericUpDown.Location = new System.Drawing.Point(280, 120);
+            this.SARequirementNumericUpDown.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.SARequirementNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.SARequirementNumericUpDown.Name = "SARequirementNumericUpDown";
+            this.SARequirementNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.SARequirementNumericUpDown.TabIndex = 9;
+            this.SARequirementNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.SARequirementNumericUpDown.Value = new decimal(new int[] {
+            90,
+            0,
+            0,
+            0});
+            this.SARequirementNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.SARequirementNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            // 
+            // TRRequirementNumericUpDown
+            // 
+            this.TRRequirementNumericUpDown.Location = new System.Drawing.Point(112, 146);
+            this.TRRequirementNumericUpDown.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.TRRequirementNumericUpDown.Name = "TRRequirementNumericUpDown";
+            this.TRRequirementNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.TRRequirementNumericUpDown.TabIndex = 5;
+            this.TRRequirementNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TRRequirementNumericUpDown.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.TRRequirementNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.TRRequirementNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            // 
+            // maxCarSlotsNumericUpDown
+            // 
+            this.maxCarSlotsNumericUpDown.Location = new System.Drawing.Point(112, 120);
+            this.maxCarSlotsNumericUpDown.Name = "maxCarSlotsNumericUpDown";
+            this.maxCarSlotsNumericUpDown.Size = new System.Drawing.Size(48, 20);
+            this.maxCarSlotsNumericUpDown.TabIndex = 4;
+            this.maxCarSlotsNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.maxCarSlotsNumericUpDown, resources.GetString("maxCarSlotsNumericUpDown.ToolTip"));
+            this.maxCarSlotsNumericUpDown.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.maxCarSlotsNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.maxCarSlotsNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -472,6 +721,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(340, 144);
             this.panel2.TabIndex = 16;
+            // 
+            // maxStabilityNumericUpDown
+            // 
+            this.maxStabilityNumericUpDown.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.maxStabilityNumericUpDown.Location = new System.Drawing.Point(185, 108);
+            this.maxStabilityNumericUpDown.Name = "maxStabilityNumericUpDown";
+            this.maxStabilityNumericUpDown.Size = new System.Drawing.Size(143, 20);
+            this.maxStabilityNumericUpDown.TabIndex = 20;
+            this.maxStabilityNumericUpDown.TabStop = false;
+            this.maxStabilityNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label12
             // 
@@ -558,6 +821,18 @@
             this.label19.Size = new System.Drawing.Size(74, 13);
             this.label19.TabIndex = 40;
             this.label19.Text = "Miscellaneous";
+            // 
+            // pCheckBox
+            // 
+            this.pCheckBox.AutoSize = true;
+            this.pCheckBox.Location = new System.Drawing.Point(213, 7);
+            this.pCheckBox.Name = "pCheckBox";
+            this.pCheckBox.Size = new System.Drawing.Size(65, 17);
+            this.pCheckBox.TabIndex = 32;
+            this.pCheckBox.TabStop = false;
+            this.pCheckBox.Text = "Practice";
+            this.pCheckBox.UseVisualStyleBackColor = true;
+            this.pCheckBox.CheckedChanged += new System.EventHandler(this.practiceCheckBox_CheckedChanged);
             // 
             // panel5
             // 
@@ -647,18 +922,6 @@
             0});
             this.overTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
             this.overTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // pCheckBox
-            // 
-            this.pCheckBox.AutoSize = true;
-            this.pCheckBox.Location = new System.Drawing.Point(213, 7);
-            this.pCheckBox.Name = "pCheckBox";
-            this.pCheckBox.Size = new System.Drawing.Size(65, 17);
-            this.pCheckBox.TabIndex = 32;
-            this.pCheckBox.TabStop = false;
-            this.pCheckBox.Text = "Practice";
-            this.pCheckBox.UseVisualStyleBackColor = true;
-            this.pCheckBox.CheckedChanged += new System.EventHandler(this.practiceCheckBox_CheckedChanged);
             // 
             // rCheckBox
             // 
@@ -949,6 +1212,7 @@
             this.rSundayRadioButton.Name = "rSundayRadioButton";
             this.rSundayRadioButton.Size = new System.Drawing.Size(44, 17);
             this.rSundayRadioButton.TabIndex = 2;
+            this.rSundayRadioButton.TabStop = true;
             this.rSundayRadioButton.Text = "Sun";
             this.rSundayRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -1112,6 +1376,7 @@
             this.qSaturdayRadioButton.Name = "qSaturdayRadioButton";
             this.qSaturdayRadioButton.Size = new System.Drawing.Size(41, 17);
             this.qSaturdayRadioButton.TabIndex = 1;
+            this.qSaturdayRadioButton.TabStop = true;
             this.qSaturdayRadioButton.Text = "Sat";
             this.qSaturdayRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -1275,6 +1540,7 @@
             this.pFridayRadioButton.Name = "pFridayRadioButton";
             this.pFridayRadioButton.Size = new System.Drawing.Size(36, 17);
             this.pFridayRadioButton.TabIndex = 0;
+            this.pFridayRadioButton.TabStop = true;
             this.pFridayRadioButton.Text = "Fri";
             this.pFridayRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -1642,274 +1908,11 @@
             this.BopButton.UseVisualStyleBackColor = false;
             this.BopButton.Click += new System.EventHandler(this.BopButton_Click);
             // 
-            // maxCarSlotsNumericUpDown
-            // 
-            this.maxCarSlotsNumericUpDown.Location = new System.Drawing.Point(112, 120);
-            this.maxCarSlotsNumericUpDown.Name = "maxCarSlotsNumericUpDown";
-            this.maxCarSlotsNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.maxCarSlotsNumericUpDown.TabIndex = 4;
-            this.maxCarSlotsNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip.SetToolTip(this.maxCarSlotsNumericUpDown, resources.GetString("maxCarSlotsNumericUpDown.ToolTip"));
-            this.maxCarSlotsNumericUpDown.Value = new decimal(new int[] {
-            30,
-            0,
-            0,
-            0});
-            this.maxCarSlotsNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.maxCarSlotsNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // TRRequirementNumericUpDown
-            // 
-            this.TRRequirementNumericUpDown.Location = new System.Drawing.Point(112, 146);
-            this.TRRequirementNumericUpDown.Maximum = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.TRRequirementNumericUpDown.Name = "TRRequirementNumericUpDown";
-            this.TRRequirementNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.TRRequirementNumericUpDown.TabIndex = 5;
-            this.TRRequirementNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TRRequirementNumericUpDown.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            this.TRRequirementNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.TRRequirementNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // RCRequirementNumericUpDown
-            // 
-            this.RCRequirementNumericUpDown.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.RCRequirementNumericUpDown.Location = new System.Drawing.Point(280, 146);
-            this.RCRequirementNumericUpDown.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.RCRequirementNumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            this.RCRequirementNumericUpDown.Name = "RCRequirementNumericUpDown";
-            this.RCRequirementNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.RCRequirementNumericUpDown.TabIndex = 10;
-            this.RCRequirementNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.RCRequirementNumericUpDown.Value = new decimal(new int[] {
-            75,
-            0,
-            0,
-            0});
-            this.RCRequirementNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.RCRequirementNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // SARequirementNumericUpDown
-            // 
-            this.SARequirementNumericUpDown.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.SARequirementNumericUpDown.Location = new System.Drawing.Point(280, 120);
-            this.SARequirementNumericUpDown.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.SARequirementNumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            this.SARequirementNumericUpDown.Name = "SARequirementNumericUpDown";
-            this.SARequirementNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.SARequirementNumericUpDown.TabIndex = 9;
-            this.SARequirementNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.SARequirementNumericUpDown.Value = new decimal(new int[] {
-            90,
-            0,
-            0,
-            0});
-            this.SARequirementNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.SARequirementNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // UDPNumericUpDown
-            // 
-            this.UDPNumericUpDown.Location = new System.Drawing.Point(112, 209);
-            this.UDPNumericUpDown.Maximum = new decimal(new int[] {
-            65535,
-            0,
-            0,
-            0});
-            this.UDPNumericUpDown.Name = "UDPNumericUpDown";
-            this.UDPNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.UDPNumericUpDown.TabIndex = 7;
-            this.UDPNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.UDPNumericUpDown.Value = new decimal(new int[] {
-            9231,
-            0,
-            0,
-            0});
-            this.UDPNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.UDPNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // TCPNumericUpDown
-            // 
-            this.TCPNumericUpDown.Location = new System.Drawing.Point(112, 235);
-            this.TCPNumericUpDown.Maximum = new decimal(new int[] {
-            65535,
-            0,
-            0,
-            0});
-            this.TCPNumericUpDown.Name = "TCPNumericUpDown";
-            this.TCPNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.TCPNumericUpDown.TabIndex = 8;
-            this.TCPNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TCPNumericUpDown.Value = new decimal(new int[] {
-            9232,
-            0,
-            0,
-            0});
-            this.TCPNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.TCPNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(4, 211);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(52, 13);
-            this.label34.TabIndex = 25;
-            this.label34.Text = "UDP Port";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(4, 237);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(50, 13);
-            this.label35.TabIndex = 24;
-            this.label35.Text = "TCP Port";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // maxConnectionsNumericUpDown
-            // 
-            this.maxConnectionsNumericUpDown.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.maxConnectionsNumericUpDown.Location = new System.Drawing.Point(112, 184);
-            this.maxConnectionsNumericUpDown.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.maxConnectionsNumericUpDown.Name = "maxConnectionsNumericUpDown";
-            this.maxConnectionsNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.maxConnectionsNumericUpDown.TabIndex = 6;
-            this.maxConnectionsNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip.SetToolTip(this.maxConnectionsNumericUpDown, resources.GetString("maxConnectionsNumericUpDown.ToolTip"));
-            this.maxConnectionsNumericUpDown.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.maxConnectionsNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.maxConnectionsNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(4, 186);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(89, 13);
-            this.label38.TabIndex = 28;
-            this.label38.Text = "Max Connections";
-            this.label38.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lanDiscoveryCheckBox
-            // 
-            this.lanDiscoveryCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lanDiscoveryCheckBox.Location = new System.Drawing.Point(181, 236);
-            this.lanDiscoveryCheckBox.Name = "lanDiscoveryCheckBox";
-            this.lanDiscoveryCheckBox.Size = new System.Drawing.Size(147, 17);
-            this.lanDiscoveryCheckBox.TabIndex = 30;
-            this.lanDiscoveryCheckBox.TabStop = false;
-            this.lanDiscoveryCheckBox.Text = "Lan Discovery";
-            this.toolTip.SetToolTip(this.lanDiscoveryCheckBox, "Defines if the server will listen to LAN discovery requests. Can be turned \r\noff " +
-        "for dedicated servers.");
-            this.lanDiscoveryCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // registerToLobbyCheckBox
-            // 
-            this.registerToLobbyCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.registerToLobbyCheckBox.Checked = true;
-            this.registerToLobbyCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.registerToLobbyCheckBox.Location = new System.Drawing.Point(181, 216);
-            this.registerToLobbyCheckBox.Name = "registerToLobbyCheckBox";
-            this.registerToLobbyCheckBox.Size = new System.Drawing.Size(147, 17);
-            this.registerToLobbyCheckBox.TabIndex = 31;
-            this.registerToLobbyCheckBox.TabStop = false;
-            this.registerToLobbyCheckBox.Text = "Register To Lobby";
-            this.toolTip.SetToolTip(this.registerToLobbyCheckBox, "When off, this server won’t register to the backend. Is useful for LAN\r\nsessions." +
-        " If unchecked, the server is declared “Private Multiplayer”.");
-            this.registerToLobbyCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // maxStabilityNumericUpDown
-            // 
-            this.maxStabilityNumericUpDown.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.maxStabilityNumericUpDown.Location = new System.Drawing.Point(185, 108);
-            this.maxStabilityNumericUpDown.Name = "maxStabilityNumericUpDown";
-            this.maxStabilityNumericUpDown.Size = new System.Drawing.Size(143, 20);
-            this.maxStabilityNumericUpDown.TabIndex = 20;
-            this.maxStabilityNumericUpDown.TabStop = false;
-            this.maxStabilityNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // toolTip
             // 
             this.toolTip.AutoPopDelay = 25000;
             this.toolTip.InitialDelay = 500;
             this.toolTip.ReshowDelay = 100;
-            // 
-            // shortFormationCheckBox
-            // 
-            this.shortFormationCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.shortFormationCheckBox.Location = new System.Drawing.Point(181, 196);
-            this.shortFormationCheckBox.Name = "shortFormationCheckBox";
-            this.shortFormationCheckBox.Size = new System.Drawing.Size(147, 17);
-            this.shortFormationCheckBox.TabIndex = 32;
-            this.shortFormationCheckBox.TabStop = false;
-            this.shortFormationCheckBox.Text = "Short Formation Lap";
-            this.toolTip.SetToolTip(this.shortFormationCheckBox, "Toggles the short and long formation lap. Long formation is\r\nonly usable on priva" +
-        "te servers.");
-            this.shortFormationCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // isRaceLockedCheckBox
-            // 
-            this.isRaceLockedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.isRaceLockedCheckBox.Checked = true;
-            this.isRaceLockedCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.isRaceLockedCheckBox.Location = new System.Drawing.Point(181, 176);
-            this.isRaceLockedCheckBox.Name = "isRaceLockedCheckBox";
-            this.isRaceLockedCheckBox.Size = new System.Drawing.Size(147, 17);
-            this.isRaceLockedCheckBox.TabIndex = 33;
-            this.isRaceLockedCheckBox.TabStop = false;
-            this.isRaceLockedCheckBox.Text = "Race Locked";
-            this.toolTip.SetToolTip(this.isRaceLockedCheckBox, "If set to 0, the server will allow joining during a race session. Is\r\nnot useful " +
-        "in “Public Multiplayer”, as the user-server matching\r\nwill ignore ongoing race s" +
-        "essions.");
-            this.isRaceLockedCheckBox.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -1933,12 +1936,20 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ACC Dedicated Server GUI V1.2";
+            this.Text = "ACC Dedicated Server GUI V1.2.1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TCPNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RCRequirementNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SARequirementNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TRRequirementNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxCarSlotsNumericUpDown)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.maxStabilityNumericUpDown)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -1981,14 +1992,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.maxCarSlotsNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TRRequirementNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RCRequirementNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SARequirementNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TCPNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maxStabilityNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

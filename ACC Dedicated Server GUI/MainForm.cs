@@ -8,7 +8,9 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static ACC_Dedicated_Server_GUI.AssistRules;
@@ -21,11 +23,22 @@ namespace ACC_Dedicated_Server_GUI
 {
     public partial class MainForm : Form
     {
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        static extern IntPtr SendMessage(IntPtr hWnd, UInt32 Msg, int wParam, int lParam);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
+
         SettingsObject settings = new SettingsObject();
         AssistObject assist = new AssistObject();
         EventObject eventObject = new EventObject();
         EventRulesObject eventRules = new EventRulesObject();
         ConfigurationObject configuration = new ConfigurationObject();
+
+        Panel consolePanel = new Panel();
+
+        const int WM_SYSCOMMAND = 274;
+        const int SC_MAXIMIZE = 61488;
 
         public MainForm()
         {
@@ -384,6 +397,18 @@ namespace ACC_Dedicated_Server_GUI
         private void Form1_Load(object sender, EventArgs e)
         {
             TrackComboBox.SelectedIndex = 0;
+
+            consolePanel.Visible = false;
+
+            Size size = new Size();
+            size = panel3.Size;
+            size.Height += 27;
+            consolePanel.Size = size;
+
+            consolePanel.Parent = panel3;
+
+            Point location = new Point(0, -27);
+            consolePanel.Location = location;
 #if !DEBUG
             if (!File.Exists("accServer.exe"))
             {
@@ -408,8 +433,19 @@ namespace ACC_Dedicated_Server_GUI
                 if (Process.GetProcessesByName("accServer").Length == 0)
                 {
                     SaveConfig();
-#if !DEBUG
-                    Process.Start("accServer.exe");
+#if !DEBUG          
+                    consolePanel.Visible = true;
+                    consolePanel.BringToFront();
+
+                    Process process = new Process();
+                    process.StartInfo.FileName = "accServer.exe";
+                    process.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
+
+                    process.Start();
+                    Thread.Sleep(100);
+                    SetParent(process.MainWindowHandle, consolePanel.Handle);
+                    SendMessage(process.MainWindowHandle, WM_SYSCOMMAND, SC_MAXIMIZE, 0);
+                    label12.Visible = false;
                 }
                 else
                 {
@@ -417,6 +453,8 @@ namespace ACC_Dedicated_Server_GUI
                     {
                         process.Kill();
                     }
+                    consolePanel.Visible = false;
+                    label12.Visible = true;
 #endif
                 }
             }

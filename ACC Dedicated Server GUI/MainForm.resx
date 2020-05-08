@@ -117,6 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>122, 17</value>
+  </metadata>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>122, 17</value>
+  </metadata>
+  <data name="maxConnectionsNumericUpDown.ToolTip" xml:space="preserve">
+    <value>Replaces “maxClients”. The maximum amount of connections a server will
+accept at a time. If you own the hardware server, you can just set any high
+number you want. If you rented a 16 or 24 slot server, your Hosting Provider
+probably has set this here and doesn’t give you write-access to this
+configuration file.</value>
+  </data>
+  <data name="maxCarSlotsNumericUpDown.ToolTip" xml:space="preserve">
+    <value>Replaces “maxClientsOverride” and “spectatorSlots”. Defines
+the amount of car slots the server can occupy; this value is
+overridden if the pit count of the track is lower, or with 30 for
+public MP. The gap between maxCarSlots and maxConnections
+defines how many spectators or other irregular connections (ie
+entry list entries) can be on the server.</value>
+  </data>
   <data name="overTimeNumericUpDown.ToolTip" xml:space="preserve">
     <value>Time after that a session is forcibly closing after the timer
 reached 0:00. Something like 107% of the expected laptime is
@@ -165,27 +186,6 @@ time resets in the pitlane, no real stop is required.
   </data>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </metadata>
-  <data name="maxCarSlotsNumericUpDown.ToolTip" xml:space="preserve">
-    <value>Replaces “maxClientsOverride” and “spectatorSlots”. Defines
-the amount of car slots the server can occupy; this value is
-overridden if the pit count of the track is lower, or with 30 for
-public MP. The gap between maxCarSlots and maxConnections
-defines how many spectators or other irregular connections (ie
-entry list entries) can be on the server.</value>
-  </data>
-  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>122, 17</value>
-  </metadata>
-  <data name="maxConnectionsNumericUpDown.ToolTip" xml:space="preserve">
-    <value>Replaces “maxClients”. The maximum amount of connections a server will
-accept at a time. If you own the hardware server, you can just set any high
-number you want. If you rented a 16 or 24 slot server, your Hosting Provider
-probably has set this here and doesn’t give you write-access to this
-configuration file.</value>
-  </data>
-  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>122, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
