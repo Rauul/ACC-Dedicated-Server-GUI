@@ -1,17 +1,12 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static ACC_Dedicated_Server_GUI.AssistRules;
 using static ACC_Dedicated_Server_GUI.Configuration;
@@ -39,6 +34,95 @@ namespace ACC_Dedicated_Server_GUI
 
         const int WM_SYSCOMMAND = 274;
         const int SC_MAXIMIZE = 61488;
+
+        public static List<Car> carList = new List<Car>()
+        {
+            new Car("    Porsche 991 GT3", 0),
+            new Car("    Mercedes AMG GT3", 1),
+            new Car("    Ferrari 488 GT3", 2),
+            new Car("    Audi R8 LMS", 3),
+            new Car("    Lamborghini Huracan GT3", 4),
+            new Car("    McLaren 650S GT3", 5),
+            new Car("    Nissan GT-R Nismo GT3 (2018)", 6),
+            new Car("    BMW M6 GT3", 7),
+            new Car("    Bentley Continental GT3 (2018)", 8),
+            new Car("    Porsche 991 II GT3 Cup", 9),
+            new Car("    Nissan GT-R Nismo GT3 (2017)", 10),
+            new Car("    Bentley Continental GT3 (2016)", 11),
+            new Car("    Aston Martin Vantage V12 GT3", 12),
+            new Car("    Lamborghini Gallardo R-EX", 13),
+            new Car("    Jaguar G3", 14),
+            new Car("    Lexus RC F GT3", 15),
+            new Car("    Lamborghini Huracan Evo (2019)", 16),
+            new Car("    Honda NSX GT3", 17),
+            new Car("    Lamborghini Huracan SuperTrofeo", 18),
+            new Car("    Audi R8 LMS Evo (2019)", 19),
+            new Car("    Aston Martin Vantage V8 GT3", 20),
+            new Car("    Honda NSX Evo (2019)", 21),
+            new Car("    McLaren 720S GT3", 22),
+            new Car("    Porsche 911 II GT3 R (2019)", 23)
+        };
+
+        public static List<Track> trackList = new List<Track>()
+        {
+            new Track("    Barcelona","barcelona"),
+            new Track("    Barcelona 2019","barcelona_2019"),
+            new Track("    Brands hatch","brands_hatch"),
+            new Track("    Brands hatch 2019","brands_hatch_2019"),
+            new Track("    Hungaroring","hungaroring"),
+            new Track("    Hungaroring 2019","hungaroring_2019"),
+            new Track("    Kyalami 2019","kyalami_2019"),
+            new Track("    Laguna seca 2019","laguna_seca_2019"),
+            new Track("    Misano","misano"),
+            new Track("    Misano 2019","misano_2019"),
+            new Track("    Monza","monza"),
+            new Track("    Monza 2019","monza_2019"),
+            new Track("    Mount panorama 2019","mount_panorama_2019"),
+            new Track("    Nurburgring","nurburgring"),
+            new Track("    Nurburgring 2019","nurburgring_2019"),
+            new Track("    Paul ricard","paul_ricard"),
+            new Track("    Paul ricard 2019","paul_ricard_2019"),
+            new Track("    Silverstone","silverstone"),
+            new Track("    Silverstone 2019","silverstone_2019"),
+            new Track("    Spa","spa"),
+            new Track("    Spa 2019","spa_2019"),
+            new Track("    Suzuka 2019","suzuka_2019"),
+            new Track("    Zandvoort","zandvoort"),
+            new Track("    Zandvoort 2019","zandvoort_2019"),
+            new Track("    Zolder","zolder"),
+            new Track("    Zolder 2019","zolder_2019")
+        };
+
+        //public static List<string> trackList = new List<string>()
+        //{
+        //    "monza",
+        //    "zolder",
+        //    "brands_hatch",
+        //    "silverstone",
+        //    "paul_ricard",
+        //    "misano",
+        //    "spa",
+        //    "nurburgring",
+        //    "barcelona",
+        //    "hungaroring",
+        //    "zandvoort",
+        //    "monza_2019",
+        //    "zolder_2019",
+        //    "brands_hatch_2019",
+        //    "silverstone_2019",
+        //    "paul_ricard_2019",
+        //    "misano_2019",
+        //    "spa_2019",
+        //    "nurburgring_2019",
+        //    "barcelona_2019",
+        //    "hungaroring_2019",
+        //    "zandvoort_2019",
+        //    "kyalami_2019",
+        //    "mount_panorama_2019",
+        //    "suzuka_2019",
+        //    "laguna_seca_2019 ",
+        //    ""
+        //};
 
         public MainForm()
         {
@@ -77,6 +161,15 @@ namespace ACC_Dedicated_Server_GUI
                 return trackBar.Minimum;
             if (value > trackBar.Maximum)
                 return trackBar.Maximum;
+            return value;
+        }
+
+        private decimal InNumUpDnRange(int value, NumericUpDown numUpDn)
+        {
+            if (value < numUpDn.Minimum)
+                return numUpDn.Minimum;
+            if (value > numUpDn.Maximum)
+                return numUpDn.Maximum;
             return value;
         }
 
@@ -123,10 +216,10 @@ namespace ACC_Dedicated_Server_GUI
                 adminPasswordTextBox.Text = settings.adminPassword;
                 joinPasswordTextBox.Text = settings.password;
                 spectatorPasswordTextBox.Text = settings.spectatorPassword;
-                maxCarSlotsNumericUpDown.Value = settings.maxCarSlots;
-                TRRequirementNumericUpDown.Value = settings.trackMedalsRequirement;
-                SARequirementNumericUpDown.Value = settings.safetyRatingRequirement;
-                RCRequirementNumericUpDown.Value = settings.racecraftRatingRequirement;
+                maxCarSlotsNumericUpDown.Value = InNumUpDnRange(settings.maxCarSlots, maxCarSlotsNumericUpDown);
+                TRRequirementNumericUpDown.Value = InNumUpDnRange(settings.trackMedalsRequirement, TRRequirementNumericUpDown);
+                SARequirementNumericUpDown.Value = InNumUpDnRange(settings.safetyRatingRequirement, SARequirementNumericUpDown);
+                RCRequirementNumericUpDown.Value = InNumUpDnRange(settings.racecraftRatingRequirement, RCRequirementNumericUpDown);
                 isRaceLockedCheckBox.Checked = settings.isRaceLocked == 1 ? true : false;
                 shortFormationCheckBox.Checked = settings.shortFormationLap == 1 ? true : false;
             }
@@ -147,7 +240,7 @@ namespace ACC_Dedicated_Server_GUI
                 autoWipersCheckBox.Checked = assist.disableAutoWiper == 0;
                 autoLightsCheckBox.Checked = assist.disableAutoLights == 0;
                 autoClutchCheckBox.Checked = assist.disableAutoClutch == 0;
-                maxStabilityNumericUpDown.Value = assist.stabilityControlLevelMax;
+                maxStabilityNumericUpDown.Value = InNumUpDnRange(assist.stabilityControlLevelMax, maxStabilityNumericUpDown);
             }
 
             file = @"cfg\event.json";
@@ -159,8 +252,8 @@ namespace ACC_Dedicated_Server_GUI
                 eventObject = JsonConvert.DeserializeObject<EventObject>(rawJSON);
 
                 TrackComboBox.SelectedItem = eventObject.track;
-                preRaceWaitTimeNumericUpDown.Value = eventObject.preRaceWaitingTimeSeconds;
-                overTimeNumericUpDown.Value = eventObject.sessionOverTimeSeconds;
+                preRaceWaitTimeNumericUpDown.Value = InNumUpDnRange(eventObject.preRaceWaitingTimeSeconds, preRaceWaitTimeNumericUpDown);
+                overTimeNumericUpDown.Value = InNumUpDnRange(eventObject.sessionOverTimeSeconds, overTimeNumericUpDown);
                 tempTrackBar.Value = InTrackBarRange(eventObject.ambientTemp, tempTrackBar);
                 cloudCoverageTrackBar.Value = InTrackBarRange((int)(eventObject.cloudLevel * 10), cloudCoverageTrackBar);
                 rainTrackBar.Value = InTrackBarRange((int)(eventObject.rain * 10), rainTrackBar);
@@ -172,9 +265,9 @@ namespace ACC_Dedicated_Server_GUI
                     {
                         case "P":
                             pCheckBox.Checked = true;
-                            pStartTimeNumericUpDown.Value = session.hourOfDay;
-                            pTimeScaleNumericUpDown.Value = session.timeMultiplier;
-                            pDurationNumericUpDown.Value = session.sessionDurationMinutes;
+                            pStartTimeNumericUpDown.Value = InNumUpDnRange(session.hourOfDay, pStartTimeNumericUpDown);
+                            pTimeScaleNumericUpDown.Value = InNumUpDnRange(session.timeMultiplier, pTimeScaleNumericUpDown);
+                            pDurationNumericUpDown.Value = InNumUpDnRange(session.sessionDurationMinutes, pDurationNumericUpDown);
                             switch (session.dayOfWeekend)
                             {
                                 case 1:
@@ -192,9 +285,9 @@ namespace ACC_Dedicated_Server_GUI
                             break;
                         case "Q":
                             qCheckBox.Checked = true;
-                            qStartTimeNumericUpDown.Value = session.hourOfDay;
-                            qTimeScaleNumericUpDown.Value = session.timeMultiplier;
-                            qDurationNumericUpDown.Value = session.sessionDurationMinutes;
+                            qStartTimeNumericUpDown.Value = InNumUpDnRange(session.hourOfDay, qStartTimeNumericUpDown);
+                            qTimeScaleNumericUpDown.Value = InNumUpDnRange(session.timeMultiplier, qTimeScaleNumericUpDown);
+                            qDurationNumericUpDown.Value = InNumUpDnRange(session.sessionDurationMinutes, qDurationNumericUpDown);
                             switch (session.dayOfWeekend)
                             {
                                 case 1:
@@ -212,9 +305,9 @@ namespace ACC_Dedicated_Server_GUI
                             break;
                         case "R":
                             rCheckBox.Checked = true;
-                            rStartTimeNumericUpDown.Value = session.hourOfDay;
-                            rTimeScaleNumericUpDown.Value = session.timeMultiplier;
-                            rDurationNumericUpDown.Value = session.sessionDurationMinutes;
+                            rStartTimeNumericUpDown.Value = InNumUpDnRange(session.hourOfDay, rStartTimeNumericUpDown);
+                            rTimeScaleNumericUpDown.Value = InNumUpDnRange(session.timeMultiplier, rTimeScaleNumericUpDown);
+                            rDurationNumericUpDown.Value = InNumUpDnRange(session.sessionDurationMinutes, rDurationNumericUpDown);
                             switch (session.dayOfWeekend)
                             {
                                 case 1:
@@ -234,6 +327,8 @@ namespace ACC_Dedicated_Server_GUI
                             break;
                     }
                 }
+                if (!pCheckBox.Checked && !qCheckBox.Checked)
+                    pCheckBox.Checked = true;
             }
 
             file = @"cfg\eventRules.json";
@@ -244,11 +339,11 @@ namespace ACC_Dedicated_Server_GUI
                 rawJSON = File.ReadAllText(file, encoding);
                 eventRules = JsonConvert.DeserializeObject<EventRulesObject>(rawJSON);
 
-                pitWindowsLengthNumericUpDown.Value = eventRules.pitWindowLengthSec;
-                driverStintTimeNumericUpDown.Value = eventRules.driverStintTimeSec;
-                mandatoryPitStopCountNumericUpDown.Value = eventRules.mandatoryPitstopCount;
-                maxTotalDrivingTimeNumericUpDown.Value = eventRules.maxTotalDrivingTime;
-                maxDriversCountNumericUpDown.Value = eventRules.maxDriversCount;
+                pitWindowsLengthNumericUpDown.Value = InNumUpDnRange(eventRules.pitWindowLengthSec, pitWindowsLengthNumericUpDown);
+                driverStintTimeNumericUpDown.Value = InNumUpDnRange(eventRules.driverStintTimeSec, driverStintTimeNumericUpDown);
+                mandatoryPitStopCountNumericUpDown.Value = InNumUpDnRange(eventRules.mandatoryPitstopCount, mandatoryPitStopCountNumericUpDown);
+                maxTotalDrivingTimeNumericUpDown.Value = InNumUpDnRange(eventRules.maxTotalDrivingTime, maxTotalDrivingTimeNumericUpDown);
+                maxDriversCountNumericUpDown.Value = InNumUpDnRange(eventRules.maxDriversCount, maxDriversCountNumericUpDown);
                 refuellingAllowedCheckBox.Checked = eventRules.isRefuellingAllowedInRace;
                 refuellingTimeFixedCheckBox.Checked = eventRules.isRefuellingTimeFixed;
                 refuellingRequiredCheckBox.Checked = eventRules.isMandatoryPitstopRefuellingRequired;
@@ -264,9 +359,9 @@ namespace ACC_Dedicated_Server_GUI
                 rawJSON = File.ReadAllText(file, encoding);
                 configuration = JsonConvert.DeserializeObject<ConfigurationObject>(rawJSON);
 
-                UDPNumericUpDown.Value = configuration.udpPort;
-                TCPNumericUpDown.Value = configuration.tcpPort;
-                maxConnectionsNumericUpDown.Value = configuration.maxConnections;
+                UDPNumericUpDown.Value = InNumUpDnRange(configuration.udpPort, UDPNumericUpDown);
+                TCPNumericUpDown.Value = InNumUpDnRange(configuration.tcpPort, TCPNumericUpDown);
+                maxConnectionsNumericUpDown.Value = InNumUpDnRange(configuration.maxConnections, maxConnectionsNumericUpDown);
                 lanDiscoveryCheckBox.Checked = configuration.lanDiscovery == 1 ? true : false;
                 registerToLobbyCheckBox.Checked = configuration.registerToLobby == 1 ? true : false;
             }
@@ -396,6 +491,10 @@ namespace ACC_Dedicated_Server_GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //trackList.Sort();
+            carList.Sort(delegate (Car x, Car y) { return x.model.CompareTo(y.model); });
+            //TrackComboBox.DataSource = trackList;
+
             TrackComboBox.SelectedIndex = 0;
 
             consolePanel.Visible = false;
@@ -428,17 +527,21 @@ namespace ACC_Dedicated_Server_GUI
 
         private void launchServerButton_Click(object sender, EventArgs e)
         {
+#if DEBUG          
+            string fileName = "testFlood";
+#else
+            string fileName = "accServer";
+#endif
             try
             {
-                if (Process.GetProcessesByName("accServer").Length == 0)
+                if (Process.GetProcessesByName(fileName).Length == 0)
                 {
                     SaveConfig();
-#if !DEBUG          
                     consolePanel.Visible = true;
                     consolePanel.BringToFront();
 
                     Process process = new Process();
-                    process.StartInfo.FileName = "accServer.exe";
+                    process.StartInfo.FileName = fileName + ".exe";
                     process.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
 
                     process.Start();
@@ -446,16 +549,17 @@ namespace ACC_Dedicated_Server_GUI
                     SetParent(process.MainWindowHandle, consolePanel.Handle);
                     SendMessage(process.MainWindowHandle, WM_SYSCOMMAND, SC_MAXIMIZE, 0);
                     label12.Visible = false;
+                    this.BringToFront();
+                    this.Activate();
                 }
                 else
                 {
-                    foreach (Process process in Process.GetProcessesByName("accServer"))
+                    foreach (Process process in Process.GetProcessesByName(fileName))
                     {
                         process.Kill();
                     }
                     consolePanel.Visible = false;
                     label12.Visible = true;
-#endif
                 }
             }
             catch (Exception ex)
@@ -467,11 +571,15 @@ namespace ACC_Dedicated_Server_GUI
         private void practiceCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             pPanel.Enabled = pCheckBox.Checked;
+            if (!pCheckBox.Checked && !qCheckBox.Checked)
+                qCheckBox.Checked = true;
         }
 
         private void qualifyingCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             qPanel.Enabled = qCheckBox.Checked;
+            if (!pCheckBox.Checked && !qCheckBox.Checked)
+                pCheckBox.Checked = true;
         }
 
         private void raceCheckBox_CheckedChanged(object sender, EventArgs e)

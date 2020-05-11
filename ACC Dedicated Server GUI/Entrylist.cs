@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ACC_Dedicated_Server_GUI
 {
@@ -15,7 +12,7 @@ namespace ACC_Dedicated_Server_GUI
             public int forceEntryList { get; set; }
         }
 
-        public class Entry
+        public class Entry : IComparable<Entry>
         {
             public List<Driver> drivers { get; set; }
             public int raceNumber { get; set; }
@@ -27,6 +24,22 @@ namespace ACC_Dedicated_Server_GUI
             public int restrictor { get; set; }
             public string customCar { get; set; }
             public int overrideCarModelForCustomCar { get; set; }
+
+
+            public int SortByNameAscending(string name1, string name2)
+            {
+                return name1.CompareTo(name2);
+            }
+
+            public int CompareTo(Entry other)
+            {
+                // A null value means that this object is greater.
+                if (other == null)
+                    return 1;
+
+                else
+                    return this.raceNumber.CompareTo(other.raceNumber);
+            }
         }
 
         public class Driver

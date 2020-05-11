@@ -1,14 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static ACC_Dedicated_Server_GUI.BoP;
 
@@ -66,8 +61,16 @@ namespace ACC_Dedicated_Server_GUI
                 string rawJSON = File.ReadAllText(file, encoding);
                 bop = JsonConvert.DeserializeObject<BopObject>(rawJSON);
             }
-         
+
+            foreach (Car car in MainForm.carList)
+                carListBox.Items.Add(car);
+            foreach (Track track in MainForm.trackList)
+                trackListBox.Items.Add(track);
+
             FillBopTable();
+            carListBox.SelectedIndex = 0;
+            trackListBox.SelectedIndex = 0;
+            UpdateTrackList();
         }
 
         private void FillBopTable()
@@ -75,12 +78,12 @@ namespace ACC_Dedicated_Server_GUI
             if (bop.entries == null)
                 bop.entries = new List<Entry>();
 
-            foreach (var item in trackListBox.Items)
+            foreach (Track track in trackListBox.Items)
             {
                 for (int i = 0; i < carListBox.Items.Count; i++)
                 {
                     Entry entry = new Entry();
-                    entry.track = item.ToString();
+                    entry.track = track.alias;
                     entry.carModel = i;
                     entry.ballast = 0;
                     entry.restrictor = 0;
@@ -91,6 +94,165 @@ namespace ACC_Dedicated_Server_GUI
             }
         }
 
+        private void UpdateTrackList()
+        {
+            trackListBox.BeginUpdate();
+
+            int selectedIndex = trackListBox.SelectedIndex;
+            List<Entry> entries = new List<Entry>(bop.entries);
+            entries.RemoveAll(ent => (ent.ballast == 0) && (ent.restrictor == 0));
+
+            for (int i = 0; i < trackListBox.Items.Count; i++)
+            {
+                Track track = (Track)trackListBox.Items[i];
+                if (track.name.Contains("★") && !entries.Any(e => e.track == track.alias))
+                {
+                    track.name = track.name.Replace("★ ", "    ");
+                    trackListBox.Items.RemoveAt(i);
+                    trackListBox.Items.Insert(i, track);
+                }
+                else if (!track.name.Contains("★") && entries.Any(e => e.track == track.alias))
+                {
+                    track.name = track.name.Replace("    ", "★ ");
+                    trackListBox.Items.RemoveAt(i);
+                    trackListBox.Items.Insert(i, track);
+                }
+            }
+
+            trackListBox.SelectedIndex = selectedIndex;
+            trackListBox.EndUpdate();
+        }
+
+        private void UpdateCarList()
+        {
+            carListBox.BeginUpdate();
+
+            int selectedIndex = carListBox.SelectedIndex;
+            Track track = (Track)trackListBox.SelectedItem;
+            List<Entry> entries = new List<Entry>(bop.entries);
+            entries.RemoveAll(ent => ent.track != track.alias);
+            entries.RemoveAll(ent => (ent.ballast == 0) && (ent.restrictor == 0));
+
+            for (int i = 0; i < carListBox.Items.Count; i++)
+            {
+                Car car = (Car)carListBox.Items[i];
+                if (car.model.Contains("★") && !entries.Any(e => e.carModel == car.ID))
+                {
+                    car.model = car.model.Replace("★ ", "    ");
+                    carListBox.Items.RemoveAt(i);
+                    carListBox.Items.Insert(i, car);
+                }
+                else if (!car.model.Contains("★") && entries.Any(e => e.carModel == car.ID))
+                {
+                    car.model = car.model.Replace("    ", "★ ");
+                    carListBox.Items.RemoveAt(i);
+                    carListBox.Items.Insert(i, car);
+                }
+            }
+
+            //for (int i = 0; i < carListBox.Items.Count; i++)
+            //{
+            //    Car car = (Car)carListBox.Items[i];
+            //    if (car.model.Contains("★"))
+            //    {
+            //        car.model = car.model.Replace("★ ", "    ");
+            //        carListBox.Items.RemoveAt(i);
+            //        carListBox.Items.Insert(i, car);
+            //    }
+            //}
+
+            //foreach (Entry entry in entries)
+            //{
+            //    for (int i = 0; i < carListBox.Items.Count; i++)
+            //    {
+            //        Car car = (Car)carListBox.Items[i];
+            //        if (car.ID == entry.carModel && entry.restrictor + entry.ballast > 0)
+            //        {
+            //            if (!car.model.Contains("★ "))
+            //            {
+            //                car.model = car.model.Replace("    ", "★ ");
+            //                carListBox.Items.RemoveAt(i);
+            //                carListBox.Items.Insert(i, car);
+            //            }
+            //        }
+            //    }
+            //}
+            carListBox.SelectedIndex = selectedIndex;
+            carListBox.EndUpdate();
+        }
+
+        private void UpdateCurrentTrack()
+        {
+            trackListBox.BeginUpdate();
+
+            Track track = (Track)trackListBox.SelectedItem;
+            int selectedIndex = trackListBox.SelectedIndex;
+
+            List<Entry> entries = new List<Entry>(bop.entries);
+            entries.RemoveAll(ent => (ent.ballast == 0) && (ent.restrictor == 0));
+
+            if (track.name.Contains("★") && !entries.Any(e => e.track == track.alias))
+            {
+                track.name = track.name.Replace("★ ", "    ");
+                trackListBox.Items.RemoveAt(selectedIndex);
+                trackListBox.Items.Insert(selectedIndex, track);
+            }
+            else if (!track.name.Contains("★") && entries.Any(e => e.track == track.alias))
+            {
+                track.name = track.name.Replace("    ", "★ ");
+                trackListBox.Items.RemoveAt(selectedIndex);
+                trackListBox.Items.Insert(selectedIndex, track);
+            }
+
+            trackListBox.SelectedIndex = selectedIndex;
+            trackListBox.EndUpdate();
+        }
+
+        private void UpdateCurrentCar()
+        {
+            carListBox.BeginUpdate();
+
+            Car car = (Car)carListBox.SelectedItem;
+            Track track = (Track)trackListBox.SelectedItem;
+            int selectedIndex = carListBox.SelectedIndex;
+
+            Entry entry = new Entry();
+            entry = bop.entries.Find(ent => ent.track == track.alias && ent.carModel == car.ID);
+            entry.ballast = ballastTrackBar.Value;
+            entry.restrictor = restrictorTrackBar.Value;
+
+            if (ballastTrackBar.Value + restrictorTrackBar.Value > 0)
+            {
+                if (!car.model.Contains("★ "))
+                {
+                    car.model = car.model.Replace("    ", "★ ");
+                    carListBox.Items.RemoveAt(selectedIndex);
+                    carListBox.Items.Insert(selectedIndex, car);
+                }
+            }
+            else if (car.model.Contains("★ "))
+            {
+                car.model = car.model.Replace("★ ", "    ");
+                carListBox.Items.RemoveAt(selectedIndex);
+                carListBox.Items.Insert(selectedIndex, car);
+            }
+
+            carListBox.SelectedIndex = selectedIndex;
+            carListBox.EndUpdate();
+        }
+
+        private void UpdateTrackBars()
+        {
+            Car car = (Car)carListBox.SelectedItem;
+            Track track = (Track)trackListBox.SelectedItem;
+
+            Entry entry = new Entry();
+            entry = bop.entries.Find(ent => ent.track == track.alias && ent.carModel == car.ID);
+
+            ballastTrackBar.Value = InTrackBarRange(entry.ballast, ballastTrackBar);
+            restrictorTrackBar.Value = InTrackBarRange(entry.restrictor, restrictorTrackBar);
+        }
+
         private void trackListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (carListBox.SelectedIndex < 0)
@@ -98,20 +260,17 @@ namespace ACC_Dedicated_Server_GUI
                 carListBox.SelectedIndex = 0;
                 return;
             }
+            if (trackListBox.SelectedIndex < 0)
+            {
+                trackListBox.SelectedIndex = 0;
+                return;
+            }
 
-            ballastNumericUpDown.Enabled = true;
-            restrictorNumericUpDown.Enabled = true;
             ballastTrackBar.Enabled = true;
             restrictorTrackBar.Enabled = true;
 
-            string track = trackListBox.SelectedItem.ToString();
-            int carModel = carListBox.SelectedIndex;
-
-            Entry entry = new Entry();
-            entry = bop.entries.Find(ent => ent.track == track && ent.carModel == carModel);
-
-            ballastNumericUpDown.Value = InTrackBarRange(entry.ballast, ballastTrackBar);
-            restrictorNumericUpDown.Value = InTrackBarRange(entry.restrictor, restrictorTrackBar);
+            UpdateTrackBars();
+            UpdateCarList();
         }
 
         private void carListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -121,39 +280,18 @@ namespace ACC_Dedicated_Server_GUI
                 trackListBox.SelectedIndex = 0;
                 return;
             }
+            if (carListBox.SelectedIndex < 0)
+            {
+                carListBox.SelectedIndex = 0;
+                return;
+            }
 
-            ballastNumericUpDown.Enabled = true;
-            restrictorNumericUpDown.Enabled = true;
             ballastTrackBar.Enabled = true;
             restrictorTrackBar.Enabled = true;
 
-            int carModel = carListBox.SelectedIndex;
-            string track = trackListBox.SelectedItem.ToString();
-
-            Entry entry = new Entry();
-            entry = bop.entries.Find(ent => (ent.track == track) && (ent.carModel == carModel));
-
-            ballastNumericUpDown.Value = InTrackBarRange(entry.ballast, ballastTrackBar);
-            restrictorNumericUpDown.Value = InTrackBarRange(entry.restrictor, restrictorTrackBar);
+            UpdateTrackBars();
         }
 
-        private void ballastNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            string track = trackListBox.Text;
-            int carModel = carListBox.SelectedIndex;
-
-            ballastTrackBar.Value = (int)ballastNumericUpDown.Value;
-            bop.entries.Find(ent => (ent.track == track) && (ent.carModel == carModel)).ballast = (int)ballastNumericUpDown.Value;
-        }
-
-        private void restrictorNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            string track = trackListBox.Text;
-            int carModel = carListBox.SelectedIndex;
-
-            restrictorTrackBar.Value = (int)restrictorNumericUpDown.Value;
-            bop.entries.Find(ent => (ent.track == track) && (ent.carModel == carModel)).restrictor = (int)restrictorNumericUpDown.Value;
-        }
         private void cleanUpAndSaveFile()
         {
             bop.entries.RemoveAll(ent => (ent.ballast == 0) && (ent.restrictor == 0));
@@ -181,12 +319,58 @@ namespace ACC_Dedicated_Server_GUI
 
         private void ballastTrackBar_Scroll(object sender, EventArgs e)
         {
-            ballastNumericUpDown.Value = ballastTrackBar.Value;
+            ballastLabel.Text = ballastTrackBar.Value.ToString();
         }
 
         private void restrictorTrackBar_Scroll(object sender, EventArgs e)
         {
-            restrictorNumericUpDown.Value = restrictorTrackBar.Value;
+            restrictorLabel.Text = restrictorTrackBar.Value.ToString();
+        }
+
+
+        bool selectByMouse = false;
+
+        private void quickBoxs_Enter(object sender, EventArgs e)
+        {
+            NumericUpDown curBox = sender as NumericUpDown;
+            curBox.Select();
+            curBox.Select(0, curBox.Text.Length);
+            if (MouseButtons == MouseButtons.Left)
+            {
+                selectByMouse = true;
+            }
+        }
+
+        private void quickBoxs_MouseDown(object sender, MouseEventArgs e)
+        {
+            NumericUpDown curBox = sender as NumericUpDown;
+            if (selectByMouse)
+            {
+                curBox.Select(0, curBox.Text.Length);
+                selectByMouse = false;
+            }
+        }
+
+        private void ballastTrackBar_MouseUp(object sender, MouseEventArgs e)
+        {
+            UpdateCurrentCar();
+            UpdateCurrentTrack();
+        }
+
+        private void restrictorTrackBar_MouseUp(object sender, MouseEventArgs e)
+        {
+            UpdateCurrentCar();
+            UpdateCurrentTrack();
+        }
+
+        private void ballastTrackBar_ValueChanged(object sender, EventArgs e)
+        {
+            ballastLabel.Text = ballastTrackBar.Value.ToString();
+        }
+
+        private void restrictorTrackBar_ValueChanged(object sender, EventArgs e)
+        {
+            restrictorLabel.Text = restrictorTrackBar.Value.ToString();
         }
     }
 }

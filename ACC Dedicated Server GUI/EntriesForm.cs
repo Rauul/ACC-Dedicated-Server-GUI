@@ -1,15 +1,11 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static ACC_Dedicated_Server_GUI.EntryList;
 
@@ -18,7 +14,9 @@ namespace ACC_Dedicated_Server_GUI
     public partial class EntriesForm : Form
     {
         EntryListObject entrylist = new EntryListObject();
+        List<Car> carList = new List<Car>(MainForm.carList);
         bool closeButtonClicked = false;
+
         public EntriesForm()
         {
             InitializeComponent();
@@ -50,6 +48,12 @@ namespace ACC_Dedicated_Server_GUI
 
         private void EntriesForm_Load(object sender, EventArgs e)
         {
+            foreach (Car car in carList)
+                car.model = car.model.Replace("    ", "");
+
+            forcedCarModelComboBox.Items.Add(new Car("", -1));
+            forcedCarModelComboBox.Items.AddRange(carList.ToArray());
+
             TreeNode entriesTreeNode = new TreeNode();
             entriesTreeNode.Text = "Entries";
             entriesTreeNode.Tag = entrylist;
@@ -61,6 +65,7 @@ namespace ACC_Dedicated_Server_GUI
                 Encoding encoding = GetEncoding(file);
                 string rawJSON = File.ReadAllText(file, encoding);
                 entrylist = JsonConvert.DeserializeObject<EntryListObject>(rawJSON);
+                entrylist.entries.Sort(delegate (Entry x, Entry y) { return x.raceNumber.CompareTo(y.raceNumber); });
                 LoadTreeView(entrylist);
                 forceEntryListCheckBox.Checked = entrylist.forceEntryList == 1 ? true : false;
             }
@@ -110,8 +115,6 @@ namespace ACC_Dedicated_Server_GUI
                 }
             }
             entriesTreeView.TopNode.Expand();
-            entriesTreeView.TreeViewNodeSorter = new NodeSorter();
-            entriesTreeView.Sort();
         }
 
         private void entriesTreeView_AfterSelect(object sender, TreeViewEventArgs e)
@@ -155,10 +158,17 @@ namespace ACC_Dedicated_Server_GUI
             Entry entry = (Entry)selectedNode.Tag;
 
             carNumberNumericUpDown.Value = entry.raceNumber;
-            forcedCarModelComboBox.SelectedIndex = entry.forcedCarModel + 1;
+            foreach (Car car in forcedCarModelComboBox.Items)
+            {
+                if (car.ID == entry.forcedCarModel)
+                {
+                    forcedCarModelComboBox.SelectedItem = car;
+                    break;
+                }
+            }
             customCarComboBox.SelectedIndex = 0;
             customCarComboBox.SelectedItem = entry.customCar;
-            overrideCarModelComboBox.SelectedIndex = entry.overrideCarModelForCustomCar + 1;
+            overrideCustomCarModelCheckBox.Checked = entry.overrideCarModelForCustomCar == 1;
             gridPositionNumericUpDown.Value = entry.defaultGridPosition;
             ballastNumericUpDown.Value = entry.ballastKg;
             restrictorNumericUpDown.Value = entry.restrictor;
@@ -178,7 +188,7 @@ namespace ACC_Dedicated_Server_GUI
         private void forcedCarModelComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Entry entry = (Entry)entriesTreeView.SelectedNode.Tag;
-            entry.forcedCarModel = forcedCarModelComboBox.SelectedIndex - 1;
+            entry.forcedCarModel = ((Car)forcedCarModelComboBox.SelectedItem).ID;
             entriesTreeView.SelectedNode.Tag = entry;
         }
 
@@ -186,13 +196,6 @@ namespace ACC_Dedicated_Server_GUI
         {
             Entry entry = (Entry)entriesTreeView.SelectedNode.Tag;
             entry.customCar = customCarComboBox.Text != "None" ? customCarComboBox.Text : "";
-            entriesTreeView.SelectedNode.Tag = entry;
-        }
-
-        private void overrideCarModelComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Entry entry = (Entry)entriesTreeView.SelectedNode.Tag;
-            entry.overrideCarModelForCustomCar = overrideCarModelComboBox.SelectedIndex - 1;
             entriesTreeView.SelectedNode.Tag = entry;
         }
 
@@ -224,6 +227,13 @@ namespace ACC_Dedicated_Server_GUI
         {
             Entry entry = (Entry)entriesTreeView.SelectedNode.Tag;
             entry.restrictor = (int)restrictorNumericUpDown.Value;
+            entriesTreeView.SelectedNode.Tag = entry;
+        }
+
+        private void overrideCustomCarModelCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            Entry entry = (Entry)entriesTreeView.SelectedNode.Tag;
+            entry.overrideCarModelForCustomCar = overrideCustomCarModelCheckBox.Checked == true ? 1 : 0;
             entriesTreeView.SelectedNode.Tag = entry;
         }
 
@@ -341,10 +351,8 @@ namespace ACC_Dedicated_Server_GUI
 
         private void cleanUpAndSaveFile()
         {
-            entriesTreeView.TreeViewNodeSorter = new NodeSorter();
-            entriesTreeView.Sort();
-
             EntryListObject nEntryList = (EntryListObject)entriesTreeView.TopNode.Tag;
+
             if (nEntryList.entries == null)
                 nEntryList.entries = new List<Entry>();
 
@@ -366,6 +374,7 @@ namespace ACC_Dedicated_Server_GUI
                 nEntryList.entries.Add(entry);
             }
 
+            nEntryList.entries.Sort(delegate (Entry x, Entry y) { return x.raceNumber.CompareTo(y.raceNumber); });
             File.WriteAllText(@"cfg\entrylist.json", JsonConvert.SerializeObject(nEntryList, Formatting.Indented), Encoding.Unicode);
         }
 
@@ -406,13 +415,15 @@ namespace ACC_Dedicated_Server_GUI
 
             entriesTreeView.SelectedNode.Nodes.Add(node);
             entriesTreeView.SelectedNode = node;
+
+            firstNameTextBox.Focus();
         }
 
         private void addEntryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Entry entry = new Entry();
-            entry.raceNumber = 1;
-            entry.forcedCarModel = 0;
+            entry.raceNumber = 0;
+            entry.forcedCarModel = -1;
             entry.overrideDriverInfo = 0;
             entry.isServerAdmin = 0;
             entry.defaultGridPosition = 0;
@@ -428,6 +439,8 @@ namespace ACC_Dedicated_Server_GUI
 
             entriesTreeView.TopNode.Nodes.Add(node);
             entriesTreeView.SelectedNode = node;
+
+            carNumberNumericUpDown.Focus();
         }
 
         private void removeEntryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -438,28 +451,6 @@ namespace ACC_Dedicated_Server_GUI
         private void toolStripMenuItem_Click(object sender, EventArgs e)
         {
             entriesTreeView.SelectedNode.Remove();
-        }
-
-        // Create a node sorter that implements the IComparer interface.
-        public class NodeSorter : IComparer
-        {
-            // Compare the length of the strings, or the strings
-            // themselves, if they are the same length.
-            public int Compare(object x, object y)
-            {
-                TreeNode tx = x as TreeNode;
-                TreeNode ty = y as TreeNode;
-
-                if (tx.Parent.Text == "Entries")
-                    return (((Entry)tx.Tag).raceNumber - ((Entry)ty.Tag).raceNumber);
-
-                // Compare the length of the strings, returning the difference.
-                //if (tx.Text.Length != ty.Text.Length)
-                //    return tx.Text.Length - ty.Text.Length;
-
-                // If they are the same length, call Compare.
-                return string.Compare(tx.Text, ty.Text);
-            }
         }
 
         private void expandAllToolStripMenuItem_Click(object sender, EventArgs e)
@@ -493,6 +484,113 @@ namespace ACC_Dedicated_Server_GUI
         {
             entriesTreeView.CollapseAll();
             entriesTreeView.TopNode.Expand();
+        }
+
+
+        bool selectByMouse = false;
+
+        private void quickBoxs_Enter(object sender, EventArgs e)
+        {
+            NumericUpDown curBox = sender as NumericUpDown;
+            curBox.Select();
+            curBox.Select(0, curBox.Text.Length);
+            if (MouseButtons == MouseButtons.Left)
+            {
+                selectByMouse = true;
+            }
+        }
+
+        private void quickBoxs_MouseDown(object sender, MouseEventArgs e)
+        {
+            NumericUpDown curBox = sender as NumericUpDown;
+            if (selectByMouse)
+            {
+                curBox.Select(0, curBox.Text.Length);
+                selectByMouse = false;
+            }
+        }
+
+        private void shortNameTextBox_Enter(object sender, EventArgs e)
+        {
+            if (shortNameTextBox.Text == "" && firstNameTextBox.Text.Length > 1 && lastNameTextBox.Text.Length > 1)
+                shortNameTextBox.Text = (firstNameTextBox.Text.Substring(0, 2) + lastNameTextBox.Text.Substring(0, 2)).ToUpper();
+        }
+
+
+        //move the nodes up/down
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (ActiveControl != entriesTreeView)
+                return base.ProcessCmdKey(ref msg, keyData);
+
+            //capture up arrow key
+            if (keyData == Keys.Up)
+            {
+                TreeNode node = entriesTreeView.SelectedNode;
+                entriesTreeView.SelectedNode.MoveUp();
+                node.TreeView.SelectedNode = node;
+                return true;
+            }
+            //capture down arrow key
+            if (keyData == Keys.Down)
+            {
+                TreeNode node = entriesTreeView.SelectedNode;
+                entriesTreeView.SelectedNode.MoveDown();
+                node.TreeView.SelectedNode = node;
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+    }
+
+    public static class Extensions
+    {
+        public static void MoveUp(this TreeNode node)
+        {
+            TreeNode parent = node.Parent;
+            TreeView view = node.TreeView;
+            if (parent != null)
+            {
+                int index = parent.Nodes.IndexOf(node);
+                if (index > 0)
+                {
+                    parent.Nodes.RemoveAt(index);
+                    parent.Nodes.Insert(index - 1, node);
+                }
+            }
+            else if (node.TreeView.Nodes.Contains(node)) //root node
+            {
+                int index = view.Nodes.IndexOf(node);
+                if (index > 0)
+                {
+                    view.Nodes.RemoveAt(index);
+                    view.Nodes.Insert(index - 1, node);
+                }
+            }
+        }
+
+        public static void MoveDown(this TreeNode node)
+        {
+            TreeNode parent = node.Parent;
+            TreeView view = node.TreeView;
+            if (parent != null)
+            {
+                int index = parent.Nodes.IndexOf(node);
+                if (index < parent.Nodes.Count - 1)
+                {
+                    parent.Nodes.RemoveAt(index);
+                    parent.Nodes.Insert(index + 1, node);
+                }
+            }
+            else if (view != null && view.Nodes.Contains(node)) //root node
+            {
+                int index = view.Nodes.IndexOf(node);
+                if (index < view.Nodes.Count - 1)
+                {
+                    view.Nodes.RemoveAt(index);
+                    view.Nodes.Insert(index + 1, node);
+                }
+            }
         }
     }
 }

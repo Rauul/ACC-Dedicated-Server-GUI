@@ -781,32 +781,32 @@
             this.TrackComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TrackComboBox.FormattingEnabled = true;
             this.TrackComboBox.Items.AddRange(new object[] {
-            "monza",
-            "zolder",
-            "brands_hatch",
-            "silverstone",
-            "paul_ricard",
-            "misano",
-            "spa",
-            "nurburgring",
             "barcelona",
-            "hungaroring",
-            "zandvoort",
-            "monza_2019",
-            "zolder_2019",
-            "brands_hatch_2019",
-            "silverstone_2019",
-            "paul_ricard_2019",
-            "misano_2019",
-            "spa_2019",
-            "nurburgring_2019",
             "barcelona_2019",
+            "brands_hatch",
+            "brands_hatch_2019",
+            "hungaroring",
             "hungaroring_2019",
-            "zandvoort_2019",
             "kyalami_2019",
+            "laguna_seca_2019",
+            "misano",
+            "misano_2019",
+            "monza",
+            "monza_2019",
             "mount_panorama_2019",
+            "nurburgring",
+            "nurburgring_2019",
+            "paul_ricard",
+            "paul_ricard_2019",
+            "silverstone",
+            "silverstone_2019",
+            "spa",
+            "spa_2019",
             "suzuka_2019",
-            "laguna_seca_2019"});
+            "zandvoort",
+            "zandvoort_2019",
+            "zolder",
+            "zolder_2019"});
             this.TrackComboBox.Location = new System.Drawing.Point(14, 16);
             this.TrackComboBox.Name = "TrackComboBox";
             this.TrackComboBox.Size = new System.Drawing.Size(180, 21);
@@ -873,7 +873,7 @@
             0,
             0,
             0});
-            this.preRaceWaitTimeNumericUpDown.Location = new System.Drawing.Point(131, 10);
+            this.preRaceWaitTimeNumericUpDown.Location = new System.Drawing.Point(125, 10);
             this.preRaceWaitTimeNumericUpDown.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -885,7 +885,7 @@
             0,
             0});
             this.preRaceWaitTimeNumericUpDown.Name = "preRaceWaitTimeNumericUpDown";
-            this.preRaceWaitTimeNumericUpDown.Size = new System.Drawing.Size(44, 20);
+            this.preRaceWaitTimeNumericUpDown.Size = new System.Drawing.Size(50, 20);
             this.preRaceWaitTimeNumericUpDown.TabIndex = 0;
             this.preRaceWaitTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.toolTip.SetToolTip(this.preRaceWaitTimeNumericUpDown, "Preparation time before a race. Cannot be less than 30s");
@@ -904,14 +904,14 @@
             0,
             0,
             0});
-            this.overTimeNumericUpDown.Location = new System.Drawing.Point(131, 35);
+            this.overTimeNumericUpDown.Location = new System.Drawing.Point(125, 35);
             this.overTimeNumericUpDown.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
             this.overTimeNumericUpDown.Name = "overTimeNumericUpDown";
-            this.overTimeNumericUpDown.Size = new System.Drawing.Size(44, 20);
+            this.overTimeNumericUpDown.Size = new System.Drawing.Size(50, 20);
             this.overTimeNumericUpDown.TabIndex = 1;
             this.overTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.toolTip.SetToolTip(this.overTimeNumericUpDown, resources.GetString("overTimeNumericUpDown.ToolTip"));
@@ -1142,6 +1142,11 @@
             0,
             0,
             0});
+            this.rDurationNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.rDurationNumericUpDown.Name = "rDurationNumericUpDown";
             this.rDurationNumericUpDown.Size = new System.Drawing.Size(47, 20);
             this.rDurationNumericUpDown.TabIndex = 2;
@@ -1293,6 +1298,11 @@
             this.qDurationNumericUpDown.Location = new System.Drawing.Point(97, 63);
             this.qDurationNumericUpDown.Maximum = new decimal(new int[] {
             1440,
+            0,
+            0,
+            0});
+            this.qDurationNumericUpDown.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
@@ -1450,6 +1460,11 @@
             0,
             0,
             0});
+            this.pDurationNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.pDurationNumericUpDown.Name = "pDurationNumericUpDown";
             this.pDurationNumericUpDown.Size = new System.Drawing.Size(47, 20);
             this.pDurationNumericUpDown.TabIndex = 2;
@@ -1599,7 +1614,7 @@
             // 
             // maxDriversCountNumericUpDown
             // 
-            this.maxDriversCountNumericUpDown.Location = new System.Drawing.Point(131, 109);
+            this.maxDriversCountNumericUpDown.Location = new System.Drawing.Point(125, 109);
             this.maxDriversCountNumericUpDown.Maximum = new decimal(new int[] {
             99,
             0,
@@ -1611,7 +1626,7 @@
             0,
             0});
             this.maxDriversCountNumericUpDown.Name = "maxDriversCountNumericUpDown";
-            this.maxDriversCountNumericUpDown.Size = new System.Drawing.Size(44, 20);
+            this.maxDriversCountNumericUpDown.Size = new System.Drawing.Size(50, 20);
             this.maxDriversCountNumericUpDown.TabIndex = 4;
             this.maxDriversCountNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.toolTip.SetToolTip(this.maxDriversCountNumericUpDown, resources.GetString("maxDriversCountNumericUpDown.ToolTip"));
@@ -1698,9 +1713,9 @@
             0,
             0,
             0});
-            this.maxTotalDrivingTimeNumericUpDown.Location = new System.Drawing.Point(131, 83);
+            this.maxTotalDrivingTimeNumericUpDown.Location = new System.Drawing.Point(125, 83);
             this.maxTotalDrivingTimeNumericUpDown.Maximum = new decimal(new int[] {
-            9999,
+            99999,
             0,
             0,
             0});
@@ -1710,7 +1725,7 @@
             0,
             -2147483648});
             this.maxTotalDrivingTimeNumericUpDown.Name = "maxTotalDrivingTimeNumericUpDown";
-            this.maxTotalDrivingTimeNumericUpDown.Size = new System.Drawing.Size(44, 20);
+            this.maxTotalDrivingTimeNumericUpDown.Size = new System.Drawing.Size(50, 20);
             this.maxTotalDrivingTimeNumericUpDown.TabIndex = 3;
             this.maxTotalDrivingTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.toolTip.SetToolTip(this.maxTotalDrivingTimeNumericUpDown, resources.GetString("maxTotalDrivingTimeNumericUpDown.ToolTip"));
@@ -1724,9 +1739,9 @@
             // 
             // mandatoryPitStopCountNumericUpDown
             // 
-            this.mandatoryPitStopCountNumericUpDown.Location = new System.Drawing.Point(131, 58);
+            this.mandatoryPitStopCountNumericUpDown.Location = new System.Drawing.Point(125, 58);
             this.mandatoryPitStopCountNumericUpDown.Name = "mandatoryPitStopCountNumericUpDown";
-            this.mandatoryPitStopCountNumericUpDown.Size = new System.Drawing.Size(44, 20);
+            this.mandatoryPitStopCountNumericUpDown.Size = new System.Drawing.Size(50, 20);
             this.mandatoryPitStopCountNumericUpDown.TabIndex = 2;
             this.mandatoryPitStopCountNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.toolTip.SetToolTip(this.mandatoryPitStopCountNumericUpDown, resources.GetString("mandatoryPitStopCountNumericUpDown.ToolTip"));
@@ -1740,9 +1755,9 @@
             0,
             0,
             0});
-            this.driverStintTimeNumericUpDown.Location = new System.Drawing.Point(131, 32);
+            this.driverStintTimeNumericUpDown.Location = new System.Drawing.Point(125, 32);
             this.driverStintTimeNumericUpDown.Maximum = new decimal(new int[] {
-            9999,
+            99999,
             0,
             0,
             0});
@@ -1752,7 +1767,7 @@
             0,
             -2147483648});
             this.driverStintTimeNumericUpDown.Name = "driverStintTimeNumericUpDown";
-            this.driverStintTimeNumericUpDown.Size = new System.Drawing.Size(44, 20);
+            this.driverStintTimeNumericUpDown.Size = new System.Drawing.Size(50, 20);
             this.driverStintTimeNumericUpDown.TabIndex = 1;
             this.driverStintTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.toolTip.SetToolTip(this.driverStintTimeNumericUpDown, resources.GetString("driverStintTimeNumericUpDown.ToolTip"));
@@ -1771,9 +1786,9 @@
             0,
             0,
             0});
-            this.pitWindowsLengthNumericUpDown.Location = new System.Drawing.Point(131, 7);
+            this.pitWindowsLengthNumericUpDown.Location = new System.Drawing.Point(125, 7);
             this.pitWindowsLengthNumericUpDown.Maximum = new decimal(new int[] {
-            9999,
+            99999,
             0,
             0,
             0});
@@ -1783,7 +1798,7 @@
             0,
             -2147483648});
             this.pitWindowsLengthNumericUpDown.Name = "pitWindowsLengthNumericUpDown";
-            this.pitWindowsLengthNumericUpDown.Size = new System.Drawing.Size(44, 20);
+            this.pitWindowsLengthNumericUpDown.Size = new System.Drawing.Size(50, 20);
             this.pitWindowsLengthNumericUpDown.TabIndex = 0;
             this.pitWindowsLengthNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.toolTip.SetToolTip(this.pitWindowsLengthNumericUpDown, "Defines a pit window at the middle of the race.\r\nObviously covers the Sprint seri" +

@@ -39,8 +39,6 @@
             this.gridPositionNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.adminCheckBox = new System.Windows.Forms.CheckBox();
-            this.overrideCarModelComboBox = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.customCarComboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.forcedCarModelComboBox = new System.Windows.Forms.ComboBox();
@@ -63,20 +61,21 @@
             this.label13 = new System.Windows.Forms.Label();
             this.entryListContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.entryContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.addDriverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.driverContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.removeDriverMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.expandAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.collapsAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entryContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addDriverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.expandAllToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.collapsAllToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.driverContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.removeDriverMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.expandAllToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.collapseAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.overrideCustomCarModelCheckBox = new System.Windows.Forms.CheckBox();
             this.carSettingsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restrictorNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballastNumericUpDown)).BeginInit();
@@ -92,16 +91,19 @@
             // 
             this.entriesTreeView.BackColor = System.Drawing.SystemColors.Window;
             this.entriesTreeView.HideSelection = false;
+            this.entriesTreeView.Indent = 14;
             this.entriesTreeView.Location = new System.Drawing.Point(13, 13);
             this.entriesTreeView.Name = "entriesTreeView";
             this.entriesTreeView.Size = new System.Drawing.Size(231, 402);
             this.entriesTreeView.TabIndex = 0;
+            this.entriesTreeView.TabStop = false;
             this.entriesTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.entriesTreeView_AfterSelect);
             this.entriesTreeView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.entriesTreeView_MouseDown);
             // 
             // carSettingsPanel
             // 
             this.carSettingsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.carSettingsPanel.Controls.Add(this.overrideCustomCarModelCheckBox);
             this.carSettingsPanel.Controls.Add(this.restrictorNumericUpDown);
             this.carSettingsPanel.Controls.Add(this.label7);
             this.carSettingsPanel.Controls.Add(this.ballastNumericUpDown);
@@ -109,8 +111,6 @@
             this.carSettingsPanel.Controls.Add(this.gridPositionNumericUpDown);
             this.carSettingsPanel.Controls.Add(this.label5);
             this.carSettingsPanel.Controls.Add(this.adminCheckBox);
-            this.carSettingsPanel.Controls.Add(this.overrideCarModelComboBox);
-            this.carSettingsPanel.Controls.Add(this.label4);
             this.carSettingsPanel.Controls.Add(this.customCarComboBox);
             this.carSettingsPanel.Controls.Add(this.label3);
             this.carSettingsPanel.Controls.Add(this.forcedCarModelComboBox);
@@ -126,7 +126,7 @@
             // 
             // restrictorNumericUpDown
             // 
-            this.restrictorNumericUpDown.Location = new System.Drawing.Point(123, 181);
+            this.restrictorNumericUpDown.Location = new System.Drawing.Point(123, 166);
             this.restrictorNumericUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -134,13 +134,16 @@
             0});
             this.restrictorNumericUpDown.Name = "restrictorNumericUpDown";
             this.restrictorNumericUpDown.Size = new System.Drawing.Size(54, 20);
-            this.restrictorNumericUpDown.TabIndex = 15;
+            this.restrictorNumericUpDown.TabIndex = 6;
+            this.restrictorNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.restrictorNumericUpDown.ValueChanged += new System.EventHandler(this.restrictorNumericUpDown_ValueChanged);
+            this.restrictorNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.restrictorNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 183);
+            this.label7.Location = new System.Drawing.Point(4, 168);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 14;
@@ -148,7 +151,7 @@
             // 
             // ballastNumericUpDown
             // 
-            this.ballastNumericUpDown.Location = new System.Drawing.Point(123, 155);
+            this.ballastNumericUpDown.Location = new System.Drawing.Point(123, 140);
             this.ballastNumericUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -156,13 +159,16 @@
             0});
             this.ballastNumericUpDown.Name = "ballastNumericUpDown";
             this.ballastNumericUpDown.Size = new System.Drawing.Size(54, 20);
-            this.ballastNumericUpDown.TabIndex = 13;
+            this.ballastNumericUpDown.TabIndex = 5;
+            this.ballastNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.ballastNumericUpDown.ValueChanged += new System.EventHandler(this.ballastNumericUpDown_ValueChanged);
+            this.ballastNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.ballastNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 157);
+            this.label6.Location = new System.Drawing.Point(4, 142);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 13);
             this.label6.TabIndex = 12;
@@ -170,7 +176,7 @@
             // 
             // gridPositionNumericUpDown
             // 
-            this.gridPositionNumericUpDown.Location = new System.Drawing.Point(123, 129);
+            this.gridPositionNumericUpDown.Location = new System.Drawing.Point(123, 114);
             this.gridPositionNumericUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -183,13 +189,16 @@
             -2147483648});
             this.gridPositionNumericUpDown.Name = "gridPositionNumericUpDown";
             this.gridPositionNumericUpDown.Size = new System.Drawing.Size(54, 20);
-            this.gridPositionNumericUpDown.TabIndex = 11;
+            this.gridPositionNumericUpDown.TabIndex = 4;
+            this.gridPositionNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.gridPositionNumericUpDown.ValueChanged += new System.EventHandler(this.gridPositionNumericUpDown_ValueChanged);
+            this.gridPositionNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.gridPositionNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 131);
+            this.label5.Location = new System.Drawing.Point(4, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 13);
             this.label5.TabIndex = 10;
@@ -198,58 +207,13 @@
             // adminCheckBox
             // 
             this.adminCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.adminCheckBox.Location = new System.Drawing.Point(3, 220);
+            this.adminCheckBox.Location = new System.Drawing.Point(193, 113);
             this.adminCheckBox.Name = "adminCheckBox";
-            this.adminCheckBox.Size = new System.Drawing.Size(174, 24);
-            this.adminCheckBox.TabIndex = 9;
+            this.adminCheckBox.Size = new System.Drawing.Size(174, 20);
+            this.adminCheckBox.TabIndex = 7;
             this.adminCheckBox.Text = "Admin";
             this.adminCheckBox.UseVisualStyleBackColor = true;
             this.adminCheckBox.CheckedChanged += new System.EventHandler(this.adminCheckBox_CheckedChanged);
-            // 
-            // overrideCarModelComboBox
-            // 
-            this.overrideCarModelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.overrideCarModelComboBox.FormattingEnabled = true;
-            this.overrideCarModelComboBox.Items.AddRange(new object[] {
-            "",
-            "Porsche 991 GT3",
-            "Mercedes AMG GT3",
-            "Ferrari 488 GT3",
-            "Audi R8 LMS",
-            "Lamborghini Huracan GT3",
-            "Mclaren 650s GT3",
-            "Nissan GT R Nismo GT3 2018",
-            "BMW M6 GT3",
-            "Bentley Continental GT3 2018",
-            "Porsche 991.2 GT3 Cup",
-            "Nissan GT-R Nismo GT3 2017",
-            "Bentley Continental GT3 2016",
-            "Aston Martin Vantage V12 GT3",
-            "Lamborghini Gallardo R-EX",
-            "Jaguar G3",
-            "Lexus RC F GT3",
-            "Lamborghini Huracan Evo (2019)",
-            "Honda NSX GT3",
-            "Lamborghini Huracan SuperTrofeo",
-            "Audi R8 LMS Evo (2019)",
-            "AMR V8 Vantage (2019)",
-            "Honda NSX Evo (2019)",
-            "McLaren 720S GT3 (Special)",
-            "Porsche 911 II GT3 R (2019)"});
-            this.overrideCarModelComboBox.Location = new System.Drawing.Point(183, 61);
-            this.overrideCarModelComboBox.Name = "overrideCarModelComboBox";
-            this.overrideCarModelComboBox.Size = new System.Drawing.Size(184, 21);
-            this.overrideCarModelComboBox.TabIndex = 8;
-            this.overrideCarModelComboBox.SelectedIndexChanged += new System.EventHandler(this.overrideCarModelComboBox_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 64);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(173, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Override Car Model For Custom Car";
             // 
             // customCarComboBox
             // 
@@ -260,7 +224,7 @@
             this.customCarComboBox.Location = new System.Drawing.Point(183, 34);
             this.customCarComboBox.Name = "customCarComboBox";
             this.customCarComboBox.Size = new System.Drawing.Size(184, 21);
-            this.customCarComboBox.TabIndex = 6;
+            this.customCarComboBox.TabIndex = 1;
             this.customCarComboBox.SelectedIndexChanged += new System.EventHandler(this.customCarComboBox_SelectedIndexChanged);
             // 
             // label3
@@ -274,38 +238,13 @@
             // 
             // forcedCarModelComboBox
             // 
+            this.forcedCarModelComboBox.DisplayMember = "model";
             this.forcedCarModelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.forcedCarModelComboBox.FormattingEnabled = true;
-            this.forcedCarModelComboBox.Items.AddRange(new object[] {
-            "",
-            "Porsche 991 GT3",
-            "Mercedes AMG GT3",
-            "Ferrari 488 GT3",
-            "Audi R8 LMS",
-            "Lamborghini Huracan GT3",
-            "Mclaren 650s GT3",
-            "Nissan GT R Nismo GT3 2018",
-            "BMW M6 GT3",
-            "Bentley Continental GT3 2018",
-            "Porsche 991.2 GT3 Cup",
-            "Nissan GT-R Nismo GT3 2017",
-            "Bentley Continental GT3 2016",
-            "Aston Martin Vantage V12 GT3",
-            "Lamborghini Gallardo R-EX",
-            "Jaguar G3",
-            "Lexus RC F GT3",
-            "Lamborghini Huracan Evo (2019)",
-            "Honda NSX GT3",
-            "Lamborghini Huracan SuperTrofeo",
-            "Audi R8 LMS Evo (2019)",
-            "AMR V8 Vantage (2019)",
-            "Honda NSX Evo (2019)",
-            "McLaren 720S GT3 (Special)",
-            "Porsche 911 II GT3 R (2019)"});
             this.forcedCarModelComboBox.Location = new System.Drawing.Point(183, 7);
             this.forcedCarModelComboBox.Name = "forcedCarModelComboBox";
             this.forcedCarModelComboBox.Size = new System.Drawing.Size(184, 21);
-            this.forcedCarModelComboBox.TabIndex = 4;
+            this.forcedCarModelComboBox.TabIndex = 0;
             this.forcedCarModelComboBox.SelectedIndexChanged += new System.EventHandler(this.forcedCarModelComboBox_SelectedIndexChanged);
             // 
             // label2
@@ -320,10 +259,10 @@
             // overrideDriverInfoCheckBox
             // 
             this.overrideDriverInfoCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.overrideDriverInfoCheckBox.Location = new System.Drawing.Point(3, 250);
+            this.overrideDriverInfoCheckBox.Location = new System.Drawing.Point(193, 139);
             this.overrideDriverInfoCheckBox.Name = "overrideDriverInfoCheckBox";
-            this.overrideDriverInfoCheckBox.Size = new System.Drawing.Size(174, 24);
-            this.overrideDriverInfoCheckBox.TabIndex = 2;
+            this.overrideDriverInfoCheckBox.Size = new System.Drawing.Size(174, 20);
+            this.overrideDriverInfoCheckBox.TabIndex = 8;
             this.overrideDriverInfoCheckBox.Text = "Override Driver Info";
             this.overrideDriverInfoCheckBox.UseVisualStyleBackColor = true;
             this.overrideDriverInfoCheckBox.CheckedChanged += new System.EventHandler(this.overrideDriverInfoCheckBox_CheckedChanged);
@@ -331,7 +270,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 105);
+            this.label1.Location = new System.Drawing.Point(4, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 1;
@@ -339,7 +278,7 @@
             // 
             // carNumberNumericUpDown
             // 
-            this.carNumberNumericUpDown.Location = new System.Drawing.Point(123, 103);
+            this.carNumberNumericUpDown.Location = new System.Drawing.Point(123, 88);
             this.carNumberNumericUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -347,8 +286,11 @@
             0});
             this.carNumberNumericUpDown.Name = "carNumberNumericUpDown";
             this.carNumberNumericUpDown.Size = new System.Drawing.Size(54, 20);
-            this.carNumberNumericUpDown.TabIndex = 0;
+            this.carNumberNumericUpDown.TabIndex = 3;
+            this.carNumberNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.carNumberNumericUpDown.ValueChanged += new System.EventHandler(this.carNumberNumericUpDown_ValueChanged);
+            this.carNumberNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.carNumberNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // forceEntryListCheckBox
             // 
@@ -357,6 +299,7 @@
             this.forceEntryListCheckBox.Name = "forceEntryListCheckBox";
             this.forceEntryListCheckBox.Size = new System.Drawing.Size(99, 17);
             this.forceEntryListCheckBox.TabIndex = 2;
+            this.forceEntryListCheckBox.TabStop = false;
             this.forceEntryListCheckBox.Text = "Force Entry List";
             this.forceEntryListCheckBox.UseVisualStyleBackColor = true;
             this.forceEntryListCheckBox.CheckedChanged += new System.EventHandler(this.forceEntryListCheckBox_CheckedChanged);
@@ -367,6 +310,7 @@
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(87, 23);
             this.closeButton.TabIndex = 3;
+            this.closeButton.TabStop = false;
             this.closeButton.Text = "Save&&Close";
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
@@ -428,6 +372,7 @@
             this.shortNameTextBox.Size = new System.Drawing.Size(184, 20);
             this.shortNameTextBox.TabIndex = 18;
             this.shortNameTextBox.TextChanged += new System.EventHandler(this.shortNameTextBox_TextChanged);
+            this.shortNameTextBox.Enter += new System.EventHandler(this.shortNameTextBox_Enter);
             // 
             // lastNameTextBox
             // 
@@ -498,6 +443,25 @@
             this.addEntryToolStripMenuItem.Text = "Add Entry";
             this.addEntryToolStripMenuItem.Click += new System.EventHandler(this.addEntryToolStripMenuItem_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(133, 6);
+            // 
+            // expandAllToolStripMenuItem
+            // 
+            this.expandAllToolStripMenuItem.Name = "expandAllToolStripMenuItem";
+            this.expandAllToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.expandAllToolStripMenuItem.Text = "Expand All";
+            this.expandAllToolStripMenuItem.Click += new System.EventHandler(this.expandAllToolStripMenuItem_Click);
+            // 
+            // collapsAllToolStripMenuItem
+            // 
+            this.collapsAllToolStripMenuItem.Name = "collapsAllToolStripMenuItem";
+            this.collapsAllToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.collapsAllToolStripMenuItem.Text = "Collapse All";
+            this.collapsAllToolStripMenuItem.Click += new System.EventHandler(this.collapsAllToolStripMenuItem_Click);
+            // 
             // entryContextMenuStrip
             // 
             this.entryContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -523,42 +487,6 @@
             this.removeEntryToolStripMenuItem.Text = "Remove Entry";
             this.removeEntryToolStripMenuItem.Click += new System.EventHandler(this.removeEntryToolStripMenuItem_Click);
             // 
-            // driverContextMenuStrip
-            // 
-            this.driverContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.removeDriverMenuItem,
-            this.toolStripSeparator3,
-            this.expandAllToolStripMenuItem2,
-            this.collapseAllToolStripMenuItem});
-            this.driverContextMenuStrip.Name = "driverContextMenuStrip";
-            this.driverContextMenuStrip.Size = new System.Drawing.Size(152, 76);
-            // 
-            // removeDriverMenuItem
-            // 
-            this.removeDriverMenuItem.Name = "removeDriverMenuItem";
-            this.removeDriverMenuItem.Size = new System.Drawing.Size(151, 22);
-            this.removeDriverMenuItem.Text = "Remove Driver";
-            this.removeDriverMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(133, 6);
-            // 
-            // expandAllToolStripMenuItem
-            // 
-            this.expandAllToolStripMenuItem.Name = "expandAllToolStripMenuItem";
-            this.expandAllToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.expandAllToolStripMenuItem.Text = "Expand All";
-            this.expandAllToolStripMenuItem.Click += new System.EventHandler(this.expandAllToolStripMenuItem_Click);
-            // 
-            // collapsAllToolStripMenuItem
-            // 
-            this.collapsAllToolStripMenuItem.Name = "collapsAllToolStripMenuItem";
-            this.collapsAllToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
-            this.collapsAllToolStripMenuItem.Text = "Collapse All";
-            this.collapsAllToolStripMenuItem.Click += new System.EventHandler(this.collapsAllToolStripMenuItem_Click);
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
@@ -577,6 +505,23 @@
             this.collapsAllToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.collapsAllToolStripMenuItem1.Text = "Collapse All";
             this.collapsAllToolStripMenuItem1.Click += new System.EventHandler(this.collapsAllToolStripMenuItem1_Click);
+            // 
+            // driverContextMenuStrip
+            // 
+            this.driverContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removeDriverMenuItem,
+            this.toolStripSeparator3,
+            this.expandAllToolStripMenuItem2,
+            this.collapseAllToolStripMenuItem});
+            this.driverContextMenuStrip.Name = "driverContextMenuStrip";
+            this.driverContextMenuStrip.Size = new System.Drawing.Size(152, 76);
+            // 
+            // removeDriverMenuItem
+            // 
+            this.removeDriverMenuItem.Name = "removeDriverMenuItem";
+            this.removeDriverMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.removeDriverMenuItem.Text = "Remove Driver";
+            this.removeDriverMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -597,6 +542,17 @@
             this.collapseAllToolStripMenuItem.Text = "Collapse All";
             this.collapseAllToolStripMenuItem.Click += new System.EventHandler(this.collapseAllToolStripMenuItem_Click);
             // 
+            // overrideCustomCarModelCheckBox
+            // 
+            this.overrideCustomCarModelCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.overrideCustomCarModelCheckBox.Location = new System.Drawing.Point(193, 87);
+            this.overrideCustomCarModelCheckBox.Name = "overrideCustomCarModelCheckBox";
+            this.overrideCustomCarModelCheckBox.Size = new System.Drawing.Size(174, 20);
+            this.overrideCustomCarModelCheckBox.TabIndex = 15;
+            this.overrideCustomCarModelCheckBox.Text = "Override Custom Car Model";
+            this.overrideCustomCarModelCheckBox.UseVisualStyleBackColor = true;
+            this.overrideCustomCarModelCheckBox.CheckedChanged += new System.EventHandler(this.overrideCustomCarModelCheckBox_CheckedChanged);
+            // 
             // EntriesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -605,8 +561,8 @@
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.forceEntryListCheckBox);
             this.Controls.Add(this.entriesTreeView);
-            this.Controls.Add(this.carSettingsPanel);
             this.Controls.Add(this.driverSettingsPanel);
+            this.Controls.Add(this.carSettingsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -643,8 +599,6 @@
         private System.Windows.Forms.NumericUpDown gridPositionNumericUpDown;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox adminCheckBox;
-        private System.Windows.Forms.ComboBox overrideCarModelComboBox;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox customCarComboBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox forcedCarModelComboBox;
@@ -681,5 +635,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem expandAllToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem collapseAllToolStripMenuItem;
+        private System.Windows.Forms.CheckBox overrideCustomCarModelCheckBox;
     }
 }

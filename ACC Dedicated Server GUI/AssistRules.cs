@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ACC_Dedicated_Server_GUI
+﻿namespace ACC_Dedicated_Server_GUI
 {
     class AssistRules
     {

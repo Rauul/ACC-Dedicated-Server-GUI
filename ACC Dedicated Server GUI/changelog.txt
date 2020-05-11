@@ -1,3 +1,10 @@
+﻿V1.x.x
+Forced at least one none race session to be enbled
+Making sure values are within range when loading json files
+Sorted all lists
+Added "★" to BoP entries where ballast and/or restictor is modified
+Added function to move drivers up/down with arrow keys
+----------------------------------------------------------------------
 V1.2.1
 Embedded server in to the GUI
 ----------------------------------------------------------------------
