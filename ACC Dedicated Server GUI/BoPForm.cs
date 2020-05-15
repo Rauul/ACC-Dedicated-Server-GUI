@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 using System.Windows.Forms;
 using static ACC_Dedicated_Server_GUI.BoP;
 
@@ -149,34 +150,6 @@ namespace ACC_Dedicated_Server_GUI
                     carListBox.Items.Insert(i, car);
                 }
             }
-
-            //for (int i = 0; i < carListBox.Items.Count; i++)
-            //{
-            //    Car car = (Car)carListBox.Items[i];
-            //    if (car.model.Contains("★"))
-            //    {
-            //        car.model = car.model.Replace("★ ", "    ");
-            //        carListBox.Items.RemoveAt(i);
-            //        carListBox.Items.Insert(i, car);
-            //    }
-            //}
-
-            //foreach (Entry entry in entries)
-            //{
-            //    for (int i = 0; i < carListBox.Items.Count; i++)
-            //    {
-            //        Car car = (Car)carListBox.Items[i];
-            //        if (car.ID == entry.carModel && entry.restrictor + entry.ballast > 0)
-            //        {
-            //            if (!car.model.Contains("★ "))
-            //            {
-            //                car.model = car.model.Replace("    ", "★ ");
-            //                carListBox.Items.RemoveAt(i);
-            //                carListBox.Items.Insert(i, car);
-            //            }
-            //        }
-            //    }
-            //}
             carListBox.SelectedIndex = selectedIndex;
             carListBox.EndUpdate();
         }

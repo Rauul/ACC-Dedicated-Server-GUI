@@ -1,9 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
@@ -18,6 +20,7 @@ namespace ACC_Dedicated_Server_GUI
 {
     public partial class MainForm : Form
     {
+
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         static extern IntPtr SendMessage(IntPtr hWnd, UInt32 Msg, int wParam, int lParam);
 
@@ -29,6 +32,7 @@ namespace ACC_Dedicated_Server_GUI
         EventObject eventObject = new EventObject();
         EventRulesObject eventRules = new EventRulesObject();
         ConfigurationObject configuration = new ConfigurationObject();
+        Process process = new Process();
 
         Panel consolePanel = new Panel();
 
@@ -67,25 +71,25 @@ namespace ACC_Dedicated_Server_GUI
         {
             new Track("    Barcelona","barcelona"),
             new Track("    Barcelona 2019","barcelona_2019"),
-            new Track("    Brands hatch","brands_hatch"),
-            new Track("    Brands hatch 2019","brands_hatch_2019"),
+            new Track("    Brands Hatch","brands_hatch"),
+            new Track("    Brands Hatch 2019","brands_hatch_2019"),
             new Track("    Hungaroring","hungaroring"),
             new Track("    Hungaroring 2019","hungaroring_2019"),
             new Track("    Kyalami 2019","kyalami_2019"),
-            new Track("    Laguna seca 2019","laguna_seca_2019"),
+            new Track("    Laguna Seca 2019","laguna_seca_2019"),
             new Track("    Misano","misano"),
             new Track("    Misano 2019","misano_2019"),
             new Track("    Monza","monza"),
             new Track("    Monza 2019","monza_2019"),
-            new Track("    Mount panorama 2019","mount_panorama_2019"),
+            new Track("    Mount Panorama 2019","mount_panorama_2019"),
             new Track("    Nurburgring","nurburgring"),
             new Track("    Nurburgring 2019","nurburgring_2019"),
-            new Track("    Paul ricard","paul_ricard"),
-            new Track("    Paul ricard 2019","paul_ricard_2019"),
+            new Track("    Paul Ricard","paul_ricard"),
+            new Track("    Paul Ricard 2019","paul_ricard_2019"),
             new Track("    Silverstone","silverstone"),
             new Track("    Silverstone 2019","silverstone_2019"),
-            new Track("    Spa","spa"),
-            new Track("    Spa 2019","spa_2019"),
+            new Track("    Spa-Francorchamps","spa"),
+            new Track("    Spa-Francorchamps 2019","spa_2019"),
             new Track("    Suzuka 2019","suzuka_2019"),
             new Track("    Zandvoort","zandvoort"),
             new Track("    Zandvoort 2019","zandvoort_2019"),
@@ -93,36 +97,6 @@ namespace ACC_Dedicated_Server_GUI
             new Track("    Zolder 2019","zolder_2019")
         };
 
-        //public static List<string> trackList = new List<string>()
-        //{
-        //    "monza",
-        //    "zolder",
-        //    "brands_hatch",
-        //    "silverstone",
-        //    "paul_ricard",
-        //    "misano",
-        //    "spa",
-        //    "nurburgring",
-        //    "barcelona",
-        //    "hungaroring",
-        //    "zandvoort",
-        //    "monza_2019",
-        //    "zolder_2019",
-        //    "brands_hatch_2019",
-        //    "silverstone_2019",
-        //    "paul_ricard_2019",
-        //    "misano_2019",
-        //    "spa_2019",
-        //    "nurburgring_2019",
-        //    "barcelona_2019",
-        //    "hungaroring_2019",
-        //    "zandvoort_2019",
-        //    "kyalami_2019",
-        //    "mount_panorama_2019",
-        //    "suzuka_2019",
-        //    "laguna_seca_2019 ",
-        //    ""
-        //};
 
         public MainForm()
         {
@@ -216,12 +190,29 @@ namespace ACC_Dedicated_Server_GUI
                 adminPasswordTextBox.Text = settings.adminPassword;
                 joinPasswordTextBox.Text = settings.password;
                 spectatorPasswordTextBox.Text = settings.spectatorPassword;
+                centraEntryListPathTextBox.Text = settings.centralEntryListPath;
                 maxCarSlotsNumericUpDown.Value = InNumUpDnRange(settings.maxCarSlots, maxCarSlotsNumericUpDown);
                 TRRequirementNumericUpDown.Value = InNumUpDnRange(settings.trackMedalsRequirement, TRRequirementNumericUpDown);
                 SARequirementNumericUpDown.Value = InNumUpDnRange(settings.safetyRatingRequirement, SARequirementNumericUpDown);
                 RCRequirementNumericUpDown.Value = InNumUpDnRange(settings.racecraftRatingRequirement, RCRequirementNumericUpDown);
                 isRaceLockedCheckBox.Checked = settings.isRaceLocked == 1 ? true : false;
                 shortFormationCheckBox.Checked = settings.shortFormationLap == 1 ? true : false;
+                dumpEntryListCheckBox.Checked = settings.dumpEntryList == 1 ? true : false;
+                dumpLeaderboardsCheckBox.Checked = settings.dumpLeaderboards == 1 ? true : false;
+                randomizeTrackCheckBox.Checked = settings.randomizeTrackWhenEmpty == 1 ? true : false;
+                autoDQCheckBox.Checked = settings.allowAutoDQ == 1 ? true : false;
+                switch (settings.formationLapType)
+                {
+                    case 0:
+                        formationLapTypeComboBox.SelectedItem = "Old";
+                        break;
+                    case 1:
+                        formationLapTypeComboBox.SelectedItem = "Manual";
+                        break;
+                    default:
+                        formationLapTypeComboBox.SelectedItem = "Default";
+                        break;
+                }
             }
 
             file = @"cfg\assistRules.json";
@@ -251,7 +242,14 @@ namespace ACC_Dedicated_Server_GUI
                 rawJSON = File.ReadAllText(file, encoding);
                 eventObject = JsonConvert.DeserializeObject<EventObject>(rawJSON);
 
-                TrackComboBox.SelectedItem = eventObject.track;
+                for (int i = 0; i < TrackComboBox.Items.Count; i++)
+                {
+                    if (((Track)TrackComboBox.Items[i]).alias == eventObject.track)
+                    {
+                        TrackComboBox.SelectedIndex = i;
+                        break;
+                    }
+                }
                 preRaceWaitTimeNumericUpDown.Value = InNumUpDnRange(eventObject.preRaceWaitingTimeSeconds, preRaceWaitTimeNumericUpDown);
                 overTimeNumericUpDown.Value = InNumUpDnRange(eventObject.sessionOverTimeSeconds, overTimeNumericUpDown);
                 tempTrackBar.Value = InTrackBarRange(eventObject.ambientTemp, tempTrackBar);
@@ -374,12 +372,29 @@ namespace ACC_Dedicated_Server_GUI
             settings.password = joinPasswordTextBox.Text;
             settings.adminPassword = adminPasswordTextBox.Text;
             settings.spectatorPassword = spectatorPasswordTextBox.Text;
+            settings.centralEntryListPath = centraEntryListPathTextBox.Text;
             settings.maxCarSlots = (int)maxCarSlotsNumericUpDown.Value;
             settings.trackMedalsRequirement = (int)TRRequirementNumericUpDown.Value;
             settings.safetyRatingRequirement = (int)SARequirementNumericUpDown.Value;
             settings.racecraftRatingRequirement = (int)RCRequirementNumericUpDown.Value;
+            switch (formationLapTypeComboBox.SelectedItem)
+            {
+                case "Old":
+                    settings.formationLapType = 0;
+                    break;
+                case "Manual":
+                    settings.formationLapType = 1;
+                    break;
+                default:
+                    settings.formationLapType = 3;
+                    break;
+            }
             settings.isRaceLocked = isRaceLockedCheckBox.Checked ? 1 : 0;
             settings.shortFormationLap = shortFormationCheckBox.Checked ? 1 : 0;
+            settings.dumpEntryList = dumpEntryListCheckBox.Checked ? 1 : 0;
+            settings.dumpLeaderboards = dumpLeaderboardsCheckBox.Checked ? 1 : 0;
+            settings.randomizeTrackWhenEmpty = randomizeTrackCheckBox.Checked ? 1 : 0;
+            settings.allowAutoDQ = autoDQCheckBox.Checked ? 1 : 0;
             settings.configVersion = 1;
 
             // assistRules.json
@@ -394,7 +409,7 @@ namespace ACC_Dedicated_Server_GUI
             assist.stabilityControlLevelMax = (int)maxStabilityNumericUpDown.Value;
 
             // event.json
-            eventObject.track = TrackComboBox.Text;
+            eventObject.track = ((Track)TrackComboBox.SelectedItem).alias;
             eventObject.preRaceWaitingTimeSeconds = (int)preRaceWaitTimeNumericUpDown.Value;
             eventObject.sessionOverTimeSeconds = (int)overTimeNumericUpDown.Value;
             eventObject.ambientTemp = tempTrackBar.Value;
@@ -491,12 +506,9 @@ namespace ACC_Dedicated_Server_GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //trackList.Sort();
             carList.Sort(delegate (Car x, Car y) { return x.model.CompareTo(y.model); });
-            //TrackComboBox.DataSource = trackList;
-
+            TrackComboBox.Items.AddRange(trackList.ToArray());
             TrackComboBox.SelectedIndex = 0;
-
             consolePanel.Visible = false;
 
             Size size = new Size();
@@ -527,40 +539,64 @@ namespace ACC_Dedicated_Server_GUI
 
         private void launchServerButton_Click(object sender, EventArgs e)
         {
-#if DEBUG          
-            string fileName = "testFlood";
+#if DEBUG
+    string fileName = "testFlood";
 #else
             string fileName = "accServer";
 #endif
             try
             {
-                if (Process.GetProcessesByName(fileName).Length == 0)
+                if (consolePanel.Visible)
+                {
+                    consolePanel.Visible = false;
+                    label12.Visible = true;
+                    process.Kill();
+                }
+                else
                 {
                     SaveConfig();
                     consolePanel.Visible = true;
                     consolePanel.BringToFront();
 
-                    Process process = new Process();
                     process.StartInfo.FileName = fileName + ".exe";
                     process.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
 
                     process.Start();
-                    Thread.Sleep(100);
+                    Thread.Sleep(200);
                     SetParent(process.MainWindowHandle, consolePanel.Handle);
                     SendMessage(process.MainWindowHandle, WM_SYSCOMMAND, SC_MAXIMIZE, 0);
                     label12.Visible = false;
                     this.BringToFront();
                     this.Activate();
                 }
-                else
-                {
-                    foreach (Process process in Process.GetProcessesByName(fileName))
-                    {
-                        process.Kill();
-                    }
-                    consolePanel.Visible = false;
-                    label12.Visible = true;
-                }
+
+                //if (Process.GetProcessesByName(fileName).Length == 0)
+                //{
+                //    SaveConfig();
+                //    consolePanel.Visible = true;
+                //    consolePanel.BringToFront();
+
+                //    Process process = new Process();
+                //    process.StartInfo.FileName = fileName + ".exe";
+                //    process.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
+
+                //    process.Start();
+                //    Thread.Sleep(200);
+                //    SetParent(process.MainWindowHandle, consolePanel.Handle);
+                //    SendMessage(process.MainWindowHandle, WM_SYSCOMMAND, SC_MAXIMIZE, 0);
+                //    label12.Visible = false;
+                //    this.BringToFront();
+                //    this.Activate();
+                //}
+                //else
+                //{
+                //    foreach (Process process in Process.GetProcessesByName(fileName))
+                //    {
+                //        process.Kill();
+                //    }
+                //    consolePanel.Visible = false;
+                //    label12.Visible = true;
+                //}
             }
             catch (Exception ex)
             {
@@ -631,6 +667,17 @@ namespace ACC_Dedicated_Server_GUI
             {
                 curBox.Select(0, curBox.Text.Length);
                 selectByMouse = false;
+            }
+        }
+
+        private void centralEntryListPathButton_Click(object sender, EventArgs e)
+        {
+            CommonOpenFileDialog dialog = new CommonOpenFileDialog();
+            dialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            dialog.IsFolderPicker = true;
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                centraEntryListPathTextBox.Text = dialog.FileName.Replace(@"\", @"/");
             }
         }
     }

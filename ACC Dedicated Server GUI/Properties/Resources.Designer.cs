@@ -63,16 +63,6 @@ namespace ACC_Dedicated_Server_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bop_50 {
-            get {
-                object obj = ResourceManager.GetObject("bop-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap bop_50s {
             get {
                 object obj = ResourceManager.GetObject("bop-50s", resourceCulture);
@@ -83,39 +73,9 @@ namespace ACC_Dedicated_Server_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bop_50si {
-            get {
-                object obj = ResourceManager.GetObject("bop-50si", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_f1_car_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-f1-car-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_f1_car_50i {
-            get {
-                object obj = ResourceManager.GetObject("icons8-f1-car-50i", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_race_car_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-race-car-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

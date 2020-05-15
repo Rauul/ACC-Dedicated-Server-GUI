@@ -48,7 +48,7 @@
             this.trackListBox.FormattingEnabled = true;
             this.trackListBox.Location = new System.Drawing.Point(12, 12);
             this.trackListBox.Name = "trackListBox";
-            this.trackListBox.Size = new System.Drawing.Size(142, 342);
+            this.trackListBox.Size = new System.Drawing.Size(151, 342);
             this.trackListBox.TabIndex = 0;
             this.trackListBox.TabStop = false;
             this.trackListBox.SelectedIndexChanged += new System.EventHandler(this.trackListBox_SelectedIndexChanged);
@@ -57,7 +57,7 @@
             // 
             this.carListBox.DisplayMember = "model";
             this.carListBox.FormattingEnabled = true;
-            this.carListBox.Location = new System.Drawing.Point(160, 12);
+            this.carListBox.Location = new System.Drawing.Point(169, 12);
             this.carListBox.Name = "carListBox";
             this.carListBox.Size = new System.Drawing.Size(196, 342);
             this.carListBox.TabIndex = 1;
@@ -67,7 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(364, 296);
+            this.label1.Location = new System.Drawing.Point(373, 296);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 2;
@@ -76,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(422, 296);
+            this.label2.Location = new System.Drawing.Point(431, 296);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 4;
@@ -84,7 +84,7 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(362, 321);
+            this.closeButton.Location = new System.Drawing.Point(371, 321);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(112, 33);
             this.closeButton.TabIndex = 6;
@@ -97,7 +97,7 @@
             // 
             this.ballastTrackBar.AutoSize = false;
             this.ballastTrackBar.Enabled = false;
-            this.ballastTrackBar.Location = new System.Drawing.Point(372, 38);
+            this.ballastTrackBar.Location = new System.Drawing.Point(381, 38);
             this.ballastTrackBar.Maximum = 50;
             this.ballastTrackBar.Name = "ballastTrackBar";
             this.ballastTrackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -112,7 +112,7 @@
             // 
             this.restrictorTrackBar.AutoSize = false;
             this.restrictorTrackBar.Enabled = false;
-            this.restrictorTrackBar.Location = new System.Drawing.Point(436, 38);
+            this.restrictorTrackBar.Location = new System.Drawing.Point(445, 38);
             this.restrictorTrackBar.Maximum = 50;
             this.restrictorTrackBar.Name = "restrictorTrackBar";
             this.restrictorTrackBar.Orientation = System.Windows.Forms.Orientation.Vertical;
@@ -126,7 +126,7 @@
             // ballastLabel
             // 
             this.ballastLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ballastLabel.Location = new System.Drawing.Point(362, 12);
+            this.ballastLabel.Location = new System.Drawing.Point(371, 12);
             this.ballastLabel.Name = "ballastLabel";
             this.ballastLabel.Size = new System.Drawing.Size(45, 20);
             this.ballastLabel.TabIndex = 9;
@@ -136,7 +136,7 @@
             // restrictorLabel
             // 
             this.restrictorLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.restrictorLabel.Location = new System.Drawing.Point(425, 12);
+            this.restrictorLabel.Location = new System.Drawing.Point(434, 12);
             this.restrictorLabel.Name = "restrictorLabel";
             this.restrictorLabel.Size = new System.Drawing.Size(45, 20);
             this.restrictorLabel.TabIndex = 10;
@@ -147,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 366);
+            this.ClientSize = new System.Drawing.Size(498, 366);
             this.Controls.Add(this.restrictorLabel);
             this.Controls.Add(this.ballastLabel);
             this.Controls.Add(this.restrictorTrackBar);

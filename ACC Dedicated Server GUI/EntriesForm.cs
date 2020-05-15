@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 using System.Windows.Forms;
 using static ACC_Dedicated_Server_GUI.EntryList;
 
@@ -82,11 +83,6 @@ namespace ACC_Dedicated_Server_GUI
 
         private void LoadTreeView(EntryListObject entrylist)
         {
-            //TreeNode entriesTreeNode = new TreeNode();
-            //entriesTreeNode.Text = "Entries";
-            //entriesTreeNode.Tag = entrylist;
-            //entriesTreeView.Nodes.Add(entriesTreeNode);
-
             foreach (Entry entry in entrylist.entries)
             {
                 TreeNode carTreeNode = new TreeNode();

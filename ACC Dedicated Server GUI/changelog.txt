@@ -1,9 +1,22 @@
-﻿V1.x.x
+﻿V1.2.3
+Support for multiple instances
+----------------------------------------------------------------------
+V1.2.2.1
+Fixed an issue where you got an unhandled exeption when trying to type something in the entry list textbox
+----------------------------------------------------------------------
+V1.2.2
 Forced at least one none race session to be enbled
 Making sure values are within range when loading json files
 Sorted all lists
 Added "★" to BoP entries where ballast and/or restictor is modified
 Added function to move drivers up/down with arrow keys
+Added options for
+	Dump Entry List
+	Dump Leaderboards
+	AutoDQ
+	Randomize Track When Empty
+	Formation Lap Type
+	Central Entry List Path
 ----------------------------------------------------------------------
 V1.2.1
 Embedded server in to the GUI

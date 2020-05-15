@@ -120,9 +120,19 @@
   <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>122, 17</value>
   </metadata>
-  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>122, 17</value>
-  </metadata>
+  <data name="autoDQCheckBox.ToolTip" xml:space="preserve">
+    <value>If disabled, the server won’t automatically disqualify drivers, and
+instead hand out Stop&amp;Go (30s) penalties. This way a server
+admin / race director has 3 laps time to review the incident, and
+either use /dq or /clear based on his judgement</value>
+  </data>
+  <data name="dumpEntryListCheckBox.ToolTip" xml:space="preserve">
+    <value>Will save an entry list at the end of any Qualifying session. This
+can be a quick way to collect a starting point to build an entry
+list, and is a way to save the defaultGridPositions which can be
+used to run a race without Qualifying session and predefined
+grid.</value>
+  </data>
   <data name="maxConnectionsNumericUpDown.ToolTip" xml:space="preserve">
     <value>Replaces “maxClients”. The maximum amount of connections a server will
 accept at a time. If you own the hardware server, you can just set any high

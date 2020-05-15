@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EntriesForm));
             this.entriesTreeView = new System.Windows.Forms.TreeView();
             this.carSettingsPanel = new System.Windows.Forms.Panel();
+            this.overrideCustomCarModelCheckBox = new System.Windows.Forms.CheckBox();
             this.restrictorNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.ballastNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -75,7 +76,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.expandAllToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.collapseAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.overrideCustomCarModelCheckBox = new System.Windows.Forms.CheckBox();
             this.carSettingsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restrictorNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballastNumericUpDown)).BeginInit();
@@ -124,6 +124,17 @@
             this.carSettingsPanel.TabIndex = 1;
             this.carSettingsPanel.Visible = false;
             // 
+            // overrideCustomCarModelCheckBox
+            // 
+            this.overrideCustomCarModelCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.overrideCustomCarModelCheckBox.Location = new System.Drawing.Point(193, 87);
+            this.overrideCustomCarModelCheckBox.Name = "overrideCustomCarModelCheckBox";
+            this.overrideCustomCarModelCheckBox.Size = new System.Drawing.Size(174, 20);
+            this.overrideCustomCarModelCheckBox.TabIndex = 6;
+            this.overrideCustomCarModelCheckBox.Text = "Override Custom Car Model";
+            this.overrideCustomCarModelCheckBox.UseVisualStyleBackColor = true;
+            this.overrideCustomCarModelCheckBox.CheckedChanged += new System.EventHandler(this.overrideCustomCarModelCheckBox_CheckedChanged);
+            // 
             // restrictorNumericUpDown
             // 
             this.restrictorNumericUpDown.Location = new System.Drawing.Point(123, 166);
@@ -134,7 +145,7 @@
             0});
             this.restrictorNumericUpDown.Name = "restrictorNumericUpDown";
             this.restrictorNumericUpDown.Size = new System.Drawing.Size(54, 20);
-            this.restrictorNumericUpDown.TabIndex = 6;
+            this.restrictorNumericUpDown.TabIndex = 5;
             this.restrictorNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.restrictorNumericUpDown.ValueChanged += new System.EventHandler(this.restrictorNumericUpDown_ValueChanged);
             this.restrictorNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
@@ -159,7 +170,7 @@
             0});
             this.ballastNumericUpDown.Name = "ballastNumericUpDown";
             this.ballastNumericUpDown.Size = new System.Drawing.Size(54, 20);
-            this.ballastNumericUpDown.TabIndex = 5;
+            this.ballastNumericUpDown.TabIndex = 4;
             this.ballastNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.ballastNumericUpDown.ValueChanged += new System.EventHandler(this.ballastNumericUpDown_ValueChanged);
             this.ballastNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
@@ -189,7 +200,7 @@
             -2147483648});
             this.gridPositionNumericUpDown.Name = "gridPositionNumericUpDown";
             this.gridPositionNumericUpDown.Size = new System.Drawing.Size(54, 20);
-            this.gridPositionNumericUpDown.TabIndex = 4;
+            this.gridPositionNumericUpDown.TabIndex = 3;
             this.gridPositionNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.gridPositionNumericUpDown.ValueChanged += new System.EventHandler(this.gridPositionNumericUpDown_ValueChanged);
             this.gridPositionNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
@@ -286,7 +297,7 @@
             0});
             this.carNumberNumericUpDown.Name = "carNumberNumericUpDown";
             this.carNumberNumericUpDown.Size = new System.Drawing.Size(54, 20);
-            this.carNumberNumericUpDown.TabIndex = 3;
+            this.carNumberNumericUpDown.TabIndex = 2;
             this.carNumberNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.carNumberNumericUpDown.ValueChanged += new System.EventHandler(this.carNumberNumericUpDown_ValueChanged);
             this.carNumberNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
@@ -332,19 +343,20 @@
             this.driverSettingsPanel.Name = "driverSettingsPanel";
             this.driverSettingsPanel.Size = new System.Drawing.Size(377, 402);
             this.driverSettingsPanel.TabIndex = 16;
+            this.driverSettingsPanel.Visible = false;
             // 
             // playerIDTextBox
             // 
-            this.playerIDTextBox.Location = new System.Drawing.Point(183, 113);
+            this.playerIDTextBox.Location = new System.Drawing.Point(183, 87);
             this.playerIDTextBox.Name = "playerIDTextBox";
             this.playerIDTextBox.Size = new System.Drawing.Size(184, 20);
-            this.playerIDTextBox.TabIndex = 21;
+            this.playerIDTextBox.TabIndex = 3;
             this.playerIDTextBox.TextChanged += new System.EventHandler(this.playerIDTextBox_TextChanged);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(4, 116);
+            this.label14.Location = new System.Drawing.Point(4, 90);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(50, 13);
             this.label14.TabIndex = 20;
@@ -359,10 +371,10 @@
             "Silver",
             "Gold",
             "Platinum"});
-            this.categoryComboBox.Location = new System.Drawing.Point(183, 86);
+            this.categoryComboBox.Location = new System.Drawing.Point(183, 113);
             this.categoryComboBox.Name = "categoryComboBox";
             this.categoryComboBox.Size = new System.Drawing.Size(184, 21);
-            this.categoryComboBox.TabIndex = 19;
+            this.categoryComboBox.TabIndex = 4;
             this.categoryComboBox.SelectedIndexChanged += new System.EventHandler(this.categoryComboBox_SelectedIndexChanged);
             // 
             // shortNameTextBox
@@ -370,7 +382,7 @@
             this.shortNameTextBox.Location = new System.Drawing.Point(183, 61);
             this.shortNameTextBox.Name = "shortNameTextBox";
             this.shortNameTextBox.Size = new System.Drawing.Size(184, 20);
-            this.shortNameTextBox.TabIndex = 18;
+            this.shortNameTextBox.TabIndex = 2;
             this.shortNameTextBox.TextChanged += new System.EventHandler(this.shortNameTextBox_TextChanged);
             this.shortNameTextBox.Enter += new System.EventHandler(this.shortNameTextBox_Enter);
             // 
@@ -379,7 +391,7 @@
             this.lastNameTextBox.Location = new System.Drawing.Point(183, 34);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(184, 20);
-            this.lastNameTextBox.TabIndex = 17;
+            this.lastNameTextBox.TabIndex = 1;
             this.lastNameTextBox.TextChanged += new System.EventHandler(this.lastNameTextBox_TextChanged);
             // 
             // firstNameTextBox
@@ -387,13 +399,13 @@
             this.firstNameTextBox.Location = new System.Drawing.Point(183, 7);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(184, 20);
-            this.firstNameTextBox.TabIndex = 16;
+            this.firstNameTextBox.TabIndex = 0;
             this.firstNameTextBox.TextChanged += new System.EventHandler(this.firstNameTextBox_TextChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(4, 89);
+            this.label10.Location = new System.Drawing.Point(4, 116);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 13);
             this.label10.TabIndex = 10;
@@ -541,17 +553,6 @@
             this.collapseAllToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.collapseAllToolStripMenuItem.Text = "Collapse All";
             this.collapseAllToolStripMenuItem.Click += new System.EventHandler(this.collapseAllToolStripMenuItem_Click);
-            // 
-            // overrideCustomCarModelCheckBox
-            // 
-            this.overrideCustomCarModelCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.overrideCustomCarModelCheckBox.Location = new System.Drawing.Point(193, 87);
-            this.overrideCustomCarModelCheckBox.Name = "overrideCustomCarModelCheckBox";
-            this.overrideCustomCarModelCheckBox.Size = new System.Drawing.Size(174, 20);
-            this.overrideCustomCarModelCheckBox.TabIndex = 15;
-            this.overrideCustomCarModelCheckBox.Text = "Override Custom Car Model";
-            this.overrideCustomCarModelCheckBox.UseVisualStyleBackColor = true;
-            this.overrideCustomCarModelCheckBox.CheckedChanged += new System.EventHandler(this.overrideCustomCarModelCheckBox_CheckedChanged);
             // 
             // EntriesForm
             // 

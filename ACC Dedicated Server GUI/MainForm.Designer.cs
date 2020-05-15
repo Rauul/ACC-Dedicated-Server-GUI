@@ -52,6 +52,15 @@
             this.autoLightsCheckBox = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label40 = new System.Windows.Forms.Label();
+            this.centralEntryListPathButton = new System.Windows.Forms.Button();
+            this.autoDQCheckBox = new System.Windows.Forms.CheckBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.formationLapTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.randomizeTrackCheckBox = new System.Windows.Forms.CheckBox();
+            this.centraEntryListPathTextBox = new System.Windows.Forms.TextBox();
+            this.dumpEntryListCheckBox = new System.Windows.Forms.CheckBox();
+            this.dumpLeaderboardsCheckBox = new System.Windows.Forms.CheckBox();
             this.isRaceLockedCheckBox = new System.Windows.Forms.CheckBox();
             this.shortFormationCheckBox = new System.Windows.Forms.CheckBox();
             this.registerToLobbyCheckBox = new System.Windows.Forms.CheckBox();
@@ -198,30 +207,30 @@
             // 
             // serverNameTextBox
             // 
-            this.serverNameTextBox.Location = new System.Drawing.Point(112, 13);
+            this.serverNameTextBox.Location = new System.Drawing.Point(121, 13);
             this.serverNameTextBox.Name = "serverNameTextBox";
-            this.serverNameTextBox.Size = new System.Drawing.Size(216, 20);
+            this.serverNameTextBox.Size = new System.Drawing.Size(207, 20);
             this.serverNameTextBox.TabIndex = 0;
             // 
             // adminPasswordTextBox
             // 
-            this.adminPasswordTextBox.Location = new System.Drawing.Point(112, 65);
+            this.adminPasswordTextBox.Location = new System.Drawing.Point(121, 65);
             this.adminPasswordTextBox.Name = "adminPasswordTextBox";
-            this.adminPasswordTextBox.Size = new System.Drawing.Size(216, 20);
+            this.adminPasswordTextBox.Size = new System.Drawing.Size(207, 20);
             this.adminPasswordTextBox.TabIndex = 2;
             // 
             // joinPasswordTextBox
             // 
-            this.joinPasswordTextBox.Location = new System.Drawing.Point(112, 39);
+            this.joinPasswordTextBox.Location = new System.Drawing.Point(121, 39);
             this.joinPasswordTextBox.Name = "joinPasswordTextBox";
-            this.joinPasswordTextBox.Size = new System.Drawing.Size(216, 20);
+            this.joinPasswordTextBox.Size = new System.Drawing.Size(207, 20);
             this.joinPasswordTextBox.TabIndex = 1;
             // 
             // spectatorPasswordTextBox
             // 
-            this.spectatorPasswordTextBox.Location = new System.Drawing.Point(112, 91);
+            this.spectatorPasswordTextBox.Location = new System.Drawing.Point(121, 91);
             this.spectatorPasswordTextBox.Name = "spectatorPasswordTextBox";
-            this.spectatorPasswordTextBox.Size = new System.Drawing.Size(216, 20);
+            this.spectatorPasswordTextBox.Size = new System.Drawing.Size(207, 20);
             this.spectatorPasswordTextBox.TabIndex = 3;
             // 
             // label1
@@ -267,7 +276,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 122);
+            this.label5.Location = new System.Drawing.Point(4, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 16;
@@ -277,7 +286,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 148);
+            this.label6.Location = new System.Drawing.Point(4, 176);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 17;
@@ -287,7 +296,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(182, 122);
+            this.label7.Location = new System.Drawing.Point(5, 203);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 13);
             this.label7.TabIndex = 18;
@@ -297,7 +306,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(182, 149);
+            this.label8.Location = new System.Drawing.Point(5, 231);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 13);
             this.label8.TabIndex = 19;
@@ -307,7 +316,7 @@
             // idealLineCheckBox
             // 
             this.idealLineCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.idealLineCheckBox.Location = new System.Drawing.Point(3, 16);
+            this.idealLineCheckBox.Location = new System.Drawing.Point(3, 12);
             this.idealLineCheckBox.Name = "idealLineCheckBox";
             this.idealLineCheckBox.Size = new System.Drawing.Size(137, 17);
             this.idealLineCheckBox.TabIndex = 0;
@@ -318,7 +327,7 @@
             // autoSteeringCheckBox
             // 
             this.autoSteeringCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoSteeringCheckBox.Location = new System.Drawing.Point(3, 39);
+            this.autoSteeringCheckBox.Location = new System.Drawing.Point(3, 32);
             this.autoSteeringCheckBox.Name = "autoSteeringCheckBox";
             this.autoSteeringCheckBox.Size = new System.Drawing.Size(137, 17);
             this.autoSteeringCheckBox.TabIndex = 1;
@@ -329,7 +338,7 @@
             // autoShiftingCheckBox
             // 
             this.autoShiftingCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoShiftingCheckBox.Location = new System.Drawing.Point(3, 85);
+            this.autoShiftingCheckBox.Location = new System.Drawing.Point(3, 72);
             this.autoShiftingCheckBox.Name = "autoShiftingCheckBox";
             this.autoShiftingCheckBox.Size = new System.Drawing.Size(137, 17);
             this.autoShiftingCheckBox.TabIndex = 3;
@@ -340,7 +349,7 @@
             // autoPitLimiterCheckBox
             // 
             this.autoPitLimiterCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoPitLimiterCheckBox.Location = new System.Drawing.Point(3, 62);
+            this.autoPitLimiterCheckBox.Location = new System.Drawing.Point(3, 52);
             this.autoPitLimiterCheckBox.Name = "autoPitLimiterCheckBox";
             this.autoPitLimiterCheckBox.Size = new System.Drawing.Size(137, 17);
             this.autoPitLimiterCheckBox.TabIndex = 2;
@@ -351,7 +360,7 @@
             // autoWipersCheckBox
             // 
             this.autoWipersCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoWipersCheckBox.Location = new System.Drawing.Point(194, 39);
+            this.autoWipersCheckBox.Location = new System.Drawing.Point(194, 32);
             this.autoWipersCheckBox.Name = "autoWipersCheckBox";
             this.autoWipersCheckBox.Size = new System.Drawing.Size(134, 17);
             this.autoWipersCheckBox.TabIndex = 15;
@@ -362,7 +371,7 @@
             // autoClutchCheckBox
             // 
             this.autoClutchCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoClutchCheckBox.Location = new System.Drawing.Point(194, 85);
+            this.autoClutchCheckBox.Location = new System.Drawing.Point(194, 72);
             this.autoClutchCheckBox.Name = "autoClutchCheckBox";
             this.autoClutchCheckBox.Size = new System.Drawing.Size(134, 17);
             this.autoClutchCheckBox.TabIndex = 17;
@@ -373,7 +382,7 @@
             // autoStartEngineCheckBox
             // 
             this.autoStartEngineCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoStartEngineCheckBox.Location = new System.Drawing.Point(194, 16);
+            this.autoStartEngineCheckBox.Location = new System.Drawing.Point(194, 12);
             this.autoStartEngineCheckBox.Name = "autoStartEngineCheckBox";
             this.autoStartEngineCheckBox.Size = new System.Drawing.Size(134, 17);
             this.autoStartEngineCheckBox.TabIndex = 14;
@@ -384,7 +393,7 @@
             // autoLightsCheckBox
             // 
             this.autoLightsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoLightsCheckBox.Location = new System.Drawing.Point(194, 62);
+            this.autoLightsCheckBox.Location = new System.Drawing.Point(194, 52);
             this.autoLightsCheckBox.Name = "autoLightsCheckBox";
             this.autoLightsCheckBox.Size = new System.Drawing.Size(134, 17);
             this.autoLightsCheckBox.TabIndex = 16;
@@ -395,7 +404,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(4, 110);
+            this.label9.Location = new System.Drawing.Point(4, 95);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 13);
             this.label9.TabIndex = 19;
@@ -405,6 +414,15 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label40);
+            this.panel1.Controls.Add(this.centralEntryListPathButton);
+            this.panel1.Controls.Add(this.autoDQCheckBox);
+            this.panel1.Controls.Add(this.label39);
+            this.panel1.Controls.Add(this.formationLapTypeComboBox);
+            this.panel1.Controls.Add(this.randomizeTrackCheckBox);
+            this.panel1.Controls.Add(this.centraEntryListPathTextBox);
+            this.panel1.Controls.Add(this.dumpEntryListCheckBox);
+            this.panel1.Controls.Add(this.dumpLeaderboardsCheckBox);
             this.panel1.Controls.Add(this.isRaceLockedCheckBox);
             this.panel1.Controls.Add(this.shortFormationCheckBox);
             this.panel1.Controls.Add(this.registerToLobbyCheckBox);
@@ -433,21 +451,124 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(12, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 265);
+            this.panel1.Size = new System.Drawing.Size(340, 340);
             this.panel1.TabIndex = 14;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(4, 120);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(111, 13);
+            this.label40.TabIndex = 42;
+            this.label40.Text = "Central Entry List Path";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // centralEntryListPathButton
+            // 
+            this.centralEntryListPathButton.Location = new System.Drawing.Point(307, 117);
+            this.centralEntryListPathButton.Name = "centralEntryListPathButton";
+            this.centralEntryListPathButton.Size = new System.Drawing.Size(21, 20);
+            this.centralEntryListPathButton.TabIndex = 41;
+            this.centralEntryListPathButton.TabStop = false;
+            this.centralEntryListPathButton.Text = "...";
+            this.centralEntryListPathButton.UseVisualStyleBackColor = true;
+            this.centralEntryListPathButton.Click += new System.EventHandler(this.centralEntryListPathButton_Click);
+            // 
+            // autoDQCheckBox
+            // 
+            this.autoDQCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.autoDQCheckBox.Location = new System.Drawing.Point(181, 287);
+            this.autoDQCheckBox.Name = "autoDQCheckBox";
+            this.autoDQCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.autoDQCheckBox.TabIndex = 37;
+            this.autoDQCheckBox.TabStop = false;
+            this.autoDQCheckBox.Text = "Auto DQ";
+            this.toolTip.SetToolTip(this.autoDQCheckBox, resources.GetString("autoDQCheckBox.ToolTip"));
+            this.autoDQCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(182, 312);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(74, 13);
+            this.label39.TabIndex = 39;
+            this.label39.Text = "Formation Lap";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // formationLapTypeComboBox
+            // 
+            this.formationLapTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.formationLapTypeComboBox.FormattingEnabled = true;
+            this.formationLapTypeComboBox.Items.AddRange(new object[] {
+            "Default",
+            "Old",
+            "Manual"});
+            this.formationLapTypeComboBox.Location = new System.Drawing.Point(265, 309);
+            this.formationLapTypeComboBox.Name = "formationLapTypeComboBox";
+            this.formationLapTypeComboBox.Size = new System.Drawing.Size(63, 21);
+            this.formationLapTypeComboBox.TabIndex = 38;
+            this.formationLapTypeComboBox.TabStop = false;
+            // 
+            // randomizeTrackCheckBox
+            // 
+            this.randomizeTrackCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.randomizeTrackCheckBox.Location = new System.Drawing.Point(181, 267);
+            this.randomizeTrackCheckBox.Name = "randomizeTrackCheckBox";
+            this.randomizeTrackCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.randomizeTrackCheckBox.TabIndex = 36;
+            this.randomizeTrackCheckBox.TabStop = false;
+            this.randomizeTrackCheckBox.Text = "Randomize Track";
+            this.toolTip.SetToolTip(this.randomizeTrackCheckBox, "If enabled, the server will change to a random track when the\r\nlast drivers leave" +
+        "s (which causes a reset to FP1). The “track”\r\nproperty will only define the defa" +
+        "ult state for the first session");
+            this.randomizeTrackCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // centraEntryListPathTextBox
+            // 
+            this.centraEntryListPathTextBox.Location = new System.Drawing.Point(121, 117);
+            this.centraEntryListPathTextBox.Name = "centraEntryListPathTextBox";
+            this.centraEntryListPathTextBox.Size = new System.Drawing.Size(180, 20);
+            this.centraEntryListPathTextBox.TabIndex = 4;
+            // 
+            // dumpEntryListCheckBox
+            // 
+            this.dumpEntryListCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dumpEntryListCheckBox.Location = new System.Drawing.Point(181, 247);
+            this.dumpEntryListCheckBox.Name = "dumpEntryListCheckBox";
+            this.dumpEntryListCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.dumpEntryListCheckBox.TabIndex = 35;
+            this.dumpEntryListCheckBox.TabStop = false;
+            this.dumpEntryListCheckBox.Text = "Dump Entry List";
+            this.toolTip.SetToolTip(this.dumpEntryListCheckBox, resources.GetString("dumpEntryListCheckBox.ToolTip"));
+            this.dumpEntryListCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // dumpLeaderboardsCheckBox
+            // 
+            this.dumpLeaderboardsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dumpLeaderboardsCheckBox.Location = new System.Drawing.Point(181, 227);
+            this.dumpLeaderboardsCheckBox.Name = "dumpLeaderboardsCheckBox";
+            this.dumpLeaderboardsCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.dumpLeaderboardsCheckBox.TabIndex = 34;
+            this.dumpLeaderboardsCheckBox.TabStop = false;
+            this.dumpLeaderboardsCheckBox.Text = "Dump Leaderboards";
+            this.toolTip.SetToolTip(this.dumpLeaderboardsCheckBox, "If enabled, any session will write down the result leaderboard in\r\na “results” fo" +
+        "lder.");
+            this.dumpLeaderboardsCheckBox.UseVisualStyleBackColor = true;
             // 
             // isRaceLockedCheckBox
             // 
             this.isRaceLockedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.isRaceLockedCheckBox.Checked = true;
             this.isRaceLockedCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.isRaceLockedCheckBox.Location = new System.Drawing.Point(181, 176);
+            this.isRaceLockedCheckBox.Location = new System.Drawing.Point(181, 147);
             this.isRaceLockedCheckBox.Name = "isRaceLockedCheckBox";
             this.isRaceLockedCheckBox.Size = new System.Drawing.Size(147, 17);
-            this.isRaceLockedCheckBox.TabIndex = 33;
+            this.isRaceLockedCheckBox.TabIndex = 12;
             this.isRaceLockedCheckBox.TabStop = false;
             this.isRaceLockedCheckBox.Text = "Race Locked";
-            this.toolTip.SetToolTip(this.isRaceLockedCheckBox, "If set to 0, the server will allow joining during a race session. Is\r\nnot useful " +
+            this.toolTip.SetToolTip(this.isRaceLockedCheckBox, "If disabled, the server will allow joining during a race session. Is\r\nnot useful " +
         "in “Public Multiplayer”, as the user-server matching\r\nwill ignore ongoing race s" +
         "essions.");
             this.isRaceLockedCheckBox.UseVisualStyleBackColor = true;
@@ -455,10 +576,10 @@
             // shortFormationCheckBox
             // 
             this.shortFormationCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.shortFormationCheckBox.Location = new System.Drawing.Point(181, 196);
+            this.shortFormationCheckBox.Location = new System.Drawing.Point(181, 167);
             this.shortFormationCheckBox.Name = "shortFormationCheckBox";
             this.shortFormationCheckBox.Size = new System.Drawing.Size(147, 17);
-            this.shortFormationCheckBox.TabIndex = 32;
+            this.shortFormationCheckBox.TabIndex = 14;
             this.shortFormationCheckBox.TabStop = false;
             this.shortFormationCheckBox.Text = "Short Formation Lap";
             this.toolTip.SetToolTip(this.shortFormationCheckBox, "Toggles the short and long formation lap. Long formation is\r\nonly usable on priva" +
@@ -470,20 +591,20 @@
             this.registerToLobbyCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.registerToLobbyCheckBox.Checked = true;
             this.registerToLobbyCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.registerToLobbyCheckBox.Location = new System.Drawing.Point(181, 216);
+            this.registerToLobbyCheckBox.Location = new System.Drawing.Point(181, 187);
             this.registerToLobbyCheckBox.Name = "registerToLobbyCheckBox";
             this.registerToLobbyCheckBox.Size = new System.Drawing.Size(147, 17);
             this.registerToLobbyCheckBox.TabIndex = 31;
             this.registerToLobbyCheckBox.TabStop = false;
             this.registerToLobbyCheckBox.Text = "Register To Lobby";
-            this.toolTip.SetToolTip(this.registerToLobbyCheckBox, "When off, this server won’t register to the backend. Is useful for LAN\r\nsessions." +
-        " If unchecked, the server is declared “Private Multiplayer”.");
+            this.toolTip.SetToolTip(this.registerToLobbyCheckBox, "When disabled, this server won’t register to the backend. Is useful for LAN\r\nsess" +
+        "ions. If disabled, the server is declared “Private Multiplayer”.");
             this.registerToLobbyCheckBox.UseVisualStyleBackColor = true;
             // 
             // lanDiscoveryCheckBox
             // 
             this.lanDiscoveryCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lanDiscoveryCheckBox.Location = new System.Drawing.Point(181, 236);
+            this.lanDiscoveryCheckBox.Location = new System.Drawing.Point(181, 207);
             this.lanDiscoveryCheckBox.Name = "lanDiscoveryCheckBox";
             this.lanDiscoveryCheckBox.Size = new System.Drawing.Size(147, 17);
             this.lanDiscoveryCheckBox.TabIndex = 30;
@@ -500,15 +621,15 @@
             0,
             0,
             0});
-            this.maxConnectionsNumericUpDown.Location = new System.Drawing.Point(112, 184);
+            this.maxConnectionsNumericUpDown.Location = new System.Drawing.Point(121, 255);
             this.maxConnectionsNumericUpDown.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
             this.maxConnectionsNumericUpDown.Name = "maxConnectionsNumericUpDown";
-            this.maxConnectionsNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.maxConnectionsNumericUpDown.TabIndex = 6;
+            this.maxConnectionsNumericUpDown.Size = new System.Drawing.Size(54, 20);
+            this.maxConnectionsNumericUpDown.TabIndex = 9;
             this.maxConnectionsNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.toolTip.SetToolTip(this.maxConnectionsNumericUpDown, resources.GetString("maxConnectionsNumericUpDown.ToolTip"));
             this.maxConnectionsNumericUpDown.Value = new decimal(new int[] {
@@ -522,7 +643,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(4, 186);
+            this.label38.Location = new System.Drawing.Point(4, 257);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(89, 13);
             this.label38.TabIndex = 28;
@@ -531,15 +652,15 @@
             // 
             // UDPNumericUpDown
             // 
-            this.UDPNumericUpDown.Location = new System.Drawing.Point(112, 209);
+            this.UDPNumericUpDown.Location = new System.Drawing.Point(122, 283);
             this.UDPNumericUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.UDPNumericUpDown.Name = "UDPNumericUpDown";
-            this.UDPNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.UDPNumericUpDown.TabIndex = 7;
+            this.UDPNumericUpDown.Size = new System.Drawing.Size(54, 20);
+            this.UDPNumericUpDown.TabIndex = 10;
             this.UDPNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.UDPNumericUpDown.Value = new decimal(new int[] {
             9231,
@@ -551,15 +672,15 @@
             // 
             // TCPNumericUpDown
             // 
-            this.TCPNumericUpDown.Location = new System.Drawing.Point(112, 235);
+            this.TCPNumericUpDown.Location = new System.Drawing.Point(122, 310);
             this.TCPNumericUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.TCPNumericUpDown.Name = "TCPNumericUpDown";
-            this.TCPNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.TCPNumericUpDown.TabIndex = 8;
+            this.TCPNumericUpDown.Size = new System.Drawing.Size(54, 20);
+            this.TCPNumericUpDown.TabIndex = 11;
             this.TCPNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TCPNumericUpDown.Value = new decimal(new int[] {
             9232,
@@ -572,7 +693,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(4, 211);
+            this.label34.Location = new System.Drawing.Point(5, 285);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(52, 13);
             this.label34.TabIndex = 25;
@@ -582,7 +703,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(4, 237);
+            this.label35.Location = new System.Drawing.Point(5, 312);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(50, 13);
             this.label35.TabIndex = 24;
@@ -596,7 +717,7 @@
             0,
             0,
             0});
-            this.RCRequirementNumericUpDown.Location = new System.Drawing.Point(280, 146);
+            this.RCRequirementNumericUpDown.Location = new System.Drawing.Point(121, 228);
             this.RCRequirementNumericUpDown.Maximum = new decimal(new int[] {
             99,
             0,
@@ -608,8 +729,8 @@
             0,
             -2147483648});
             this.RCRequirementNumericUpDown.Name = "RCRequirementNumericUpDown";
-            this.RCRequirementNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.RCRequirementNumericUpDown.TabIndex = 10;
+            this.RCRequirementNumericUpDown.Size = new System.Drawing.Size(54, 20);
+            this.RCRequirementNumericUpDown.TabIndex = 8;
             this.RCRequirementNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.RCRequirementNumericUpDown.Value = new decimal(new int[] {
             75,
@@ -626,7 +747,7 @@
             0,
             0,
             0});
-            this.SARequirementNumericUpDown.Location = new System.Drawing.Point(280, 120);
+            this.SARequirementNumericUpDown.Location = new System.Drawing.Point(121, 201);
             this.SARequirementNumericUpDown.Maximum = new decimal(new int[] {
             99,
             0,
@@ -638,8 +759,8 @@
             0,
             -2147483648});
             this.SARequirementNumericUpDown.Name = "SARequirementNumericUpDown";
-            this.SARequirementNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.SARequirementNumericUpDown.TabIndex = 9;
+            this.SARequirementNumericUpDown.Size = new System.Drawing.Size(54, 20);
+            this.SARequirementNumericUpDown.TabIndex = 7;
             this.SARequirementNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.SARequirementNumericUpDown.Value = new decimal(new int[] {
             90,
@@ -651,15 +772,15 @@
             // 
             // TRRequirementNumericUpDown
             // 
-            this.TRRequirementNumericUpDown.Location = new System.Drawing.Point(112, 146);
+            this.TRRequirementNumericUpDown.Location = new System.Drawing.Point(121, 174);
             this.TRRequirementNumericUpDown.Maximum = new decimal(new int[] {
             3,
             0,
             0,
             0});
             this.TRRequirementNumericUpDown.Name = "TRRequirementNumericUpDown";
-            this.TRRequirementNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.TRRequirementNumericUpDown.TabIndex = 5;
+            this.TRRequirementNumericUpDown.Size = new System.Drawing.Size(54, 20);
+            this.TRRequirementNumericUpDown.TabIndex = 6;
             this.TRRequirementNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TRRequirementNumericUpDown.Value = new decimal(new int[] {
             3,
@@ -671,10 +792,10 @@
             // 
             // maxCarSlotsNumericUpDown
             // 
-            this.maxCarSlotsNumericUpDown.Location = new System.Drawing.Point(112, 120);
+            this.maxCarSlotsNumericUpDown.Location = new System.Drawing.Point(121, 147);
             this.maxCarSlotsNumericUpDown.Name = "maxCarSlotsNumericUpDown";
-            this.maxCarSlotsNumericUpDown.Size = new System.Drawing.Size(48, 20);
-            this.maxCarSlotsNumericUpDown.TabIndex = 4;
+            this.maxCarSlotsNumericUpDown.Size = new System.Drawing.Size(54, 20);
+            this.maxCarSlotsNumericUpDown.TabIndex = 5;
             this.maxCarSlotsNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.toolTip.SetToolTip(this.maxCarSlotsNumericUpDown, resources.GetString("maxCarSlotsNumericUpDown.ToolTip"));
             this.maxCarSlotsNumericUpDown.Value = new decimal(new int[] {
@@ -697,7 +818,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(17, 303);
+            this.label11.Location = new System.Drawing.Point(17, 378);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 13);
             this.label11.TabIndex = 17;
@@ -717,9 +838,9 @@
             this.panel2.Controls.Add(this.autoStartEngineCheckBox);
             this.panel2.Controls.Add(this.autoClutchCheckBox);
             this.panel2.Controls.Add(this.autoPitLimiterCheckBox);
-            this.panel2.Location = new System.Drawing.Point(12, 309);
+            this.panel2.Location = new System.Drawing.Point(12, 384);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(340, 144);
+            this.panel2.Size = new System.Drawing.Size(340, 126);
             this.panel2.TabIndex = 16;
             // 
             // maxStabilityNumericUpDown
@@ -729,7 +850,7 @@
             0,
             0,
             0});
-            this.maxStabilityNumericUpDown.Location = new System.Drawing.Point(185, 108);
+            this.maxStabilityNumericUpDown.Location = new System.Drawing.Point(185, 93);
             this.maxStabilityNumericUpDown.Name = "maxStabilityNumericUpDown";
             this.maxStabilityNumericUpDown.Size = new System.Drawing.Size(143, 20);
             this.maxStabilityNumericUpDown.TabIndex = 20;
@@ -778,35 +899,9 @@
             // 
             // TrackComboBox
             // 
+            this.TrackComboBox.DisplayMember = "name";
             this.TrackComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TrackComboBox.FormattingEnabled = true;
-            this.TrackComboBox.Items.AddRange(new object[] {
-            "barcelona",
-            "barcelona_2019",
-            "brands_hatch",
-            "brands_hatch_2019",
-            "hungaroring",
-            "hungaroring_2019",
-            "kyalami_2019",
-            "laguna_seca_2019",
-            "misano",
-            "misano_2019",
-            "monza",
-            "monza_2019",
-            "mount_panorama_2019",
-            "nurburgring",
-            "nurburgring_2019",
-            "paul_ricard",
-            "paul_ricard_2019",
-            "silverstone",
-            "silverstone_2019",
-            "spa",
-            "spa_2019",
-            "suzuka_2019",
-            "zandvoort",
-            "zandvoort_2019",
-            "zolder",
-            "zolder_2019"});
             this.TrackComboBox.Location = new System.Drawing.Point(14, 16);
             this.TrackComboBox.Name = "TrackComboBox";
             this.TrackComboBox.Size = new System.Drawing.Size(180, 21);
@@ -1856,9 +1951,9 @@
             // 
             this.launchServerButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.launchServerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.launchServerButton.Location = new System.Drawing.Point(184, 459);
+            this.launchServerButton.Location = new System.Drawing.Point(184, 516);
             this.launchServerButton.Name = "launchServerButton";
-            this.launchServerButton.Size = new System.Drawing.Size(168, 119);
+            this.launchServerButton.Size = new System.Drawing.Size(168, 62);
             this.launchServerButton.TabIndex = 0;
             this.launchServerButton.TabStop = false;
             this.launchServerButton.Text = "Start/Stop Server";
@@ -1901,9 +1996,9 @@
             // 
             this.entryListButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.entryListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.entryListButton.Location = new System.Drawing.Point(12, 459);
+            this.entryListButton.Location = new System.Drawing.Point(12, 516);
             this.entryListButton.Name = "entryListButton";
-            this.entryListButton.Size = new System.Drawing.Size(166, 56);
+            this.entryListButton.Size = new System.Drawing.Size(166, 28);
             this.entryListButton.TabIndex = 21;
             this.entryListButton.TabStop = false;
             this.entryListButton.Text = "Entry List";
@@ -1914,9 +2009,9 @@
             // 
             this.BopButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.BopButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BopButton.Location = new System.Drawing.Point(12, 522);
+            this.BopButton.Location = new System.Drawing.Point(12, 550);
             this.BopButton.Name = "BopButton";
-            this.BopButton.Size = new System.Drawing.Size(166, 56);
+            this.BopButton.Size = new System.Drawing.Size(166, 28);
             this.BopButton.TabIndex = 22;
             this.BopButton.TabStop = false;
             this.BopButton.Text = "Additional BoP";
@@ -1951,7 +2046,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ACC Dedicated Server GUI V1.2.1";
+            this.Text = "ACC Dedicated Server GUI V1.2.3";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -2137,6 +2232,15 @@
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.CheckBox isRaceLockedCheckBox;
         private System.Windows.Forms.CheckBox shortFormationCheckBox;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Button centralEntryListPathButton;
+        private System.Windows.Forms.TextBox centraEntryListPathTextBox;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ComboBox formationLapTypeComboBox;
+        private System.Windows.Forms.CheckBox autoDQCheckBox;
+        private System.Windows.Forms.CheckBox randomizeTrackCheckBox;
+        private System.Windows.Forms.CheckBox dumpEntryListCheckBox;
+        private System.Windows.Forms.CheckBox dumpLeaderboardsCheckBox;
     }
 }
 
