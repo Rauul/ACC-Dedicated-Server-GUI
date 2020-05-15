@@ -540,7 +540,7 @@ namespace ACC_Dedicated_Server_GUI
         private void launchServerButton_Click(object sender, EventArgs e)
         {
 #if DEBUG
-    string fileName = "testFlood";
+            string fileName = "testFlood";
 #else
             string fileName = "accServer";
 #endif
@@ -678,6 +678,19 @@ namespace ACC_Dedicated_Server_GUI
             if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
             {
                 centraEntryListPathTextBox.Text = dialog.FileName.Replace(@"\", @"/");
+            }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                if (consolePanel.Visible)
+                    process.Kill();
+            }
+            catch (Exception)
+            {
+
             }
         }
     }

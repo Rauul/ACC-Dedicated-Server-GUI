@@ -1,4 +1,8 @@
-﻿V1.2.3
+﻿V1.X.X.X
+Server is being stoped on application exit
+Embeded dlls
+----------------------------------------------------------------------
+V1.2.3
 Support for multiple instances
 ----------------------------------------------------------------------
 V1.2.2.1
