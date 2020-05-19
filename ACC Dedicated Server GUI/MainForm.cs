@@ -103,12 +103,6 @@ namespace ACC_Dedicated_Server_GUI
             InitializeComponent();
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            SaveConfig();
-            Application.Exit();
-        }
-
         private void tempTrackBar_Scroll(object sender, EventArgs e)
         {
             tempLabel.Text = tempTrackBar.Value.ToString();
