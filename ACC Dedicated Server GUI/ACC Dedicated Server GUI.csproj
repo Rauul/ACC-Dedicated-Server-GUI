@@ -151,6 +151,8 @@
     <None Include="bop-50s.png" />
     <None Include="bop-50si.png" />
     <Content Include="changelog.txt" />
+    <None Include="donate-button-full.png" />
+    <None Include="donate-button-light.png" />
     <Content Include="icon.ico" />
     <None Include="icons8-race-car-50.png" />
   </ItemGroup>

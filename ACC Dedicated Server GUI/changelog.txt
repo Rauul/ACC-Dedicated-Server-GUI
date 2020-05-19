@@ -1,6 +1,8 @@
 ﻿V1.X.X.X
-Server is being stoped on application exit
+Server is now being terminated on GUI exit
 Embeded dlls
+Added 'Post Race Wait Time' option
+Added a donation button, empty your bank accounts guys ;)
 ----------------------------------------------------------------------
 V1.2.3
 Support for multiple instances

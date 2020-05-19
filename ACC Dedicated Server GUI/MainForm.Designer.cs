@@ -86,10 +86,12 @@
             this.label19 = new System.Windows.Forms.Label();
             this.pCheckBox = new System.Windows.Forms.CheckBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label41 = new System.Windows.Forms.Label();
+            this.overTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label23 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.preRaceWaitTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.overTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.postRaceWaitTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.rCheckBox = new System.Windows.Forms.CheckBox();
             this.qCheckBox = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -156,12 +158,11 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.launchServerButton = new System.Windows.Forms.Button();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.EntriesToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.BoPToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.entryListButton = new System.Windows.Forms.Button();
             this.BopButton = new System.Windows.Forms.Button();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.donationButton = new System.Windows.Forms.Button();
+            this.donationLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).BeginInit();
@@ -174,8 +175,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.maxStabilityNumericUpDown)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.preRaceWaitTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.overTimeNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.preRaceWaitTimeNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postRaceWaitTimeNumericUpDown)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weatherRandomnessTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rainTrackBar)).BeginInit();
@@ -202,7 +204,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mandatoryPitStopCountNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // serverNameTextBox
@@ -449,7 +450,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 33);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(340, 340);
             this.panel1.TabIndex = 14;
@@ -809,7 +810,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 26);
+            this.label10.Location = new System.Drawing.Point(17, 5);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 13);
             this.label10.TabIndex = 15;
@@ -818,7 +819,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(17, 378);
+            this.label11.Location = new System.Drawing.Point(17, 357);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 13);
             this.label11.TabIndex = 17;
@@ -838,7 +839,7 @@
             this.panel2.Controls.Add(this.autoStartEngineCheckBox);
             this.panel2.Controls.Add(this.autoClutchCheckBox);
             this.panel2.Controls.Add(this.autoPitLimiterCheckBox);
-            this.panel2.Location = new System.Drawing.Point(12, 384);
+            this.panel2.Location = new System.Drawing.Point(12, 363);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(340, 126);
             this.panel2.TabIndex = 16;
@@ -860,7 +861,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(375, 27);
+            this.label12.Location = new System.Drawing.Point(375, 6);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 13);
             this.label12.TabIndex = 19;
@@ -883,7 +884,7 @@
             this.panel3.Controls.Add(this.qPanel);
             this.panel3.Controls.Add(this.pPanel);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(363, 33);
+            this.panel3.Location = new System.Drawing.Point(363, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(368, 545);
             this.panel3.TabIndex = 18;
@@ -891,7 +892,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(18, 119);
+            this.label32.Location = new System.Drawing.Point(18, 145);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(39, 13);
             this.label32.TabIndex = 3;
@@ -932,14 +933,50 @@
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label41);
+            this.panel5.Controls.Add(this.overTimeNumericUpDown);
             this.panel5.Controls.Add(this.label23);
             this.panel5.Controls.Add(this.label31);
             this.panel5.Controls.Add(this.preRaceWaitTimeNumericUpDown);
-            this.panel5.Controls.Add(this.overTimeNumericUpDown);
+            this.panel5.Controls.Add(this.postRaceWaitTimeNumericUpDown);
             this.panel5.Location = new System.Drawing.Point(14, 49);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(180, 67);
+            this.panel5.Size = new System.Drawing.Size(180, 88);
             this.panel5.TabIndex = 0;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(3, 63);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(56, 13);
+            this.label41.TabIndex = 29;
+            this.label41.Text = "Over Time";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // overTimeNumericUpDown
+            // 
+            this.overTimeNumericUpDown.Increment = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.overTimeNumericUpDown.Location = new System.Drawing.Point(125, 61);
+            this.overTimeNumericUpDown.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.overTimeNumericUpDown.Name = "overTimeNumericUpDown";
+            this.overTimeNumericUpDown.Size = new System.Drawing.Size(50, 20);
+            this.overTimeNumericUpDown.TabIndex = 28;
+            this.overTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.overTimeNumericUpDown, resources.GetString("overTimeNumericUpDown.ToolTip"));
+            this.overTimeNumericUpDown.Value = new decimal(new int[] {
+            180,
+            0,
+            0,
+            0});
             // 
             // label23
             // 
@@ -956,9 +993,9 @@
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(3, 37);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(56, 13);
+            this.label31.Size = new System.Drawing.Size(108, 13);
             this.label31.TabIndex = 27;
-            this.label31.Text = "Over Time";
+            this.label31.Text = "Post Race Wait Time";
             this.label31.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // preRaceWaitTimeNumericUpDown
@@ -992,31 +1029,32 @@
             this.preRaceWaitTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
             this.preRaceWaitTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
-            // overTimeNumericUpDown
+            // postRaceWaitTimeNumericUpDown
             // 
-            this.overTimeNumericUpDown.Increment = new decimal(new int[] {
+            this.postRaceWaitTimeNumericUpDown.Increment = new decimal(new int[] {
             30,
             0,
             0,
             0});
-            this.overTimeNumericUpDown.Location = new System.Drawing.Point(125, 35);
-            this.overTimeNumericUpDown.Maximum = new decimal(new int[] {
+            this.postRaceWaitTimeNumericUpDown.Location = new System.Drawing.Point(125, 35);
+            this.postRaceWaitTimeNumericUpDown.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.overTimeNumericUpDown.Name = "overTimeNumericUpDown";
-            this.overTimeNumericUpDown.Size = new System.Drawing.Size(50, 20);
-            this.overTimeNumericUpDown.TabIndex = 1;
-            this.overTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip.SetToolTip(this.overTimeNumericUpDown, resources.GetString("overTimeNumericUpDown.ToolTip"));
-            this.overTimeNumericUpDown.Value = new decimal(new int[] {
+            this.postRaceWaitTimeNumericUpDown.Name = "postRaceWaitTimeNumericUpDown";
+            this.postRaceWaitTimeNumericUpDown.Size = new System.Drawing.Size(50, 20);
+            this.postRaceWaitTimeNumericUpDown.TabIndex = 1;
+            this.postRaceWaitTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.postRaceWaitTimeNumericUpDown, "Additional time after the race ended for everyone, before the\r\nnext race weekend " +
+        "starts.");
+            this.postRaceWaitTimeNumericUpDown.Value = new decimal(new int[] {
             180,
             0,
             0,
             0});
-            this.overTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.overTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
+            this.postRaceWaitTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
+            this.postRaceWaitTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
             // rCheckBox
             // 
@@ -1702,9 +1740,9 @@
             this.panel4.Controls.Add(this.label27);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.label17);
-            this.panel4.Location = new System.Drawing.Point(14, 125);
+            this.panel4.Location = new System.Drawing.Point(14, 151);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(180, 266);
+            this.panel4.Size = new System.Drawing.Size(180, 240);
             this.panel4.TabIndex = 1;
             // 
             // maxDriversCountNumericUpDown
@@ -1746,9 +1784,9 @@
             // driverSwapRequiredCheckBox
             // 
             this.driverSwapRequiredCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.driverSwapRequiredCheckBox.Location = new System.Drawing.Point(3, 239);
+            this.driverSwapRequiredCheckBox.Location = new System.Drawing.Point(3, 219);
             this.driverSwapRequiredCheckBox.Name = "driverSwapRequiredCheckBox";
-            this.driverSwapRequiredCheckBox.Size = new System.Drawing.Size(172, 24);
+            this.driverSwapRequiredCheckBox.Size = new System.Drawing.Size(172, 17);
             this.driverSwapRequiredCheckBox.TabIndex = 60;
             this.driverSwapRequiredCheckBox.TabStop = false;
             this.driverSwapRequiredCheckBox.Text = "Driver Swap Required";
@@ -1760,9 +1798,9 @@
             // tyreChangeRequiredCheckBox
             // 
             this.tyreChangeRequiredCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tyreChangeRequiredCheckBox.Location = new System.Drawing.Point(3, 214);
+            this.tyreChangeRequiredCheckBox.Location = new System.Drawing.Point(3, 199);
             this.tyreChangeRequiredCheckBox.Name = "tyreChangeRequiredCheckBox";
-            this.tyreChangeRequiredCheckBox.Size = new System.Drawing.Size(172, 24);
+            this.tyreChangeRequiredCheckBox.Size = new System.Drawing.Size(172, 17);
             this.tyreChangeRequiredCheckBox.TabIndex = 59;
             this.tyreChangeRequiredCheckBox.TabStop = false;
             this.tyreChangeRequiredCheckBox.Text = "Tyre Change Required";
@@ -1771,9 +1809,9 @@
             // refuellingRequiredCheckBox
             // 
             this.refuellingRequiredCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.refuellingRequiredCheckBox.Location = new System.Drawing.Point(3, 189);
+            this.refuellingRequiredCheckBox.Location = new System.Drawing.Point(3, 179);
             this.refuellingRequiredCheckBox.Name = "refuellingRequiredCheckBox";
-            this.refuellingRequiredCheckBox.Size = new System.Drawing.Size(172, 24);
+            this.refuellingRequiredCheckBox.Size = new System.Drawing.Size(172, 17);
             this.refuellingRequiredCheckBox.TabIndex = 58;
             this.refuellingRequiredCheckBox.TabStop = false;
             this.refuellingRequiredCheckBox.Text = "Refuelling Required";
@@ -1782,9 +1820,9 @@
             // refuellingTimeFixedCheckBox
             // 
             this.refuellingTimeFixedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.refuellingTimeFixedCheckBox.Location = new System.Drawing.Point(3, 164);
+            this.refuellingTimeFixedCheckBox.Location = new System.Drawing.Point(3, 159);
             this.refuellingTimeFixedCheckBox.Name = "refuellingTimeFixedCheckBox";
-            this.refuellingTimeFixedCheckBox.Size = new System.Drawing.Size(172, 24);
+            this.refuellingTimeFixedCheckBox.Size = new System.Drawing.Size(172, 17);
             this.refuellingTimeFixedCheckBox.TabIndex = 57;
             this.refuellingTimeFixedCheckBox.TabStop = false;
             this.refuellingTimeFixedCheckBox.Text = "Refuelling Time Fixed";
@@ -1795,7 +1833,7 @@
             this.refuellingAllowedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.refuellingAllowedCheckBox.Location = new System.Drawing.Point(3, 139);
             this.refuellingAllowedCheckBox.Name = "refuellingAllowedCheckBox";
-            this.refuellingAllowedCheckBox.Size = new System.Drawing.Size(172, 24);
+            this.refuellingAllowedCheckBox.Size = new System.Drawing.Size(172, 17);
             this.refuellingAllowedCheckBox.TabIndex = 56;
             this.refuellingAllowedCheckBox.TabStop = false;
             this.refuellingAllowedCheckBox.Text = "Refuelling Allowed";
@@ -1951,54 +1989,22 @@
             // 
             this.launchServerButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.launchServerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.launchServerButton.Location = new System.Drawing.Point(184, 516);
+            this.launchServerButton.Location = new System.Drawing.Point(184, 495);
             this.launchServerButton.Name = "launchServerButton";
-            this.launchServerButton.Size = new System.Drawing.Size(168, 62);
+            this.launchServerButton.Size = new System.Drawing.Size(168, 98);
             this.launchServerButton.TabIndex = 0;
             this.launchServerButton.TabStop = false;
             this.launchServerButton.Text = "Start/Stop Server";
             this.launchServerButton.UseVisualStyleBackColor = false;
             this.launchServerButton.Click += new System.EventHandler(this.launchServerButton_Click);
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.EntriesToolStripButton,
-            this.BoPToolStripButton});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(744, 25);
-            this.toolStrip1.TabIndex = 20;
-            this.toolStrip1.Text = "ToolStrip";
-            // 
-            // EntriesToolStripButton
-            // 
-            this.EntriesToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.EntriesToolStripButton.Image = global::ACC_Dedicated_Server_GUI.Properties.Resources.icons8_f1_car_50;
-            this.EntriesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.EntriesToolStripButton.Name = "EntriesToolStripButton";
-            this.EntriesToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.EntriesToolStripButton.Text = "Entry List";
-            this.EntriesToolStripButton.Click += new System.EventHandler(this.EntriesToolStripButton_Click);
-            // 
-            // BoPToolStripButton
-            // 
-            this.BoPToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BoPToolStripButton.Image = global::ACC_Dedicated_Server_GUI.Properties.Resources.bop_50s;
-            this.BoPToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BoPToolStripButton.Name = "BoPToolStripButton";
-            this.BoPToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.BoPToolStripButton.Text = "Additional BoP";
-            this.BoPToolStripButton.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
             // entryListButton
             // 
             this.entryListButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.entryListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.entryListButton.Location = new System.Drawing.Point(12, 516);
+            this.entryListButton.Location = new System.Drawing.Point(12, 495);
             this.entryListButton.Name = "entryListButton";
-            this.entryListButton.Size = new System.Drawing.Size(166, 28);
+            this.entryListButton.Size = new System.Drawing.Size(166, 46);
             this.entryListButton.TabIndex = 21;
             this.entryListButton.TabStop = false;
             this.entryListButton.Text = "Entry List";
@@ -2009,9 +2015,9 @@
             // 
             this.BopButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.BopButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BopButton.Location = new System.Drawing.Point(12, 550);
+            this.BopButton.Location = new System.Drawing.Point(12, 547);
             this.BopButton.Name = "BopButton";
-            this.BopButton.Size = new System.Drawing.Size(166, 28);
+            this.BopButton.Size = new System.Drawing.Size(166, 46);
             this.BopButton.TabIndex = 22;
             this.BopButton.TabStop = false;
             this.BopButton.Text = "Additional BoP";
@@ -2024,12 +2030,39 @@
             this.toolTip.InitialDelay = 500;
             this.toolTip.ReshowDelay = 100;
             // 
+            // donationButton
+            // 
+            this.donationButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.donationButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.donationButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.donationButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donationButton.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.donationButton.Location = new System.Drawing.Point(551, 563);
+            this.donationButton.Name = "donationButton";
+            this.donationButton.Size = new System.Drawing.Size(180, 30);
+            this.donationButton.TabIndex = 23;
+            this.donationButton.Text = "B U Y   M E   A   B E E R";
+            this.donationButton.UseVisualStyleBackColor = false;
+            this.donationButton.Click += new System.EventHandler(this.donationButton_Click);
+            // 
+            // donationLabel
+            // 
+            this.donationLabel.AutoSize = true;
+            this.donationLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.donationLabel.Location = new System.Drawing.Point(361, 564);
+            this.donationLabel.Name = "donationLabel";
+            this.donationLabel.Size = new System.Drawing.Size(183, 26);
+            this.donationLabel.TabIndex = 24;
+            this.donationLabel.Text = "   This software will forever be free\r\nbut donations are always appreciated";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(744, 591);
+            this.ClientSize = new System.Drawing.Size(744, 606);
+            this.Controls.Add(this.donationLabel);
+            this.Controls.Add(this.donationButton);
             this.Controls.Add(this.BopButton);
             this.Controls.Add(this.entryListButton);
             this.Controls.Add(this.label11);
@@ -2039,7 +2072,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.toolStrip1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2065,8 +2097,9 @@
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.preRaceWaitTimeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.overTimeNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.preRaceWaitTimeNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postRaceWaitTimeNumericUpDown)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weatherRandomnessTrackBar)).EndInit();
@@ -2101,8 +2134,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mandatoryPitStopCountNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2181,9 +2212,6 @@
         private System.Windows.Forms.CheckBox pCheckBox;
         private System.Windows.Forms.CheckBox rCheckBox;
         private System.Windows.Forms.CheckBox qCheckBox;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton EntriesToolStripButton;
-        private System.Windows.Forms.ToolStripButton BoPToolStripButton;
         private System.Windows.Forms.NumericUpDown pDurationNumericUpDown;
         private System.Windows.Forms.NumericUpDown pTimeScaleNumericUpDown;
         private System.Windows.Forms.NumericUpDown pStartTimeNumericUpDown;
@@ -2191,7 +2219,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.NumericUpDown preRaceWaitTimeNumericUpDown;
-        private System.Windows.Forms.NumericUpDown overTimeNumericUpDown;
+        private System.Windows.Forms.NumericUpDown postRaceWaitTimeNumericUpDown;
         private System.Windows.Forms.NumericUpDown rDurationNumericUpDown;
         private System.Windows.Forms.NumericUpDown rTimeScaleNumericUpDown;
         private System.Windows.Forms.NumericUpDown rStartTimeNumericUpDown;
@@ -2242,6 +2270,10 @@
         private System.Windows.Forms.CheckBox randomizeTrackCheckBox;
         private System.Windows.Forms.CheckBox dumpEntryListCheckBox;
         private System.Windows.Forms.CheckBox dumpLeaderboardsCheckBox;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.NumericUpDown overTimeNumericUpDown;
+        private System.Windows.Forms.Button donationButton;
+        private System.Windows.Forms.Label donationLabel;
     }
 }
 

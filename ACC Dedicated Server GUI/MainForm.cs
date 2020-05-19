@@ -251,6 +251,7 @@ namespace ACC_Dedicated_Server_GUI
                     }
                 }
                 preRaceWaitTimeNumericUpDown.Value = InNumUpDnRange(eventObject.preRaceWaitingTimeSeconds, preRaceWaitTimeNumericUpDown);
+                postRaceWaitTimeNumericUpDown.Value = InNumUpDnRange(eventObject.postRaceSeconds, postRaceWaitTimeNumericUpDown);
                 overTimeNumericUpDown.Value = InNumUpDnRange(eventObject.sessionOverTimeSeconds, overTimeNumericUpDown);
                 tempTrackBar.Value = InTrackBarRange(eventObject.ambientTemp, tempTrackBar);
                 cloudCoverageTrackBar.Value = InTrackBarRange((int)(eventObject.cloudLevel * 10), cloudCoverageTrackBar);
@@ -411,6 +412,7 @@ namespace ACC_Dedicated_Server_GUI
             // event.json
             eventObject.track = ((Track)TrackComboBox.SelectedItem).alias;
             eventObject.preRaceWaitingTimeSeconds = (int)preRaceWaitTimeNumericUpDown.Value;
+            eventObject.postRaceSeconds = (int)postRaceWaitTimeNumericUpDown.Value;
             eventObject.sessionOverTimeSeconds = (int)overTimeNumericUpDown.Value;
             eventObject.ambientTemp = tempTrackBar.Value;
             eventObject.cloudLevel = (float)cloudCoverageTrackBar.Value / 10;
@@ -692,6 +694,11 @@ namespace ACC_Dedicated_Server_GUI
             {
 
             }
+        }
+
+        private void donationButton_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=P6JSQXRX543V8&currency_code=EUR&source=url");
         }
     }
 }

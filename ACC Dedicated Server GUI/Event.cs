@@ -8,6 +8,7 @@ namespace ACC_Dedicated_Server_GUI
         {
             public string track { get; set; }
             public int preRaceWaitingTimeSeconds { get; set; }
+            public int postRaceSeconds { get; set; }
             public int sessionOverTimeSeconds { get; set; }
             public int ambientTemp { get; set; }
             public float cloudLevel { get; set; }
