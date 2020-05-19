@@ -164,7 +164,7 @@
             this.Name = "BoPForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Additional BoP";
-            this.TopMost = true;
+            this.Activated += new System.EventHandler(this.BoPForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BoPForm_FormClosing);
             this.Load += new System.EventHandler(this.BoPForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ballastTrackBar)).EndInit();

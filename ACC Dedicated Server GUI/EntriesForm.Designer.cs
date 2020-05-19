@@ -446,7 +446,7 @@
             this.expandAllToolStripMenuItem,
             this.collapsAllToolStripMenuItem});
             this.entryListContextMenuStrip.Name = "entryListContextMenuStrip";
-            this.entryListContextMenuStrip.Size = new System.Drawing.Size(181, 98);
+            this.entryListContextMenuStrip.Size = new System.Drawing.Size(137, 76);
             // 
             // addEntryToolStripMenuItem
             // 
@@ -470,7 +470,7 @@
             // collapsAllToolStripMenuItem
             // 
             this.collapsAllToolStripMenuItem.Name = "collapsAllToolStripMenuItem";
-            this.collapsAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.collapsAllToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.collapsAllToolStripMenuItem.Text = "Collapse All";
             this.collapsAllToolStripMenuItem.Click += new System.EventHandler(this.collapseAllToolStripMenuItem_Click);
             // 
@@ -531,7 +531,7 @@
             // removeDriverMenuItem
             // 
             this.removeDriverMenuItem.Name = "removeDriverMenuItem";
-            this.removeDriverMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeDriverMenuItem.Size = new System.Drawing.Size(151, 22);
             this.removeDriverMenuItem.Text = "Remove Driver";
             this.removeDriverMenuItem.Click += new System.EventHandler(this.removeDriverMenuItem_Click);
             // 
@@ -543,7 +543,7 @@
             // expandAllToolStripMenuItem2
             // 
             this.expandAllToolStripMenuItem2.Name = "expandAllToolStripMenuItem2";
-            this.expandAllToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.expandAllToolStripMenuItem2.Size = new System.Drawing.Size(151, 22);
             this.expandAllToolStripMenuItem2.Text = "Expand All";
             this.expandAllToolStripMenuItem2.Click += new System.EventHandler(this.expandAllToolStripMenuItem_Click);
             // 
@@ -570,7 +570,7 @@
             this.Name = "EntriesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entries";
-            this.TopMost = true;
+            this.Activated += new System.EventHandler(this.EntriesForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EntriesForm_FormClosing);
             this.Load += new System.EventHandler(this.EntriesForm_Load);
             this.carSettingsPanel.ResumeLayout(false);

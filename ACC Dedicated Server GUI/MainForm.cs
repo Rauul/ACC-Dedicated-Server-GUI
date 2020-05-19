@@ -32,6 +32,8 @@ namespace ACC_Dedicated_Server_GUI
         EventObject eventObject = new EventObject();
         EventRulesObject eventRules = new EventRulesObject();
         ConfigurationObject configuration = new ConfigurationObject();
+        EntriesForm entriesForm = new EntriesForm();
+        BoPForm boPForm = new BoPForm();
         Process process = new Process();
 
         Panel consolePanel = new Panel();
@@ -251,6 +253,8 @@ namespace ACC_Dedicated_Server_GUI
                 cloudCoverageTrackBar.Value = InTrackBarRange((int)(eventObject.cloudLevel * 10), cloudCoverageTrackBar);
                 rainTrackBar.Value = InTrackBarRange((int)(eventObject.rain * 10), rainTrackBar);
                 weatherRandomnessTrackBar.Value = InTrackBarRange(eventObject.weatherRandomness, weatherRandomnessTrackBar);
+                simracerWeatherConditionsCheckBox.Checked = eventObject.simracerWeatherConditions == 1 ? true : false;
+                fixedConditionQualificationCheckBox.Checked = eventObject.isFixedConditionQualification == 1 ? true : false;
 
                 foreach (Session session in eventObject.sessions)
                 {
@@ -412,6 +416,8 @@ namespace ACC_Dedicated_Server_GUI
             eventObject.cloudLevel = (float)cloudCoverageTrackBar.Value / 10;
             eventObject.rain = (float)rainTrackBar.Value / 10;
             eventObject.weatherRandomness = weatherRandomnessTrackBar.Value;
+            eventObject.isFixedConditionQualification = fixedConditionQualificationCheckBox.Checked ? 1 : 0;
+            eventObject.simracerWeatherConditions = simracerWeatherConditionsCheckBox.Checked ? 1 : 0;
             eventObject.configVersion = 1;
 
             if (eventObject.sessions == null)
@@ -591,27 +597,13 @@ namespace ACC_Dedicated_Server_GUI
             rPanel.Enabled = rCheckBox.Checked;
         }
 
-        private void EntriesToolStripButton_Click(object sender, EventArgs e)
-        {
-            EntriesForm entriesForm = new EntriesForm();
-            entriesForm.Show();
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            BoPForm boPForm = new BoPForm();
-            boPForm.Show();
-        }
-
         private void entryListButton_Click(object sender, EventArgs e)
         {
-            EntriesForm entriesForm = new EntriesForm();
             entriesForm.Show();
         }
 
         private void BopButton_Click(object sender, EventArgs e)
         {
-            BoPForm boPForm = new BoPForm();
             boPForm.Show();
         }
 
@@ -665,6 +657,27 @@ namespace ACC_Dedicated_Server_GUI
         private void donationButton_Click(object sender, EventArgs e)
         {
             Process.Start("https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=P6JSQXRX543V8&currency_code=EUR&source=url");
+        }
+
+        private bool IsFormOpen(string formName)
+        {
+            FormCollection fc = Application.OpenForms;
+
+            foreach (Form frm in fc)
+            {
+                if (frm.Name == formName)
+                    return true;
+            }
+            return false;
+        }
+
+        private void MainForm_Activated(object sender, EventArgs e)
+        {
+            if (IsFormOpen("EntriesForm"))
+                entriesForm.Activate();
+
+            else if (IsFormOpen("BoPForm"))
+                boPForm.Activate();
         }
     }
 }

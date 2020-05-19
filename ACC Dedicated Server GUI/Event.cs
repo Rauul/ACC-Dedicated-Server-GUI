@@ -14,6 +14,8 @@ namespace ACC_Dedicated_Server_GUI
             public float cloudLevel { get; set; }
             public float rain { get; set; }
             public int weatherRandomness { get; set; }
+            public int simracerWeatherConditions { get; set; }
+            public int isFixedConditionQualification { get; set; }
             public List<Session> sessions { get; set; }
             public int configVersion { get; set; }
         }

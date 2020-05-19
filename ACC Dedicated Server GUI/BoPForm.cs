@@ -288,6 +288,9 @@ namespace ACC_Dedicated_Server_GUI
                     cleanUpAndSaveFile();
                 }
             }
+
+            e.Cancel = true;
+            this.Hide();
         }
 
         private void ballastTrackBar_Scroll(object sender, EventArgs e)
@@ -344,6 +347,11 @@ namespace ACC_Dedicated_Server_GUI
         private void restrictorTrackBar_ValueChanged(object sender, EventArgs e)
         {
             restrictorLabel.Text = restrictorTrackBar.Value.ToString();
+        }
+
+        private void BoPForm_Activated(object sender, EventArgs e)
+        {
+            closeButtonClicked = false;
         }
     }
 }

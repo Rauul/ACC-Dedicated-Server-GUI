@@ -342,6 +342,9 @@ namespace ACC_Dedicated_Server_GUI
                     cleanUpAndSaveFile();
                 }
             }
+
+            e.Cancel = true;
+            this.Hide();
         }
 
         private void cleanUpAndSaveFile()
@@ -526,6 +529,11 @@ namespace ACC_Dedicated_Server_GUI
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void EntriesForm_Activated(object sender, EventArgs e)
+        {
+            closeButtonClicked = false;
         }
     }
 
