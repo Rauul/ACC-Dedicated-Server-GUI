@@ -2037,9 +2037,9 @@
             this.donationButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.donationButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.donationButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.donationButton.Location = new System.Drawing.Point(551, 563);
+            this.donationButton.Location = new System.Drawing.Point(517, 563);
             this.donationButton.Name = "donationButton";
-            this.donationButton.Size = new System.Drawing.Size(180, 30);
+            this.donationButton.Size = new System.Drawing.Size(214, 30);
             this.donationButton.TabIndex = 23;
             this.donationButton.Text = "B U Y   M E   A   B E E R";
             this.donationButton.UseVisualStyleBackColor = false;
@@ -2051,9 +2051,9 @@
             this.donationLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.donationLabel.Location = new System.Drawing.Point(361, 564);
             this.donationLabel.Name = "donationLabel";
-            this.donationLabel.Size = new System.Drawing.Size(183, 26);
+            this.donationLabel.Size = new System.Drawing.Size(150, 26);
             this.donationLabel.TabIndex = 24;
-            this.donationLabel.Text = "   This software will forever be free\r\nbut donations are always appreciated";
+            this.donationLabel.Text = "Donations are never expected\r\n      but always appreciated";
             // 
             // MainForm
             // 
@@ -2078,7 +2078,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ACC Dedicated Server GUI V1.2.3";
+            this.Text = "ACC Dedicated Server GUI V1.2.4.1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

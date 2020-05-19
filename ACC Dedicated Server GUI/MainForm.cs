@@ -571,34 +571,6 @@ namespace ACC_Dedicated_Server_GUI
                     this.BringToFront();
                     this.Activate();
                 }
-
-                //if (Process.GetProcessesByName(fileName).Length == 0)
-                //{
-                //    SaveConfig();
-                //    consolePanel.Visible = true;
-                //    consolePanel.BringToFront();
-
-                //    Process process = new Process();
-                //    process.StartInfo.FileName = fileName + ".exe";
-                //    process.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
-
-                //    process.Start();
-                //    Thread.Sleep(200);
-                //    SetParent(process.MainWindowHandle, consolePanel.Handle);
-                //    SendMessage(process.MainWindowHandle, WM_SYSCOMMAND, SC_MAXIMIZE, 0);
-                //    label12.Visible = false;
-                //    this.BringToFront();
-                //    this.Activate();
-                //}
-                //else
-                //{
-                //    foreach (Process process in Process.GetProcessesByName(fileName))
-                //    {
-                //        process.Kill();
-                //    }
-                //    consolePanel.Visible = false;
-                //    label12.Visible = true;
-                //}
             }
             catch (Exception ex)
             {

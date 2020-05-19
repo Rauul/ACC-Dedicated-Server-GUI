@@ -446,7 +446,7 @@
             this.expandAllToolStripMenuItem,
             this.collapsAllToolStripMenuItem});
             this.entryListContextMenuStrip.Name = "entryListContextMenuStrip";
-            this.entryListContextMenuStrip.Size = new System.Drawing.Size(137, 76);
+            this.entryListContextMenuStrip.Size = new System.Drawing.Size(181, 98);
             // 
             // addEntryToolStripMenuItem
             // 
@@ -470,9 +470,9 @@
             // collapsAllToolStripMenuItem
             // 
             this.collapsAllToolStripMenuItem.Name = "collapsAllToolStripMenuItem";
-            this.collapsAllToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.collapsAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.collapsAllToolStripMenuItem.Text = "Collapse All";
-            this.collapsAllToolStripMenuItem.Click += new System.EventHandler(this.collapsAllToolStripMenuItem_Click);
+            this.collapsAllToolStripMenuItem.Click += new System.EventHandler(this.collapseAllToolStripMenuItem_Click);
             // 
             // entryContextMenuStrip
             // 
@@ -509,14 +509,14 @@
             this.expandAllToolStripMenuItem1.Name = "expandAllToolStripMenuItem1";
             this.expandAllToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.expandAllToolStripMenuItem1.Text = "Expand All";
-            this.expandAllToolStripMenuItem1.Click += new System.EventHandler(this.expandAllToolStripMenuItem1_Click);
+            this.expandAllToolStripMenuItem1.Click += new System.EventHandler(this.expandAllToolStripMenuItem_Click);
             // 
             // collapsAllToolStripMenuItem1
             // 
             this.collapsAllToolStripMenuItem1.Name = "collapsAllToolStripMenuItem1";
             this.collapsAllToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.collapsAllToolStripMenuItem1.Text = "Collapse All";
-            this.collapsAllToolStripMenuItem1.Click += new System.EventHandler(this.collapsAllToolStripMenuItem1_Click);
+            this.collapsAllToolStripMenuItem1.Click += new System.EventHandler(this.collapseAllToolStripMenuItem_Click);
             // 
             // driverContextMenuStrip
             // 
@@ -531,9 +531,9 @@
             // removeDriverMenuItem
             // 
             this.removeDriverMenuItem.Name = "removeDriverMenuItem";
-            this.removeDriverMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.removeDriverMenuItem.Size = new System.Drawing.Size(180, 22);
             this.removeDriverMenuItem.Text = "Remove Driver";
-            this.removeDriverMenuItem.Click += new System.EventHandler(this.toolStripMenuItem_Click);
+            this.removeDriverMenuItem.Click += new System.EventHandler(this.removeDriverMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -543,9 +543,9 @@
             // expandAllToolStripMenuItem2
             // 
             this.expandAllToolStripMenuItem2.Name = "expandAllToolStripMenuItem2";
-            this.expandAllToolStripMenuItem2.Size = new System.Drawing.Size(151, 22);
+            this.expandAllToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.expandAllToolStripMenuItem2.Text = "Expand All";
-            this.expandAllToolStripMenuItem2.Click += new System.EventHandler(this.expandAllToolStripMenuItem2_Click);
+            this.expandAllToolStripMenuItem2.Click += new System.EventHandler(this.expandAllToolStripMenuItem_Click);
             // 
             // collapseAllToolStripMenuItem
             // 
@@ -562,8 +562,8 @@
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.forceEntryListCheckBox);
             this.Controls.Add(this.entriesTreeView);
-            this.Controls.Add(this.driverSettingsPanel);
             this.Controls.Add(this.carSettingsPanel);
+            this.Controls.Add(this.driverSettingsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

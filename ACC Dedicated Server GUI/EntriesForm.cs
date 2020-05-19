@@ -6,7 +6,6 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Reflection;
 using System.Windows.Forms;
 using static ACC_Dedicated_Server_GUI.EntryList;
 
@@ -86,14 +85,14 @@ namespace ACC_Dedicated_Server_GUI
             foreach (Entry entry in entrylist.entries)
             {
                 TreeNode carTreeNode = new TreeNode();
-                Font regularFont = new Font(entriesTreeView.Font, FontStyle.Regular);
-                Font boldFont = new Font(entriesTreeView.Font, FontStyle.Bold);
+                //Font regularFont = new Font(entriesTreeView.Font, FontStyle.Regular);
+                //Font boldFont = new Font(entriesTreeView.Font, FontStyle.Bold);
                 //carTreeNode.NodeFont = entry.isServerAdmin == 1 ? boldFont : regularFont;
                 carTreeNode.Text = entry.raceNumber.ToString();
                 if (entry.isServerAdmin == 1)
                     carTreeNode.Text = carTreeNode.Text + " ★";
                 carTreeNode.Tag = entry;
-                entriesTreeView.TopNode.Nodes.Add(carTreeNode);
+                entriesTreeView.Nodes[0].Nodes.Add(carTreeNode);
 
                 foreach (Driver driver in entry.drivers)
                 {
@@ -110,7 +109,7 @@ namespace ACC_Dedicated_Server_GUI
                     carTreeNode.Nodes.Add(driverTreeNode);
                 }
             }
-            entriesTreeView.TopNode.Expand();
+            entriesTreeView.Nodes[0].Expand();
         }
 
         private void entriesTreeView_AfterSelect(object sender, TreeViewEventArgs e)
@@ -256,7 +255,7 @@ namespace ACC_Dedicated_Server_GUI
         private void forceEntryListCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             entrylist.forceEntryList = forceEntryListCheckBox.Checked == true ? 1 : 0;
-            entriesTreeView.TopNode.Tag = entrylist;
+            entriesTreeView.Nodes[0].Tag = entrylist;
         }
 
         private void firstNameTextBox_TextChanged(object sender, EventArgs e)
@@ -347,14 +346,14 @@ namespace ACC_Dedicated_Server_GUI
 
         private void cleanUpAndSaveFile()
         {
-            EntryListObject nEntryList = (EntryListObject)entriesTreeView.TopNode.Tag;
+            EntryListObject nEntryList = (EntryListObject)entriesTreeView.Nodes[0].Tag;
 
             if (nEntryList.entries == null)
                 nEntryList.entries = new List<Entry>();
 
             nEntryList.entries.Clear();
 
-            foreach (TreeNode node in entriesTreeView.TopNode.Nodes)
+            foreach (TreeNode node in entriesTreeView.Nodes[0].Nodes)
             {
                 Entry entry = (Entry)node.Tag;
                 if (entry.drivers == null)
@@ -396,6 +395,9 @@ namespace ACC_Dedicated_Server_GUI
                 driverContextMenuStrip.Show(entriesTreeView, new Point(e.X, e.Y));
         }
 
+
+
+        #region Tool Strip Menus
         private void addDriverToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Driver driver = new Driver();
@@ -410,6 +412,8 @@ namespace ACC_Dedicated_Server_GUI
             node.Tag = driver;
 
             entriesTreeView.SelectedNode.Nodes.Add(node);
+            if (entriesTreeView.SelectedNode.Nodes.Count > 1)
+                ((Entry)entriesTreeView.SelectedNode.Tag).overrideDriverInfo = 1;
             entriesTreeView.SelectedNode = node;
 
             firstNameTextBox.Focus();
@@ -433,18 +437,18 @@ namespace ACC_Dedicated_Server_GUI
             node.Text = entry.raceNumber.ToString();
             node.Tag = entry;
 
-            entriesTreeView.TopNode.Nodes.Add(node);
+            entriesTreeView.Nodes[0].Nodes.Add(node);
             entriesTreeView.SelectedNode = node;
 
             carNumberNumericUpDown.Focus();
         }
 
-        private void removeEntryToolStripMenuItem_Click(object sender, EventArgs e)
+        private void removeDriverMenuItem_Click(object sender, EventArgs e)
         {
             entriesTreeView.SelectedNode.Remove();
         }
 
-        private void toolStripMenuItem_Click(object sender, EventArgs e)
+        private void removeEntryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             entriesTreeView.SelectedNode.Remove();
         }
@@ -454,35 +458,16 @@ namespace ACC_Dedicated_Server_GUI
             entriesTreeView.ExpandAll();
         }
 
-        private void collapsAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            entriesTreeView.CollapseAll();
-            entriesTreeView.TopNode.Expand();
-        }
-
-        private void expandAllToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            entriesTreeView.ExpandAll();
-        }
-
-        private void collapsAllToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            entriesTreeView.CollapseAll();
-            entriesTreeView.TopNode.Expand();
-        }
-
-        private void expandAllToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            entriesTreeView.ExpandAll();
-        }
-
         private void collapseAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
             entriesTreeView.CollapseAll();
-            entriesTreeView.TopNode.Expand();
+            entriesTreeView.Nodes[0].Expand();
         }
+        #endregion
 
 
+
+        #region Select Text on Enter Numeric Up Down
         bool selectByMouse = false;
 
         private void quickBoxs_Enter(object sender, EventArgs e)
@@ -505,6 +490,9 @@ namespace ACC_Dedicated_Server_GUI
                 selectByMouse = false;
             }
         }
+        #endregion
+
+
 
         private void shortNameTextBox_Enter(object sender, EventArgs e)
         {
@@ -513,6 +501,8 @@ namespace ACC_Dedicated_Server_GUI
         }
 
 
+
+        #region Movable Tree Nodes
         //move the nodes up/down
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -589,4 +579,5 @@ namespace ACC_Dedicated_Server_GUI
             }
         }
     }
+    #endregion
 }

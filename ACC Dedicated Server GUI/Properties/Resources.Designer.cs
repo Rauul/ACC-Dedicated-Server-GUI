@@ -73,26 +73,6 @@ namespace ACC_Dedicated_Server_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap donate_button_full {
-            get {
-                object obj = ResourceManager.GetObject("donate_button_full", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap donate_button_light {
-            get {
-                object obj = ResourceManager.GetObject("donate_button_light", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_f1_car_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-f1-car-50", resourceCulture);
