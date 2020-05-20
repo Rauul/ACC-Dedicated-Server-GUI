@@ -7,6 +7,7 @@ using System.Text;
 using System.Reflection;
 using System.Windows.Forms;
 using static ACC_Dedicated_Server_GUI.BoP;
+using System.Threading;
 
 namespace ACC_Dedicated_Server_GUI
 {
@@ -216,6 +217,7 @@ namespace ACC_Dedicated_Server_GUI
 
         private void UpdateTrackBars()
         {
+            
             Car car = (Car)carListBox.SelectedItem;
             Track track = (Track)trackListBox.SelectedItem;
 
@@ -352,6 +354,7 @@ namespace ACC_Dedicated_Server_GUI
         private void BoPForm_Activated(object sender, EventArgs e)
         {
             closeButtonClicked = false;
+            FillBopTable();
         }
     }
 }

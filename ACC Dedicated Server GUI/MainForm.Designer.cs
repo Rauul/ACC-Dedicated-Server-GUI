@@ -214,6 +214,7 @@
             this.serverNameTextBox.Name = "serverNameTextBox";
             this.serverNameTextBox.Size = new System.Drawing.Size(207, 20);
             this.serverNameTextBox.TabIndex = 0;
+            this.serverNameTextBox.Text = "My ACC Server";
             // 
             // adminPasswordTextBox
             // 
@@ -326,6 +327,7 @@
             this.idealLineCheckBox.TabStop = false;
             this.idealLineCheckBox.Text = "Ideal Line";
             this.idealLineCheckBox.UseVisualStyleBackColor = true;
+            this.idealLineCheckBox.CheckedChanged += new System.EventHandler(this.idealLineCheckBox_CheckedChanged);
             // 
             // autoSteeringCheckBox
             // 
@@ -337,6 +339,7 @@
             this.autoSteeringCheckBox.TabStop = false;
             this.autoSteeringCheckBox.Text = "Auto Steering";
             this.autoSteeringCheckBox.UseVisualStyleBackColor = true;
+            this.autoSteeringCheckBox.CheckedChanged += new System.EventHandler(this.autoSteeringCheckBox_CheckedChanged);
             // 
             // autoShiftingCheckBox
             // 
@@ -348,6 +351,7 @@
             this.autoShiftingCheckBox.TabStop = false;
             this.autoShiftingCheckBox.Text = "Auto Shifting";
             this.autoShiftingCheckBox.UseVisualStyleBackColor = true;
+            this.autoShiftingCheckBox.CheckedChanged += new System.EventHandler(this.autoShiftingCheckBox_CheckedChanged);
             // 
             // autoPitLimiterCheckBox
             // 
@@ -359,6 +363,7 @@
             this.autoPitLimiterCheckBox.TabStop = false;
             this.autoPitLimiterCheckBox.Text = "Auto Pit Limiter";
             this.autoPitLimiterCheckBox.UseVisualStyleBackColor = true;
+            this.autoPitLimiterCheckBox.CheckedChanged += new System.EventHandler(this.autoPitLimiterCheckBox_CheckedChanged);
             // 
             // autoWipersCheckBox
             // 
@@ -370,6 +375,7 @@
             this.autoWipersCheckBox.TabStop = false;
             this.autoWipersCheckBox.Text = "Auto Wiper";
             this.autoWipersCheckBox.UseVisualStyleBackColor = true;
+            this.autoWipersCheckBox.CheckedChanged += new System.EventHandler(this.autoWipersCheckBox_CheckedChanged);
             // 
             // autoClutchCheckBox
             // 
@@ -381,6 +387,7 @@
             this.autoClutchCheckBox.TabStop = false;
             this.autoClutchCheckBox.Text = "Auto Clutch";
             this.autoClutchCheckBox.UseVisualStyleBackColor = true;
+            this.autoClutchCheckBox.CheckedChanged += new System.EventHandler(this.autoClutchCheckBox_CheckedChanged);
             // 
             // autoStartEngineCheckBox
             // 
@@ -392,6 +399,7 @@
             this.autoStartEngineCheckBox.TabStop = false;
             this.autoStartEngineCheckBox.Text = "Auto Start Engine";
             this.autoStartEngineCheckBox.UseVisualStyleBackColor = true;
+            this.autoStartEngineCheckBox.CheckedChanged += new System.EventHandler(this.autoStartEngineCheckBox_CheckedChanged);
             // 
             // autoLightsCheckBox
             // 
@@ -403,6 +411,7 @@
             this.autoLightsCheckBox.TabStop = false;
             this.autoLightsCheckBox.Text = "Auto Lights";
             this.autoLightsCheckBox.UseVisualStyleBackColor = true;
+            this.autoLightsCheckBox.CheckedChanged += new System.EventHandler(this.autoLightsCheckBox_CheckedChanged);
             // 
             // label9
             // 
@@ -487,6 +496,7 @@
             this.autoDQCheckBox.Text = "Auto DQ";
             this.toolTip.SetToolTip(this.autoDQCheckBox, resources.GetString("autoDQCheckBox.ToolTip"));
             this.autoDQCheckBox.UseVisualStyleBackColor = true;
+            this.autoDQCheckBox.CheckedChanged += new System.EventHandler(this.autoDQCheckBox_CheckedChanged);
             // 
             // label39
             // 
@@ -525,6 +535,7 @@
         "s (which causes a reset to FP1). The “track”\r\nproperty will only define the defa" +
         "ult state for the first session");
             this.randomizeTrackCheckBox.UseVisualStyleBackColor = true;
+            this.randomizeTrackCheckBox.CheckedChanged += new System.EventHandler(this.randomizeTrackCheckBox_CheckedChanged);
             // 
             // centraEntryListPathTextBox
             // 
@@ -544,6 +555,7 @@
             this.dumpEntryListCheckBox.Text = "Dump Entry List";
             this.toolTip.SetToolTip(this.dumpEntryListCheckBox, resources.GetString("dumpEntryListCheckBox.ToolTip"));
             this.dumpEntryListCheckBox.UseVisualStyleBackColor = true;
+            this.dumpEntryListCheckBox.CheckedChanged += new System.EventHandler(this.dumpEntryListCheckBox_CheckedChanged);
             // 
             // dumpLeaderboardsCheckBox
             // 
@@ -557,12 +569,13 @@
             this.toolTip.SetToolTip(this.dumpLeaderboardsCheckBox, "If enabled, any session will write down the result leaderboard in\r\na “results” fo" +
         "lder.");
             this.dumpLeaderboardsCheckBox.UseVisualStyleBackColor = true;
+            this.dumpLeaderboardsCheckBox.CheckedChanged += new System.EventHandler(this.dumpLeaderboardsCheckBox_CheckedChanged);
             // 
             // isRaceLockedCheckBox
             // 
             this.isRaceLockedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.isRaceLockedCheckBox.Checked = true;
-            this.isRaceLockedCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.isRaceLockedCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.isRaceLockedCheckBox.Location = new System.Drawing.Point(181, 152);
             this.isRaceLockedCheckBox.Name = "isRaceLockedCheckBox";
             this.isRaceLockedCheckBox.Size = new System.Drawing.Size(147, 17);
@@ -573,6 +586,7 @@
         "in “Public Multiplayer”, as the user-server matching\r\nwill ignore ongoing race s" +
         "essions.");
             this.isRaceLockedCheckBox.UseVisualStyleBackColor = true;
+            this.isRaceLockedCheckBox.CheckedChanged += new System.EventHandler(this.isRaceLockedCheckBox_CheckedChanged);
             // 
             // shortFormationCheckBox
             // 
@@ -586,12 +600,13 @@
             this.toolTip.SetToolTip(this.shortFormationCheckBox, "Toggles the short and long formation lap. Long formation is\r\nonly usable on priva" +
         "te servers.");
             this.shortFormationCheckBox.UseVisualStyleBackColor = true;
+            this.shortFormationCheckBox.CheckedChanged += new System.EventHandler(this.shortFormationCheckBox_CheckedChanged);
             // 
             // registerToLobbyCheckBox
             // 
             this.registerToLobbyCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.registerToLobbyCheckBox.Checked = true;
-            this.registerToLobbyCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.registerToLobbyCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.registerToLobbyCheckBox.Location = new System.Drawing.Point(181, 200);
             this.registerToLobbyCheckBox.Name = "registerToLobbyCheckBox";
             this.registerToLobbyCheckBox.Size = new System.Drawing.Size(147, 17);
@@ -601,6 +616,7 @@
             this.toolTip.SetToolTip(this.registerToLobbyCheckBox, "When disabled, this server won’t register to the backend. Is useful for LAN\r\nsess" +
         "ions. If disabled, the server is declared “Private Multiplayer”.");
             this.registerToLobbyCheckBox.UseVisualStyleBackColor = true;
+            this.registerToLobbyCheckBox.CheckedChanged += new System.EventHandler(this.registerToLobbyCheckBox_CheckedChanged);
             // 
             // lanDiscoveryCheckBox
             // 
@@ -614,6 +630,7 @@
             this.toolTip.SetToolTip(this.lanDiscoveryCheckBox, "Defines if the server will listen to LAN discovery requests. Can be turned \r\noff " +
         "for dedicated servers.");
             this.lanDiscoveryCheckBox.UseVisualStyleBackColor = true;
+            this.lanDiscoveryCheckBox.CheckedChanged += new System.EventHandler(this.lanDiscoveryCheckBox_CheckedChanged);
             // 
             // maxConnectionsNumericUpDown
             // 
@@ -1798,6 +1815,7 @@
         "r cars in driver swap\r\nsituations; even in a mixed field this will be\r\nskipped f" +
         "or cars with a team size of 1 driver.");
             this.driverSwapRequiredCheckBox.UseVisualStyleBackColor = true;
+            this.driverSwapRequiredCheckBox.CheckedChanged += new System.EventHandler(this.driverSwapRequiredCheckBox_CheckedChanged);
             // 
             // tyreChangeRequiredCheckBox
             // 
@@ -1809,6 +1827,7 @@
             this.tyreChangeRequiredCheckBox.TabStop = false;
             this.tyreChangeRequiredCheckBox.Text = "Tyre Change Required";
             this.tyreChangeRequiredCheckBox.UseVisualStyleBackColor = true;
+            this.tyreChangeRequiredCheckBox.CheckedChanged += new System.EventHandler(this.tyreChangeRequiredCheckBox_CheckedChanged);
             // 
             // refuellingRequiredCheckBox
             // 
@@ -1820,6 +1839,7 @@
             this.refuellingRequiredCheckBox.TabStop = false;
             this.refuellingRequiredCheckBox.Text = "Refuelling Required";
             this.refuellingRequiredCheckBox.UseVisualStyleBackColor = true;
+            this.refuellingRequiredCheckBox.CheckedChanged += new System.EventHandler(this.refuellingRequiredCheckBox_CheckedChanged);
             // 
             // refuellingTimeFixedCheckBox
             // 
@@ -1831,6 +1851,7 @@
             this.refuellingTimeFixedCheckBox.TabStop = false;
             this.refuellingTimeFixedCheckBox.Text = "Refuelling Time Fixed";
             this.refuellingTimeFixedCheckBox.UseVisualStyleBackColor = true;
+            this.refuellingTimeFixedCheckBox.CheckedChanged += new System.EventHandler(this.refuellingTimeFixedCheckBox_CheckedChanged);
             // 
             // refuellingAllowedCheckBox
             // 
@@ -1842,6 +1863,7 @@
             this.refuellingAllowedCheckBox.TabStop = false;
             this.refuellingAllowedCheckBox.Text = "Refuelling Allowed";
             this.refuellingAllowedCheckBox.UseVisualStyleBackColor = true;
+            this.refuellingAllowedCheckBox.CheckedChanged += new System.EventHandler(this.refuellingAllowedCheckBox_CheckedChanged);
             // 
             // maxTotalDrivingTimeNumericUpDown
             // 
@@ -2071,6 +2093,7 @@
             this.simracerWeatherConditionsCheckBox.Text = "Sim Weather Conditions";
             this.toolTip.SetToolTip(this.simracerWeatherConditionsCheckBox, resources.GetString("simracerWeatherConditionsCheckBox.ToolTip"));
             this.simracerWeatherConditionsCheckBox.UseVisualStyleBackColor = true;
+            this.simracerWeatherConditionsCheckBox.CheckedChanged += new System.EventHandler(this.simracerWeatherConditionsCheckBox_CheckedChanged);
             // 
             // fixedConditionQualificationCheckBox
             // 
@@ -2084,6 +2107,7 @@
             this.fixedConditionQualificationCheckBox.Text = "Fixed Qualification Weather";
             this.toolTip.SetToolTip(this.fixedConditionQualificationCheckBox, resources.GetString("fixedConditionQualificationCheckBox.ToolTip"));
             this.fixedConditionQualificationCheckBox.UseVisualStyleBackColor = true;
+            this.fixedConditionQualificationCheckBox.CheckedChanged += new System.EventHandler(this.fixedConditionQualificationCheckBox_CheckedChanged);
             // 
             // MainForm
             // 
@@ -2108,7 +2132,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ACC Dedicated Server GUI V1.2.4.1";
+            this.Text = "ACC Dedicated Server GUI V1.2.4.1X";
             this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);

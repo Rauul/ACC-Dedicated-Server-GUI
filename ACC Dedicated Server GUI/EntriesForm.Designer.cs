@@ -306,13 +306,14 @@
             // forceEntryListCheckBox
             // 
             this.forceEntryListCheckBox.AutoSize = true;
+            this.forceEntryListCheckBox.BackColor = System.Drawing.SystemColors.Control;
             this.forceEntryListCheckBox.Location = new System.Drawing.Point(13, 421);
             this.forceEntryListCheckBox.Name = "forceEntryListCheckBox";
             this.forceEntryListCheckBox.Size = new System.Drawing.Size(99, 17);
             this.forceEntryListCheckBox.TabIndex = 2;
             this.forceEntryListCheckBox.TabStop = false;
             this.forceEntryListCheckBox.Text = "Force Entry List";
-            this.forceEntryListCheckBox.UseVisualStyleBackColor = true;
+            this.forceEntryListCheckBox.UseVisualStyleBackColor = false;
             this.forceEntryListCheckBox.CheckedChanged += new System.EventHandler(this.forceEntryListCheckBox_CheckedChanged);
             // 
             // closeButton

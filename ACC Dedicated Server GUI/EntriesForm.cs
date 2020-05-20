@@ -227,6 +227,7 @@ namespace ACC_Dedicated_Server_GUI
 
         private void overrideCustomCarModelCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+            overrideCustomCarModelCheckBox.CheckState = overrideCustomCarModelCheckBox.Checked ? CheckState.Indeterminate : CheckState.Unchecked;
             Entry entry = (Entry)entriesTreeView.SelectedNode.Tag;
             entry.overrideCarModelForCustomCar = overrideCustomCarModelCheckBox.Checked == true ? 1 : 0;
             entriesTreeView.SelectedNode.Tag = entry;
@@ -234,11 +235,9 @@ namespace ACC_Dedicated_Server_GUI
 
         private void adminCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+            adminCheckBox.CheckState = adminCheckBox.Checked ? CheckState.Indeterminate : CheckState.Unchecked;
             Entry entry = (Entry)entriesTreeView.SelectedNode.Tag;
             entry.isServerAdmin = adminCheckBox.Checked == true ? 1 : 0;
-            Font regularFont = new Font(entriesTreeView.Font, FontStyle.Regular);
-            Font boldFont = new Font(entriesTreeView.Font, FontStyle.Bold);
-            //entriesTreeView.SelectedNode.NodeFont = adminCheckBox.Checked == true ? boldFont : regularFont;
             entriesTreeView.SelectedNode.Text = entry.raceNumber.ToString();
             if (entry.isServerAdmin == 1)
                 entriesTreeView.SelectedNode.Text = entriesTreeView.SelectedNode.Text + " ★";
@@ -247,6 +246,7 @@ namespace ACC_Dedicated_Server_GUI
 
         private void overrideDriverInfoCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+            overrideDriverInfoCheckBox.CheckState = overrideDriverInfoCheckBox.Checked ? CheckState.Indeterminate : CheckState.Unchecked;
             Entry entry = (Entry)entriesTreeView.SelectedNode.Tag;
             entry.overrideDriverInfo = overrideDriverInfoCheckBox.Checked == true ? 1 : 0;
             entriesTreeView.SelectedNode.Tag = entry;
@@ -254,6 +254,7 @@ namespace ACC_Dedicated_Server_GUI
 
         private void forceEntryListCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+            forceEntryListCheckBox.CheckState = forceEntryListCheckBox.Checked ? CheckState.Indeterminate : CheckState.Unchecked;
             entrylist.forceEntryList = forceEntryListCheckBox.Checked == true ? 1 : 0;
             entriesTreeView.Nodes[0].Tag = entrylist;
         }
@@ -468,6 +469,62 @@ namespace ACC_Dedicated_Server_GUI
         }
         #endregion
 
+        private void AddNewEntry()
+        {
+            Entry entry = new Entry();
+            entry.raceNumber = 0;
+            entry.forcedCarModel = -1;
+            entry.overrideDriverInfo = 0;
+            entry.isServerAdmin = 0;
+            entry.defaultGridPosition = 0;
+            entry.ballastKg = 0;
+            entry.restrictor = 0;
+            entry.customCar = "";
+            entry.overrideCarModelForCustomCar = 0;
+            entry.drivers = new List<Driver>();
+
+            TreeNode node = new TreeNode();
+            node.Text = entry.raceNumber.ToString();
+            node.Tag = entry;
+
+            entriesTreeView.Nodes[0].Nodes.Add(node);
+            entriesTreeView.SelectedNode = node;
+
+            carNumberNumericUpDown.Focus();
+        }
+
+        private void AddNewDriver()
+        {
+            Driver driver = new Driver();
+            driver.firstName = "New";
+            driver.lastName = "Driver";
+            driver.shortName = "";
+            driver.playerID = "";
+            driver.driverCategory = 0;
+
+            TreeNode node = new TreeNode();
+            node.Text = driver.firstName + " " + driver.lastName;
+            node.Tag = driver;
+
+            TreeNode selectedNode = entriesTreeView.SelectedNode;
+
+            if (selectedNode.Parent == entriesTreeView.Nodes[0])
+            {
+                selectedNode.Nodes.Add(node);
+                if (selectedNode.Nodes.Count > 1)
+                    ((Entry)selectedNode.Tag).overrideDriverInfo = 1;
+            }
+            else
+            {
+                selectedNode.Parent.Nodes.Add(node);
+                if (selectedNode.Parent.Nodes.Count > 1)
+                    ((Entry)selectedNode.Parent.Tag).overrideDriverInfo = 1;
+            }
+            entriesTreeView.SelectedNode = node;
+
+            firstNameTextBox.Focus();
+        }
+
 
 
         #region Select Text on Enter Numeric Up Down
@@ -505,14 +562,36 @@ namespace ACC_Dedicated_Server_GUI
 
 
 
-        #region Movable Tree Nodes
-        //move the nodes up/down
+        #region Keyboard inputs on treeview
+        //handle all the inputs
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (ActiveControl != entriesTreeView)
                 return base.ProcessCmdKey(ref msg, keyData);
 
-            //capture up arrow key
+
+            if (keyData == Keys.Delete)
+            {
+                if (entriesTreeView.SelectedNode != entriesTreeView.Nodes[0])
+                    entriesTreeView.SelectedNode.Remove();
+                return true;
+            }
+
+            if (keyData == Keys.Insert)
+            {
+                if (entriesTreeView.SelectedNode == entriesTreeView.Nodes[0])
+                {
+                    AddNewEntry();
+                    return true;
+                }
+
+                else
+                {
+                    AddNewDriver();
+                    return true;
+                }
+            }
+
             if (keyData == Keys.Up)
             {
                 TreeNode node = entriesTreeView.SelectedNode;
@@ -520,7 +599,7 @@ namespace ACC_Dedicated_Server_GUI
                 node.TreeView.SelectedNode = node;
                 return true;
             }
-            //capture down arrow key
+
             if (keyData == Keys.Down)
             {
                 TreeNode node = entriesTreeView.SelectedNode;

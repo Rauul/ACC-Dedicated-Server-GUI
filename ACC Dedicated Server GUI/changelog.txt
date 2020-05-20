@@ -2,6 +2,7 @@
 Moved 'Formation Lap' to event options
 Added 'simracerWeatherConditions' option *Experimental*
 Added 'isFixedConditionQualification' option *Experimental*
+Changed check boxes check state for better visibility
 ----------------------------------------------------------------------
 V1.2.4.1
 Fixed an issue where you would get an unexpected error if you tried and save the entry list without scrolling up to the top

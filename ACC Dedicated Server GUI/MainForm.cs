@@ -41,32 +41,60 @@ namespace ACC_Dedicated_Server_GUI
         const int WM_SYSCOMMAND = 274;
         const int SC_MAXIMIZE = 61488;
 
+        //public static List<Car> carList = new List<Car>()
+        //{
+        //    new Car("    Porsche 991 GT3", 0),
+        //    new Car("    Mercedes AMG GT3", 1),
+        //    new Car("    Ferrari 488 GT3", 2),
+        //    new Car("    Audi R8 LMS", 3),
+        //    new Car("    Lamborghini Huracan GT3", 4),
+        //    new Car("    McLaren 650S GT3", 5),
+        //    new Car("    Nissan GT-R Nismo GT3 (2018)", 6),
+        //    new Car("    BMW M6 GT3", 7),
+        //    new Car("    Bentley Continental GT3 (2018)", 8),
+        //    new Car("    Porsche 991 II GT3 Cup", 9),
+        //    new Car("    Nissan GT-R Nismo GT3 (2017)", 10),
+        //    new Car("    Bentley Continental GT3 (2016)", 11),
+        //    new Car("    Aston Martin Vantage V12 GT3", 12),
+        //    new Car("    Lamborghini Gallardo R-EX", 13),
+        //    new Car("    Jaguar G3", 14),
+        //    new Car("    Lexus RC F GT3", 15),
+        //    new Car("    Lamborghini Huracan Evo (2019)", 16),
+        //    new Car("    Honda NSX GT3", 17),
+        //    new Car("    Lamborghini Huracan SuperTrofeo", 18),
+        //    new Car("    Audi R8 LMS Evo (2019)", 19),
+        //    new Car("    Aston Martin Vantage V8 GT3", 20),
+        //    new Car("    Honda NSX Evo (2019)", 21),
+        //    new Car("    McLaren 720S GT3", 22),
+        //    new Car("    Porsche 911 II GT3 R (2019)", 23)
+        //};
+
         public static List<Car> carList = new List<Car>()
         {
-            new Car("    Porsche 991 GT3", 0),
-            new Car("    Mercedes AMG GT3", 1),
-            new Car("    Ferrari 488 GT3", 2),
-            new Car("    Audi R8 LMS", 3),
-            new Car("    Lamborghini Huracan GT3", 4),
-            new Car("    McLaren 650S GT3", 5),
-            new Car("    Nissan GT-R Nismo GT3 (2018)", 6),
-            new Car("    BMW M6 GT3", 7),
-            new Car("    Bentley Continental GT3 (2018)", 8),
-            new Car("    Porsche 991 II GT3 Cup", 9),
-            new Car("    Nissan GT-R Nismo GT3 (2017)", 10),
-            new Car("    Bentley Continental GT3 (2016)", 11),
-            new Car("    Aston Martin Vantage V12 GT3", 12),
-            new Car("    Lamborghini Gallardo R-EX", 13),
-            new Car("    Jaguar G3", 14),
-            new Car("    Lexus RC F GT3", 15),
-            new Car("    Lamborghini Huracan Evo (2019)", 16),
-            new Car("    Honda NSX GT3", 17),
-            new Car("    Lamborghini Huracan SuperTrofeo", 18),
-            new Car("    Audi R8 LMS Evo (2019)", 19),
             new Car("    Aston Martin Vantage V8 GT3", 20),
+            new Car("    Aston Martin Vantage V12 GT3", 12),
+            new Car("    Audi R8 LMS", 3),
+            new Car("    Audi R8 LMS Evo (2019)", 19),
+            new Car("    Bentley Continental GT3 (2016)", 11),
+            new Car("    Bentley Continental GT3 (2018)", 8),
+            new Car("    BMW M6 GT3", 7),
+            new Car("    Ferrari 488 GT3", 2),
             new Car("    Honda NSX Evo (2019)", 21),
+            new Car("    Honda NSX GT3", 17),
+            new Car("    Jaguar G3", 14),
+            new Car("    Lamborghini Gallardo R-EX", 13),
+            new Car("    Lamborghini Huracan Evo (2019)", 16),
+            new Car("    Lamborghini Huracan GT3", 4),
+            new Car("    Lamborghini Huracan SuperTrofeo", 18),
+            new Car("    Lexus RC F GT3", 15),
+            new Car("    McLaren 650S GT3", 5),
             new Car("    McLaren 720S GT3", 22),
-            new Car("    Porsche 911 II GT3 R (2019)", 23)
+            new Car("    Mercedes AMG GT3", 1),
+            new Car("    Nissan GT-R Nismo GT3 (2017)", 10),
+            new Car("    Nissan GT-R Nismo GT3 (2018)", 6),
+            new Car("    Porsche 911 II GT3 R (2019)", 23),
+            new Car("    Porsche 991 GT3", 0),
+            new Car("    Porsche 991 II GT3 Cup", 9)
         };
 
         public static List<Track> trackList = new List<Track>()
@@ -508,7 +536,7 @@ namespace ACC_Dedicated_Server_GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            carList.Sort(delegate (Car x, Car y) { return x.model.CompareTo(y.model); });
+            //carList.Sort(delegate (Car x, Car y) { return x.model.CompareTo(y.model); });
             TrackComboBox.Items.AddRange(trackList.ToArray());
             TrackComboBox.SelectedIndex = 0;
             consolePanel.Visible = false;
@@ -546,6 +574,9 @@ namespace ACC_Dedicated_Server_GUI
 #else
             string fileName = "accServer";
 #endif
+            if (!pCheckBox.Checked && !qCheckBox.Checked)
+                pCheckBox.Checked = true;
+
             try
             {
                 if (consolePanel.Visible)
@@ -580,6 +611,7 @@ namespace ACC_Dedicated_Server_GUI
 
         private void practiceCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+            checkBox_CheckChanged(pCheckBox);
             pPanel.Enabled = pCheckBox.Checked;
             if (!pCheckBox.Checked && !qCheckBox.Checked)
                 qCheckBox.Checked = true;
@@ -587,6 +619,7 @@ namespace ACC_Dedicated_Server_GUI
 
         private void qualifyingCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+            checkBox_CheckChanged(qCheckBox);
             qPanel.Enabled = qCheckBox.Checked;
             if (!pCheckBox.Checked && !qCheckBox.Checked)
                 pCheckBox.Checked = true;
@@ -594,6 +627,7 @@ namespace ACC_Dedicated_Server_GUI
 
         private void raceCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+            checkBox_CheckChanged(rCheckBox);
             rPanel.Enabled = rCheckBox.Checked;
         }
 
@@ -679,5 +713,127 @@ namespace ACC_Dedicated_Server_GUI
             else if (IsFormOpen("BoPForm"))
                 boPForm.Activate();
         }
+
+        #region Custom checkstates
+        private void checkBox_CheckChanged(CheckBox checkBox)
+        {
+            checkBox.CheckState = checkBox.Checked ? CheckState.Indeterminate : CheckState.Unchecked;
+        }
+
+        private void isRaceLockedCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(isRaceLockedCheckBox);
+        }
+
+        private void shortFormationCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(shortFormationCheckBox);
+        }
+
+        private void registerToLobbyCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(registerToLobbyCheckBox);
+        }
+
+        private void lanDiscoveryCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(lanDiscoveryCheckBox);
+        }
+
+        private void dumpLeaderboardsCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(dumpLeaderboardsCheckBox);
+        }
+
+        private void dumpEntryListCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(dumpEntryListCheckBox);
+        }
+
+        private void randomizeTrackCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(randomizeTrackCheckBox);
+        }
+
+        private void autoDQCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(autoDQCheckBox);
+        }
+
+        private void idealLineCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(idealLineCheckBox);
+        }
+
+        private void autoSteeringCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(autoSteeringCheckBox);
+        }
+
+        private void autoPitLimiterCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(autoPitLimiterCheckBox);
+        }
+
+        private void autoShiftingCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(autoShiftingCheckBox);
+        }
+
+        private void autoStartEngineCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(autoStartEngineCheckBox);
+        }
+
+        private void autoWipersCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(autoWipersCheckBox);
+        }
+
+        private void autoLightsCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(autoLightsCheckBox);
+        }
+
+        private void autoClutchCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(autoClutchCheckBox);
+        }
+
+        private void refuellingAllowedCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(refuellingAllowedCheckBox);
+        }
+
+        private void refuellingTimeFixedCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(refuellingTimeFixedCheckBox);
+        }
+
+        private void refuellingRequiredCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(refuellingRequiredCheckBox);
+        }
+
+        private void tyreChangeRequiredCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(tyreChangeRequiredCheckBox);
+        }
+
+        private void driverSwapRequiredCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(driverSwapRequiredCheckBox);
+        }
+
+        private void simracerWeatherConditionsCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(simracerWeatherConditionsCheckBox);
+        }
+
+        private void fixedConditionQualificationCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(fixedConditionQualificationCheckBox);
+        }
+        #endregion
     }
 }
