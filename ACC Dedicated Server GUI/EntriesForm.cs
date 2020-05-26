@@ -114,27 +114,57 @@ namespace ACC_Dedicated_Server_GUI
 
         private void entriesTreeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            // Selecting the root node
-            var selectedNode = entriesTreeView.SelectedNode;
-            if (selectedNode.Text == "Entries")
-            {
-                carSettingsPanel.Visible = false;
-                driverSettingsPanel.Visible = false;
-            }
-            // Selecting a car
-            else if (selectedNode.Parent.Text == "Entries")
-            {
-                carSettingsPanel.Visible = true;
-                driverSettingsPanel.Visible = false;
-                LoadCarPanel(selectedNode);
-            }
+
+            //-------------------------------------------------------------------------
             // Selecting a driver
-            else
+            TreeNode selectedNode = entriesTreeView.SelectedNode;
+            if (selectedNode.Tag is Driver)
             {
                 carSettingsPanel.Visible = false;
                 driverSettingsPanel.Visible = true;
                 LoadDriverPanel(selectedNode);
             }
+            // Selecting a car
+            else if (selectedNode.Tag is Entry)
+            {
+                carSettingsPanel.Visible = true;
+                driverSettingsPanel.Visible = false;
+                LoadCarPanel(selectedNode);
+            }
+            // Selecting root node
+            else
+            {
+                carSettingsPanel.Visible = false;
+                driverSettingsPanel.Visible = false;
+            }
+
+            //-------------------------------------------------------------------------
+
+
+
+
+
+
+            //// Selecting the root node
+            //var selectedNode = entriesTreeView.SelectedNode;
+            //if (selectedNode.Text == "Entries")
+            //{
+                
+            //}
+            //// Selecting a car
+            //else if (selectedNode.Parent.Text == "Entries")
+            //{
+            //    carSettingsPanel.Visible = true;
+            //    driverSettingsPanel.Visible = false;
+            //    LoadCarPanel(selectedNode);
+            //}
+            //// Selecting a driver
+            //else
+            //{
+            //    carSettingsPanel.Visible = false;
+            //    driverSettingsPanel.Visible = true;
+            //    LoadDriverPanel(selectedNode);
+            //}
         }
 
         private void LoadDriverPanel(TreeNode selectedNode)

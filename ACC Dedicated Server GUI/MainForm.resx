@@ -154,6 +154,25 @@ reached 0:00. Something like 107% of the expected laptime is
 recommended (careful: default 2 minutes does not properly
 cover tracks like Spa or Silverstone).</value>
   </data>
+  <data name="simracerWeatherConditionsCheckBox.ToolTip" xml:space="preserve">
+    <value>EXPERIMENTAL/NOT SUPPORTED
+If enabled, this will limit the maximum rain/wetness
+to roughly 2/3 of the maximum values,
+translating to something between medium and heavy rain.
+It may be useful if you feel forced to run very low cloudLevel
+and weatherRandomness values just to avoid thunderstorm;
+however high levels (0.4+ clouds combined with 5+
+randomness) will still result in quite serious conditions. </value>
+  </data>
+  <data name="fixedConditionQualificationCheckBox.ToolTip" xml:space="preserve">
+    <value>EXPERIMENTAL/NOT SUPPORTED
+If enabled, the server will take the
+rain, cloud, temperature, rain levels literally and make sure
+whatever is set up never changes. Daytime transitions still
+happen visually, but do not affect the temperatures or road
+wetness. Also rubber/grip is always the same. This is intended
+to be used for private league qualification servers only.</value>
+  </data>
   <data name="maxDriversCountNumericUpDown.ToolTip" xml:space="preserve">
     <value>In driver swap situations, set this to the maximum
 number of drivers on a car. When an entry has
@@ -193,25 +212,6 @@ without getting a penalty. Can be used to balance
 fuel efficient cars in endurance races. The stint
 time resets in the pitlane, no real stop is required.
 -1 will disable the stint times.</value>
-  </data>
-  <data name="simracerWeatherConditionsCheckBox.ToolTip" xml:space="preserve">
-    <value>EXPERIMENTAL/NOT SUPPORTED
-If enabled, this will limit the maximum rain/wetness
-to roughly 2/3 of the maximum values,
-translating to something between medium and heavy rain.
-It may be useful if you feel forced to run very low cloudLevel
-and weatherRandomness values just to avoid thunderstorm;
-however high levels (0.4+ clouds combined with 5+
-randomness) will still result in quite serious conditions. </value>
-  </data>
-  <data name="fixedConditionQualificationCheckBox.ToolTip" xml:space="preserve">
-    <value>EXPERIMENTAL/NOT SUPPORTED
-If enabled, the server will take the
-rain, cloud, temperature, rain levels literally and make sure
-whatever is set up never changes. Daytime transitions still
-happen visually, but do not affect the temperatures or road
-wetness. Also rubber/grip is always the same. This is intended
-to be used for private league qualification servers only.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

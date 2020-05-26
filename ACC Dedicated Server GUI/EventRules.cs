@@ -10,6 +10,7 @@
             public int mandatoryPitstopCount { get; set; }
             public int maxTotalDrivingTime { get; set; }
             public int maxDriversCount { get; set; }
+            public int tyreSetCount { get; set; }
             public bool isRefuellingAllowedInRace { get; set; }
             public bool isRefuellingTimeFixed { get; set; }
             public bool isMandatoryPitstopRefuellingRequired { get; set; }

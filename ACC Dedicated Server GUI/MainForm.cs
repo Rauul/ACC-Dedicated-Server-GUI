@@ -369,6 +369,7 @@ namespace ACC_Dedicated_Server_GUI
                 mandatoryPitStopCountNumericUpDown.Value = InNumUpDnRange(eventRules.mandatoryPitstopCount, mandatoryPitStopCountNumericUpDown);
                 maxTotalDrivingTimeNumericUpDown.Value = InNumUpDnRange(eventRules.maxTotalDrivingTime, maxTotalDrivingTimeNumericUpDown);
                 maxDriversCountNumericUpDown.Value = InNumUpDnRange(eventRules.maxDriversCount, maxDriversCountNumericUpDown);
+                tyreSetsNumericUpDown.Value = InNumUpDnRange(eventRules.tyreSetCount, tyreSetsNumericUpDown);
                 refuellingAllowedCheckBox.Checked = eventRules.isRefuellingAllowedInRace;
                 refuellingTimeFixedCheckBox.Checked = eventRules.isRefuellingTimeFixed;
                 refuellingRequiredCheckBox.Checked = eventRules.isMandatoryPitstopRefuellingRequired;
@@ -513,6 +514,7 @@ namespace ACC_Dedicated_Server_GUI
             eventRules.mandatoryPitstopCount = (int)mandatoryPitStopCountNumericUpDown.Value;
             eventRules.maxTotalDrivingTime = (int)maxTotalDrivingTimeNumericUpDown.Value;
             eventRules.maxDriversCount = (int)maxDriversCountNumericUpDown.Value;
+            eventRules.tyreSetCount = (int)tyreSetsNumericUpDown.Value;
             eventRules.isRefuellingAllowedInRace = refuellingAllowedCheckBox.Checked;
             eventRules.isRefuellingTimeFixed = refuellingTimeFixedCheckBox.Checked;
             eventRules.isMandatoryPitstopRefuellingRequired = refuellingRequiredCheckBox.Checked;

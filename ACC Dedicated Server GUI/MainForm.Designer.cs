@@ -55,8 +55,6 @@
             this.label40 = new System.Windows.Forms.Label();
             this.centralEntryListPathButton = new System.Windows.Forms.Button();
             this.autoDQCheckBox = new System.Windows.Forms.CheckBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.formationLapTypeComboBox = new System.Windows.Forms.ComboBox();
             this.randomizeTrackCheckBox = new System.Windows.Forms.CheckBox();
             this.centraEntryListPathTextBox = new System.Windows.Forms.TextBox();
             this.dumpEntryListCheckBox = new System.Windows.Forms.CheckBox();
@@ -75,6 +73,8 @@
             this.SARequirementNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.TRRequirementNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.maxCarSlotsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label39 = new System.Windows.Forms.Label();
+            this.formationLapTypeComboBox = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -96,6 +96,8 @@
             this.qCheckBox = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.simracerWeatherConditionsCheckBox = new System.Windows.Forms.CheckBox();
+            this.fixedConditionQualificationCheckBox = new System.Windows.Forms.CheckBox();
             this.weatherRandomnessTrackBar = new System.Windows.Forms.TrackBar();
             this.label33 = new System.Windows.Forms.Label();
             this.weatherRandomnessLabel = new System.Windows.Forms.Label();
@@ -163,8 +165,8 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.donationButton = new System.Windows.Forms.Button();
             this.donationLabel = new System.Windows.Forms.Label();
-            this.simracerWeatherConditionsCheckBox = new System.Windows.Forms.CheckBox();
-            this.fixedConditionQualificationCheckBox = new System.Windows.Forms.CheckBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.tyreSetsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).BeginInit();
@@ -206,6 +208,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mandatoryPitStopCountNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tyreSetsNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // serverNameTextBox
@@ -497,30 +500,6 @@
             this.toolTip.SetToolTip(this.autoDQCheckBox, resources.GetString("autoDQCheckBox.ToolTip"));
             this.autoDQCheckBox.UseVisualStyleBackColor = true;
             this.autoDQCheckBox.CheckedChanged += new System.EventHandler(this.autoDQCheckBox_CheckedChanged);
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(3, 90);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(74, 13);
-            this.label39.TabIndex = 39;
-            this.label39.Text = "Formation Lap";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // formationLapTypeComboBox
-            // 
-            this.formationLapTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.formationLapTypeComboBox.FormattingEnabled = true;
-            this.formationLapTypeComboBox.Items.AddRange(new object[] {
-            "Default",
-            "Old",
-            "Manual"});
-            this.formationLapTypeComboBox.Location = new System.Drawing.Point(112, 87);
-            this.formationLapTypeComboBox.Name = "formationLapTypeComboBox";
-            this.formationLapTypeComboBox.Size = new System.Drawing.Size(63, 21);
-            this.formationLapTypeComboBox.TabIndex = 38;
-            this.formationLapTypeComboBox.TabStop = false;
             // 
             // randomizeTrackCheckBox
             // 
@@ -824,6 +803,30 @@
             this.maxCarSlotsNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
             this.maxCarSlotsNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(3, 116);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(74, 13);
+            this.label39.TabIndex = 39;
+            this.label39.Text = "Formation Lap";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // formationLapTypeComboBox
+            // 
+            this.formationLapTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.formationLapTypeComboBox.FormattingEnabled = true;
+            this.formationLapTypeComboBox.Items.AddRange(new object[] {
+            "Default",
+            "Old",
+            "Manual"});
+            this.formationLapTypeComboBox.Location = new System.Drawing.Point(112, 113);
+            this.formationLapTypeComboBox.Name = "formationLapTypeComboBox";
+            this.formationLapTypeComboBox.Size = new System.Drawing.Size(63, 21);
+            this.formationLapTypeComboBox.TabIndex = 38;
+            this.formationLapTypeComboBox.TabStop = false;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -903,13 +906,13 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Location = new System.Drawing.Point(363, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(368, 569);
+            this.panel3.Size = new System.Drawing.Size(368, 632);
             this.panel3.TabIndex = 18;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(18, 166);
+            this.label32.Location = new System.Drawing.Point(18, 199);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(39, 13);
             this.label32.TabIndex = 3;
@@ -938,7 +941,7 @@
             // pCheckBox
             // 
             this.pCheckBox.AutoSize = true;
-            this.pCheckBox.Location = new System.Drawing.Point(213, 7);
+            this.pCheckBox.Location = new System.Drawing.Point(213, 43);
             this.pCheckBox.Name = "pCheckBox";
             this.pCheckBox.Size = new System.Drawing.Size(65, 17);
             this.pCheckBox.TabIndex = 32;
@@ -950,6 +953,8 @@
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label42);
+            this.panel5.Controls.Add(this.tyreSetsNumericUpDown);
             this.panel5.Controls.Add(this.label41);
             this.panel5.Controls.Add(this.overTimeNumericUpDown);
             this.panel5.Controls.Add(this.label23);
@@ -960,7 +965,7 @@
             this.panel5.Controls.Add(this.postRaceWaitTimeNumericUpDown);
             this.panel5.Location = new System.Drawing.Point(14, 49);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(180, 115);
+            this.panel5.Size = new System.Drawing.Size(180, 141);
             this.panel5.TabIndex = 0;
             // 
             // label41
@@ -1078,7 +1083,7 @@
             // rCheckBox
             // 
             this.rCheckBox.AutoSize = true;
-            this.rCheckBox.Location = new System.Drawing.Point(213, 290);
+            this.rCheckBox.Location = new System.Drawing.Point(213, 338);
             this.rCheckBox.Name = "rCheckBox";
             this.rCheckBox.Size = new System.Drawing.Size(52, 17);
             this.rCheckBox.TabIndex = 37;
@@ -1090,7 +1095,7 @@
             // qCheckBox
             // 
             this.qCheckBox.AutoSize = true;
-            this.qCheckBox.Location = new System.Drawing.Point(213, 148);
+            this.qCheckBox.Location = new System.Drawing.Point(213, 190);
             this.qCheckBox.Name = "qCheckBox";
             this.qCheckBox.Size = new System.Drawing.Size(72, 17);
             this.qCheckBox.TabIndex = 36;
@@ -1102,7 +1107,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(18, 416);
+            this.label20.Location = new System.Drawing.Point(18, 472);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(48, 13);
             this.label20.TabIndex = 35;
@@ -1126,10 +1131,38 @@
             this.panel11.Controls.Add(this.tempTrackBar);
             this.panel11.Controls.Add(this.tempLabel);
             this.panel11.Controls.Add(this.label30);
-            this.panel11.Location = new System.Drawing.Point(14, 423);
+            this.panel11.Location = new System.Drawing.Point(14, 479);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(339, 135);
             this.panel11.TabIndex = 34;
+            // 
+            // simracerWeatherConditionsCheckBox
+            // 
+            this.simracerWeatherConditionsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.simracerWeatherConditionsCheckBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.simracerWeatherConditionsCheckBox.Location = new System.Drawing.Point(2, 112);
+            this.simracerWeatherConditionsCheckBox.Name = "simracerWeatherConditionsCheckBox";
+            this.simracerWeatherConditionsCheckBox.Size = new System.Drawing.Size(139, 17);
+            this.simracerWeatherConditionsCheckBox.TabIndex = 43;
+            this.simracerWeatherConditionsCheckBox.TabStop = false;
+            this.simracerWeatherConditionsCheckBox.Text = "Sim Weather Conditions";
+            this.toolTip.SetToolTip(this.simracerWeatherConditionsCheckBox, resources.GetString("simracerWeatherConditionsCheckBox.ToolTip"));
+            this.simracerWeatherConditionsCheckBox.UseVisualStyleBackColor = true;
+            this.simracerWeatherConditionsCheckBox.CheckedChanged += new System.EventHandler(this.simracerWeatherConditionsCheckBox_CheckedChanged);
+            // 
+            // fixedConditionQualificationCheckBox
+            // 
+            this.fixedConditionQualificationCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.fixedConditionQualificationCheckBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.fixedConditionQualificationCheckBox.Location = new System.Drawing.Point(175, 112);
+            this.fixedConditionQualificationCheckBox.Name = "fixedConditionQualificationCheckBox";
+            this.fixedConditionQualificationCheckBox.Size = new System.Drawing.Size(156, 17);
+            this.fixedConditionQualificationCheckBox.TabIndex = 44;
+            this.fixedConditionQualificationCheckBox.TabStop = false;
+            this.fixedConditionQualificationCheckBox.Text = "Fixed Qualification Weather";
+            this.toolTip.SetToolTip(this.fixedConditionQualificationCheckBox, resources.GetString("fixedConditionQualificationCheckBox.ToolTip"));
+            this.fixedConditionQualificationCheckBox.UseVisualStyleBackColor = true;
+            this.fixedConditionQualificationCheckBox.CheckedChanged += new System.EventHandler(this.fixedConditionQualificationCheckBox_CheckedChanged);
             // 
             // weatherRandomnessTrackBar
             // 
@@ -1278,7 +1311,7 @@
             this.rPanel.Controls.Add(this.label28);
             this.rPanel.Controls.Add(this.label29);
             this.rPanel.Enabled = false;
-            this.rPanel.Location = new System.Drawing.Point(200, 296);
+            this.rPanel.Location = new System.Drawing.Point(200, 344);
             this.rPanel.Name = "rPanel";
             this.rPanel.Size = new System.Drawing.Size(153, 116);
             this.rPanel.TabIndex = 32;
@@ -1437,7 +1470,7 @@
             this.qPanel.Controls.Add(this.label21);
             this.qPanel.Controls.Add(this.label22);
             this.qPanel.Enabled = false;
-            this.qPanel.Location = new System.Drawing.Point(200, 154);
+            this.qPanel.Location = new System.Drawing.Point(200, 196);
             this.qPanel.Name = "qPanel";
             this.qPanel.Size = new System.Drawing.Size(153, 116);
             this.qPanel.TabIndex = 22;
@@ -1596,7 +1629,7 @@
             this.pPanel.Controls.Add(this.label16);
             this.pPanel.Controls.Add(this.label15);
             this.pPanel.Enabled = false;
-            this.pPanel.Location = new System.Drawing.Point(200, 13);
+            this.pPanel.Location = new System.Drawing.Point(200, 49);
             this.pPanel.Name = "pPanel";
             this.pPanel.Size = new System.Drawing.Size(153, 116);
             this.pPanel.TabIndex = 2;
@@ -1761,9 +1794,9 @@
             this.panel4.Controls.Add(this.label27);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.label17);
-            this.panel4.Location = new System.Drawing.Point(14, 172);
+            this.panel4.Location = new System.Drawing.Point(14, 205);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(180, 240);
+            this.panel4.Size = new System.Drawing.Size(180, 255);
             this.panel4.TabIndex = 1;
             // 
             // maxDriversCountNumericUpDown
@@ -1805,7 +1838,7 @@
             // driverSwapRequiredCheckBox
             // 
             this.driverSwapRequiredCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.driverSwapRequiredCheckBox.Location = new System.Drawing.Point(3, 219);
+            this.driverSwapRequiredCheckBox.Location = new System.Drawing.Point(3, 234);
             this.driverSwapRequiredCheckBox.Name = "driverSwapRequiredCheckBox";
             this.driverSwapRequiredCheckBox.Size = new System.Drawing.Size(172, 17);
             this.driverSwapRequiredCheckBox.TabIndex = 60;
@@ -1820,7 +1853,7 @@
             // tyreChangeRequiredCheckBox
             // 
             this.tyreChangeRequiredCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tyreChangeRequiredCheckBox.Location = new System.Drawing.Point(3, 198);
+            this.tyreChangeRequiredCheckBox.Location = new System.Drawing.Point(3, 210);
             this.tyreChangeRequiredCheckBox.Name = "tyreChangeRequiredCheckBox";
             this.tyreChangeRequiredCheckBox.Size = new System.Drawing.Size(172, 17);
             this.tyreChangeRequiredCheckBox.TabIndex = 59;
@@ -1832,7 +1865,7 @@
             // refuellingRequiredCheckBox
             // 
             this.refuellingRequiredCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.refuellingRequiredCheckBox.Location = new System.Drawing.Point(3, 177);
+            this.refuellingRequiredCheckBox.Location = new System.Drawing.Point(3, 186);
             this.refuellingRequiredCheckBox.Name = "refuellingRequiredCheckBox";
             this.refuellingRequiredCheckBox.Size = new System.Drawing.Size(172, 17);
             this.refuellingRequiredCheckBox.TabIndex = 58;
@@ -1844,7 +1877,7 @@
             // refuellingTimeFixedCheckBox
             // 
             this.refuellingTimeFixedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.refuellingTimeFixedCheckBox.Location = new System.Drawing.Point(3, 156);
+            this.refuellingTimeFixedCheckBox.Location = new System.Drawing.Point(3, 162);
             this.refuellingTimeFixedCheckBox.Name = "refuellingTimeFixedCheckBox";
             this.refuellingTimeFixedCheckBox.Size = new System.Drawing.Size(172, 17);
             this.refuellingTimeFixedCheckBox.TabIndex = 57;
@@ -1856,7 +1889,7 @@
             // refuellingAllowedCheckBox
             // 
             this.refuellingAllowedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.refuellingAllowedCheckBox.Location = new System.Drawing.Point(3, 135);
+            this.refuellingAllowedCheckBox.Location = new System.Drawing.Point(3, 138);
             this.refuellingAllowedCheckBox.Name = "refuellingAllowedCheckBox";
             this.refuellingAllowedCheckBox.Size = new System.Drawing.Size(172, 17);
             this.refuellingAllowedCheckBox.TabIndex = 56;
@@ -2017,7 +2050,7 @@
             this.launchServerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.launchServerButton.Location = new System.Drawing.Point(184, 517);
             this.launchServerButton.Name = "launchServerButton";
-            this.launchServerButton.Size = new System.Drawing.Size(168, 98);
+            this.launchServerButton.Size = new System.Drawing.Size(168, 91);
             this.launchServerButton.TabIndex = 0;
             this.launchServerButton.TabStop = false;
             this.launchServerButton.Text = "Start/Stop Server";
@@ -2030,7 +2063,7 @@
             this.entryListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.entryListButton.Location = new System.Drawing.Point(12, 517);
             this.entryListButton.Name = "entryListButton";
-            this.entryListButton.Size = new System.Drawing.Size(166, 46);
+            this.entryListButton.Size = new System.Drawing.Size(166, 42);
             this.entryListButton.TabIndex = 21;
             this.entryListButton.TabStop = false;
             this.entryListButton.Text = "Entry List";
@@ -2041,9 +2074,9 @@
             // 
             this.BopButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.BopButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BopButton.Location = new System.Drawing.Point(12, 569);
+            this.BopButton.Location = new System.Drawing.Point(12, 566);
             this.BopButton.Name = "BopButton";
-            this.BopButton.Size = new System.Drawing.Size(166, 46);
+            this.BopButton.Size = new System.Drawing.Size(166, 42);
             this.BopButton.TabIndex = 22;
             this.BopButton.TabStop = false;
             this.BopButton.Text = "Additional BoP";
@@ -2061,11 +2094,11 @@
             this.donationButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.donationButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.donationButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.donationButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donationButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.donationButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.donationButton.Location = new System.Drawing.Point(517, 588);
+            this.donationButton.Location = new System.Drawing.Point(184, 614);
             this.donationButton.Name = "donationButton";
-            this.donationButton.Size = new System.Drawing.Size(214, 30);
+            this.donationButton.Size = new System.Drawing.Size(168, 30);
             this.donationButton.TabIndex = 23;
             this.donationButton.Text = "B U Y   M E   A   B E E R";
             this.donationButton.UseVisualStyleBackColor = false;
@@ -2075,46 +2108,52 @@
             // 
             this.donationLabel.AutoSize = true;
             this.donationLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.donationLabel.Location = new System.Drawing.Point(361, 589);
+            this.donationLabel.Location = new System.Drawing.Point(9, 614);
             this.donationLabel.Name = "donationLabel";
             this.donationLabel.Size = new System.Drawing.Size(150, 26);
             this.donationLabel.TabIndex = 24;
             this.donationLabel.Text = "Donations are never expected\r\n      but always appreciated";
             // 
-            // simracerWeatherConditionsCheckBox
+            // label42
             // 
-            this.simracerWeatherConditionsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.simracerWeatherConditionsCheckBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.simracerWeatherConditionsCheckBox.Location = new System.Drawing.Point(2, 112);
-            this.simracerWeatherConditionsCheckBox.Name = "simracerWeatherConditionsCheckBox";
-            this.simracerWeatherConditionsCheckBox.Size = new System.Drawing.Size(139, 17);
-            this.simracerWeatherConditionsCheckBox.TabIndex = 43;
-            this.simracerWeatherConditionsCheckBox.TabStop = false;
-            this.simracerWeatherConditionsCheckBox.Text = "Sim Weather Conditions";
-            this.toolTip.SetToolTip(this.simracerWeatherConditionsCheckBox, resources.GetString("simracerWeatherConditionsCheckBox.ToolTip"));
-            this.simracerWeatherConditionsCheckBox.UseVisualStyleBackColor = true;
-            this.simracerWeatherConditionsCheckBox.CheckedChanged += new System.EventHandler(this.simracerWeatherConditionsCheckBox_CheckedChanged);
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(3, 89);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(52, 13);
+            this.label42.TabIndex = 41;
+            this.label42.Text = "Tyre Sets";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // fixedConditionQualificationCheckBox
+            // tyreSetsNumericUpDown
             // 
-            this.fixedConditionQualificationCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.fixedConditionQualificationCheckBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.fixedConditionQualificationCheckBox.Location = new System.Drawing.Point(175, 112);
-            this.fixedConditionQualificationCheckBox.Name = "fixedConditionQualificationCheckBox";
-            this.fixedConditionQualificationCheckBox.Size = new System.Drawing.Size(156, 17);
-            this.fixedConditionQualificationCheckBox.TabIndex = 44;
-            this.fixedConditionQualificationCheckBox.TabStop = false;
-            this.fixedConditionQualificationCheckBox.Text = "Fixed Qualification Weather";
-            this.toolTip.SetToolTip(this.fixedConditionQualificationCheckBox, resources.GetString("fixedConditionQualificationCheckBox.ToolTip"));
-            this.fixedConditionQualificationCheckBox.UseVisualStyleBackColor = true;
-            this.fixedConditionQualificationCheckBox.CheckedChanged += new System.EventHandler(this.fixedConditionQualificationCheckBox_CheckedChanged);
+            this.tyreSetsNumericUpDown.Location = new System.Drawing.Point(125, 87);
+            this.tyreSetsNumericUpDown.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.tyreSetsNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.tyreSetsNumericUpDown.Name = "tyreSetsNumericUpDown";
+            this.tyreSetsNumericUpDown.Size = new System.Drawing.Size(50, 20);
+            this.tyreSetsNumericUpDown.TabIndex = 40;
+            this.tyreSetsNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.tyreSetsNumericUpDown, "Specify the number of permitted tyre sets, 1-50 are possible.");
+            this.tyreSetsNumericUpDown.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(744, 630);
+            this.ClientSize = new System.Drawing.Size(744, 657);
             this.Controls.Add(this.donationLabel);
             this.Controls.Add(this.donationButton);
             this.Controls.Add(this.BopButton);
@@ -2132,7 +2171,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ACC Dedicated Server GUI V1.2.4.1X";
+            this.Text = "ACC Dedicated Server GUI V1.2.5";
             this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -2189,6 +2228,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mandatoryPitStopCountNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tyreSetsNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2331,6 +2371,8 @@
         private System.Windows.Forms.Label donationLabel;
         private System.Windows.Forms.CheckBox simracerWeatherConditionsCheckBox;
         private System.Windows.Forms.CheckBox fixedConditionQualificationCheckBox;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.NumericUpDown tyreSetsNumericUpDown;
     }
 }
 

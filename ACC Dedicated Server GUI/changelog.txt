@@ -1,8 +1,10 @@
-﻿V1.
+﻿V1.2.5
 Moved 'Formation Lap' to event options
+Added 'Tyre Sets' option
 Added 'simracerWeatherConditions' option *Experimental*
 Added 'isFixedConditionQualification' option *Experimental*
-Changed check boxes check state for better visibility
+Changed check boxes check state
+Added function to add/delete entries in the entry list with Insert/Delete
 ----------------------------------------------------------------------
 V1.2.4.1
 Fixed an issue where you would get an unexpected error if you tried and save the entry list without scrolling up to the top
