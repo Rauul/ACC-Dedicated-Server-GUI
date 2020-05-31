@@ -43,6 +43,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.idealLineCheckBox = new System.Windows.Forms.CheckBox();
+            this.CheckBoximageList = new System.Windows.Forms.ImageList(this.components);
             this.autoSteeringCheckBox = new System.Windows.Forms.CheckBox();
             this.autoShiftingCheckBox = new System.Windows.Forms.CheckBox();
             this.autoPitLimiterCheckBox = new System.Windows.Forms.CheckBox();
@@ -86,6 +87,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.pCheckBox = new System.Windows.Forms.CheckBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label42 = new System.Windows.Forms.Label();
+            this.tyreSetsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label41 = new System.Windows.Forms.Label();
             this.overTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label23 = new System.Windows.Forms.Label();
@@ -165,8 +168,12 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.donationButton = new System.Windows.Forms.Button();
             this.donationLabel = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.tyreSetsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.assistRulesPanel = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.configurationPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).BeginInit();
@@ -175,10 +182,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.SARequirementNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TRRequirementNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxCarSlotsNumericUpDown)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxStabilityNumericUpDown)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tyreSetsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.overTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.preRaceWaitTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postRaceWaitTimeNumericUpDown)).BeginInit();
@@ -208,7 +215,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.mandatoryPitStopCountNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tyreSetsNumericUpDown)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.assistRulesPanel.SuspendLayout();
+            this.configurationPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // serverNameTextBox
@@ -322,108 +331,207 @@
             // 
             // idealLineCheckBox
             // 
-            this.idealLineCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.idealLineCheckBox.Location = new System.Drawing.Point(3, 15);
+            this.idealLineCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.idealLineCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.idealLineCheckBox.FlatAppearance.BorderSize = 0;
+            this.idealLineCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.idealLineCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.idealLineCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.idealLineCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.idealLineCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idealLineCheckBox.ForeColor = System.Drawing.SystemColors.Control;
+            this.idealLineCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.idealLineCheckBox.ImageIndex = 0;
+            this.idealLineCheckBox.ImageList = this.CheckBoximageList;
+            this.idealLineCheckBox.Location = new System.Drawing.Point(0, 0);
             this.idealLineCheckBox.Name = "idealLineCheckBox";
-            this.idealLineCheckBox.Size = new System.Drawing.Size(137, 17);
+            this.idealLineCheckBox.Size = new System.Drawing.Size(683, 32);
             this.idealLineCheckBox.TabIndex = 0;
             this.idealLineCheckBox.TabStop = false;
-            this.idealLineCheckBox.Text = "Ideal Line";
-            this.idealLineCheckBox.UseVisualStyleBackColor = true;
+            this.idealLineCheckBox.Text = "IDEAL LINE";
+            this.idealLineCheckBox.UseVisualStyleBackColor = false;
             this.idealLineCheckBox.CheckedChanged += new System.EventHandler(this.idealLineCheckBox_CheckedChanged);
+            // 
+            // CheckBoximageList
+            // 
+            this.CheckBoximageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("CheckBoximageList.ImageStream")));
+            this.CheckBoximageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.CheckBoximageList.Images.SetKeyName(0, "chk_off4.png");
+            this.CheckBoximageList.Images.SetKeyName(1, "chk_on4.png");
+            this.CheckBoximageList.Images.SetKeyName(2, "chk_mid4.png");
             // 
             // autoSteeringCheckBox
             // 
-            this.autoSteeringCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoSteeringCheckBox.Location = new System.Drawing.Point(3, 39);
+            this.autoSteeringCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.autoSteeringCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoSteeringCheckBox.FlatAppearance.BorderSize = 0;
+            this.autoSteeringCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoSteeringCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoSteeringCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoSteeringCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autoSteeringCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoSteeringCheckBox.ForeColor = System.Drawing.SystemColors.Control;
+            this.autoSteeringCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.autoSteeringCheckBox.ImageIndex = 0;
+            this.autoSteeringCheckBox.ImageList = this.CheckBoximageList;
+            this.autoSteeringCheckBox.Location = new System.Drawing.Point(0, 40);
             this.autoSteeringCheckBox.Name = "autoSteeringCheckBox";
-            this.autoSteeringCheckBox.Size = new System.Drawing.Size(137, 17);
+            this.autoSteeringCheckBox.Size = new System.Drawing.Size(683, 32);
             this.autoSteeringCheckBox.TabIndex = 1;
             this.autoSteeringCheckBox.TabStop = false;
-            this.autoSteeringCheckBox.Text = "Auto Steering";
-            this.autoSteeringCheckBox.UseVisualStyleBackColor = true;
+            this.autoSteeringCheckBox.Text = "AUTO STEERING";
+            this.autoSteeringCheckBox.UseVisualStyleBackColor = false;
             this.autoSteeringCheckBox.CheckedChanged += new System.EventHandler(this.autoSteeringCheckBox_CheckedChanged);
             // 
             // autoShiftingCheckBox
             // 
-            this.autoShiftingCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoShiftingCheckBox.Location = new System.Drawing.Point(3, 87);
+            this.autoShiftingCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.autoShiftingCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoShiftingCheckBox.FlatAppearance.BorderSize = 0;
+            this.autoShiftingCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoShiftingCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoShiftingCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoShiftingCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autoShiftingCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoShiftingCheckBox.ForeColor = System.Drawing.SystemColors.Control;
+            this.autoShiftingCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.autoShiftingCheckBox.ImageIndex = 0;
+            this.autoShiftingCheckBox.ImageList = this.CheckBoximageList;
+            this.autoShiftingCheckBox.Location = new System.Drawing.Point(0, 120);
             this.autoShiftingCheckBox.Name = "autoShiftingCheckBox";
-            this.autoShiftingCheckBox.Size = new System.Drawing.Size(137, 17);
+            this.autoShiftingCheckBox.Size = new System.Drawing.Size(683, 32);
             this.autoShiftingCheckBox.TabIndex = 3;
             this.autoShiftingCheckBox.TabStop = false;
-            this.autoShiftingCheckBox.Text = "Auto Shifting";
-            this.autoShiftingCheckBox.UseVisualStyleBackColor = true;
+            this.autoShiftingCheckBox.Text = "AUTO SHIFTING";
+            this.autoShiftingCheckBox.UseVisualStyleBackColor = false;
             this.autoShiftingCheckBox.CheckedChanged += new System.EventHandler(this.autoShiftingCheckBox_CheckedChanged);
             // 
             // autoPitLimiterCheckBox
             // 
-            this.autoPitLimiterCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoPitLimiterCheckBox.Location = new System.Drawing.Point(3, 63);
+            this.autoPitLimiterCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.autoPitLimiterCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoPitLimiterCheckBox.FlatAppearance.BorderSize = 0;
+            this.autoPitLimiterCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoPitLimiterCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoPitLimiterCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoPitLimiterCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autoPitLimiterCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoPitLimiterCheckBox.ForeColor = System.Drawing.SystemColors.Control;
+            this.autoPitLimiterCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.autoPitLimiterCheckBox.ImageIndex = 0;
+            this.autoPitLimiterCheckBox.ImageList = this.CheckBoximageList;
+            this.autoPitLimiterCheckBox.Location = new System.Drawing.Point(0, 80);
             this.autoPitLimiterCheckBox.Name = "autoPitLimiterCheckBox";
-            this.autoPitLimiterCheckBox.Size = new System.Drawing.Size(137, 17);
+            this.autoPitLimiterCheckBox.Size = new System.Drawing.Size(683, 32);
             this.autoPitLimiterCheckBox.TabIndex = 2;
             this.autoPitLimiterCheckBox.TabStop = false;
-            this.autoPitLimiterCheckBox.Text = "Auto Pit Limiter";
-            this.autoPitLimiterCheckBox.UseVisualStyleBackColor = true;
+            this.autoPitLimiterCheckBox.Text = "AUTO PIT LIMITER";
+            this.autoPitLimiterCheckBox.UseVisualStyleBackColor = false;
             this.autoPitLimiterCheckBox.CheckedChanged += new System.EventHandler(this.autoPitLimiterCheckBox_CheckedChanged);
             // 
             // autoWipersCheckBox
             // 
-            this.autoWipersCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoWipersCheckBox.Location = new System.Drawing.Point(194, 39);
+            this.autoWipersCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.autoWipersCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoWipersCheckBox.FlatAppearance.BorderSize = 0;
+            this.autoWipersCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoWipersCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoWipersCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoWipersCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autoWipersCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoWipersCheckBox.ForeColor = System.Drawing.SystemColors.Control;
+            this.autoWipersCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.autoWipersCheckBox.ImageIndex = 0;
+            this.autoWipersCheckBox.ImageList = this.CheckBoximageList;
+            this.autoWipersCheckBox.Location = new System.Drawing.Point(0, 200);
             this.autoWipersCheckBox.Name = "autoWipersCheckBox";
-            this.autoWipersCheckBox.Size = new System.Drawing.Size(134, 17);
+            this.autoWipersCheckBox.Size = new System.Drawing.Size(683, 32);
             this.autoWipersCheckBox.TabIndex = 15;
             this.autoWipersCheckBox.TabStop = false;
-            this.autoWipersCheckBox.Text = "Auto Wiper";
-            this.autoWipersCheckBox.UseVisualStyleBackColor = true;
+            this.autoWipersCheckBox.Text = "AUTO WIPER";
+            this.autoWipersCheckBox.UseVisualStyleBackColor = false;
             this.autoWipersCheckBox.CheckedChanged += new System.EventHandler(this.autoWipersCheckBox_CheckedChanged);
             // 
             // autoClutchCheckBox
             // 
-            this.autoClutchCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoClutchCheckBox.Location = new System.Drawing.Point(194, 87);
+            this.autoClutchCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.autoClutchCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoClutchCheckBox.FlatAppearance.BorderSize = 0;
+            this.autoClutchCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoClutchCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoClutchCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoClutchCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autoClutchCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoClutchCheckBox.ForeColor = System.Drawing.SystemColors.Control;
+            this.autoClutchCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.autoClutchCheckBox.ImageIndex = 0;
+            this.autoClutchCheckBox.ImageList = this.CheckBoximageList;
+            this.autoClutchCheckBox.Location = new System.Drawing.Point(0, 280);
             this.autoClutchCheckBox.Name = "autoClutchCheckBox";
-            this.autoClutchCheckBox.Size = new System.Drawing.Size(134, 17);
+            this.autoClutchCheckBox.Size = new System.Drawing.Size(683, 32);
             this.autoClutchCheckBox.TabIndex = 17;
             this.autoClutchCheckBox.TabStop = false;
-            this.autoClutchCheckBox.Text = "Auto Clutch";
-            this.autoClutchCheckBox.UseVisualStyleBackColor = true;
+            this.autoClutchCheckBox.Text = "AUTO CLUTCH";
+            this.autoClutchCheckBox.UseVisualStyleBackColor = false;
             this.autoClutchCheckBox.CheckedChanged += new System.EventHandler(this.autoClutchCheckBox_CheckedChanged);
             // 
             // autoStartEngineCheckBox
             // 
-            this.autoStartEngineCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoStartEngineCheckBox.Location = new System.Drawing.Point(194, 15);
+            this.autoStartEngineCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.autoStartEngineCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoStartEngineCheckBox.FlatAppearance.BorderSize = 0;
+            this.autoStartEngineCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoStartEngineCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoStartEngineCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoStartEngineCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autoStartEngineCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoStartEngineCheckBox.ForeColor = System.Drawing.SystemColors.Control;
+            this.autoStartEngineCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.autoStartEngineCheckBox.ImageIndex = 0;
+            this.autoStartEngineCheckBox.ImageList = this.CheckBoximageList;
+            this.autoStartEngineCheckBox.Location = new System.Drawing.Point(0, 160);
             this.autoStartEngineCheckBox.Name = "autoStartEngineCheckBox";
-            this.autoStartEngineCheckBox.Size = new System.Drawing.Size(134, 17);
+            this.autoStartEngineCheckBox.Size = new System.Drawing.Size(683, 32);
             this.autoStartEngineCheckBox.TabIndex = 14;
             this.autoStartEngineCheckBox.TabStop = false;
-            this.autoStartEngineCheckBox.Text = "Auto Start Engine";
-            this.autoStartEngineCheckBox.UseVisualStyleBackColor = true;
+            this.autoStartEngineCheckBox.Text = "AUTO START ENGINE";
+            this.autoStartEngineCheckBox.UseVisualStyleBackColor = false;
             this.autoStartEngineCheckBox.CheckedChanged += new System.EventHandler(this.autoStartEngineCheckBox_CheckedChanged);
             // 
             // autoLightsCheckBox
             // 
-            this.autoLightsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoLightsCheckBox.Location = new System.Drawing.Point(194, 63);
+            this.autoLightsCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.autoLightsCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoLightsCheckBox.FlatAppearance.BorderSize = 0;
+            this.autoLightsCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoLightsCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoLightsCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.autoLightsCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autoLightsCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoLightsCheckBox.ForeColor = System.Drawing.SystemColors.Control;
+            this.autoLightsCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.autoLightsCheckBox.ImageIndex = 0;
+            this.autoLightsCheckBox.ImageList = this.CheckBoximageList;
+            this.autoLightsCheckBox.Location = new System.Drawing.Point(0, 240);
             this.autoLightsCheckBox.Name = "autoLightsCheckBox";
-            this.autoLightsCheckBox.Size = new System.Drawing.Size(134, 17);
+            this.autoLightsCheckBox.Size = new System.Drawing.Size(683, 32);
             this.autoLightsCheckBox.TabIndex = 16;
             this.autoLightsCheckBox.TabStop = false;
-            this.autoLightsCheckBox.Text = "Auto Lights";
-            this.autoLightsCheckBox.UseVisualStyleBackColor = true;
+            this.autoLightsCheckBox.Text = "AUTO LIGHTS";
+            this.autoLightsCheckBox.UseVisualStyleBackColor = false;
             this.autoLightsCheckBox.CheckedChanged += new System.EventHandler(this.autoLightsCheckBox_CheckedChanged);
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(4, 114);
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(3, 320);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 13);
+            this.label9.Size = new System.Drawing.Size(157, 32);
             this.label9.TabIndex = 19;
-            this.label9.Text = "Max Stability Control";
+            this.label9.Text = "MAX STABILITY CONTROL";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
             // 
@@ -438,14 +546,6 @@
             this.panel1.Controls.Add(this.dumpLeaderboardsCheckBox);
             this.panel1.Controls.Add(this.isRaceLockedCheckBox);
             this.panel1.Controls.Add(this.shortFormationCheckBox);
-            this.panel1.Controls.Add(this.registerToLobbyCheckBox);
-            this.panel1.Controls.Add(this.lanDiscoveryCheckBox);
-            this.panel1.Controls.Add(this.maxConnectionsNumericUpDown);
-            this.panel1.Controls.Add(this.label38);
-            this.panel1.Controls.Add(this.UDPNumericUpDown);
-            this.panel1.Controls.Add(this.TCPNumericUpDown);
-            this.panel1.Controls.Add(this.label34);
-            this.panel1.Controls.Add(this.label35);
             this.panel1.Controls.Add(this.RCRequirementNumericUpDown);
             this.panel1.Controls.Add(this.SARequirementNumericUpDown);
             this.panel1.Controls.Add(this.TRRequirementNumericUpDown);
@@ -462,7 +562,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(1120, 38);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(340, 347);
             this.panel1.TabIndex = 14;
@@ -583,49 +683,72 @@
             // 
             // registerToLobbyCheckBox
             // 
+            this.registerToLobbyCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.registerToLobbyCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.registerToLobbyCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.registerToLobbyCheckBox.Checked = true;
             this.registerToLobbyCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.registerToLobbyCheckBox.Location = new System.Drawing.Point(181, 200);
+            this.registerToLobbyCheckBox.FlatAppearance.BorderSize = 0;
+            this.registerToLobbyCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.registerToLobbyCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerToLobbyCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerToLobbyCheckBox.ForeColor = System.Drawing.SystemColors.Control;
+            this.registerToLobbyCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.registerToLobbyCheckBox.ImageIndex = 0;
+            this.registerToLobbyCheckBox.ImageList = this.CheckBoximageList;
+            this.registerToLobbyCheckBox.Location = new System.Drawing.Point(0, 0);
             this.registerToLobbyCheckBox.Name = "registerToLobbyCheckBox";
-            this.registerToLobbyCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.registerToLobbyCheckBox.Size = new System.Drawing.Size(683, 32);
             this.registerToLobbyCheckBox.TabIndex = 31;
             this.registerToLobbyCheckBox.TabStop = false;
-            this.registerToLobbyCheckBox.Text = "Register To Lobby";
+            this.registerToLobbyCheckBox.Text = "REGISTER TO LOBBY";
             this.toolTip.SetToolTip(this.registerToLobbyCheckBox, "When disabled, this server won’t register to the backend. Is useful for LAN\r\nsess" +
         "ions. If disabled, the server is declared “Private Multiplayer”.");
-            this.registerToLobbyCheckBox.UseVisualStyleBackColor = true;
+            this.registerToLobbyCheckBox.UseVisualStyleBackColor = false;
             this.registerToLobbyCheckBox.CheckedChanged += new System.EventHandler(this.registerToLobbyCheckBox_CheckedChanged);
             // 
             // lanDiscoveryCheckBox
             // 
+            this.lanDiscoveryCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.lanDiscoveryCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.lanDiscoveryCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lanDiscoveryCheckBox.Location = new System.Drawing.Point(181, 224);
+            this.lanDiscoveryCheckBox.FlatAppearance.BorderSize = 0;
+            this.lanDiscoveryCheckBox.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.lanDiscoveryCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lanDiscoveryCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lanDiscoveryCheckBox.ForeColor = System.Drawing.SystemColors.Control;
+            this.lanDiscoveryCheckBox.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lanDiscoveryCheckBox.ImageIndex = 0;
+            this.lanDiscoveryCheckBox.ImageList = this.CheckBoximageList;
+            this.lanDiscoveryCheckBox.Location = new System.Drawing.Point(0, 40);
             this.lanDiscoveryCheckBox.Name = "lanDiscoveryCheckBox";
-            this.lanDiscoveryCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.lanDiscoveryCheckBox.Size = new System.Drawing.Size(683, 32);
             this.lanDiscoveryCheckBox.TabIndex = 30;
             this.lanDiscoveryCheckBox.TabStop = false;
-            this.lanDiscoveryCheckBox.Text = "Lan Discovery";
+            this.lanDiscoveryCheckBox.Text = "LAN DISCOVERY";
             this.toolTip.SetToolTip(this.lanDiscoveryCheckBox, "Defines if the server will listen to LAN discovery requests. Can be turned \r\noff " +
         "for dedicated servers.");
-            this.lanDiscoveryCheckBox.UseVisualStyleBackColor = true;
+            this.lanDiscoveryCheckBox.UseVisualStyleBackColor = false;
             this.lanDiscoveryCheckBox.CheckedChanged += new System.EventHandler(this.lanDiscoveryCheckBox_CheckedChanged);
             // 
             // maxConnectionsNumericUpDown
             // 
+            this.maxConnectionsNumericUpDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.maxConnectionsNumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maxConnectionsNumericUpDown.ForeColor = System.Drawing.SystemColors.Control;
             this.maxConnectionsNumericUpDown.Increment = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.maxConnectionsNumericUpDown.Location = new System.Drawing.Point(121, 262);
+            this.maxConnectionsNumericUpDown.Location = new System.Drawing.Point(643, 83);
             this.maxConnectionsNumericUpDown.Maximum = new decimal(new int[] {
             999,
             0,
             0,
             0});
             this.maxConnectionsNumericUpDown.Name = "maxConnectionsNumericUpDown";
-            this.maxConnectionsNumericUpDown.Size = new System.Drawing.Size(54, 20);
+            this.maxConnectionsNumericUpDown.Size = new System.Drawing.Size(54, 25);
             this.maxConnectionsNumericUpDown.TabIndex = 9;
             this.maxConnectionsNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.toolTip.SetToolTip(this.maxConnectionsNumericUpDown, resources.GetString("maxConnectionsNumericUpDown.ToolTip"));
@@ -640,23 +763,29 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(4, 264);
+            this.label38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.label38.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.SystemColors.Control;
+            this.label38.Location = new System.Drawing.Point(4, 89);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(89, 13);
+            this.label38.Size = new System.Drawing.Size(130, 17);
             this.label38.TabIndex = 28;
-            this.label38.Text = "Max Connections";
+            this.label38.Text = "MAX CONNECTIONS";
             this.label38.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // UDPNumericUpDown
             // 
-            this.UDPNumericUpDown.Location = new System.Drawing.Point(122, 290);
+            this.UDPNumericUpDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.UDPNumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UDPNumericUpDown.ForeColor = System.Drawing.SystemColors.Control;
+            this.UDPNumericUpDown.Location = new System.Drawing.Point(643, 118);
             this.UDPNumericUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.UDPNumericUpDown.Name = "UDPNumericUpDown";
-            this.UDPNumericUpDown.Size = new System.Drawing.Size(54, 20);
+            this.UDPNumericUpDown.Size = new System.Drawing.Size(54, 25);
             this.UDPNumericUpDown.TabIndex = 10;
             this.UDPNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.UDPNumericUpDown.Value = new decimal(new int[] {
@@ -669,14 +798,17 @@
             // 
             // TCPNumericUpDown
             // 
-            this.TCPNumericUpDown.Location = new System.Drawing.Point(122, 317);
+            this.TCPNumericUpDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.TCPNumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TCPNumericUpDown.ForeColor = System.Drawing.SystemColors.Control;
+            this.TCPNumericUpDown.Location = new System.Drawing.Point(643, 152);
             this.TCPNumericUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.TCPNumericUpDown.Name = "TCPNumericUpDown";
-            this.TCPNumericUpDown.Size = new System.Drawing.Size(54, 20);
+            this.TCPNumericUpDown.Size = new System.Drawing.Size(54, 25);
             this.TCPNumericUpDown.TabIndex = 11;
             this.TCPNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TCPNumericUpDown.Value = new decimal(new int[] {
@@ -690,21 +822,27 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(5, 292);
+            this.label34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.label34.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.SystemColors.Control;
+            this.label34.Location = new System.Drawing.Point(4, 124);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(52, 13);
+            this.label34.Size = new System.Drawing.Size(68, 17);
             this.label34.TabIndex = 25;
-            this.label34.Text = "UDP Port";
+            this.label34.Text = "UDP PORT";
             this.label34.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(5, 319);
+            this.label35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.label35.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.SystemColors.Control;
+            this.label35.Location = new System.Drawing.Point(4, 158);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(50, 13);
+            this.label35.Size = new System.Drawing.Size(64, 17);
             this.label35.TabIndex = 24;
-            this.label35.Text = "TCP Port";
+            this.label35.Text = "TCP PORT";
             this.label35.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // RCRequirementNumericUpDown
@@ -830,7 +968,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 5);
+            this.label10.Location = new System.Drawing.Point(1125, 31);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 13);
             this.label10.TabIndex = 15;
@@ -839,7 +977,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(17, 362);
+            this.label11.Location = new System.Drawing.Point(1125, 388);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 13);
             this.label11.TabIndex = 17;
@@ -849,39 +987,33 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.maxStabilityNumericUpDown);
-            this.panel2.Controls.Add(this.idealLineCheckBox);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.autoSteeringCheckBox);
-            this.panel2.Controls.Add(this.autoLightsCheckBox);
-            this.panel2.Controls.Add(this.autoWipersCheckBox);
-            this.panel2.Controls.Add(this.autoShiftingCheckBox);
-            this.panel2.Controls.Add(this.autoStartEngineCheckBox);
-            this.panel2.Controls.Add(this.autoClutchCheckBox);
-            this.panel2.Controls.Add(this.autoPitLimiterCheckBox);
-            this.panel2.Location = new System.Drawing.Point(12, 368);
+            this.panel2.Location = new System.Drawing.Point(1120, 394);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(340, 143);
             this.panel2.TabIndex = 16;
             // 
             // maxStabilityNumericUpDown
             // 
+            this.maxStabilityNumericUpDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.maxStabilityNumericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maxStabilityNumericUpDown.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maxStabilityNumericUpDown.ForeColor = System.Drawing.SystemColors.Control;
             this.maxStabilityNumericUpDown.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.maxStabilityNumericUpDown.Location = new System.Drawing.Point(185, 112);
+            this.maxStabilityNumericUpDown.Location = new System.Drawing.Point(637, 326);
             this.maxStabilityNumericUpDown.Name = "maxStabilityNumericUpDown";
-            this.maxStabilityNumericUpDown.Size = new System.Drawing.Size(143, 20);
+            this.maxStabilityNumericUpDown.Size = new System.Drawing.Size(59, 25);
             this.maxStabilityNumericUpDown.TabIndex = 20;
             this.maxStabilityNumericUpDown.TabStop = false;
-            this.maxStabilityNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maxStabilityNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(375, 6);
+            this.label12.Location = new System.Drawing.Point(1483, 32);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 13);
             this.label12.TabIndex = 19;
@@ -904,7 +1036,7 @@
             this.panel3.Controls.Add(this.qPanel);
             this.panel3.Controls.Add(this.pPanel);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(363, 12);
+            this.panel3.Location = new System.Drawing.Point(1471, 38);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(368, 632);
             this.panel3.TabIndex = 18;
@@ -967,6 +1099,40 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(180, 141);
             this.panel5.TabIndex = 0;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(3, 89);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(52, 13);
+            this.label42.TabIndex = 41;
+            this.label42.Text = "Tyre Sets";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // tyreSetsNumericUpDown
+            // 
+            this.tyreSetsNumericUpDown.Location = new System.Drawing.Point(125, 87);
+            this.tyreSetsNumericUpDown.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.tyreSetsNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.tyreSetsNumericUpDown.Name = "tyreSetsNumericUpDown";
+            this.tyreSetsNumericUpDown.Size = new System.Drawing.Size(50, 20);
+            this.tyreSetsNumericUpDown.TabIndex = 40;
+            this.tyreSetsNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.toolTip.SetToolTip(this.tyreSetsNumericUpDown, "Specify the number of permitted tyre sets, 1-50 are possible.");
+            this.tyreSetsNumericUpDown.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             // 
             // label41
             // 
@@ -2048,7 +2214,7 @@
             // 
             this.launchServerButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.launchServerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.launchServerButton.Location = new System.Drawing.Point(184, 517);
+            this.launchServerButton.Location = new System.Drawing.Point(1292, 543);
             this.launchServerButton.Name = "launchServerButton";
             this.launchServerButton.Size = new System.Drawing.Size(168, 91);
             this.launchServerButton.TabIndex = 0;
@@ -2061,7 +2227,7 @@
             // 
             this.entryListButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.entryListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.entryListButton.Location = new System.Drawing.Point(12, 517);
+            this.entryListButton.Location = new System.Drawing.Point(1120, 543);
             this.entryListButton.Name = "entryListButton";
             this.entryListButton.Size = new System.Drawing.Size(166, 42);
             this.entryListButton.TabIndex = 21;
@@ -2074,7 +2240,7 @@
             // 
             this.BopButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.BopButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BopButton.Location = new System.Drawing.Point(12, 566);
+            this.BopButton.Location = new System.Drawing.Point(1120, 592);
             this.BopButton.Name = "BopButton";
             this.BopButton.Size = new System.Drawing.Size(166, 42);
             this.BopButton.TabIndex = 22;
@@ -2096,7 +2262,7 @@
             this.donationButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.donationButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.donationButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.donationButton.Location = new System.Drawing.Point(184, 614);
+            this.donationButton.Location = new System.Drawing.Point(1292, 640);
             this.donationButton.Name = "donationButton";
             this.donationButton.Size = new System.Drawing.Size(168, 30);
             this.donationButton.TabIndex = 23;
@@ -2108,52 +2274,118 @@
             // 
             this.donationLabel.AutoSize = true;
             this.donationLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.donationLabel.Location = new System.Drawing.Point(9, 614);
+            this.donationLabel.Location = new System.Drawing.Point(1117, 640);
             this.donationLabel.Name = "donationLabel";
             this.donationLabel.Size = new System.Drawing.Size(150, 26);
             this.donationLabel.TabIndex = 24;
             this.donationLabel.Text = "Donations are never expected\r\n      but always appreciated";
             // 
-            // label42
+            // listBox1
             // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(3, 89);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(52, 13);
-            this.label42.TabIndex = 41;
-            this.label42.Text = "Tyre Sets";
-            this.label42.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 32;
+            this.listBox1.Items.AddRange(new object[] {
+            "ASSISTRULES",
+            "BOP",
+            "CONFIGURATION",
+            "ENTRYLIST",
+            "EVENT",
+            "EVENTRULES",
+            "SETTINGS",
+            "",
+            "",
+            "GUI SETTINGS"});
+            this.listBox1.Location = new System.Drawing.Point(3, 5);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(199, 320);
+            this.listBox1.TabIndex = 0;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // tyreSetsNumericUpDown
+            // panel6
             // 
-            this.tyreSetsNumericUpDown.Location = new System.Drawing.Point(125, 87);
-            this.tyreSetsNumericUpDown.Maximum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.tyreSetsNumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.tyreSetsNumericUpDown.Name = "tyreSetsNumericUpDown";
-            this.tyreSetsNumericUpDown.Size = new System.Drawing.Size(50, 20);
-            this.tyreSetsNumericUpDown.TabIndex = 40;
-            this.tyreSetsNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.toolTip.SetToolTip(this.tyreSetsNumericUpDown, "Specify the number of permitted tyre sets, 1-50 are possible.");
-            this.tyreSetsNumericUpDown.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
+            this.panel6.Controls.Add(this.configurationPanel);
+            this.panel6.Controls.Add(this.assistRulesPanel);
+            this.panel6.Controls.Add(this.listBox1);
+            this.panel6.Location = new System.Drawing.Point(12, 38);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1099, 685);
+            this.panel6.TabIndex = 25;
+            // 
+            // assistRulesPanel
+            // 
+            this.assistRulesPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.assistRulesPanel.Controls.Add(this.button2);
+            this.assistRulesPanel.Controls.Add(this.button1);
+            this.assistRulesPanel.Controls.Add(this.maxStabilityNumericUpDown);
+            this.assistRulesPanel.Controls.Add(this.idealLineCheckBox);
+            this.assistRulesPanel.Controls.Add(this.autoPitLimiterCheckBox);
+            this.assistRulesPanel.Controls.Add(this.label9);
+            this.assistRulesPanel.Controls.Add(this.autoClutchCheckBox);
+            this.assistRulesPanel.Controls.Add(this.autoSteeringCheckBox);
+            this.assistRulesPanel.Controls.Add(this.autoStartEngineCheckBox);
+            this.assistRulesPanel.Controls.Add(this.autoLightsCheckBox);
+            this.assistRulesPanel.Controls.Add(this.autoShiftingCheckBox);
+            this.assistRulesPanel.Controls.Add(this.autoWipersCheckBox);
+            this.assistRulesPanel.Location = new System.Drawing.Point(208, 5);
+            this.assistRulesPanel.Name = "assistRulesPanel";
+            this.assistRulesPanel.Size = new System.Drawing.Size(795, 623);
+            this.assistRulesPanel.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Sui Generis Free", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(702, 320);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(32, 32);
+            this.button2.TabIndex = 22;
+            this.button2.Text = ">";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Sui Generis Free", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(599, 320);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(32, 32);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "<";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // configurationPanel
+            // 
+            this.configurationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.configurationPanel.Controls.Add(this.label38);
+            this.configurationPanel.Controls.Add(this.label35);
+            this.configurationPanel.Controls.Add(this.label34);
+            this.configurationPanel.Controls.Add(this.TCPNumericUpDown);
+            this.configurationPanel.Controls.Add(this.UDPNumericUpDown);
+            this.configurationPanel.Controls.Add(this.maxConnectionsNumericUpDown);
+            this.configurationPanel.Controls.Add(this.lanDiscoveryCheckBox);
+            this.configurationPanel.Controls.Add(this.registerToLobbyCheckBox);
+            this.configurationPanel.Location = new System.Drawing.Point(208, 5);
+            this.configurationPanel.Name = "configurationPanel";
+            this.configurationPanel.Size = new System.Drawing.Size(795, 623);
+            this.configurationPanel.TabIndex = 23;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(744, 657);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.ClientSize = new System.Drawing.Size(2054, 917);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.donationLabel);
             this.Controls.Add(this.donationButton);
             this.Controls.Add(this.BopButton);
@@ -2184,13 +2416,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.SARequirementNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TRRequirementNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxCarSlotsNumericUpDown)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxStabilityNumericUpDown)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tyreSetsNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.overTimeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.preRaceWaitTimeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postRaceWaitTimeNumericUpDown)).EndInit();
@@ -2228,7 +2459,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.mandatoryPitStopCountNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tyreSetsNumericUpDown)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.assistRulesPanel.ResumeLayout(false);
+            this.configurationPanel.ResumeLayout(false);
+            this.configurationPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2373,6 +2607,13 @@
         private System.Windows.Forms.CheckBox fixedConditionQualificationCheckBox;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.NumericUpDown tyreSetsNumericUpDown;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel assistRulesPanel;
+        private System.Windows.Forms.ImageList CheckBoximageList;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel configurationPanel;
     }
 }
 

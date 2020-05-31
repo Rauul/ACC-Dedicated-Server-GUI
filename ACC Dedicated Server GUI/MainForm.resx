@@ -117,6 +117,138 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="CheckBoximageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>212, 17</value>
+  </metadata>
+  <data name="CheckBoximageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACC
+        HAAAAk1TRnQBSQFMAgEBAwEAARABAAEQAQABGAEAARgBAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFg
+        AwABGAMAAQEBAAEgBgABJBIAAwQBBgPmAfwD8AH/A/AB/wPwAf8D8AH/A/AB/wPwAf8D8AH/A/AB/wPw
+        Af8D8AH/A/AB/wPwAf8D8AH/A/AB/wPwAf8D8AH/A/AB/wPwAf8D8AH/A/AB/wPwAf8D1QHzAwQBBgHt
+        AZYBIwH9AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEf
+        Af8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHz
+        AZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AdgBjgEr
+        AfQDBAEGA5gB/AOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOe
+        Af8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOUAfNgAAMrAUAD8AH/VAAD8AH/AisBKgFA
+        AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGW
+        AR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/
+        AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8gGX
+        AR8B/wMrAUADngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/
+        A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/2AAAysBQAPwAf9UAAPwAf8BKwIq
+        AUAB8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHz
+        AZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEf
+        Af8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHz
+        AZYBHwH/AyoBQAOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOe
+        Af8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/YAADKwFAA/AB/1QAA/AB/wEr
+        AioBQAHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/
+        AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGW
+        AR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/
+        AfMBlQEhAf8DKgFAA54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/
+        A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf9gAAMrAUAD8AH/VAAD8AH/
+        ASsCKgFAAfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEf
+        Af8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHz
+        AZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEf
+        Af8B8wGVASEB/wMqAUADngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOe
+        Af8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/2AAAysBQAPwAf9UAAPw
+        Af8BKwIqAUAB8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGW
+        AR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/
+        AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGW
+        AR8B/wHzAZUBIQH/AyoBQAOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/
+        A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/YAADKwFAA/AB/1QA
+        A/AB/wErAioBQAHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHz
+        AZYBHwH/AfMBlQEgAf8B6wGVASUD/wH9Af8B7gG8AXYB/wHyAZcBHgH/AfMBlgEfAf8B8wGWAR8B/wHz
+        AZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEf
+        Af8B8wGVASEB/wMqAUADngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeBf8D+QH/A54B/wOe
+        Af8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/YAADKwFAA/AB/1QAA/AB/wEr
+        AioBQAHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/
+        AesBlQEkDf8B7AG5AXYB/wHxAZcBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGW
+        AR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlQEhAf8DKgFAA54B/wOeAf8DngH/
+        A54B/wOeAf8DngH/A54B/wOeDf8D/gH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/
+        A54B/wOeAf9gAAMrAUAD8AH/VAAD8AH/ASsCKgFAAfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEf
+        Af8B8wGWAR8B/wHzAZYBHwH/AeoBlQElFf8B7AHAAYAB/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHz
+        AZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZUBIQH/AyoBQAOe
+        Af8DngH/A54B/wOeAf8DngH/A54B/wOeFf8D+AH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOe
+        Af8DngH/A54B/2AAAysBQAPwAf9UAAPwAf8BKwIqAUAB8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGW
+        AR8B/wHzAZYBHwH/AesBlQElDf8B5QGTASoD/wH6Cf8B7AHAAYIB/wHzAZYBHwH/AfMBlgEfAf8B8wGW
+        AR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGVASEB/wMqAUADngH/
+        A54B/wOeAf8DngH/A54B/wOeDf8D3Q3/A/UB/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/
+        A54B/2AAAysBQAPwAf9UAAPwAf8BKwIqAUAB8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHs
+        AZUBJQv/Af4B/wHlAZQBKgH/AfMBlQEhAf8B9AGWAR8D/wH4Cf8B6wG9AX0B/wHzAZYBHwH/AfMBlgEf
+        Af8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlQEhAf8DKgFAA54B/wOe
+        Af8DngH/A54B/wOfDf8D4wH/A54B/wOeDf8D9gH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOe
+        Af9gAAMrAUAD8AH/VAAD8AH/ASsCKgFAAfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlQEhA/8B+gb/
+        Af4C/wHsAZUBKAH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfA/8B9wn/AesBuAFzAf8B8gGW
+        AR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGVASEB/wMqAUADngH/
+        A54B/wOeAf8Dng3/A/AB/wOeAf8DngH/A54B/wOeEf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/
+        YAADKwFAA/AB/1QAA/AB/wErAioBQAHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wH1AZUBIQH/AeMBnAE/
+        A/8B/QH/AeYBlQEqAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfIBlwEf
+        A/8B9wn/Ae0BwAGAAf8B8QGXAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlQEh
+        Af8DKgFAA54B/wOeAf8DngH/A54B/wPjBf8D6AH/A54B/wOeAf8DngH/A54B/wOeAf8DnQ3/A/MB/wOe
+        Af8DngH/A54B/wOeAf8DngH/A54B/2AAAysBQAPwAf9UAAPwAf8BKwIqAUAB8wGWAR8B/wHzAZYBHwH/
+        AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGW
+        AR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwP/AfYF/wH+A/8B7AHBAYEB/wHxAZcBHwH/
+        AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlQEhAf8DKgFAA54B/wOeAf8DngH/A54B/wOeAf8DngH/
+        A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOfDf8D7gH/A58B/wOeAf8DngH/A54B/wOeAf9gAAMr
+        AUAD8AH/VAAD8AH/ASsCKgFAAfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHz
+        AZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEf
+        Af8B8wGWAR8B/wH1AZUBIAP/AfoC/wH+Bv8B7AG+AXgB/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHz
+        AZUBIQH/AyoBQAOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOe
+        Af8DngH/A54N/wPvAf8DngH/A54B/wOeAf8DngH/YAADKwFAA/AB/1QAA/AB/wErAioBQAHzAZYBHwH/
+        AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGW
+        AR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wH1AZUBIQP/
+        AfoH/wH5Af8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGVASEB/wMqAUADngH/A54B/wOeAf8DngH/
+        A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DnQ3/A54B/wOeAf8DngH/
+        A54B/2AAAysBQAPwAf9UAAPwAf8BKwIqAUAB8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHz
+        AZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEf
+        Af8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGVASEB/wH1AZcBHwH/AeYBvQGCAf8B8AGWASEB/wHz
+        AZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZUBIQH/AyoBQAOeAf8DngH/A54B/wOeAf8DngH/A54B/wOe
+        Af8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngX/A7gB/wOeAf8DngH/A54B/wOe
+        Af9gAAMrAUAD8AH/VAAD8AH/ASsCKgFAAfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGW
+        AR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/
+        AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGW
+        AR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGVASEB/wMqAUADngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/
+        A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/
+        A54B/2AAAysBQAPwAf9UAAPwAf8BKwIqAUAB8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHz
+        AZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEf
+        Af8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHz
+        AZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZUBIQH/AyoBQAOeAf8DngH/A54B/wOeAf8DngH/A54B/wOe
+        Af8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOe
+        Af8DngH/YAADKwFAA/AB/1QAA/AB/wErAioBQAHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/
+        AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGW
+        AR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/
+        AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlQEhAf8DKgFAA54B/wOeAf8DngH/A54B/wOeAf8DngH/
+        A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/
+        A54B/wOeAf9gAAMrAUAD8AH/VAAD8AH/ASsCKgFAAfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEf
+        Af8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHz
+        AZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEf
+        Af8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGVASEB/wMqAUADngH/A54B/wOeAf8DngH/A54B/wOe
+        Af8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOe
+        Af8DngH/A54B/2AAAysBQAPwAf9UAAPwAf8CKwEqAUAB8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGW
+        AR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/
+        AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGW
+        AR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wH1AZYBHwH/AysBQAOeAf8DngH/A54B/wOeAf8DngH/
+        A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/
+        A54B/wOeAf8DngH/YAADDwEUA/AB/wPwAf8D8AH/A/AB/wPwAf8D8AH/A/AB/wPwAf8D8AH/A/AB/wPw
+        Af8D8AH/A/AB/wPwAf8D8AH/A/AB/wPwAf8D8AH/A/AB/wPwAf8D8AH/A/AB/wPmAfwDDwEUAfMBlgEf
+        Af8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHz
+        AZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEf
+        Af8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B8wGWAR8B/wHzAZYBHwH/AfMBlgEfAf8B5wGQASMB/AMP
+        ARQDngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A54B/wOe
+        Af8DngH/A54B/wOeAf8DngH/A54B/wOeAf8DngH/A5gB/GQAAw8BFAMrAUADKwFAAysBQAMrAUADKwFA
+        AysBQAMrAUADKwFAAysBQAMrAUADKwFAAysBQAMrAUADKwFAAysBQAMrAUADKwFAAysBQAMrAUADKwFA
+        AysBQAMEAQYEAAMPARQCKwEqAUABKwIqAUABKwIqAUABKwIqAUABKwIqAUABKwIqAUABKwIqAUABKwIq
+        AUABKwIqAUABKwIqAUABKwIqAUABKwIqAUABKwIqAUABKwIqAUABKwIqAUABKwIqAUABKwIqAUABKwIq
+        AUABKwIqAUABKwIqAUACKwEqAUADBAEGBAADDwEUAysBQAMqAUADKgFAAyoBQAMqAUADKgFAAyoBQAMq
+        AUADKgFAAyoBQAMqAUADKgFAAyoBQAMqAUADKgFAAyoBQAMqAUADKgFAAyoBQAMqAUADKwFAAwQBBmAA
+        AUIBTQE+BwABPgMAASgDAAFgAwABGAMAAQEBAAEBBQABIAEBFgAD/w0AAT8B/wH+CQABPwH/Af4JAAE/
+        Af8B/gkAAT8B/wH+CQABPwH/Af4JAAE/Af8B/gkAAT8B/wH+CQABPwH/Af4JAAE/Af8B/gkAAT8B/wH+
+        CQABPwH/Af4JAAE/Af8B/gkAAT8B/wH+CQABPwH/Af4JAAE/Af8B/gkAAT8B/wH+CQABPwH/Af4JAAE/
+        Af8B/gkAAT8B/wH+CQABPwH/Af4JAAE/Af8B/hUAAYACAAGAAgABgAUACw==
+</value>
+  </data>
   <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>122, 17</value>
   </metadata>
@@ -133,13 +265,6 @@ list, and is a way to save the defaultGridPositions which can be
 used to run a race without Qualifying session and predefined
 grid.</value>
   </data>
-  <data name="maxConnectionsNumericUpDown.ToolTip" xml:space="preserve">
-    <value>Replaces “maxClients”. The maximum amount of connections a server will
-accept at a time. If you own the hardware server, you can just set any high
-number you want. If you rented a 16 or 24 slot server, your Hosting Provider
-probably has set this here and doesn’t give you write-access to this
-configuration file.</value>
-  </data>
   <data name="maxCarSlotsNumericUpDown.ToolTip" xml:space="preserve">
     <value>Replaces “maxClientsOverride” and “spectatorSlots”. Defines
 the amount of car slots the server can occupy; this value is
@@ -147,6 +272,13 @@ overridden if the pit count of the track is lower, or with 30 for
 public MP. The gap between maxCarSlots and maxConnections
 defines how many spectators or other irregular connections (ie
 entry list entries) can be on the server.</value>
+  </data>
+  <data name="maxConnectionsNumericUpDown.ToolTip" xml:space="preserve">
+    <value>Replaces “maxClients”. The maximum amount of connections a server will
+accept at a time. If you own the hardware server, you can just set any high
+number you want. If you rented a 16 or 24 slot server, your Hosting Provider
+probably has set this here and doesn’t give you write-access to this
+configuration file.</value>
   </data>
   <data name="overTimeNumericUpDown.ToolTip" xml:space="preserve">
     <value>Time after that a session is forcibly closing after the timer

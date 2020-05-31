@@ -720,6 +720,10 @@ namespace ACC_Dedicated_Server_GUI
         private void checkBox_CheckChanged(CheckBox checkBox)
         {
             checkBox.CheckState = checkBox.Checked ? CheckState.Indeterminate : CheckState.Unchecked;
+            if (checkBox.Checked)
+                checkBox.ImageIndex = 1;
+            else
+                checkBox.ImageIndex = 0;
         }
 
         private void isRaceLockedCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -837,5 +841,17 @@ namespace ACC_Dedicated_Server_GUI
             checkBox_CheckChanged(fixedConditionQualificationCheckBox);
         }
         #endregion
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex == 0)
+            {
+                assistRulesPanel.BringToFront();
+            }
+            else if (listBox1.SelectedIndex == 2)
+            {
+                configurationPanel.BringToFront();
+            }
+        }
     }
 }
