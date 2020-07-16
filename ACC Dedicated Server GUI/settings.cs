@@ -10,11 +10,13 @@
             public string password { get; set; }
             public string spectatorPassword { get; set; }
             public string centralEntryListPath { get; set; }
+            public string carClass { get; set; }
             public int trackMedalsRequirement { get; set; }
             public int safetyRatingRequirement { get; set; }
             public int racecraftRatingRequirement { get; set; }
             public int maxCarSlots { get; set; }
             public int isRaceLocked { get; set; }
+            public int isLockedPrepPhase { get; set; }
             public int shortFormationLap { get; set; }
             public int dumpLeaderboards { get; set; }
             public int dumpEntryList { get; set; }

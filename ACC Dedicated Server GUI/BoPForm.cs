@@ -86,7 +86,7 @@ namespace ACC_Dedicated_Server_GUI
                 {
                     Entry entry = new Entry();
                     entry.track = track.alias;
-                    entry.carModel = i;
+                    entry.carModel = ((Car)carListBox.Items[i]).ID;
                     entry.ballast = 0;
                     entry.restrictor = 0;
 

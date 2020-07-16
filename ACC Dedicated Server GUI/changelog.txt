@@ -1,4 +1,10 @@
-﻿V1.2.5
+﻿V1.2.6
+Fixed an issue where you would get an error if you loaded an entry with "Car Number" set to -1
+Added 'carClass' drop down list
+Added 'isLockedPrepPhase' check box
+Added GT4 cars to car lists
+----------------------------------------------------------------------
+V1.2.5
 Moved 'Formation Lap' to event options
 Added 'Tyre Sets' option
 Added 'simracerWeatherConditions' option *Experimental*

@@ -69,6 +69,8 @@ namespace ACC_Dedicated_Server_GUI
         //    new Car("    Porsche 911 II GT3 R (2019)", 23)
         //};
 
+        //public static List<CarClass>
+
         public static List<Car> carList = new List<Car>()
         {
             new Car("    Aston Martin Vantage V8 GT3", 20),
@@ -94,7 +96,19 @@ namespace ACC_Dedicated_Server_GUI
             new Car("    Nissan GT-R Nismo GT3 (2018)", 6),
             new Car("    Porsche 911 II GT3 R (2019)", 23),
             new Car("    Porsche 991 GT3", 0),
-            new Car("    Porsche 991 II GT3 Cup", 9)
+            new Car("    Porsche 991 II GT3 Cup", 9),
+
+            new Car("    Alpine A1110 GT4", 50),
+            new Car("    Aston Martin Vantage GT4", 51),
+            new Car("    Audi R8 LMS GT4", 52),
+            new Car("    BMW M4 GT4", 53),
+            new Car("    Chevrolet Camaro GT4", 55),
+            new Car("    Ginetta G55 GT4", 56),
+            new Car("    KTM X-Bow GT4", 57),
+            new Car("    Maserati MC GT4", 58),
+            new Car("    McLaren 570S GT4", 59),
+            new Car("    Mercedes AMG GT4", 60),
+            new Car("    Porsche 718 Cayman GT4", 61)
         };
 
         public static List<Track> trackList = new List<Track>()
@@ -215,6 +229,7 @@ namespace ACC_Dedicated_Server_GUI
                 joinPasswordTextBox.Text = settings.password;
                 spectatorPasswordTextBox.Text = settings.spectatorPassword;
                 centraEntryListPathTextBox.Text = settings.centralEntryListPath;
+                carClassComboBox.SelectedItem = settings.carClass != null && settings.carClass.Length > 0 ? "    " + settings.carClass : "    FreeForAll";
                 maxCarSlotsNumericUpDown.Value = InNumUpDnRange(settings.maxCarSlots, maxCarSlotsNumericUpDown);
                 TRRequirementNumericUpDown.Value = InNumUpDnRange(settings.trackMedalsRequirement, TRRequirementNumericUpDown);
                 SARequirementNumericUpDown.Value = InNumUpDnRange(settings.safetyRatingRequirement, SARequirementNumericUpDown);
@@ -225,6 +240,7 @@ namespace ACC_Dedicated_Server_GUI
                 dumpLeaderboardsCheckBox.Checked = settings.dumpLeaderboards == 1 ? true : false;
                 randomizeTrackCheckBox.Checked = settings.randomizeTrackWhenEmpty == 1 ? true : false;
                 autoDQCheckBox.Checked = settings.allowAutoDQ == 1 ? true : false;
+                isPrepPhaseLockedCheckBox.Checked = settings.isLockedPrepPhase == 1 ? true : false;
                 switch (settings.formationLapType)
                 {
                     case 0:
@@ -401,6 +417,7 @@ namespace ACC_Dedicated_Server_GUI
             settings.adminPassword = adminPasswordTextBox.Text;
             settings.spectatorPassword = spectatorPasswordTextBox.Text;
             settings.centralEntryListPath = centraEntryListPathTextBox.Text;
+            settings.carClass = carClassComboBox.Text.Replace("    ", "");
             settings.maxCarSlots = (int)maxCarSlotsNumericUpDown.Value;
             settings.trackMedalsRequirement = (int)TRRequirementNumericUpDown.Value;
             settings.safetyRatingRequirement = (int)SARequirementNumericUpDown.Value;
@@ -418,6 +435,7 @@ namespace ACC_Dedicated_Server_GUI
                     break;
             }
             settings.isRaceLocked = isRaceLockedCheckBox.Checked ? 1 : 0;
+            settings.isLockedPrepPhase = isPrepPhaseLockedCheckBox.Checked ? 1 : 0;
             settings.shortFormationLap = shortFormationCheckBox.Checked ? 1 : 0;
             settings.dumpEntryList = dumpEntryListCheckBox.Checked ? 1 : 0;
             settings.dumpLeaderboards = dumpLeaderboardsCheckBox.Checked ? 1 : 0;
@@ -541,6 +559,7 @@ namespace ACC_Dedicated_Server_GUI
             //carList.Sort(delegate (Car x, Car y) { return x.model.CompareTo(y.model); });
             TrackComboBox.Items.AddRange(trackList.ToArray());
             TrackComboBox.SelectedIndex = 0;
+            carClassComboBox.SelectedIndex = 0;
             consolePanel.Visible = false;
 
             Size size = new Size();
@@ -837,5 +856,10 @@ namespace ACC_Dedicated_Server_GUI
             checkBox_CheckChanged(fixedConditionQualificationCheckBox);
         }
         #endregion
+
+        private void isPrepPhaseLockedCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(isPrepPhaseLockedCheckBox);
+        }
     }
 }

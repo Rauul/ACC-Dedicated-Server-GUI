@@ -295,6 +295,11 @@
             0,
             0,
             0});
+            this.carNumberNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
             this.carNumberNumericUpDown.Name = "carNumberNumericUpDown";
             this.carNumberNumericUpDown.Size = new System.Drawing.Size(54, 20);
             this.carNumberNumericUpDown.TabIndex = 2;
