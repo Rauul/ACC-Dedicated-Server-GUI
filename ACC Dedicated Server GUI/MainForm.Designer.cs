@@ -52,6 +52,7 @@
             this.autoLightsCheckBox = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.isPrepPhaseLockedCheckBox = new System.Windows.Forms.CheckBox();
             this.label40 = new System.Windows.Forms.Label();
             this.centralEntryListPathButton = new System.Windows.Forms.Button();
             this.autoDQCheckBox = new System.Windows.Forms.CheckBox();
@@ -81,6 +82,7 @@
             this.maxStabilityNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.carClassComboBox = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
             this.TrackComboBox = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -167,8 +169,6 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.donationButton = new System.Windows.Forms.Button();
             this.donationLabel = new System.Windows.Forms.Label();
-            this.carClassComboBox = new System.Windows.Forms.ComboBox();
-            this.isPrepPhaseLockedCheckBox = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).BeginInit();
@@ -469,6 +469,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(340, 371);
             this.panel1.TabIndex = 14;
+            // 
+            // isPrepPhaseLockedCheckBox
+            // 
+            this.isPrepPhaseLockedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.isPrepPhaseLockedCheckBox.Checked = true;
+            this.isPrepPhaseLockedCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.isPrepPhaseLockedCheckBox.Location = new System.Drawing.Point(181, 176);
+            this.isPrepPhaseLockedCheckBox.Name = "isPrepPhaseLockedCheckBox";
+            this.isPrepPhaseLockedCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.isPrepPhaseLockedCheckBox.TabIndex = 43;
+            this.isPrepPhaseLockedCheckBox.TabStop = false;
+            this.isPrepPhaseLockedCheckBox.Text = "Prep Phase Locked";
+            this.isPrepPhaseLockedCheckBox.UseVisualStyleBackColor = true;
+            this.isPrepPhaseLockedCheckBox.CheckedChanged += new System.EventHandler(this.isPrepPhaseLockedCheckBox_CheckedChanged);
             // 
             // label40
             // 
@@ -912,6 +926,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(368, 632);
             this.panel3.TabIndex = 18;
+            // 
+            // carClassComboBox
+            // 
+            this.carClassComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.carClassComboBox.FormattingEnabled = true;
+            this.carClassComboBox.Items.AddRange(new object[] {
+            "    FreeForAll",
+            "    GT3",
+            "    GT4",
+            "    Cup",
+            "    ST"});
+            this.carClassComboBox.Location = new System.Drawing.Point(200, 16);
+            this.carClassComboBox.Name = "carClassComboBox";
+            this.carClassComboBox.Size = new System.Drawing.Size(153, 21);
+            this.carClassComboBox.TabIndex = 42;
             // 
             // label32
             // 
@@ -2152,38 +2181,6 @@
             this.donationLabel.TabIndex = 24;
             this.donationLabel.Text = "Donations are never expected\r\n      but always appreciated";
             // 
-            // carClassComboBox
-            // 
-            this.carClassComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.carClassComboBox.FormattingEnabled = true;
-            this.carClassComboBox.Items.AddRange(new object[] {
-            "    FreeForAll",
-            "    GT3",
-            "    GT4",
-            "    Cup",
-            "    ST"});
-            this.carClassComboBox.Location = new System.Drawing.Point(200, 16);
-            this.carClassComboBox.Name = "carClassComboBox";
-            this.carClassComboBox.Size = new System.Drawing.Size(153, 21);
-            this.carClassComboBox.TabIndex = 42;
-            // 
-            // isPrepPhaseLockedCheckBox
-            // 
-            this.isPrepPhaseLockedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.isPrepPhaseLockedCheckBox.Checked = true;
-            this.isPrepPhaseLockedCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.isPrepPhaseLockedCheckBox.Location = new System.Drawing.Point(181, 176);
-            this.isPrepPhaseLockedCheckBox.Name = "isPrepPhaseLockedCheckBox";
-            this.isPrepPhaseLockedCheckBox.Size = new System.Drawing.Size(147, 17);
-            this.isPrepPhaseLockedCheckBox.TabIndex = 43;
-            this.isPrepPhaseLockedCheckBox.TabStop = false;
-            this.isPrepPhaseLockedCheckBox.Text = "Prep Phase Locked";
-            this.toolTip.SetToolTip(this.isPrepPhaseLockedCheckBox, "If disabled, the server will allow joining during a race session. Is\r\nnot useful " +
-        "in “Public Multiplayer”, as the user-server matching\r\nwill ignore ongoing race s" +
-        "essions.");
-            this.isPrepPhaseLockedCheckBox.UseVisualStyleBackColor = true;
-            this.isPrepPhaseLockedCheckBox.CheckedChanged += new System.EventHandler(this.isPrepPhaseLockedCheckBox_CheckedChanged);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2207,7 +2204,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ACC Dedicated Server GUI V1.2.6";
+            this.Text = "ACC Dedicated Server GUI V1.2.6.2";
             this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);

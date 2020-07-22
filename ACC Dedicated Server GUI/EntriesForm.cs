@@ -191,13 +191,18 @@ namespace ACC_Dedicated_Server_GUI
                     break;
                 }
             }
-            customCarComboBox.SelectedIndex = 0;
-            customCarComboBox.SelectedItem = entry.customCar;
+
+            if (customCarComboBox.Items.Contains(entry.customCar))
+                customCarComboBox.SelectedItem = entry.customCar;
+            else
+                customCarComboBox.SelectedIndex = 0;
+
             overrideCustomCarModelCheckBox.Checked = entry.overrideCarModelForCustomCar == 1;
             gridPositionNumericUpDown.Value = entry.defaultGridPosition;
             ballastNumericUpDown.Value = entry.ballastKg;
             restrictorNumericUpDown.Value = entry.restrictor;
             adminCheckBox.Checked = entry.isServerAdmin == 1 ? true : false;
+
             if (selectedNode.Nodes.Count > 1)
             {
                 overrideDriverInfoCheckBox.Checked = true;
@@ -220,7 +225,8 @@ namespace ACC_Dedicated_Server_GUI
         private void customCarComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Entry entry = (Entry)entriesTreeView.SelectedNode.Tag;
-            entry.customCar = customCarComboBox.Text != "None" ? customCarComboBox.Text : "";
+            entry.customCar = customCarComboBox.Text;
+            //entry.customCar = customCarComboBox.Text != "None" ? customCarComboBox.Text : "";
             entriesTreeView.SelectedNode.Tag = entry;
         }
 

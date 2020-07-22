@@ -10,7 +10,7 @@
             public string password { get; set; }
             public string spectatorPassword { get; set; }
             public string centralEntryListPath { get; set; }
-            public string carClass { get; set; }
+            public string carGroup { get; set; }
             public int trackMedalsRequirement { get; set; }
             public int safetyRatingRequirement { get; set; }
             public int racecraftRatingRequirement { get; set; }

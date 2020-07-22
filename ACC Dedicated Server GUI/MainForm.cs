@@ -229,7 +229,7 @@ namespace ACC_Dedicated_Server_GUI
                 joinPasswordTextBox.Text = settings.password;
                 spectatorPasswordTextBox.Text = settings.spectatorPassword;
                 centraEntryListPathTextBox.Text = settings.centralEntryListPath;
-                carClassComboBox.SelectedItem = settings.carClass != null && settings.carClass.Length > 0 ? "    " + settings.carClass : "    FreeForAll";
+                carClassComboBox.SelectedItem = settings.carGroup != null && settings.carGroup.Length > 0 ? "    " + settings.carGroup : "    FreeForAll";
                 maxCarSlotsNumericUpDown.Value = InNumUpDnRange(settings.maxCarSlots, maxCarSlotsNumericUpDown);
                 TRRequirementNumericUpDown.Value = InNumUpDnRange(settings.trackMedalsRequirement, TRRequirementNumericUpDown);
                 SARequirementNumericUpDown.Value = InNumUpDnRange(settings.safetyRatingRequirement, SARequirementNumericUpDown);
@@ -417,7 +417,7 @@ namespace ACC_Dedicated_Server_GUI
             settings.adminPassword = adminPasswordTextBox.Text;
             settings.spectatorPassword = spectatorPasswordTextBox.Text;
             settings.centralEntryListPath = centraEntryListPathTextBox.Text;
-            settings.carClass = carClassComboBox.Text.Replace("    ", "");
+            settings.carGroup = carClassComboBox.Text.Replace("    ", "");
             settings.maxCarSlots = (int)maxCarSlotsNumericUpDown.Value;
             settings.trackMedalsRequirement = (int)TRRequirementNumericUpDown.Value;
             settings.safetyRatingRequirement = (int)SARequirementNumericUpDown.Value;
