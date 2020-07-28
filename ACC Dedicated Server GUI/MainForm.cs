@@ -604,7 +604,8 @@ namespace ACC_Dedicated_Server_GUI
                 {
                     consolePanel.Visible = false;
                     label12.Visible = true;
-                    process.Kill();
+                    if (!process.HasExited)
+                        process.Kill();
                 }
                 else
                 {
@@ -616,7 +617,11 @@ namespace ACC_Dedicated_Server_GUI
                     process.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
 
                     process.Start();
-                    Thread.Sleep(200);
+                    while (string.IsNullOrEmpty(process.MainWindowTitle))
+                    {
+                        Thread.Sleep(10);
+                        process.Refresh();
+                    }
                     SetParent(process.MainWindowHandle, consolePanel.Handle);
                     SendMessage(process.MainWindowHandle, WM_SYSCOMMAND, SC_MAXIMIZE, 0);
                     label12.Visible = false;

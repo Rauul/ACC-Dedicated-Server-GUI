@@ -2161,7 +2161,7 @@
             this.donationButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.donationButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.donationButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.donationButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.donationButton.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.donationButton.Location = new System.Drawing.Point(184, 635);
             this.donationButton.Name = "donationButton";
@@ -2204,7 +2204,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ACC Dedicated Server GUI V1.2.6.2";
+            this.Text = "ACC Dedicated Server GUI V1.2.6.3 beta";
             this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
