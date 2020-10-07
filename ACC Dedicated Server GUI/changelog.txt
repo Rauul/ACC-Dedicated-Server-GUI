@@ -1,5 +1,5 @@
-﻿V1.2.6.x
-Iproved the server startup logic
+﻿V1.2.6.3
+Improved the server startup logic
 ----------------------------------------------------------------------
 V1.2.6.2
 Fixen an issue where custom cars wouldn't always get saved
