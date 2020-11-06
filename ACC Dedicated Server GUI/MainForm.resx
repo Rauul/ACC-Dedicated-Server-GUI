@@ -148,6 +148,16 @@ public MP. The gap between maxCarSlots and maxConnections
 defines how many spectators or other irregular connections (ie
 entry list entries) can be on the server.</value>
   </data>
+  <data name="formationLapTypeComboBox.ToolTip" xml:space="preserve">
+    <value>Toggles the formation lap type that is permanently used on this server:
+
+Short formation lap with position control and UI + 1 ghosted cars lap
+One free formation lap + 1 ghosted cars lap
+
+Default formation lap with position control and UI
+Old limiter lap
+Free (replaces /manual start), only usable for private servers</value>
+  </data>
   <data name="overTimeNumericUpDown.ToolTip" xml:space="preserve">
     <value>Time after that a session is forcibly closing after the timer
 reached 0:00. Something like 107% of the expected laptime is
@@ -213,6 +223,9 @@ fuel efficient cars in endurance races. The stint
 time resets in the pitlane, no real stop is required.
 -1 will disable the stint times.</value>
   </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>36</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -825,9 +825,9 @@
             this.label39.AutoSize = true;
             this.label39.Location = new System.Drawing.Point(3, 116);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(74, 13);
+            this.label39.Size = new System.Drawing.Size(101, 13);
             this.label39.TabIndex = 39;
-            this.label39.Text = "Formation Lap";
+            this.label39.Text = "Formation Lap Type";
             this.label39.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // formationLapTypeComboBox
@@ -835,14 +835,18 @@
             this.formationLapTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.formationLapTypeComboBox.FormattingEnabled = true;
             this.formationLapTypeComboBox.Items.AddRange(new object[] {
+            "Short Ghost",
+            "Free Ghost",
+            "",
             "Default",
             "Old",
-            "Manual"});
+            "Free"});
             this.formationLapTypeComboBox.Location = new System.Drawing.Point(112, 113);
             this.formationLapTypeComboBox.Name = "formationLapTypeComboBox";
             this.formationLapTypeComboBox.Size = new System.Drawing.Size(63, 21);
             this.formationLapTypeComboBox.TabIndex = 38;
             this.formationLapTypeComboBox.TabStop = false;
+            this.toolTip.SetToolTip(this.formationLapTypeComboBox, resources.GetString("formationLapTypeComboBox.ToolTip"));
             // 
             // label10
             // 

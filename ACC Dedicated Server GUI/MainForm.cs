@@ -247,7 +247,13 @@ namespace ACC_Dedicated_Server_GUI
                         formationLapTypeComboBox.SelectedItem = "Old";
                         break;
                     case 1:
-                        formationLapTypeComboBox.SelectedItem = "Manual";
+                        formationLapTypeComboBox.SelectedItem = "Free";
+                        break;
+                    case 4:
+                        formationLapTypeComboBox.SelectedItem = "Free Ghost";
+                        break;
+                    case 5:
+                        formationLapTypeComboBox.SelectedItem = "Short Ghost";
                         break;
                     default:
                         formationLapTypeComboBox.SelectedItem = "Default";
@@ -427,8 +433,14 @@ namespace ACC_Dedicated_Server_GUI
                 case "Old":
                     settings.formationLapType = 0;
                     break;
-                case "Manual":
+                case "Free":
                     settings.formationLapType = 1;
+                    break;
+                case "Free Ghost":
+                    settings.formationLapType = 4;
+                    break;
+                case "Short Ghost":
+                    settings.formationLapType = 5;
                     break;
                 default:
                     settings.formationLapType = 3;
@@ -574,7 +586,7 @@ namespace ACC_Dedicated_Server_GUI
 #if !DEBUG
             if (!File.Exists("accServer.exe"))
             {
-                MessageBox.Show("File 'accServer.exe' not found. Please make sure you installed this program to your 'Assetto Corsa Competizione\\server' folder.\n\nClosing...", "ACC Dedicated Server GUI Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("File 'accServer.exe' not found. Please make sure you installed this program to your 'Assetto Corsa Competizione Dedicated Server\\server' folder.\n\nClosing...", "ACC Dedicated Server GUI Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
 #endif
