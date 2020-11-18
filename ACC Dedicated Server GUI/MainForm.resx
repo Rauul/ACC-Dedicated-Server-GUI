@@ -148,6 +148,17 @@ public MP. The gap between maxCarSlots and maxConnections
 defines how many spectators or other irregular connections (ie
 entry list entries) can be on the server.</value>
   </data>
+  <data name="label39.ToolTip" xml:space="preserve">
+    <value>Toggles the formation lap type that is permanently used on this server:
+
+Short formation lap with position control and UI + 1 ghosted cars lap
+One free formation lap + 1 ghosted cars lap
+
+Default formation lap with position control and UI
+Old limiter lap
+Free (replaces /manual start), only usable for private servers
+</value>
+  </data>
   <data name="formationLapTypeComboBox.ToolTip" xml:space="preserve">
     <value>Toggles the formation lap type that is permanently used on this server:
 

@@ -829,6 +829,7 @@
             this.label39.TabIndex = 39;
             this.label39.Text = "Formation Lap Type";
             this.label39.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip.SetToolTip(this.label39, resources.GetString("label39.ToolTip"));
             // 
             // formationLapTypeComboBox
             // 
@@ -2171,7 +2172,7 @@
             this.donationButton.Name = "donationButton";
             this.donationButton.Size = new System.Drawing.Size(168, 30);
             this.donationButton.TabIndex = 23;
-            this.donationButton.Text = "B U Y   M E   A   B E E R";
+            this.donationButton.Text = "BUY ME A BEER";
             this.donationButton.UseVisualStyleBackColor = false;
             this.donationButton.Click += new System.EventHandler(this.donationButton_Click);
             // 
@@ -2208,7 +2209,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ACC Dedicated Server GUI V1.2.6.3";
+            this.Text = "ACC Dedicated Server GUI V1.2.7.0";
             this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);

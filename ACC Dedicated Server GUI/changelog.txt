@@ -1,4 +1,9 @@
-﻿V1.2.6.3
+﻿V1.2.7.0
+Added Short Ghost and Free Ghost to formation lap type option
+Added Imola 2020 to track list
+Added Mercedes AMG GT3 2020 and Ferrari 488 GT3 Evo 2020 to cars list
+----------------------------------------------------------------------
+V1.2.6.3
 Improved the server startup logic
 ----------------------------------------------------------------------
 V1.2.6.2
