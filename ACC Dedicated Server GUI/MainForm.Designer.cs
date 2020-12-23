@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.serverNameTextBox = new System.Windows.Forms.TextBox();
             this.adminPasswordTextBox = new System.Windows.Forms.TextBox();
             this.joinPasswordTextBox = new System.Windows.Forms.TextBox();
@@ -86,7 +90,6 @@
             this.label32 = new System.Windows.Forms.Label();
             this.TrackComboBox = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.pCheckBox = new System.Windows.Forms.CheckBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label42 = new System.Windows.Forms.Label();
             this.tyreSetsNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -96,8 +99,6 @@
             this.label31 = new System.Windows.Forms.Label();
             this.preRaceWaitTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.postRaceWaitTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.rCheckBox = new System.Windows.Forms.CheckBox();
-            this.qCheckBox = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.simracerWeatherConditionsCheckBox = new System.Windows.Forms.CheckBox();
@@ -114,39 +115,6 @@
             this.tempTrackBar = new System.Windows.Forms.TrackBar();
             this.tempLabel = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.rPanel = new System.Windows.Forms.Panel();
-            this.rDurationNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.rTimeScaleNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.rStartTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.rSundayRadioButton = new System.Windows.Forms.RadioButton();
-            this.rSaturdayRadioButton = new System.Windows.Forms.RadioButton();
-            this.rFridayRadioButton = new System.Windows.Forms.RadioButton();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.qPanel = new System.Windows.Forms.Panel();
-            this.qDurationNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.qTimeScaleNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.qStartTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.qSundayRadioButton = new System.Windows.Forms.RadioButton();
-            this.qSaturdayRadioButton = new System.Windows.Forms.RadioButton();
-            this.qFridayRadioButton = new System.Windows.Forms.RadioButton();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.pPanel = new System.Windows.Forms.Panel();
-            this.pDurationNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.pTimeScaleNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.pStartTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pSundayRadioButton = new System.Windows.Forms.RadioButton();
-            this.pSaturdayRadioButton = new System.Windows.Forms.RadioButton();
-            this.pFridayRadioButton = new System.Windows.Forms.RadioButton();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.maxDriversCountNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label24 = new System.Windows.Forms.Label();
@@ -169,6 +137,13 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.donationButton = new System.Windows.Forms.Button();
             this.donationLabel = new System.Windows.Forms.Label();
+            this.sessionGridView = new System.Windows.Forms.DataGridView();
+            this.SessionColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.DayColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.TimeScaleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DurationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).BeginInit();
@@ -190,27 +165,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.rainTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloudCoverageTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tempTrackBar)).BeginInit();
-            this.rPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rDurationNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rTimeScaleNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rStartTimeNumericUpDown)).BeginInit();
-            this.panel9.SuspendLayout();
-            this.qPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qDurationNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qTimeScaleNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qStartTimeNumericUpDown)).BeginInit();
-            this.panel8.SuspendLayout();
-            this.pPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pDurationNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pTimeScaleNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pStartTimeNumericUpDown)).BeginInit();
-            this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxDriversCountNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxTotalDrivingTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mandatoryPitStopCountNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // serverNameTextBox
@@ -823,7 +784,7 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(3, 116);
+            this.label39.Location = new System.Drawing.Point(3, 62);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(101, 13);
             this.label39.TabIndex = 39;
@@ -836,15 +797,15 @@
             this.formationLapTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.formationLapTypeComboBox.FormattingEnabled = true;
             this.formationLapTypeComboBox.Items.AddRange(new object[] {
-            "Short Ghost",
-            "Free Ghost",
+            "Short formation lap with UI + 1 ghosted cars lap",
+            "Free formation lap + 1 ghosted cars lap",
             "",
-            "Default",
-            "Old",
-            "Free"});
-            this.formationLapTypeComboBox.Location = new System.Drawing.Point(112, 113);
+            "Default formation lap UI",
+            "Old limiter lap",
+            "Free, only usable for private servers"});
+            this.formationLapTypeComboBox.Location = new System.Drawing.Point(125, 59);
             this.formationLapTypeComboBox.Name = "formationLapTypeComboBox";
-            this.formationLapTypeComboBox.Size = new System.Drawing.Size(63, 21);
+            this.formationLapTypeComboBox.Size = new System.Drawing.Size(228, 21);
             this.formationLapTypeComboBox.TabIndex = 38;
             this.formationLapTypeComboBox.TabStop = false;
             this.toolTip.SetToolTip(this.formationLapTypeComboBox, resources.GetString("formationLapTypeComboBox.ToolTip"));
@@ -913,23 +874,18 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.sessionGridView);
             this.panel3.Controls.Add(this.carClassComboBox);
             this.panel3.Controls.Add(this.label32);
             this.panel3.Controls.Add(this.TrackComboBox);
             this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.pCheckBox);
             this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.rCheckBox);
-            this.panel3.Controls.Add(this.qCheckBox);
             this.panel3.Controls.Add(this.label20);
             this.panel3.Controls.Add(this.panel11);
-            this.panel3.Controls.Add(this.rPanel);
-            this.panel3.Controls.Add(this.qPanel);
-            this.panel3.Controls.Add(this.pPanel);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Location = new System.Drawing.Point(364, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(368, 632);
+            this.panel3.Size = new System.Drawing.Size(394, 653);
             this.panel3.TabIndex = 18;
             // 
             // carClassComboBox
@@ -942,7 +898,7 @@
             "    GT4",
             "    Cup",
             "    ST"});
-            this.carClassComboBox.Location = new System.Drawing.Point(200, 16);
+            this.carClassComboBox.Location = new System.Drawing.Point(226, 16);
             this.carClassComboBox.Name = "carClassComboBox";
             this.carClassComboBox.Size = new System.Drawing.Size(153, 21);
             this.carClassComboBox.TabIndex = 42;
@@ -950,7 +906,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(18, 199);
+            this.label32.Location = new System.Drawing.Point(18, 44);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(39, 13);
             this.label32.TabIndex = 3;
@@ -970,23 +926,11 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(18, 42);
+            this.label19.Location = new System.Drawing.Point(18, 340);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(74, 13);
             this.label19.TabIndex = 40;
             this.label19.Text = "Miscellaneous";
-            // 
-            // pCheckBox
-            // 
-            this.pCheckBox.AutoSize = true;
-            this.pCheckBox.Location = new System.Drawing.Point(213, 43);
-            this.pCheckBox.Name = "pCheckBox";
-            this.pCheckBox.Size = new System.Drawing.Size(65, 17);
-            this.pCheckBox.TabIndex = 32;
-            this.pCheckBox.TabStop = false;
-            this.pCheckBox.Text = "Practice";
-            this.pCheckBox.UseVisualStyleBackColor = true;
-            this.pCheckBox.CheckedChanged += new System.EventHandler(this.practiceCheckBox_CheckedChanged);
             // 
             // panel5
             // 
@@ -1001,15 +945,15 @@
             this.panel5.Controls.Add(this.formationLapTypeComboBox);
             this.panel5.Controls.Add(this.preRaceWaitTimeNumericUpDown);
             this.panel5.Controls.Add(this.postRaceWaitTimeNumericUpDown);
-            this.panel5.Location = new System.Drawing.Point(14, 49);
+            this.panel5.Location = new System.Drawing.Point(14, 347);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(180, 141);
+            this.panel5.Size = new System.Drawing.Size(365, 93);
             this.panel5.TabIndex = 0;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(3, 89);
+            this.label42.Location = new System.Drawing.Point(181, 38);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(52, 13);
             this.label42.TabIndex = 41;
@@ -1018,7 +962,7 @@
             // 
             // tyreSetsNumericUpDown
             // 
-            this.tyreSetsNumericUpDown.Location = new System.Drawing.Point(125, 87);
+            this.tyreSetsNumericUpDown.Location = new System.Drawing.Point(303, 36);
             this.tyreSetsNumericUpDown.Maximum = new decimal(new int[] {
             50,
             0,
@@ -1043,7 +987,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(3, 63);
+            this.label41.Location = new System.Drawing.Point(181, 12);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(56, 13);
             this.label41.TabIndex = 29;
@@ -1057,7 +1001,7 @@
             0,
             0,
             0});
-            this.overTimeNumericUpDown.Location = new System.Drawing.Point(125, 61);
+            this.overTimeNumericUpDown.Location = new System.Drawing.Point(303, 10);
             this.overTimeNumericUpDown.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -1152,34 +1096,10 @@
             this.postRaceWaitTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
             this.postRaceWaitTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
             // 
-            // rCheckBox
-            // 
-            this.rCheckBox.AutoSize = true;
-            this.rCheckBox.Location = new System.Drawing.Point(213, 338);
-            this.rCheckBox.Name = "rCheckBox";
-            this.rCheckBox.Size = new System.Drawing.Size(52, 17);
-            this.rCheckBox.TabIndex = 37;
-            this.rCheckBox.TabStop = false;
-            this.rCheckBox.Text = "Race";
-            this.rCheckBox.UseVisualStyleBackColor = true;
-            this.rCheckBox.CheckedChanged += new System.EventHandler(this.raceCheckBox_CheckedChanged);
-            // 
-            // qCheckBox
-            // 
-            this.qCheckBox.AutoSize = true;
-            this.qCheckBox.Location = new System.Drawing.Point(213, 190);
-            this.qCheckBox.Name = "qCheckBox";
-            this.qCheckBox.Size = new System.Drawing.Size(72, 17);
-            this.qCheckBox.TabIndex = 36;
-            this.qCheckBox.TabStop = false;
-            this.qCheckBox.Text = "Qualifying";
-            this.qCheckBox.UseVisualStyleBackColor = true;
-            this.qCheckBox.CheckedChanged += new System.EventHandler(this.qualifyingCheckBox_CheckedChanged);
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(18, 472);
+            this.label20.Location = new System.Drawing.Point(18, 192);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(48, 13);
             this.label20.TabIndex = 35;
@@ -1203,9 +1123,9 @@
             this.panel11.Controls.Add(this.tempTrackBar);
             this.panel11.Controls.Add(this.tempLabel);
             this.panel11.Controls.Add(this.label30);
-            this.panel11.Location = new System.Drawing.Point(14, 479);
+            this.panel11.Location = new System.Drawing.Point(14, 199);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(339, 135);
+            this.panel11.Size = new System.Drawing.Size(365, 135);
             this.panel11.TabIndex = 34;
             // 
             // simracerWeatherConditionsCheckBox
@@ -1214,7 +1134,7 @@
             this.simracerWeatherConditionsCheckBox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.simracerWeatherConditionsCheckBox.Location = new System.Drawing.Point(2, 112);
             this.simracerWeatherConditionsCheckBox.Name = "simracerWeatherConditionsCheckBox";
-            this.simracerWeatherConditionsCheckBox.Size = new System.Drawing.Size(139, 17);
+            this.simracerWeatherConditionsCheckBox.Size = new System.Drawing.Size(173, 17);
             this.simracerWeatherConditionsCheckBox.TabIndex = 43;
             this.simracerWeatherConditionsCheckBox.TabStop = false;
             this.simracerWeatherConditionsCheckBox.Text = "Sim Weather Conditions";
@@ -1226,9 +1146,9 @@
             // 
             this.fixedConditionQualificationCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.fixedConditionQualificationCheckBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.fixedConditionQualificationCheckBox.Location = new System.Drawing.Point(175, 112);
+            this.fixedConditionQualificationCheckBox.Location = new System.Drawing.Point(184, 112);
             this.fixedConditionQualificationCheckBox.Name = "fixedConditionQualificationCheckBox";
-            this.fixedConditionQualificationCheckBox.Size = new System.Drawing.Size(156, 17);
+            this.fixedConditionQualificationCheckBox.Size = new System.Drawing.Size(170, 17);
             this.fixedConditionQualificationCheckBox.TabIndex = 44;
             this.fixedConditionQualificationCheckBox.TabStop = false;
             this.fixedConditionQualificationCheckBox.Text = "Fixed Qualification Weather";
@@ -1242,7 +1162,7 @@
             this.weatherRandomnessTrackBar.Location = new System.Drawing.Point(122, 83);
             this.weatherRandomnessTrackBar.Maximum = 7;
             this.weatherRandomnessTrackBar.Name = "weatherRandomnessTrackBar";
-            this.weatherRandomnessTrackBar.Size = new System.Drawing.Size(158, 45);
+            this.weatherRandomnessTrackBar.Size = new System.Drawing.Size(181, 45);
             this.weatherRandomnessTrackBar.TabIndex = 38;
             this.weatherRandomnessTrackBar.TabStop = false;
             this.weatherRandomnessTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
@@ -1263,7 +1183,7 @@
             // weatherRandomnessLabel
             // 
             this.weatherRandomnessLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.weatherRandomnessLabel.Location = new System.Drawing.Point(286, 83);
+            this.weatherRandomnessLabel.Location = new System.Drawing.Point(309, 83);
             this.weatherRandomnessLabel.Name = "weatherRandomnessLabel";
             this.weatherRandomnessLabel.Size = new System.Drawing.Size(44, 20);
             this.weatherRandomnessLabel.TabIndex = 40;
@@ -1273,7 +1193,7 @@
             // cloudCoverageLabel
             // 
             this.cloudCoverageLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cloudCoverageLabel.Location = new System.Drawing.Point(286, 33);
+            this.cloudCoverageLabel.Location = new System.Drawing.Point(309, 33);
             this.cloudCoverageLabel.Name = "cloudCoverageLabel";
             this.cloudCoverageLabel.Size = new System.Drawing.Size(44, 20);
             this.cloudCoverageLabel.TabIndex = 34;
@@ -1295,7 +1215,7 @@
             this.rainTrackBar.LargeChange = 1;
             this.rainTrackBar.Location = new System.Drawing.Point(122, 58);
             this.rainTrackBar.Name = "rainTrackBar";
-            this.rainTrackBar.Size = new System.Drawing.Size(158, 45);
+            this.rainTrackBar.Size = new System.Drawing.Size(181, 45);
             this.rainTrackBar.TabIndex = 35;
             this.rainTrackBar.TabStop = false;
             this.rainTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
@@ -1316,7 +1236,7 @@
             // rainLabel
             // 
             this.rainLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rainLabel.Location = new System.Drawing.Point(286, 58);
+            this.rainLabel.Location = new System.Drawing.Point(309, 58);
             this.rainLabel.Name = "rainLabel";
             this.rainLabel.Size = new System.Drawing.Size(44, 20);
             this.rainLabel.TabIndex = 37;
@@ -1328,7 +1248,7 @@
             this.cloudCoverageTrackBar.LargeChange = 1;
             this.cloudCoverageTrackBar.Location = new System.Drawing.Point(122, 33);
             this.cloudCoverageTrackBar.Name = "cloudCoverageTrackBar";
-            this.cloudCoverageTrackBar.Size = new System.Drawing.Size(158, 45);
+            this.cloudCoverageTrackBar.Size = new System.Drawing.Size(181, 45);
             this.cloudCoverageTrackBar.TabIndex = 32;
             this.cloudCoverageTrackBar.TabStop = false;
             this.cloudCoverageTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
@@ -1343,7 +1263,7 @@
             this.tempTrackBar.Maximum = 35;
             this.tempTrackBar.Minimum = 10;
             this.tempTrackBar.Name = "tempTrackBar";
-            this.tempTrackBar.Size = new System.Drawing.Size(158, 45);
+            this.tempTrackBar.Size = new System.Drawing.Size(181, 45);
             this.tempTrackBar.TabIndex = 29;
             this.tempTrackBar.TabStop = false;
             this.tempTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
@@ -1354,7 +1274,7 @@
             // tempLabel
             // 
             this.tempLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tempLabel.Location = new System.Drawing.Point(286, 8);
+            this.tempLabel.Location = new System.Drawing.Point(309, 8);
             this.tempLabel.Name = "tempLabel";
             this.tempLabel.Size = new System.Drawing.Size(44, 20);
             this.tempLabel.TabIndex = 31;
@@ -1370,483 +1290,6 @@
             this.label30.TabIndex = 30;
             this.label30.Text = "Avg. Ambient Temp";
             this.label30.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // rPanel
-            // 
-            this.rPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.rPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rPanel.Controls.Add(this.rDurationNumericUpDown);
-            this.rPanel.Controls.Add(this.rTimeScaleNumericUpDown);
-            this.rPanel.Controls.Add(this.rStartTimeNumericUpDown);
-            this.rPanel.Controls.Add(this.panel9);
-            this.rPanel.Controls.Add(this.label25);
-            this.rPanel.Controls.Add(this.label28);
-            this.rPanel.Controls.Add(this.label29);
-            this.rPanel.Enabled = false;
-            this.rPanel.Location = new System.Drawing.Point(200, 344);
-            this.rPanel.Name = "rPanel";
-            this.rPanel.Size = new System.Drawing.Size(153, 116);
-            this.rPanel.TabIndex = 32;
-            // 
-            // rDurationNumericUpDown
-            // 
-            this.rDurationNumericUpDown.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.rDurationNumericUpDown.Location = new System.Drawing.Point(97, 63);
-            this.rDurationNumericUpDown.Maximum = new decimal(new int[] {
-            1440,
-            0,
-            0,
-            0});
-            this.rDurationNumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.rDurationNumericUpDown.Name = "rDurationNumericUpDown";
-            this.rDurationNumericUpDown.Size = new System.Drawing.Size(47, 20);
-            this.rDurationNumericUpDown.TabIndex = 2;
-            this.rDurationNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.rDurationNumericUpDown.Value = new decimal(new int[] {
-            90,
-            0,
-            0,
-            0});
-            this.rDurationNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.rDurationNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // rTimeScaleNumericUpDown
-            // 
-            this.rTimeScaleNumericUpDown.Location = new System.Drawing.Point(97, 38);
-            this.rTimeScaleNumericUpDown.Maximum = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-            this.rTimeScaleNumericUpDown.Name = "rTimeScaleNumericUpDown";
-            this.rTimeScaleNumericUpDown.Size = new System.Drawing.Size(47, 20);
-            this.rTimeScaleNumericUpDown.TabIndex = 1;
-            this.rTimeScaleNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.rTimeScaleNumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.rTimeScaleNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.rTimeScaleNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // rStartTimeNumericUpDown
-            // 
-            this.rStartTimeNumericUpDown.Location = new System.Drawing.Point(97, 13);
-            this.rStartTimeNumericUpDown.Maximum = new decimal(new int[] {
-            23,
-            0,
-            0,
-            0});
-            this.rStartTimeNumericUpDown.Name = "rStartTimeNumericUpDown";
-            this.rStartTimeNumericUpDown.Size = new System.Drawing.Size(47, 20);
-            this.rStartTimeNumericUpDown.TabIndex = 0;
-            this.rStartTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.rStartTimeNumericUpDown.Value = new decimal(new int[] {
-            14,
-            0,
-            0,
-            0});
-            this.rStartTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.rStartTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.rSundayRadioButton);
-            this.panel9.Controls.Add(this.rSaturdayRadioButton);
-            this.panel9.Controls.Add(this.rFridayRadioButton);
-            this.panel9.Location = new System.Drawing.Point(7, 87);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(137, 25);
-            this.panel9.TabIndex = 22;
-            // 
-            // rSundayRadioButton
-            // 
-            this.rSundayRadioButton.AutoSize = true;
-            this.rSundayRadioButton.Checked = true;
-            this.rSundayRadioButton.Location = new System.Drawing.Point(88, 3);
-            this.rSundayRadioButton.Name = "rSundayRadioButton";
-            this.rSundayRadioButton.Size = new System.Drawing.Size(44, 17);
-            this.rSundayRadioButton.TabIndex = 2;
-            this.rSundayRadioButton.TabStop = true;
-            this.rSundayRadioButton.Text = "Sun";
-            this.rSundayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // rSaturdayRadioButton
-            // 
-            this.rSaturdayRadioButton.AutoSize = true;
-            this.rSaturdayRadioButton.Location = new System.Drawing.Point(45, 3);
-            this.rSaturdayRadioButton.Name = "rSaturdayRadioButton";
-            this.rSaturdayRadioButton.Size = new System.Drawing.Size(41, 17);
-            this.rSaturdayRadioButton.TabIndex = 1;
-            this.rSaturdayRadioButton.Text = "Sat";
-            this.rSaturdayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // rFridayRadioButton
-            // 
-            this.rFridayRadioButton.AutoSize = true;
-            this.rFridayRadioButton.Location = new System.Drawing.Point(3, 3);
-            this.rFridayRadioButton.Name = "rFridayRadioButton";
-            this.rFridayRadioButton.Size = new System.Drawing.Size(36, 17);
-            this.rFridayRadioButton.TabIndex = 0;
-            this.rFridayRadioButton.Text = "Fri";
-            this.rFridayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(4, 15);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(55, 13);
-            this.label25.TabIndex = 24;
-            this.label25.Text = "Start Time";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(4, 65);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(47, 13);
-            this.label28.TabIndex = 30;
-            this.label28.Text = "Duration";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(4, 40);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(60, 13);
-            this.label29.TabIndex = 27;
-            this.label29.Text = "Time Scale";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // qPanel
-            // 
-            this.qPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.qPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.qPanel.Controls.Add(this.qDurationNumericUpDown);
-            this.qPanel.Controls.Add(this.qTimeScaleNumericUpDown);
-            this.qPanel.Controls.Add(this.qStartTimeNumericUpDown);
-            this.qPanel.Controls.Add(this.panel8);
-            this.qPanel.Controls.Add(this.label18);
-            this.qPanel.Controls.Add(this.label21);
-            this.qPanel.Controls.Add(this.label22);
-            this.qPanel.Enabled = false;
-            this.qPanel.Location = new System.Drawing.Point(200, 196);
-            this.qPanel.Name = "qPanel";
-            this.qPanel.Size = new System.Drawing.Size(153, 116);
-            this.qPanel.TabIndex = 22;
-            // 
-            // qDurationNumericUpDown
-            // 
-            this.qDurationNumericUpDown.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.qDurationNumericUpDown.Location = new System.Drawing.Point(97, 63);
-            this.qDurationNumericUpDown.Maximum = new decimal(new int[] {
-            1440,
-            0,
-            0,
-            0});
-            this.qDurationNumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.qDurationNumericUpDown.Name = "qDurationNumericUpDown";
-            this.qDurationNumericUpDown.Size = new System.Drawing.Size(47, 20);
-            this.qDurationNumericUpDown.TabIndex = 2;
-            this.qDurationNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.qDurationNumericUpDown.Value = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.qDurationNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.qDurationNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // qTimeScaleNumericUpDown
-            // 
-            this.qTimeScaleNumericUpDown.Location = new System.Drawing.Point(97, 38);
-            this.qTimeScaleNumericUpDown.Maximum = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-            this.qTimeScaleNumericUpDown.Name = "qTimeScaleNumericUpDown";
-            this.qTimeScaleNumericUpDown.Size = new System.Drawing.Size(47, 20);
-            this.qTimeScaleNumericUpDown.TabIndex = 1;
-            this.qTimeScaleNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.qTimeScaleNumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.qTimeScaleNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.qTimeScaleNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // qStartTimeNumericUpDown
-            // 
-            this.qStartTimeNumericUpDown.Location = new System.Drawing.Point(97, 13);
-            this.qStartTimeNumericUpDown.Maximum = new decimal(new int[] {
-            23,
-            0,
-            0,
-            0});
-            this.qStartTimeNumericUpDown.Name = "qStartTimeNumericUpDown";
-            this.qStartTimeNumericUpDown.Size = new System.Drawing.Size(47, 20);
-            this.qStartTimeNumericUpDown.TabIndex = 0;
-            this.qStartTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.qStartTimeNumericUpDown.Value = new decimal(new int[] {
-            11,
-            0,
-            0,
-            0});
-            this.qStartTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.qStartTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.qSundayRadioButton);
-            this.panel8.Controls.Add(this.qSaturdayRadioButton);
-            this.panel8.Controls.Add(this.qFridayRadioButton);
-            this.panel8.Location = new System.Drawing.Point(7, 86);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(137, 25);
-            this.panel8.TabIndex = 21;
-            // 
-            // qSundayRadioButton
-            // 
-            this.qSundayRadioButton.AutoSize = true;
-            this.qSundayRadioButton.Location = new System.Drawing.Point(88, 3);
-            this.qSundayRadioButton.Name = "qSundayRadioButton";
-            this.qSundayRadioButton.Size = new System.Drawing.Size(44, 17);
-            this.qSundayRadioButton.TabIndex = 2;
-            this.qSundayRadioButton.Text = "Sun";
-            this.qSundayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // qSaturdayRadioButton
-            // 
-            this.qSaturdayRadioButton.AutoSize = true;
-            this.qSaturdayRadioButton.Checked = true;
-            this.qSaturdayRadioButton.Location = new System.Drawing.Point(45, 3);
-            this.qSaturdayRadioButton.Name = "qSaturdayRadioButton";
-            this.qSaturdayRadioButton.Size = new System.Drawing.Size(41, 17);
-            this.qSaturdayRadioButton.TabIndex = 1;
-            this.qSaturdayRadioButton.TabStop = true;
-            this.qSaturdayRadioButton.Text = "Sat";
-            this.qSaturdayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // qFridayRadioButton
-            // 
-            this.qFridayRadioButton.AutoSize = true;
-            this.qFridayRadioButton.Location = new System.Drawing.Point(3, 3);
-            this.qFridayRadioButton.Name = "qFridayRadioButton";
-            this.qFridayRadioButton.Size = new System.Drawing.Size(36, 17);
-            this.qFridayRadioButton.TabIndex = 0;
-            this.qFridayRadioButton.Text = "Fri";
-            this.qFridayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(4, 15);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(55, 13);
-            this.label18.TabIndex = 24;
-            this.label18.Text = "Start Time";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(4, 65);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(47, 13);
-            this.label21.TabIndex = 30;
-            this.label21.Text = "Duration";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(4, 40);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(60, 13);
-            this.label22.TabIndex = 27;
-            this.label22.Text = "Time Scale";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // pPanel
-            // 
-            this.pPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.pPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pPanel.Controls.Add(this.pDurationNumericUpDown);
-            this.pPanel.Controls.Add(this.pTimeScaleNumericUpDown);
-            this.pPanel.Controls.Add(this.pStartTimeNumericUpDown);
-            this.pPanel.Controls.Add(this.panel7);
-            this.pPanel.Controls.Add(this.label14);
-            this.pPanel.Controls.Add(this.label16);
-            this.pPanel.Controls.Add(this.label15);
-            this.pPanel.Enabled = false;
-            this.pPanel.Location = new System.Drawing.Point(200, 49);
-            this.pPanel.Name = "pPanel";
-            this.pPanel.Size = new System.Drawing.Size(153, 116);
-            this.pPanel.TabIndex = 2;
-            // 
-            // pDurationNumericUpDown
-            // 
-            this.pDurationNumericUpDown.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.pDurationNumericUpDown.Location = new System.Drawing.Point(97, 63);
-            this.pDurationNumericUpDown.Maximum = new decimal(new int[] {
-            1440,
-            0,
-            0,
-            0});
-            this.pDurationNumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.pDurationNumericUpDown.Name = "pDurationNumericUpDown";
-            this.pDurationNumericUpDown.Size = new System.Drawing.Size(47, 20);
-            this.pDurationNumericUpDown.TabIndex = 2;
-            this.pDurationNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.pDurationNumericUpDown.Value = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            this.pDurationNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.pDurationNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // pTimeScaleNumericUpDown
-            // 
-            this.pTimeScaleNumericUpDown.Location = new System.Drawing.Point(97, 38);
-            this.pTimeScaleNumericUpDown.Maximum = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-            this.pTimeScaleNumericUpDown.Name = "pTimeScaleNumericUpDown";
-            this.pTimeScaleNumericUpDown.Size = new System.Drawing.Size(47, 20);
-            this.pTimeScaleNumericUpDown.TabIndex = 1;
-            this.pTimeScaleNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.pTimeScaleNumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.pTimeScaleNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.pTimeScaleNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // pStartTimeNumericUpDown
-            // 
-            this.pStartTimeNumericUpDown.Location = new System.Drawing.Point(97, 13);
-            this.pStartTimeNumericUpDown.Maximum = new decimal(new int[] {
-            23,
-            0,
-            0,
-            0});
-            this.pStartTimeNumericUpDown.Name = "pStartTimeNumericUpDown";
-            this.pStartTimeNumericUpDown.Size = new System.Drawing.Size(47, 20);
-            this.pStartTimeNumericUpDown.TabIndex = 0;
-            this.pStartTimeNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.pStartTimeNumericUpDown.Value = new decimal(new int[] {
-            16,
-            0,
-            0,
-            0});
-            this.pStartTimeNumericUpDown.Enter += new System.EventHandler(this.quickBoxs_Enter);
-            this.pStartTimeNumericUpDown.MouseDown += new System.Windows.Forms.MouseEventHandler(this.quickBoxs_MouseDown);
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.pSundayRadioButton);
-            this.panel7.Controls.Add(this.pSaturdayRadioButton);
-            this.panel7.Controls.Add(this.pFridayRadioButton);
-            this.panel7.Location = new System.Drawing.Point(7, 86);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(137, 25);
-            this.panel7.TabIndex = 20;
-            // 
-            // pSundayRadioButton
-            // 
-            this.pSundayRadioButton.AutoSize = true;
-            this.pSundayRadioButton.Location = new System.Drawing.Point(92, 3);
-            this.pSundayRadioButton.Name = "pSundayRadioButton";
-            this.pSundayRadioButton.Size = new System.Drawing.Size(44, 17);
-            this.pSundayRadioButton.TabIndex = 2;
-            this.pSundayRadioButton.Text = "Sun";
-            this.pSundayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // pSaturdayRadioButton
-            // 
-            this.pSaturdayRadioButton.AutoSize = true;
-            this.pSaturdayRadioButton.Location = new System.Drawing.Point(45, 3);
-            this.pSaturdayRadioButton.Name = "pSaturdayRadioButton";
-            this.pSaturdayRadioButton.Size = new System.Drawing.Size(41, 17);
-            this.pSaturdayRadioButton.TabIndex = 1;
-            this.pSaturdayRadioButton.Text = "Sat";
-            this.pSaturdayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // pFridayRadioButton
-            // 
-            this.pFridayRadioButton.AutoSize = true;
-            this.pFridayRadioButton.Checked = true;
-            this.pFridayRadioButton.Location = new System.Drawing.Point(3, 3);
-            this.pFridayRadioButton.Name = "pFridayRadioButton";
-            this.pFridayRadioButton.Size = new System.Drawing.Size(36, 17);
-            this.pFridayRadioButton.TabIndex = 0;
-            this.pFridayRadioButton.TabStop = true;
-            this.pFridayRadioButton.Text = "Fri";
-            this.pFridayRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(4, 15);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(55, 13);
-            this.label14.TabIndex = 24;
-            this.label14.Text = "Start Time";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(4, 65);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(47, 13);
-            this.label16.TabIndex = 30;
-            this.label16.Text = "Duration";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(4, 40);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(60, 13);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "Time Scale";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panel4
             // 
@@ -1866,9 +1309,9 @@
             this.panel4.Controls.Add(this.label27);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.label17);
-            this.panel4.Location = new System.Drawing.Point(14, 205);
+            this.panel4.Location = new System.Drawing.Point(14, 50);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(180, 255);
+            this.panel4.Size = new System.Drawing.Size(365, 135);
             this.panel4.TabIndex = 1;
             // 
             // maxDriversCountNumericUpDown
@@ -1910,7 +1353,7 @@
             // driverSwapRequiredCheckBox
             // 
             this.driverSwapRequiredCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.driverSwapRequiredCheckBox.Location = new System.Drawing.Point(3, 234);
+            this.driverSwapRequiredCheckBox.Location = new System.Drawing.Point(181, 110);
             this.driverSwapRequiredCheckBox.Name = "driverSwapRequiredCheckBox";
             this.driverSwapRequiredCheckBox.Size = new System.Drawing.Size(172, 17);
             this.driverSwapRequiredCheckBox.TabIndex = 60;
@@ -1925,7 +1368,7 @@
             // tyreChangeRequiredCheckBox
             // 
             this.tyreChangeRequiredCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tyreChangeRequiredCheckBox.Location = new System.Drawing.Point(3, 210);
+            this.tyreChangeRequiredCheckBox.Location = new System.Drawing.Point(181, 84);
             this.tyreChangeRequiredCheckBox.Name = "tyreChangeRequiredCheckBox";
             this.tyreChangeRequiredCheckBox.Size = new System.Drawing.Size(172, 17);
             this.tyreChangeRequiredCheckBox.TabIndex = 59;
@@ -1937,7 +1380,7 @@
             // refuellingRequiredCheckBox
             // 
             this.refuellingRequiredCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.refuellingRequiredCheckBox.Location = new System.Drawing.Point(3, 186);
+            this.refuellingRequiredCheckBox.Location = new System.Drawing.Point(181, 59);
             this.refuellingRequiredCheckBox.Name = "refuellingRequiredCheckBox";
             this.refuellingRequiredCheckBox.Size = new System.Drawing.Size(172, 17);
             this.refuellingRequiredCheckBox.TabIndex = 58;
@@ -1949,7 +1392,7 @@
             // refuellingTimeFixedCheckBox
             // 
             this.refuellingTimeFixedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.refuellingTimeFixedCheckBox.Location = new System.Drawing.Point(3, 162);
+            this.refuellingTimeFixedCheckBox.Location = new System.Drawing.Point(181, 33);
             this.refuellingTimeFixedCheckBox.Name = "refuellingTimeFixedCheckBox";
             this.refuellingTimeFixedCheckBox.Size = new System.Drawing.Size(172, 17);
             this.refuellingTimeFixedCheckBox.TabIndex = 57;
@@ -1961,7 +1404,7 @@
             // refuellingAllowedCheckBox
             // 
             this.refuellingAllowedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.refuellingAllowedCheckBox.Location = new System.Drawing.Point(3, 138);
+            this.refuellingAllowedCheckBox.Location = new System.Drawing.Point(181, 8);
             this.refuellingAllowedCheckBox.Name = "refuellingAllowedCheckBox";
             this.refuellingAllowedCheckBox.Size = new System.Drawing.Size(172, 17);
             this.refuellingAllowedCheckBox.TabIndex = 56;
@@ -2178,20 +1621,115 @@
             // 
             // donationLabel
             // 
-            this.donationLabel.AutoSize = true;
             this.donationLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.donationLabel.Location = new System.Drawing.Point(9, 635);
             this.donationLabel.Name = "donationLabel";
-            this.donationLabel.Size = new System.Drawing.Size(150, 26);
+            this.donationLabel.Size = new System.Drawing.Size(169, 30);
             this.donationLabel.TabIndex = 24;
             this.donationLabel.Text = "Donations are never expected\r\n      but always appreciated";
+            this.donationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // sessionGridView
+            // 
+            this.sessionGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sessionGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SessionColumn,
+            this.DayColumn,
+            this.TimeScaleColumn,
+            this.StartTimeColumn,
+            this.DurationColumn,
+            this.DeleteColumn});
+            this.sessionGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.sessionGridView.Location = new System.Drawing.Point(14, 454);
+            this.sessionGridView.MultiSelect = false;
+            this.sessionGridView.Name = "sessionGridView";
+            this.sessionGridView.RowHeadersVisible = false;
+            this.sessionGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.sessionGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.sessionGridView.Size = new System.Drawing.Size(365, 184);
+            this.sessionGridView.TabIndex = 43;
+            this.sessionGridView.TabStop = false;
+            this.sessionGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sessionGridView_CellContentClick);
+            // 
+            // SessionColumn
+            // 
+            this.SessionColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SessionColumn.HeaderText = "Session";
+            this.SessionColumn.Items.AddRange(new object[] {
+            "Practice",
+            "Qualifying",
+            "Race"});
+            this.SessionColumn.Name = "SessionColumn";
+            this.SessionColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // DayColumn
+            // 
+            this.DayColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DayColumn.HeaderText = "Day";
+            this.DayColumn.Items.AddRange(new object[] {
+            "Friday",
+            "Saturday",
+            "Sunday"});
+            this.DayColumn.Name = "DayColumn";
+            this.DayColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TimeScaleColumn
+            // 
+            this.TimeScaleColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.NullValue = null;
+            this.TimeScaleColumn.DefaultCellStyle = dataGridViewCellStyle13;
+            this.TimeScaleColumn.HeaderText = "Time Scale";
+            this.TimeScaleColumn.Name = "TimeScaleColumn";
+            this.TimeScaleColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.TimeScaleColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.TimeScaleColumn.Width = 66;
+            // 
+            // StartTimeColumn
+            // 
+            this.StartTimeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.StartTimeColumn.DefaultCellStyle = dataGridViewCellStyle14;
+            this.StartTimeColumn.HeaderText = "Start Time";
+            this.StartTimeColumn.Name = "StartTimeColumn";
+            this.StartTimeColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.StartTimeColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.StartTimeColumn.Width = 61;
+            // 
+            // DurationColumn
+            // 
+            this.DurationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle15.NullValue = null;
+            this.DurationColumn.DefaultCellStyle = dataGridViewCellStyle15;
+            this.DurationColumn.HeaderText = "Duration";
+            this.DurationColumn.Name = "DurationColumn";
+            this.DurationColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DurationColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DurationColumn.Width = 53;
+            // 
+            // DeleteColumn
+            // 
+            this.DeleteColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            this.DeleteColumn.DefaultCellStyle = dataGridViewCellStyle16;
+            this.DeleteColumn.HeaderText = "";
+            this.DeleteColumn.Name = "DeleteColumn";
+            this.DeleteColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DeleteColumn.Text = "X";
+            this.DeleteColumn.UseColumnTextForButtonValue = true;
+            this.DeleteColumn.Width = 25;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(744, 673);
+            this.ClientSize = new System.Drawing.Size(769, 673);
             this.Controls.Add(this.donationLabel);
             this.Controls.Add(this.donationButton);
             this.Controls.Add(this.BopButton);
@@ -2209,7 +1747,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ACC Dedicated Server GUI V1.2.7.1";
+            this.Text = "ACC Dedicated Server GUI V1.2.8.0";
             this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -2239,27 +1777,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.rainTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloudCoverageTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tempTrackBar)).EndInit();
-            this.rPanel.ResumeLayout(false);
-            this.rPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rDurationNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rTimeScaleNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rStartTimeNumericUpDown)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.qPanel.ResumeLayout(false);
-            this.qPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qDurationNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qTimeScaleNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qStartTimeNumericUpDown)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.pPanel.ResumeLayout(false);
-            this.pPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pDurationNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pTimeScaleNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pStartTimeNumericUpDown)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxDriversCountNumericUpDown)).EndInit();
@@ -2267,6 +1784,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mandatoryPitStopCountNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2301,30 +1819,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel pPanel;
-        private System.Windows.Forms.Panel rPanel;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Panel qPanel;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.RadioButton pSundayRadioButton;
-        private System.Windows.Forms.RadioButton pSaturdayRadioButton;
-        private System.Windows.Forms.RadioButton pFridayRadioButton;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.RadioButton rSundayRadioButton;
-        private System.Windows.Forms.RadioButton rSaturdayRadioButton;
-        private System.Windows.Forms.RadioButton rFridayRadioButton;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.RadioButton qSundayRadioButton;
-        private System.Windows.Forms.RadioButton qSaturdayRadioButton;
-        private System.Windows.Forms.RadioButton qFridayRadioButton;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TrackBar weatherRandomnessTrackBar;
@@ -2342,23 +1836,11 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button launchServerButton;
-        private System.Windows.Forms.CheckBox pCheckBox;
-        private System.Windows.Forms.CheckBox rCheckBox;
-        private System.Windows.Forms.CheckBox qCheckBox;
-        private System.Windows.Forms.NumericUpDown pDurationNumericUpDown;
-        private System.Windows.Forms.NumericUpDown pTimeScaleNumericUpDown;
-        private System.Windows.Forms.NumericUpDown pStartTimeNumericUpDown;
         private System.Windows.Forms.ComboBox TrackComboBox;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.NumericUpDown preRaceWaitTimeNumericUpDown;
         private System.Windows.Forms.NumericUpDown postRaceWaitTimeNumericUpDown;
-        private System.Windows.Forms.NumericUpDown rDurationNumericUpDown;
-        private System.Windows.Forms.NumericUpDown rTimeScaleNumericUpDown;
-        private System.Windows.Forms.NumericUpDown rStartTimeNumericUpDown;
-        private System.Windows.Forms.NumericUpDown qDurationNumericUpDown;
-        private System.Windows.Forms.NumericUpDown qTimeScaleNumericUpDown;
-        private System.Windows.Forms.NumericUpDown qStartTimeNumericUpDown;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.NumericUpDown maxDriversCountNumericUpDown;
         private System.Windows.Forms.Label label24;
@@ -2413,6 +1895,13 @@
         private System.Windows.Forms.NumericUpDown tyreSetsNumericUpDown;
         private System.Windows.Forms.ComboBox carClassComboBox;
         private System.Windows.Forms.CheckBox isPrepPhaseLockedCheckBox;
+        private System.Windows.Forms.DataGridView sessionGridView;
+        private System.Windows.Forms.DataGridViewComboBoxColumn SessionColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn DayColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TimeScaleColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StartTimeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DurationColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn DeleteColumn;
     }
 }
 

@@ -258,19 +258,19 @@ namespace ACC_Dedicated_Server_GUI
                 switch (settings.formationLapType)
                 {
                     case 0:
-                        formationLapTypeComboBox.SelectedItem = "Old";
+                        formationLapTypeComboBox.SelectedItem = "Old limiter lap";
                         break;
                     case 1:
-                        formationLapTypeComboBox.SelectedItem = "Free";
+                        formationLapTypeComboBox.SelectedItem = "Free, only usable for private servers";
                         break;
                     case 4:
-                        formationLapTypeComboBox.SelectedItem = "Free Ghost";
+                        formationLapTypeComboBox.SelectedItem = "Free formation lap + 1 ghosted cars lap";
                         break;
                     case 5:
-                        formationLapTypeComboBox.SelectedItem = "Short Ghost";
+                        formationLapTypeComboBox.SelectedItem = "Short formation lap with UI + 1 ghosted cars lap";
                         break;
                     default:
-                        formationLapTypeComboBox.SelectedItem = "Default";
+                        formationLapTypeComboBox.SelectedItem = "Default formation lap UI";
                         break;
                 }
             }
@@ -322,74 +322,46 @@ namespace ACC_Dedicated_Server_GUI
 
                 foreach (Session session in eventObject.sessions)
                 {
-                    switch (session.sessionType.ToUpper())
+                    string sessionType = "";
+                    switch (session.sessionType)
                     {
                         case "P":
-                            pCheckBox.Checked = true;
-                            pStartTimeNumericUpDown.Value = InNumUpDnRange(session.hourOfDay, pStartTimeNumericUpDown);
-                            pTimeScaleNumericUpDown.Value = InNumUpDnRange(session.timeMultiplier, pTimeScaleNumericUpDown);
-                            pDurationNumericUpDown.Value = InNumUpDnRange(session.sessionDurationMinutes, pDurationNumericUpDown);
-                            switch (session.dayOfWeekend)
-                            {
-                                case 1:
-                                    pFridayRadioButton.Checked = true;
-                                    break;
-                                case 2:
-                                    pSaturdayRadioButton.Checked = true;
-                                    break;
-                                case 3:
-                                    pSundayRadioButton.Checked = true;
-                                    break;
-                                default:
-                                    break;
-                            }
+                            sessionType = "Practice";
                             break;
                         case "Q":
-                            qCheckBox.Checked = true;
-                            qStartTimeNumericUpDown.Value = InNumUpDnRange(session.hourOfDay, qStartTimeNumericUpDown);
-                            qTimeScaleNumericUpDown.Value = InNumUpDnRange(session.timeMultiplier, qTimeScaleNumericUpDown);
-                            qDurationNumericUpDown.Value = InNumUpDnRange(session.sessionDurationMinutes, qDurationNumericUpDown);
-                            switch (session.dayOfWeekend)
-                            {
-                                case 1:
-                                    qFridayRadioButton.Checked = true;
-                                    break;
-                                case 2:
-                                    qSaturdayRadioButton.Checked = true;
-                                    break;
-                                case 3:
-                                    qSundayRadioButton.Checked = true;
-                                    break;
-                                default:
-                                    break;
-                            }
+                            sessionType = "Qualifying";
                             break;
                         case "R":
-                            rCheckBox.Checked = true;
-                            rStartTimeNumericUpDown.Value = InNumUpDnRange(session.hourOfDay, rStartTimeNumericUpDown);
-                            rTimeScaleNumericUpDown.Value = InNumUpDnRange(session.timeMultiplier, rTimeScaleNumericUpDown);
-                            rDurationNumericUpDown.Value = InNumUpDnRange(session.sessionDurationMinutes, rDurationNumericUpDown);
-                            switch (session.dayOfWeekend)
-                            {
-                                case 1:
-                                    rFridayRadioButton.Checked = true;
-                                    break;
-                                case 2:
-                                    rSaturdayRadioButton.Checked = true;
-                                    break;
-                                case 3:
-                                    rSundayRadioButton.Checked = true;
-                                    break;
-                                default:
-                                    break;
-                            }
+                            sessionType = "Race";
                             break;
                         default:
                             break;
                     }
+
+                    string dayOfWeekend = "";
+                    switch (session.dayOfWeekend)
+                    {
+                        case 1:
+                            dayOfWeekend = "Friday";
+                            break;
+                        case 2:
+                            dayOfWeekend = "Saturday";
+                            break;
+                        case 3:
+                            dayOfWeekend = "Sunday";
+                            break;
+                        default:
+                            break;
+                    }   
+
+                    sessionGridView.Rows.Add(new object[] { 
+                        sessionType,
+                        dayOfWeekend,
+                        session.timeMultiplier,                        
+                        session.hourOfDay,
+                        session.sessionDurationMinutes
+                    });
                 }
-                if (!pCheckBox.Checked && !qCheckBox.Checked)
-                    pCheckBox.Checked = true;
             }
 
             file = @"cfg\eventRules.json";
@@ -444,16 +416,16 @@ namespace ACC_Dedicated_Server_GUI
             settings.racecraftRatingRequirement = (int)RCRequirementNumericUpDown.Value;
             switch (formationLapTypeComboBox.SelectedItem)
             {
-                case "Old":
+                case "Old limiter lap":
                     settings.formationLapType = 0;
                     break;
-                case "Free":
+                case "Free, only usable for private servers":
                     settings.formationLapType = 1;
                     break;
-                case "Free Ghost":
+                case "Free formation lap + 1 ghosted cars lap":
                     settings.formationLapType = 4;
                     break;
-                case "Short Ghost":
+                case "Short formation lap with UI + 1 ghosted cars lap":
                     settings.formationLapType = 5;
                     break;
                 default:
@@ -497,56 +469,36 @@ namespace ACC_Dedicated_Server_GUI
                 eventObject.sessions = new List<Session>();
             eventObject.sessions.Clear();
 
-            if (pCheckBox.Checked)
+
+
+
+            foreach (DataGridViewRow dgvr in sessionGridView.Rows)
             {
+                if (dgvr.Index + 1 >= sessionGridView.Rows.Count ||
+                    dgvr.Cells[0].Value == null)
+                    break;
+
                 Session session = new Session();
 
-                session.sessionType = "P";
-                session.hourOfDay = (int)pStartTimeNumericUpDown.Value;
-                session.timeMultiplier = (int)pTimeScaleNumericUpDown.Value;
-                session.sessionDurationMinutes = (int)pDurationNumericUpDown.Value;
-                if (pFridayRadioButton.Checked)
-                    session.dayOfWeekend = 1;
-                else if (pSaturdayRadioButton.Checked)
-                    session.dayOfWeekend = 2;
-                else
-                    session.dayOfWeekend = 3;
+                session.sessionType = dgvr.Cells[0].Value.ToString().Substring(0, 1);
+                session.timeMultiplier = int.Parse(dgvr.Cells[2].Value.ToString());
+                session.hourOfDay = int.Parse(dgvr.Cells[3].Value.ToString());
+                session.sessionDurationMinutes = int.Parse(dgvr.Cells[4].Value.ToString());
 
-                eventObject.sessions.Add(session);
-            }
-
-            if (qCheckBox.Checked)
-            {
-                Session session = new Session();
-
-                session.sessionType = "Q";
-                session.hourOfDay = (int)qStartTimeNumericUpDown.Value;
-                session.timeMultiplier = (int)qTimeScaleNumericUpDown.Value;
-                session.sessionDurationMinutes = (int)qDurationNumericUpDown.Value;
-                if (qFridayRadioButton.Checked)
-                    session.dayOfWeekend = 1;
-                else if (qSaturdayRadioButton.Checked)
-                    session.dayOfWeekend = 2;
-                else
-                    session.dayOfWeekend = 3;
-
-                eventObject.sessions.Add(session);
-            }
-
-            if (rCheckBox.Checked)
-            {
-                Session session = new Session();
-
-                session.sessionType = "R";
-                session.hourOfDay = (int)rStartTimeNumericUpDown.Value;
-                session.timeMultiplier = (int)rTimeScaleNumericUpDown.Value;
-                session.sessionDurationMinutes = (int)rDurationNumericUpDown.Value;
-                if (rFridayRadioButton.Checked)
-                    session.dayOfWeekend = 1;
-                else if (rSaturdayRadioButton.Checked)
-                    session.dayOfWeekend = 2;
-                else
-                    session.dayOfWeekend = 3;
+                switch (dgvr.Cells[1].Value.ToString())
+                {
+                    case "Friday":
+                        session.dayOfWeekend = 1;
+                        break;
+                    case "Saturday":
+                        session.dayOfWeekend = 2;
+                        break;
+                    case "Sunday":
+                        session.dayOfWeekend = 3;
+                        break;
+                    default:
+                        break;
+                }
 
                 eventObject.sessions.Add(session);
             }
@@ -621,9 +573,6 @@ namespace ACC_Dedicated_Server_GUI
 #else
             string fileName = "accServer";
 #endif
-            if (!pCheckBox.Checked && !qCheckBox.Checked)
-                pCheckBox.Checked = true;
-
             try
             {
                 if (consolePanel.Visible)
@@ -659,28 +608,6 @@ namespace ACC_Dedicated_Server_GUI
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void practiceCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBox_CheckChanged(pCheckBox);
-            pPanel.Enabled = pCheckBox.Checked;
-            if (!pCheckBox.Checked && !qCheckBox.Checked)
-                qCheckBox.Checked = true;
-        }
-
-        private void qualifyingCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBox_CheckChanged(qCheckBox);
-            qPanel.Enabled = qCheckBox.Checked;
-            if (!pCheckBox.Checked && !qCheckBox.Checked)
-                pCheckBox.Checked = true;
-        }
-
-        private void raceCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            checkBox_CheckChanged(rCheckBox);
-            rPanel.Enabled = rCheckBox.Checked;
         }
 
         private void entryListButton_Click(object sender, EventArgs e)
@@ -891,6 +818,18 @@ namespace ACC_Dedicated_Server_GUI
         private void isPrepPhaseLockedCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             checkBox_CheckChanged(isPrepPhaseLockedCheckBox);
+        }
+
+        private void sessionGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0 && e.RowIndex + 1 < senderGrid.Rows.Count)
+            {
+                //TODO - Button Clicked - Execute Code Here
+                sessionGridView.Rows.RemoveAt(e.RowIndex);
+            }
         }
     }
 }
