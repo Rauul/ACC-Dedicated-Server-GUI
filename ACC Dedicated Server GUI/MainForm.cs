@@ -693,6 +693,71 @@ namespace ACC_Dedicated_Server_GUI
                 boPForm.Activate();
         }
 
+        private void sessionGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Up))
+            {
+                moveUp();
+            }
+            if (e.KeyCode.Equals(Keys.Down))
+            {
+                moveDown();
+            }
+            e.Handled = true;
+        }
+
+        private void moveUp()
+        {
+            if (sessionGridView.RowCount > 0)
+            {
+                if (sessionGridView.SelectedRows.Count > 0 && sessionGridView.SelectedRows[0].Index < sessionGridView.Rows.Count - 1)
+                {
+                    int rowCount = sessionGridView.Rows.Count;
+                    int index = sessionGridView.SelectedCells[0].OwningRow.Index;
+
+                    if (index == 0)
+                    {
+                        return;
+                    }
+                    DataGridViewRowCollection rows = sessionGridView.Rows;
+
+                    // remove the previous row and add it behind the selected row.
+                    DataGridViewRow prevRow = rows[index - 1];
+                    rows.Remove(prevRow);
+                    prevRow.Frozen = false;
+                    rows.Insert(index, prevRow);
+                    sessionGridView.ClearSelection();
+                    sessionGridView.Rows[index - 1].Selected = true;
+                }
+            }
+        }
+
+        private void moveDown()
+        {
+            if (sessionGridView.RowCount > 0)
+            {
+                if (sessionGridView.SelectedRows.Count > 0 && sessionGridView.SelectedRows[0].Index < sessionGridView.Rows.Count - 1)
+                {
+                    int rowCount = sessionGridView.Rows.Count;
+                    int index = sessionGridView.SelectedCells[0].OwningRow.Index;
+
+                    if (index == (rowCount - 2)) // include the header row
+                    {
+                        return;
+                    }
+                    DataGridViewRowCollection rows = sessionGridView.Rows;
+
+                    // remove the next row and add it in front of the selected row.
+                    DataGridViewRow nextRow = rows[index + 1];
+                    rows.Remove(nextRow);
+                    nextRow.Frozen = false;
+                    rows.Insert(index, nextRow);
+                    sessionGridView.ClearSelection();
+                    sessionGridView.Rows[index + 1].Selected = true;
+                }
+            }
+        }
+
         #region Custom checkstates
         private void checkBox_CheckChanged(CheckBox checkBox)
         {
@@ -831,5 +896,7 @@ namespace ACC_Dedicated_Server_GUI
                 sessionGridView.Rows.RemoveAt(e.RowIndex);
             }
         }
+
+        
     }
 }

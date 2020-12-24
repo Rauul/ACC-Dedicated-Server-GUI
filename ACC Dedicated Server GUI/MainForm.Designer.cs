@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.serverNameTextBox = new System.Windows.Forms.TextBox();
             this.adminPasswordTextBox = new System.Windows.Forms.TextBox();
             this.joinPasswordTextBox = new System.Windows.Forms.TextBox();
@@ -86,6 +86,13 @@
             this.maxStabilityNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.sessionGridView = new System.Windows.Forms.DataGridView();
+            this.SessionColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.DayColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.TimeScaleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DurationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.carClassComboBox = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
             this.TrackComboBox = new System.Windows.Forms.ComboBox();
@@ -137,13 +144,6 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.donationButton = new System.Windows.Forms.Button();
             this.donationLabel = new System.Windows.Forms.Label();
-            this.sessionGridView = new System.Windows.Forms.DataGridView();
-            this.SessionColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.DayColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.TimeScaleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DurationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).BeginInit();
@@ -155,6 +155,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxStabilityNumericUpDown)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionGridView)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tyreSetsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.overTimeNumericUpDown)).BeginInit();
@@ -171,7 +172,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mandatoryPitStopCountNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sessionGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // serverNameTextBox
@@ -887,6 +887,105 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(394, 653);
             this.panel3.TabIndex = 18;
+            // 
+            // sessionGridView
+            // 
+            this.sessionGridView.AllowUserToOrderColumns = true;
+            this.sessionGridView.AllowUserToResizeColumns = false;
+            this.sessionGridView.AllowUserToResizeRows = false;
+            this.sessionGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sessionGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SessionColumn,
+            this.DayColumn,
+            this.TimeScaleColumn,
+            this.StartTimeColumn,
+            this.DurationColumn,
+            this.DeleteColumn});
+            this.sessionGridView.Location = new System.Drawing.Point(14, 454);
+            this.sessionGridView.MultiSelect = false;
+            this.sessionGridView.Name = "sessionGridView";
+            this.sessionGridView.RowHeadersVisible = false;
+            this.sessionGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.sessionGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.sessionGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.sessionGridView.Size = new System.Drawing.Size(365, 184);
+            this.sessionGridView.TabIndex = 43;
+            this.sessionGridView.TabStop = false;
+            this.sessionGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sessionGridView_CellContentClick);
+            this.sessionGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.sessionGridView_KeyDown);
+            // 
+            // SessionColumn
+            // 
+            this.SessionColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SessionColumn.HeaderText = "Session";
+            this.SessionColumn.Items.AddRange(new object[] {
+            "Practice",
+            "Qualifying",
+            "Race"});
+            this.SessionColumn.Name = "SessionColumn";
+            this.SessionColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // DayColumn
+            // 
+            this.DayColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DayColumn.HeaderText = "Day";
+            this.DayColumn.Items.AddRange(new object[] {
+            "Friday",
+            "Saturday",
+            "Sunday"});
+            this.DayColumn.Name = "DayColumn";
+            this.DayColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TimeScaleColumn
+            // 
+            this.TimeScaleColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle21.NullValue = null;
+            this.TimeScaleColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            this.TimeScaleColumn.HeaderText = "Time Scale";
+            this.TimeScaleColumn.Name = "TimeScaleColumn";
+            this.TimeScaleColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.TimeScaleColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.TimeScaleColumn.Width = 66;
+            // 
+            // StartTimeColumn
+            // 
+            this.StartTimeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.StartTimeColumn.DefaultCellStyle = dataGridViewCellStyle22;
+            this.StartTimeColumn.HeaderText = "Start Time";
+            this.StartTimeColumn.Name = "StartTimeColumn";
+            this.StartTimeColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.StartTimeColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.StartTimeColumn.Width = 61;
+            // 
+            // DurationColumn
+            // 
+            this.DurationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle23.NullValue = null;
+            this.DurationColumn.DefaultCellStyle = dataGridViewCellStyle23;
+            this.DurationColumn.HeaderText = "Duration";
+            this.DurationColumn.Name = "DurationColumn";
+            this.DurationColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DurationColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DurationColumn.Width = 53;
+            // 
+            // DeleteColumn
+            // 
+            this.DeleteColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
+            this.DeleteColumn.DefaultCellStyle = dataGridViewCellStyle24;
+            this.DeleteColumn.HeaderText = "";
+            this.DeleteColumn.Name = "DeleteColumn";
+            this.DeleteColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DeleteColumn.Text = "X";
+            this.DeleteColumn.UseColumnTextForButtonValue = true;
+            this.DeleteColumn.Width = 25;
             // 
             // carClassComboBox
             // 
@@ -1629,101 +1728,6 @@
             this.donationLabel.Text = "Donations are never expected\r\n      but always appreciated";
             this.donationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // sessionGridView
-            // 
-            this.sessionGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sessionGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SessionColumn,
-            this.DayColumn,
-            this.TimeScaleColumn,
-            this.StartTimeColumn,
-            this.DurationColumn,
-            this.DeleteColumn});
-            this.sessionGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.sessionGridView.Location = new System.Drawing.Point(14, 454);
-            this.sessionGridView.MultiSelect = false;
-            this.sessionGridView.Name = "sessionGridView";
-            this.sessionGridView.RowHeadersVisible = false;
-            this.sessionGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.sessionGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.sessionGridView.Size = new System.Drawing.Size(365, 184);
-            this.sessionGridView.TabIndex = 43;
-            this.sessionGridView.TabStop = false;
-            this.sessionGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sessionGridView_CellContentClick);
-            // 
-            // SessionColumn
-            // 
-            this.SessionColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SessionColumn.HeaderText = "Session";
-            this.SessionColumn.Items.AddRange(new object[] {
-            "Practice",
-            "Qualifying",
-            "Race"});
-            this.SessionColumn.Name = "SessionColumn";
-            this.SessionColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // DayColumn
-            // 
-            this.DayColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DayColumn.HeaderText = "Day";
-            this.DayColumn.Items.AddRange(new object[] {
-            "Friday",
-            "Saturday",
-            "Sunday"});
-            this.DayColumn.Name = "DayColumn";
-            this.DayColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // TimeScaleColumn
-            // 
-            this.TimeScaleColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.NullValue = null;
-            this.TimeScaleColumn.DefaultCellStyle = dataGridViewCellStyle13;
-            this.TimeScaleColumn.HeaderText = "Time Scale";
-            this.TimeScaleColumn.Name = "TimeScaleColumn";
-            this.TimeScaleColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.TimeScaleColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.TimeScaleColumn.Width = 66;
-            // 
-            // StartTimeColumn
-            // 
-            this.StartTimeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.StartTimeColumn.DefaultCellStyle = dataGridViewCellStyle14;
-            this.StartTimeColumn.HeaderText = "Start Time";
-            this.StartTimeColumn.Name = "StartTimeColumn";
-            this.StartTimeColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.StartTimeColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.StartTimeColumn.Width = 61;
-            // 
-            // DurationColumn
-            // 
-            this.DurationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.NullValue = null;
-            this.DurationColumn.DefaultCellStyle = dataGridViewCellStyle15;
-            this.DurationColumn.HeaderText = "Duration";
-            this.DurationColumn.Name = "DurationColumn";
-            this.DurationColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.DurationColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DurationColumn.Width = 53;
-            // 
-            // DeleteColumn
-            // 
-            this.DeleteColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.DeleteColumn.DefaultCellStyle = dataGridViewCellStyle16;
-            this.DeleteColumn.HeaderText = "";
-            this.DeleteColumn.Name = "DeleteColumn";
-            this.DeleteColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.DeleteColumn.Text = "X";
-            this.DeleteColumn.UseColumnTextForButtonValue = true;
-            this.DeleteColumn.Width = 25;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1765,6 +1769,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.maxStabilityNumericUpDown)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionGridView)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tyreSetsNumericUpDown)).EndInit();
@@ -1784,7 +1789,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mandatoryPitStopCountNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sessionGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
