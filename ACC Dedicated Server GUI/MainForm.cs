@@ -26,7 +26,7 @@ namespace ACC_Dedicated_Server_GUI
 
         [DllImport("user32.dll", SetLastError = true)]
         static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
-
+        
         SettingsObject settings = new SettingsObject();
         AssistObject assist = new AssistObject();
         EventObject eventObject = new EventObject();
@@ -35,6 +35,9 @@ namespace ACC_Dedicated_Server_GUI
         EntriesForm entriesForm = new EntriesForm();
         BoPForm boPForm = new BoPForm();
         Process process = new Process();
+
+        private IntPtr hWndOriginalParent;
+        private IntPtr hWndDocked;
 
         Panel consolePanel = new Panel();
 
@@ -534,18 +537,19 @@ namespace ACC_Dedicated_Server_GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //carList.Sort(delegate (Car x, Car y) { return x.model.CompareTo(y.model); });
             TrackComboBox.Items.AddRange(trackList.ToArray());
             TrackComboBox.SelectedIndex = 0;
             carClassComboBox.SelectedIndex = 0;
+            embedConsoleCheckBox.Checked = Properties.Settings.Default.EmbedConsole;
+
             consolePanel.Visible = false;
 
             Size size = new Size();
-            size = panel3.Size;
+            size = consoleParentPanel.Size;
             size.Height += 27;
             consolePanel.Size = size;
 
-            consolePanel.Parent = panel3;
+            consolePanel.Parent = consoleParentPanel;
 
             Point location = new Point(0, -27);
             consolePanel.Location = location;
@@ -575,39 +579,63 @@ namespace ACC_Dedicated_Server_GUI
 #endif
             try
             {
-                if (consolePanel.Visible)
+                if (IsRunning(process))
                 {
                     consolePanel.Visible = false;
+                    consoleParentPanel.SendToBack();
                     label12.Visible = true;
                     if (!process.HasExited)
                         process.Kill();
                 }
+                else if (embedConsoleCheckBox.Checked)
+                {
+                    {
+                        SaveConfig();
+                        consolePanel.Visible = true;
+                        consoleParentPanel.BringToFront();
+
+                        process.StartInfo.FileName = fileName + ".exe";
+
+                        process.Start();
+                        while (string.IsNullOrEmpty(process.MainWindowTitle))
+                        {
+                            Thread.Sleep(10);
+                            process.Refresh();
+                        }
+                        hWndOriginalParent = SetParent(process.MainWindowHandle, consolePanel.Handle);
+                        SendMessage(process.MainWindowHandle, WM_SYSCOMMAND, SC_MAXIMIZE, 0);
+                        label12.Visible = false;
+                        this.BringToFront();
+                        this.Activate();
+                    }
+                }
                 else
                 {
-                    SaveConfig();
-                    consolePanel.Visible = true;
-                    consolePanel.BringToFront();
-
                     process.StartInfo.FileName = fileName + ".exe";
-                    process.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
-
                     process.Start();
-                    while (string.IsNullOrEmpty(process.MainWindowTitle))
-                    {
-                        Thread.Sleep(10);
-                        process.Refresh();
-                    }
-                    SetParent(process.MainWindowHandle, consolePanel.Handle);
-                    SendMessage(process.MainWindowHandle, WM_SYSCOMMAND, SC_MAXIMIZE, 0);
-                    label12.Visible = false;
-                    this.BringToFront();
-                    this.Activate();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        public static bool IsRunning(Process process)
+        {
+            if (process == null)
+                throw new ArgumentNullException("process");
+
+
+            try
+            {
+                Process.GetProcessById(process.Id);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
         }
 
         private void entryListButton_Click(object sender, EventArgs e)
@@ -658,6 +686,8 @@ namespace ACC_Dedicated_Server_GUI
         {
             try
             {
+                Properties.Settings.Default.EmbedConsole = embedConsoleCheckBox.Checked;
+                Properties.Settings.Default.Save();
                 if (consolePanel.Visible)
                     process.Kill();
             }
@@ -883,6 +913,38 @@ namespace ACC_Dedicated_Server_GUI
         private void isPrepPhaseLockedCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             checkBox_CheckChanged(isPrepPhaseLockedCheckBox);
+        }
+
+        private void embedConsoleCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(embedConsoleCheckBox);
+
+            if (IsRunning(process))
+            {
+                if (embedConsoleCheckBox.Checked)
+                {
+                    consolePanel.Visible = true;
+                    consoleParentPanel.BringToFront();
+
+                    while (string.IsNullOrEmpty(process.MainWindowTitle))
+                    {
+                        Thread.Sleep(10);
+                        process.Refresh();
+                    }
+                    hWndOriginalParent = SetParent(process.MainWindowHandle, consolePanel.Handle);
+                    SendMessage(process.MainWindowHandle, WM_SYSCOMMAND, SC_MAXIMIZE, 0);
+                    label12.Visible = false;
+                    this.BringToFront();
+                    this.Activate();
+                }
+                else
+                {
+                    SetParent(process.MainWindowHandle, hWndOriginalParent);
+                    consolePanel.Visible = false;
+                    consoleParentPanel.SendToBack();
+                    label12.Visible = true;
+                }
+            }
         }
 
         private void sessionGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.serverNameTextBox = new System.Windows.Forms.TextBox();
             this.adminPasswordTextBox = new System.Windows.Forms.TextBox();
             this.joinPasswordTextBox = new System.Windows.Forms.TextBox();
@@ -55,7 +55,7 @@
             this.autoStartEngineCheckBox = new System.Windows.Forms.CheckBox();
             this.autoLightsCheckBox = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.serverSettingsPanel = new System.Windows.Forms.Panel();
             this.isPrepPhaseLockedCheckBox = new System.Windows.Forms.CheckBox();
             this.label40 = new System.Windows.Forms.Label();
             this.centralEntryListPathButton = new System.Windows.Forms.Button();
@@ -82,10 +82,8 @@
             this.formationLapTypeComboBox = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.drivingAidsPanel = new System.Windows.Forms.Panel();
             this.maxStabilityNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.sessionGridView = new System.Windows.Forms.DataGridView();
             this.SessionColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.DayColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -93,11 +91,9 @@
             this.StartTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DurationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.carClassComboBox = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.TrackComboBox = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.miscPanel = new System.Windows.Forms.Panel();
             this.label42 = new System.Windows.Forms.Label();
             this.tyreSetsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label41 = new System.Windows.Forms.Label();
@@ -107,7 +103,7 @@
             this.preRaceWaitTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.postRaceWaitTimeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label20 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.weatherPanel = new System.Windows.Forms.Panel();
             this.simracerWeatherConditionsCheckBox = new System.Windows.Forms.CheckBox();
             this.fixedConditionQualificationCheckBox = new System.Windows.Forms.CheckBox();
             this.weatherRandomnessTrackBar = new System.Windows.Forms.TrackBar();
@@ -122,7 +118,7 @@
             this.tempTrackBar = new System.Windows.Forms.TrackBar();
             this.tempLabel = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pitstopPanel = new System.Windows.Forms.Panel();
             this.maxDriversCountNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label24 = new System.Windows.Forms.Label();
             this.driverSwapRequiredCheckBox = new System.Windows.Forms.CheckBox();
@@ -144,7 +140,14 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.donationButton = new System.Windows.Forms.Button();
             this.donationLabel = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.label12 = new System.Windows.Forms.Label();
+            this.embedConsoleCheckBox = new System.Windows.Forms.CheckBox();
+            this.sessionsPanel = new System.Windows.Forms.Panel();
+            this.TrackComboBox = new System.Windows.Forms.ComboBox();
+            this.carClassComboBox = new System.Windows.Forms.ComboBox();
+            this.eventPanel = new System.Windows.Forms.Panel();
+            this.consoleParentPanel = new System.Windows.Forms.Panel();
+            this.serverSettingsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TCPNumericUpDown)).BeginInit();
@@ -152,31 +155,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.SARequirementNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TRRequirementNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxCarSlotsNumericUpDown)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.drivingAidsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxStabilityNumericUpDown)).BeginInit();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sessionGridView)).BeginInit();
-            this.panel5.SuspendLayout();
+            this.miscPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tyreSetsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.overTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.preRaceWaitTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postRaceWaitTimeNumericUpDown)).BeginInit();
-            this.panel11.SuspendLayout();
+            this.weatherPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weatherRandomnessTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rainTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloudCoverageTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tempTrackBar)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.pitstopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxDriversCountNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxTotalDrivingTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mandatoryPitStopCountNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).BeginInit();
+            this.sessionsPanel.SuspendLayout();
+            this.eventPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // serverNameTextBox
             // 
-            this.serverNameTextBox.Location = new System.Drawing.Point(121, 13);
+            this.serverNameTextBox.Location = new System.Drawing.Point(120, 10);
             this.serverNameTextBox.Name = "serverNameTextBox";
             this.serverNameTextBox.Size = new System.Drawing.Size(207, 20);
             this.serverNameTextBox.TabIndex = 0;
@@ -184,21 +188,21 @@
             // 
             // adminPasswordTextBox
             // 
-            this.adminPasswordTextBox.Location = new System.Drawing.Point(121, 65);
+            this.adminPasswordTextBox.Location = new System.Drawing.Point(120, 62);
             this.adminPasswordTextBox.Name = "adminPasswordTextBox";
             this.adminPasswordTextBox.Size = new System.Drawing.Size(207, 20);
             this.adminPasswordTextBox.TabIndex = 2;
             // 
             // joinPasswordTextBox
             // 
-            this.joinPasswordTextBox.Location = new System.Drawing.Point(121, 39);
+            this.joinPasswordTextBox.Location = new System.Drawing.Point(120, 36);
             this.joinPasswordTextBox.Name = "joinPasswordTextBox";
             this.joinPasswordTextBox.Size = new System.Drawing.Size(207, 20);
             this.joinPasswordTextBox.TabIndex = 1;
             // 
             // spectatorPasswordTextBox
             // 
-            this.spectatorPasswordTextBox.Location = new System.Drawing.Point(121, 91);
+            this.spectatorPasswordTextBox.Location = new System.Drawing.Point(120, 88);
             this.spectatorPasswordTextBox.Name = "spectatorPasswordTextBox";
             this.spectatorPasswordTextBox.Size = new System.Drawing.Size(207, 20);
             this.spectatorPasswordTextBox.TabIndex = 3;
@@ -206,7 +210,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 16);
+            this.label1.Location = new System.Drawing.Point(3, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 12;
@@ -216,7 +220,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 68);
+            this.label2.Location = new System.Drawing.Point(3, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 13;
@@ -226,7 +230,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 42);
+            this.label3.Location = new System.Drawing.Point(3, 39);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 14;
@@ -236,7 +240,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 94);
+            this.label4.Location = new System.Drawing.Point(3, 91);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 13);
             this.label4.TabIndex = 15;
@@ -246,7 +250,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 156);
+            this.label5.Location = new System.Drawing.Point(3, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 16;
@@ -256,7 +260,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 183);
+            this.label6.Location = new System.Drawing.Point(3, 180);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 17;
@@ -266,7 +270,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 210);
+            this.label7.Location = new System.Drawing.Point(4, 207);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 13);
             this.label7.TabIndex = 18;
@@ -276,7 +280,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(5, 238);
+            this.label8.Location = new System.Drawing.Point(4, 235);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 13);
             this.label8.TabIndex = 19;
@@ -288,7 +292,7 @@
             this.idealLineCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.idealLineCheckBox.Location = new System.Drawing.Point(3, 15);
             this.idealLineCheckBox.Name = "idealLineCheckBox";
-            this.idealLineCheckBox.Size = new System.Drawing.Size(137, 17);
+            this.idealLineCheckBox.Size = new System.Drawing.Size(150, 17);
             this.idealLineCheckBox.TabIndex = 0;
             this.idealLineCheckBox.TabStop = false;
             this.idealLineCheckBox.Text = "Ideal Line";
@@ -300,7 +304,7 @@
             this.autoSteeringCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.autoSteeringCheckBox.Location = new System.Drawing.Point(3, 39);
             this.autoSteeringCheckBox.Name = "autoSteeringCheckBox";
-            this.autoSteeringCheckBox.Size = new System.Drawing.Size(137, 17);
+            this.autoSteeringCheckBox.Size = new System.Drawing.Size(150, 17);
             this.autoSteeringCheckBox.TabIndex = 1;
             this.autoSteeringCheckBox.TabStop = false;
             this.autoSteeringCheckBox.Text = "Auto Steering";
@@ -312,7 +316,7 @@
             this.autoShiftingCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.autoShiftingCheckBox.Location = new System.Drawing.Point(3, 87);
             this.autoShiftingCheckBox.Name = "autoShiftingCheckBox";
-            this.autoShiftingCheckBox.Size = new System.Drawing.Size(137, 17);
+            this.autoShiftingCheckBox.Size = new System.Drawing.Size(150, 17);
             this.autoShiftingCheckBox.TabIndex = 3;
             this.autoShiftingCheckBox.TabStop = false;
             this.autoShiftingCheckBox.Text = "Auto Shifting";
@@ -324,7 +328,7 @@
             this.autoPitLimiterCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.autoPitLimiterCheckBox.Location = new System.Drawing.Point(3, 63);
             this.autoPitLimiterCheckBox.Name = "autoPitLimiterCheckBox";
-            this.autoPitLimiterCheckBox.Size = new System.Drawing.Size(137, 17);
+            this.autoPitLimiterCheckBox.Size = new System.Drawing.Size(150, 17);
             this.autoPitLimiterCheckBox.TabIndex = 2;
             this.autoPitLimiterCheckBox.TabStop = false;
             this.autoPitLimiterCheckBox.Text = "Auto Pit Limiter";
@@ -334,9 +338,9 @@
             // autoWipersCheckBox
             // 
             this.autoWipersCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoWipersCheckBox.Location = new System.Drawing.Point(194, 39);
+            this.autoWipersCheckBox.Location = new System.Drawing.Point(178, 39);
             this.autoWipersCheckBox.Name = "autoWipersCheckBox";
-            this.autoWipersCheckBox.Size = new System.Drawing.Size(134, 17);
+            this.autoWipersCheckBox.Size = new System.Drawing.Size(150, 17);
             this.autoWipersCheckBox.TabIndex = 15;
             this.autoWipersCheckBox.TabStop = false;
             this.autoWipersCheckBox.Text = "Auto Wiper";
@@ -346,9 +350,9 @@
             // autoClutchCheckBox
             // 
             this.autoClutchCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoClutchCheckBox.Location = new System.Drawing.Point(194, 87);
+            this.autoClutchCheckBox.Location = new System.Drawing.Point(178, 87);
             this.autoClutchCheckBox.Name = "autoClutchCheckBox";
-            this.autoClutchCheckBox.Size = new System.Drawing.Size(134, 17);
+            this.autoClutchCheckBox.Size = new System.Drawing.Size(150, 17);
             this.autoClutchCheckBox.TabIndex = 17;
             this.autoClutchCheckBox.TabStop = false;
             this.autoClutchCheckBox.Text = "Auto Clutch";
@@ -358,9 +362,9 @@
             // autoStartEngineCheckBox
             // 
             this.autoStartEngineCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoStartEngineCheckBox.Location = new System.Drawing.Point(194, 15);
+            this.autoStartEngineCheckBox.Location = new System.Drawing.Point(178, 15);
             this.autoStartEngineCheckBox.Name = "autoStartEngineCheckBox";
-            this.autoStartEngineCheckBox.Size = new System.Drawing.Size(134, 17);
+            this.autoStartEngineCheckBox.Size = new System.Drawing.Size(150, 17);
             this.autoStartEngineCheckBox.TabIndex = 14;
             this.autoStartEngineCheckBox.TabStop = false;
             this.autoStartEngineCheckBox.Text = "Auto Start Engine";
@@ -370,9 +374,9 @@
             // autoLightsCheckBox
             // 
             this.autoLightsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoLightsCheckBox.Location = new System.Drawing.Point(194, 63);
+            this.autoLightsCheckBox.Location = new System.Drawing.Point(178, 63);
             this.autoLightsCheckBox.Name = "autoLightsCheckBox";
-            this.autoLightsCheckBox.Size = new System.Drawing.Size(134, 17);
+            this.autoLightsCheckBox.Size = new System.Drawing.Size(150, 17);
             this.autoLightsCheckBox.TabIndex = 16;
             this.autoLightsCheckBox.TabStop = false;
             this.autoLightsCheckBox.Text = "Auto Lights";
@@ -388,57 +392,57 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "Max Stability Control";
             // 
-            // panel1
+            // serverSettingsPanel
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.isPrepPhaseLockedCheckBox);
-            this.panel1.Controls.Add(this.label40);
-            this.panel1.Controls.Add(this.centralEntryListPathButton);
-            this.panel1.Controls.Add(this.autoDQCheckBox);
-            this.panel1.Controls.Add(this.randomizeTrackCheckBox);
-            this.panel1.Controls.Add(this.centraEntryListPathTextBox);
-            this.panel1.Controls.Add(this.dumpEntryListCheckBox);
-            this.panel1.Controls.Add(this.dumpLeaderboardsCheckBox);
-            this.panel1.Controls.Add(this.isRaceLockedCheckBox);
-            this.panel1.Controls.Add(this.shortFormationCheckBox);
-            this.panel1.Controls.Add(this.registerToLobbyCheckBox);
-            this.panel1.Controls.Add(this.lanDiscoveryCheckBox);
-            this.panel1.Controls.Add(this.maxConnectionsNumericUpDown);
-            this.panel1.Controls.Add(this.label38);
-            this.panel1.Controls.Add(this.UDPNumericUpDown);
-            this.panel1.Controls.Add(this.TCPNumericUpDown);
-            this.panel1.Controls.Add(this.label34);
-            this.panel1.Controls.Add(this.label35);
-            this.panel1.Controls.Add(this.RCRequirementNumericUpDown);
-            this.panel1.Controls.Add(this.SARequirementNumericUpDown);
-            this.panel1.Controls.Add(this.TRRequirementNumericUpDown);
-            this.panel1.Controls.Add(this.maxCarSlotsNumericUpDown);
-            this.panel1.Controls.Add(this.serverNameTextBox);
-            this.panel1.Controls.Add(this.spectatorPasswordTextBox);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.joinPasswordTextBox);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.adminPasswordTextBox);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 371);
-            this.panel1.TabIndex = 14;
+            this.serverSettingsPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.serverSettingsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.serverSettingsPanel.Controls.Add(this.isPrepPhaseLockedCheckBox);
+            this.serverSettingsPanel.Controls.Add(this.label40);
+            this.serverSettingsPanel.Controls.Add(this.centralEntryListPathButton);
+            this.serverSettingsPanel.Controls.Add(this.autoDQCheckBox);
+            this.serverSettingsPanel.Controls.Add(this.randomizeTrackCheckBox);
+            this.serverSettingsPanel.Controls.Add(this.centraEntryListPathTextBox);
+            this.serverSettingsPanel.Controls.Add(this.dumpEntryListCheckBox);
+            this.serverSettingsPanel.Controls.Add(this.dumpLeaderboardsCheckBox);
+            this.serverSettingsPanel.Controls.Add(this.isRaceLockedCheckBox);
+            this.serverSettingsPanel.Controls.Add(this.shortFormationCheckBox);
+            this.serverSettingsPanel.Controls.Add(this.registerToLobbyCheckBox);
+            this.serverSettingsPanel.Controls.Add(this.lanDiscoveryCheckBox);
+            this.serverSettingsPanel.Controls.Add(this.maxConnectionsNumericUpDown);
+            this.serverSettingsPanel.Controls.Add(this.label38);
+            this.serverSettingsPanel.Controls.Add(this.UDPNumericUpDown);
+            this.serverSettingsPanel.Controls.Add(this.TCPNumericUpDown);
+            this.serverSettingsPanel.Controls.Add(this.label34);
+            this.serverSettingsPanel.Controls.Add(this.label35);
+            this.serverSettingsPanel.Controls.Add(this.RCRequirementNumericUpDown);
+            this.serverSettingsPanel.Controls.Add(this.SARequirementNumericUpDown);
+            this.serverSettingsPanel.Controls.Add(this.TRRequirementNumericUpDown);
+            this.serverSettingsPanel.Controls.Add(this.maxCarSlotsNumericUpDown);
+            this.serverSettingsPanel.Controls.Add(this.serverNameTextBox);
+            this.serverSettingsPanel.Controls.Add(this.spectatorPasswordTextBox);
+            this.serverSettingsPanel.Controls.Add(this.label8);
+            this.serverSettingsPanel.Controls.Add(this.label7);
+            this.serverSettingsPanel.Controls.Add(this.joinPasswordTextBox);
+            this.serverSettingsPanel.Controls.Add(this.label6);
+            this.serverSettingsPanel.Controls.Add(this.label5);
+            this.serverSettingsPanel.Controls.Add(this.adminPasswordTextBox);
+            this.serverSettingsPanel.Controls.Add(this.label4);
+            this.serverSettingsPanel.Controls.Add(this.label1);
+            this.serverSettingsPanel.Controls.Add(this.label3);
+            this.serverSettingsPanel.Controls.Add(this.label2);
+            this.serverSettingsPanel.Location = new System.Drawing.Point(12, 12);
+            this.serverSettingsPanel.Name = "serverSettingsPanel";
+            this.serverSettingsPanel.Size = new System.Drawing.Size(340, 371);
+            this.serverSettingsPanel.TabIndex = 14;
             // 
             // isPrepPhaseLockedCheckBox
             // 
             this.isPrepPhaseLockedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.isPrepPhaseLockedCheckBox.Checked = true;
             this.isPrepPhaseLockedCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.isPrepPhaseLockedCheckBox.Location = new System.Drawing.Point(181, 176);
+            this.isPrepPhaseLockedCheckBox.Location = new System.Drawing.Point(177, 176);
             this.isPrepPhaseLockedCheckBox.Name = "isPrepPhaseLockedCheckBox";
-            this.isPrepPhaseLockedCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.isPrepPhaseLockedCheckBox.Size = new System.Drawing.Size(150, 17);
             this.isPrepPhaseLockedCheckBox.TabIndex = 43;
             this.isPrepPhaseLockedCheckBox.TabStop = false;
             this.isPrepPhaseLockedCheckBox.Text = "Prep Phase Locked";
@@ -448,7 +452,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(4, 120);
+            this.label40.Location = new System.Drawing.Point(3, 117);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(111, 13);
             this.label40.TabIndex = 42;
@@ -457,7 +461,7 @@
             // 
             // centralEntryListPathButton
             // 
-            this.centralEntryListPathButton.Location = new System.Drawing.Point(307, 117);
+            this.centralEntryListPathButton.Location = new System.Drawing.Point(306, 114);
             this.centralEntryListPathButton.Name = "centralEntryListPathButton";
             this.centralEntryListPathButton.Size = new System.Drawing.Size(21, 20);
             this.centralEntryListPathButton.TabIndex = 41;
@@ -469,9 +473,9 @@
             // autoDQCheckBox
             // 
             this.autoDQCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.autoDQCheckBox.Location = new System.Drawing.Point(181, 343);
+            this.autoDQCheckBox.Location = new System.Drawing.Point(177, 343);
             this.autoDQCheckBox.Name = "autoDQCheckBox";
-            this.autoDQCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.autoDQCheckBox.Size = new System.Drawing.Size(150, 17);
             this.autoDQCheckBox.TabIndex = 37;
             this.autoDQCheckBox.TabStop = false;
             this.autoDQCheckBox.Text = "Auto DQ";
@@ -482,9 +486,9 @@
             // randomizeTrackCheckBox
             // 
             this.randomizeTrackCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.randomizeTrackCheckBox.Location = new System.Drawing.Point(181, 319);
+            this.randomizeTrackCheckBox.Location = new System.Drawing.Point(177, 319);
             this.randomizeTrackCheckBox.Name = "randomizeTrackCheckBox";
-            this.randomizeTrackCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.randomizeTrackCheckBox.Size = new System.Drawing.Size(150, 17);
             this.randomizeTrackCheckBox.TabIndex = 36;
             this.randomizeTrackCheckBox.TabStop = false;
             this.randomizeTrackCheckBox.Text = "Randomize Track";
@@ -496,7 +500,7 @@
             // 
             // centraEntryListPathTextBox
             // 
-            this.centraEntryListPathTextBox.Location = new System.Drawing.Point(121, 117);
+            this.centraEntryListPathTextBox.Location = new System.Drawing.Point(120, 114);
             this.centraEntryListPathTextBox.Name = "centraEntryListPathTextBox";
             this.centraEntryListPathTextBox.Size = new System.Drawing.Size(180, 20);
             this.centraEntryListPathTextBox.TabIndex = 4;
@@ -504,9 +508,9 @@
             // dumpEntryListCheckBox
             // 
             this.dumpEntryListCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.dumpEntryListCheckBox.Location = new System.Drawing.Point(181, 295);
+            this.dumpEntryListCheckBox.Location = new System.Drawing.Point(177, 295);
             this.dumpEntryListCheckBox.Name = "dumpEntryListCheckBox";
-            this.dumpEntryListCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.dumpEntryListCheckBox.Size = new System.Drawing.Size(150, 17);
             this.dumpEntryListCheckBox.TabIndex = 35;
             this.dumpEntryListCheckBox.TabStop = false;
             this.dumpEntryListCheckBox.Text = "Dump Entry List";
@@ -517,9 +521,9 @@
             // dumpLeaderboardsCheckBox
             // 
             this.dumpLeaderboardsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.dumpLeaderboardsCheckBox.Location = new System.Drawing.Point(181, 271);
+            this.dumpLeaderboardsCheckBox.Location = new System.Drawing.Point(177, 271);
             this.dumpLeaderboardsCheckBox.Name = "dumpLeaderboardsCheckBox";
-            this.dumpLeaderboardsCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.dumpLeaderboardsCheckBox.Size = new System.Drawing.Size(150, 17);
             this.dumpLeaderboardsCheckBox.TabIndex = 34;
             this.dumpLeaderboardsCheckBox.TabStop = false;
             this.dumpLeaderboardsCheckBox.Text = "Dump Leaderboards";
@@ -533,9 +537,9 @@
             this.isRaceLockedCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.isRaceLockedCheckBox.Checked = true;
             this.isRaceLockedCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.isRaceLockedCheckBox.Location = new System.Drawing.Point(181, 152);
+            this.isRaceLockedCheckBox.Location = new System.Drawing.Point(177, 152);
             this.isRaceLockedCheckBox.Name = "isRaceLockedCheckBox";
-            this.isRaceLockedCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.isRaceLockedCheckBox.Size = new System.Drawing.Size(150, 17);
             this.isRaceLockedCheckBox.TabIndex = 12;
             this.isRaceLockedCheckBox.TabStop = false;
             this.isRaceLockedCheckBox.Text = "Race Locked";
@@ -548,9 +552,9 @@
             // shortFormationCheckBox
             // 
             this.shortFormationCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.shortFormationCheckBox.Location = new System.Drawing.Point(181, 199);
+            this.shortFormationCheckBox.Location = new System.Drawing.Point(177, 199);
             this.shortFormationCheckBox.Name = "shortFormationCheckBox";
-            this.shortFormationCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.shortFormationCheckBox.Size = new System.Drawing.Size(150, 17);
             this.shortFormationCheckBox.TabIndex = 14;
             this.shortFormationCheckBox.TabStop = false;
             this.shortFormationCheckBox.Text = "Short Formation Lap";
@@ -564,9 +568,9 @@
             this.registerToLobbyCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.registerToLobbyCheckBox.Checked = true;
             this.registerToLobbyCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.registerToLobbyCheckBox.Location = new System.Drawing.Point(181, 223);
+            this.registerToLobbyCheckBox.Location = new System.Drawing.Point(177, 223);
             this.registerToLobbyCheckBox.Name = "registerToLobbyCheckBox";
-            this.registerToLobbyCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.registerToLobbyCheckBox.Size = new System.Drawing.Size(150, 17);
             this.registerToLobbyCheckBox.TabIndex = 31;
             this.registerToLobbyCheckBox.TabStop = false;
             this.registerToLobbyCheckBox.Text = "Register To Lobby";
@@ -578,9 +582,9 @@
             // lanDiscoveryCheckBox
             // 
             this.lanDiscoveryCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lanDiscoveryCheckBox.Location = new System.Drawing.Point(181, 247);
+            this.lanDiscoveryCheckBox.Location = new System.Drawing.Point(177, 247);
             this.lanDiscoveryCheckBox.Name = "lanDiscoveryCheckBox";
-            this.lanDiscoveryCheckBox.Size = new System.Drawing.Size(147, 17);
+            this.lanDiscoveryCheckBox.Size = new System.Drawing.Size(150, 17);
             this.lanDiscoveryCheckBox.TabIndex = 30;
             this.lanDiscoveryCheckBox.TabStop = false;
             this.lanDiscoveryCheckBox.Text = "Lan Discovery";
@@ -596,7 +600,7 @@
             0,
             0,
             0});
-            this.maxConnectionsNumericUpDown.Location = new System.Drawing.Point(121, 262);
+            this.maxConnectionsNumericUpDown.Location = new System.Drawing.Point(120, 259);
             this.maxConnectionsNumericUpDown.Maximum = new decimal(new int[] {
             999,
             0,
@@ -618,7 +622,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(4, 264);
+            this.label38.Location = new System.Drawing.Point(3, 261);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(89, 13);
             this.label38.TabIndex = 28;
@@ -627,7 +631,7 @@
             // 
             // UDPNumericUpDown
             // 
-            this.UDPNumericUpDown.Location = new System.Drawing.Point(122, 290);
+            this.UDPNumericUpDown.Location = new System.Drawing.Point(121, 287);
             this.UDPNumericUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -647,7 +651,7 @@
             // 
             // TCPNumericUpDown
             // 
-            this.TCPNumericUpDown.Location = new System.Drawing.Point(122, 317);
+            this.TCPNumericUpDown.Location = new System.Drawing.Point(121, 314);
             this.TCPNumericUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -668,7 +672,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(5, 292);
+            this.label34.Location = new System.Drawing.Point(4, 289);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(52, 13);
             this.label34.TabIndex = 25;
@@ -678,7 +682,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(5, 319);
+            this.label35.Location = new System.Drawing.Point(4, 316);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(50, 13);
             this.label35.TabIndex = 24;
@@ -692,7 +696,7 @@
             0,
             0,
             0});
-            this.RCRequirementNumericUpDown.Location = new System.Drawing.Point(121, 235);
+            this.RCRequirementNumericUpDown.Location = new System.Drawing.Point(120, 232);
             this.RCRequirementNumericUpDown.Maximum = new decimal(new int[] {
             99,
             0,
@@ -722,7 +726,7 @@
             0,
             0,
             0});
-            this.SARequirementNumericUpDown.Location = new System.Drawing.Point(121, 208);
+            this.SARequirementNumericUpDown.Location = new System.Drawing.Point(120, 205);
             this.SARequirementNumericUpDown.Maximum = new decimal(new int[] {
             99,
             0,
@@ -747,7 +751,7 @@
             // 
             // TRRequirementNumericUpDown
             // 
-            this.TRRequirementNumericUpDown.Location = new System.Drawing.Point(121, 181);
+            this.TRRequirementNumericUpDown.Location = new System.Drawing.Point(120, 178);
             this.TRRequirementNumericUpDown.Maximum = new decimal(new int[] {
             3,
             0,
@@ -767,7 +771,7 @@
             // 
             // maxCarSlotsNumericUpDown
             // 
-            this.maxCarSlotsNumericUpDown.Location = new System.Drawing.Point(121, 154);
+            this.maxCarSlotsNumericUpDown.Location = new System.Drawing.Point(120, 151);
             this.maxCarSlotsNumericUpDown.Name = "maxCarSlotsNumericUpDown";
             this.maxCarSlotsNumericUpDown.Size = new System.Drawing.Size(54, 20);
             this.maxCarSlotsNumericUpDown.TabIndex = 5;
@@ -828,24 +832,24 @@
             this.label11.TabIndex = 17;
             this.label11.Text = "Driving Aids";
             // 
-            // panel2
+            // drivingAidsPanel
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.maxStabilityNumericUpDown);
-            this.panel2.Controls.Add(this.idealLineCheckBox);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.autoSteeringCheckBox);
-            this.panel2.Controls.Add(this.autoLightsCheckBox);
-            this.panel2.Controls.Add(this.autoWipersCheckBox);
-            this.panel2.Controls.Add(this.autoShiftingCheckBox);
-            this.panel2.Controls.Add(this.autoStartEngineCheckBox);
-            this.panel2.Controls.Add(this.autoClutchCheckBox);
-            this.panel2.Controls.Add(this.autoPitLimiterCheckBox);
-            this.panel2.Location = new System.Drawing.Point(12, 389);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(340, 143);
-            this.panel2.TabIndex = 16;
+            this.drivingAidsPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.drivingAidsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.drivingAidsPanel.Controls.Add(this.maxStabilityNumericUpDown);
+            this.drivingAidsPanel.Controls.Add(this.idealLineCheckBox);
+            this.drivingAidsPanel.Controls.Add(this.label9);
+            this.drivingAidsPanel.Controls.Add(this.autoSteeringCheckBox);
+            this.drivingAidsPanel.Controls.Add(this.autoLightsCheckBox);
+            this.drivingAidsPanel.Controls.Add(this.autoWipersCheckBox);
+            this.drivingAidsPanel.Controls.Add(this.autoShiftingCheckBox);
+            this.drivingAidsPanel.Controls.Add(this.autoStartEngineCheckBox);
+            this.drivingAidsPanel.Controls.Add(this.autoClutchCheckBox);
+            this.drivingAidsPanel.Controls.Add(this.autoPitLimiterCheckBox);
+            this.drivingAidsPanel.Location = new System.Drawing.Point(12, 389);
+            this.drivingAidsPanel.Name = "drivingAidsPanel";
+            this.drivingAidsPanel.Size = new System.Drawing.Size(340, 143);
+            this.drivingAidsPanel.TabIndex = 16;
             // 
             // maxStabilityNumericUpDown
             // 
@@ -854,45 +858,19 @@
             0,
             0,
             0});
-            this.maxStabilityNumericUpDown.Location = new System.Drawing.Point(185, 112);
+            this.maxStabilityNumericUpDown.Location = new System.Drawing.Point(178, 112);
             this.maxStabilityNumericUpDown.Name = "maxStabilityNumericUpDown";
-            this.maxStabilityNumericUpDown.Size = new System.Drawing.Size(143, 20);
+            this.maxStabilityNumericUpDown.Size = new System.Drawing.Size(150, 20);
             this.maxStabilityNumericUpDown.TabIndex = 20;
             this.maxStabilityNumericUpDown.TabStop = false;
             this.maxStabilityNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(376, 6);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(74, 13);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "Event Options";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.sessionGridView);
-            this.panel3.Controls.Add(this.carClassComboBox);
-            this.panel3.Controls.Add(this.label32);
-            this.panel3.Controls.Add(this.TrackComboBox);
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.panel11);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(364, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(394, 653);
-            this.panel3.TabIndex = 18;
             // 
             // sessionGridView
             // 
             this.sessionGridView.AllowUserToOrderColumns = true;
             this.sessionGridView.AllowUserToResizeColumns = false;
             this.sessionGridView.AllowUserToResizeRows = false;
+            this.sessionGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sessionGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sessionGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SessionColumn,
@@ -901,14 +879,15 @@
             this.StartTimeColumn,
             this.DurationColumn,
             this.DeleteColumn});
-            this.sessionGridView.Location = new System.Drawing.Point(14, 454);
+            this.sessionGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sessionGridView.Location = new System.Drawing.Point(0, 0);
             this.sessionGridView.MultiSelect = false;
             this.sessionGridView.Name = "sessionGridView";
             this.sessionGridView.RowHeadersVisible = false;
             this.sessionGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.sessionGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.sessionGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.sessionGridView.Size = new System.Drawing.Size(365, 184);
+            this.sessionGridView.Size = new System.Drawing.Size(363, 181);
             this.sessionGridView.TabIndex = 43;
             this.sessionGridView.TabStop = false;
             this.sessionGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sessionGridView_CellContentClick);
@@ -917,6 +896,7 @@
             // SessionColumn
             // 
             this.SessionColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SessionColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SessionColumn.HeaderText = "Session";
             this.SessionColumn.Items.AddRange(new object[] {
             "Practice",
@@ -928,6 +908,7 @@
             // DayColumn
             // 
             this.DayColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DayColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DayColumn.HeaderText = "Day";
             this.DayColumn.Items.AddRange(new object[] {
             "Friday",
@@ -939,9 +920,9 @@
             // TimeScaleColumn
             // 
             this.TimeScaleColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle21.NullValue = null;
-            this.TimeScaleColumn.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.NullValue = null;
+            this.TimeScaleColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.TimeScaleColumn.HeaderText = "Time Scale";
             this.TimeScaleColumn.Name = "TimeScaleColumn";
             this.TimeScaleColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -951,8 +932,8 @@
             // StartTimeColumn
             // 
             this.StartTimeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.StartTimeColumn.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.StartTimeColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.StartTimeColumn.HeaderText = "Start Time";
             this.StartTimeColumn.Name = "StartTimeColumn";
             this.StartTimeColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -962,9 +943,9 @@
             // DurationColumn
             // 
             this.DurationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle23.NullValue = null;
-            this.DurationColumn.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.NullValue = null;
+            this.DurationColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.DurationColumn.HeaderText = "Duration";
             this.DurationColumn.Name = "DurationColumn";
             this.DurationColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -974,12 +955,12 @@
             // DeleteColumn
             // 
             this.DeleteColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
-            this.DeleteColumn.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.DeleteColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.DeleteColumn.HeaderText = "";
             this.DeleteColumn.Name = "DeleteColumn";
             this.DeleteColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -987,67 +968,41 @@
             this.DeleteColumn.UseColumnTextForButtonValue = true;
             this.DeleteColumn.Width = 25;
             // 
-            // carClassComboBox
-            // 
-            this.carClassComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.carClassComboBox.FormattingEnabled = true;
-            this.carClassComboBox.Items.AddRange(new object[] {
-            "    FreeForAll",
-            "    GT3",
-            "    GT4",
-            "    Cup",
-            "    ST"});
-            this.carClassComboBox.Location = new System.Drawing.Point(226, 16);
-            this.carClassComboBox.Name = "carClassComboBox";
-            this.carClassComboBox.Size = new System.Drawing.Size(153, 21);
-            this.carClassComboBox.TabIndex = 42;
-            // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(18, 44);
+            this.label32.Location = new System.Drawing.Point(367, 61);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(39, 13);
             this.label32.TabIndex = 3;
             this.label32.Text = "Pitstop";
             // 
-            // TrackComboBox
-            // 
-            this.TrackComboBox.DisplayMember = "name";
-            this.TrackComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TrackComboBox.FormattingEnabled = true;
-            this.TrackComboBox.Location = new System.Drawing.Point(14, 16);
-            this.TrackComboBox.Name = "TrackComboBox";
-            this.TrackComboBox.Size = new System.Drawing.Size(180, 21);
-            this.TrackComboBox.TabIndex = 41;
-            this.TrackComboBox.TabStop = false;
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(18, 340);
+            this.label19.Location = new System.Drawing.Point(367, 352);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(74, 13);
             this.label19.TabIndex = 40;
             this.label19.Text = "Miscellaneous";
             // 
-            // panel5
+            // miscPanel
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label42);
-            this.panel5.Controls.Add(this.tyreSetsNumericUpDown);
-            this.panel5.Controls.Add(this.label41);
-            this.panel5.Controls.Add(this.overTimeNumericUpDown);
-            this.panel5.Controls.Add(this.label23);
-            this.panel5.Controls.Add(this.label39);
-            this.panel5.Controls.Add(this.label31);
-            this.panel5.Controls.Add(this.formationLapTypeComboBox);
-            this.panel5.Controls.Add(this.preRaceWaitTimeNumericUpDown);
-            this.panel5.Controls.Add(this.postRaceWaitTimeNumericUpDown);
-            this.panel5.Location = new System.Drawing.Point(14, 347);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(365, 93);
-            this.panel5.TabIndex = 0;
+            this.miscPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.miscPanel.Controls.Add(this.label42);
+            this.miscPanel.Controls.Add(this.tyreSetsNumericUpDown);
+            this.miscPanel.Controls.Add(this.label41);
+            this.miscPanel.Controls.Add(this.overTimeNumericUpDown);
+            this.miscPanel.Controls.Add(this.label23);
+            this.miscPanel.Controls.Add(this.label39);
+            this.miscPanel.Controls.Add(this.label31);
+            this.miscPanel.Controls.Add(this.formationLapTypeComboBox);
+            this.miscPanel.Controls.Add(this.preRaceWaitTimeNumericUpDown);
+            this.miscPanel.Controls.Add(this.postRaceWaitTimeNumericUpDown);
+            this.miscPanel.Location = new System.Drawing.Point(363, 359);
+            this.miscPanel.Name = "miscPanel";
+            this.miscPanel.Size = new System.Drawing.Size(365, 93);
+            this.miscPanel.TabIndex = 0;
             // 
             // label42
             // 
@@ -1198,34 +1153,34 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(18, 192);
+            this.label20.Location = new System.Drawing.Point(367, 206);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(48, 13);
             this.label20.TabIndex = 35;
             this.label20.Text = "Weather";
             // 
-            // panel11
+            // weatherPanel
             // 
-            this.panel11.BackColor = System.Drawing.SystemColors.Control;
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.simracerWeatherConditionsCheckBox);
-            this.panel11.Controls.Add(this.fixedConditionQualificationCheckBox);
-            this.panel11.Controls.Add(this.weatherRandomnessTrackBar);
-            this.panel11.Controls.Add(this.label33);
-            this.panel11.Controls.Add(this.weatherRandomnessLabel);
-            this.panel11.Controls.Add(this.cloudCoverageLabel);
-            this.panel11.Controls.Add(this.label36);
-            this.panel11.Controls.Add(this.rainTrackBar);
-            this.panel11.Controls.Add(this.label37);
-            this.panel11.Controls.Add(this.rainLabel);
-            this.panel11.Controls.Add(this.cloudCoverageTrackBar);
-            this.panel11.Controls.Add(this.tempTrackBar);
-            this.panel11.Controls.Add(this.tempLabel);
-            this.panel11.Controls.Add(this.label30);
-            this.panel11.Location = new System.Drawing.Point(14, 199);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(365, 135);
-            this.panel11.TabIndex = 34;
+            this.weatherPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.weatherPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.weatherPanel.Controls.Add(this.simracerWeatherConditionsCheckBox);
+            this.weatherPanel.Controls.Add(this.fixedConditionQualificationCheckBox);
+            this.weatherPanel.Controls.Add(this.weatherRandomnessTrackBar);
+            this.weatherPanel.Controls.Add(this.label33);
+            this.weatherPanel.Controls.Add(this.weatherRandomnessLabel);
+            this.weatherPanel.Controls.Add(this.cloudCoverageLabel);
+            this.weatherPanel.Controls.Add(this.label36);
+            this.weatherPanel.Controls.Add(this.rainTrackBar);
+            this.weatherPanel.Controls.Add(this.label37);
+            this.weatherPanel.Controls.Add(this.rainLabel);
+            this.weatherPanel.Controls.Add(this.cloudCoverageTrackBar);
+            this.weatherPanel.Controls.Add(this.tempTrackBar);
+            this.weatherPanel.Controls.Add(this.tempLabel);
+            this.weatherPanel.Controls.Add(this.label30);
+            this.weatherPanel.Location = new System.Drawing.Point(363, 213);
+            this.weatherPanel.Name = "weatherPanel";
+            this.weatherPanel.Size = new System.Drawing.Size(365, 135);
+            this.weatherPanel.TabIndex = 34;
             // 
             // simracerWeatherConditionsCheckBox
             // 
@@ -1390,28 +1345,28 @@
             this.label30.Text = "Avg. Ambient Temp";
             this.label30.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // panel4
+            // pitstopPanel
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.maxDriversCountNumericUpDown);
-            this.panel4.Controls.Add(this.label24);
-            this.panel4.Controls.Add(this.driverSwapRequiredCheckBox);
-            this.panel4.Controls.Add(this.tyreChangeRequiredCheckBox);
-            this.panel4.Controls.Add(this.refuellingRequiredCheckBox);
-            this.panel4.Controls.Add(this.refuellingTimeFixedCheckBox);
-            this.panel4.Controls.Add(this.refuellingAllowedCheckBox);
-            this.panel4.Controls.Add(this.maxTotalDrivingTimeNumericUpDown);
-            this.panel4.Controls.Add(this.mandatoryPitStopCountNumericUpDown);
-            this.panel4.Controls.Add(this.driverStintTimeNumericUpDown);
-            this.panel4.Controls.Add(this.pitWindowsLengthNumericUpDown);
-            this.panel4.Controls.Add(this.label26);
-            this.panel4.Controls.Add(this.label27);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.label17);
-            this.panel4.Location = new System.Drawing.Point(14, 50);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(365, 135);
-            this.panel4.TabIndex = 1;
+            this.pitstopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pitstopPanel.Controls.Add(this.maxDriversCountNumericUpDown);
+            this.pitstopPanel.Controls.Add(this.label24);
+            this.pitstopPanel.Controls.Add(this.driverSwapRequiredCheckBox);
+            this.pitstopPanel.Controls.Add(this.tyreChangeRequiredCheckBox);
+            this.pitstopPanel.Controls.Add(this.refuellingRequiredCheckBox);
+            this.pitstopPanel.Controls.Add(this.refuellingTimeFixedCheckBox);
+            this.pitstopPanel.Controls.Add(this.refuellingAllowedCheckBox);
+            this.pitstopPanel.Controls.Add(this.maxTotalDrivingTimeNumericUpDown);
+            this.pitstopPanel.Controls.Add(this.mandatoryPitStopCountNumericUpDown);
+            this.pitstopPanel.Controls.Add(this.driverStintTimeNumericUpDown);
+            this.pitstopPanel.Controls.Add(this.pitWindowsLengthNumericUpDown);
+            this.pitstopPanel.Controls.Add(this.label26);
+            this.pitstopPanel.Controls.Add(this.label27);
+            this.pitstopPanel.Controls.Add(this.label13);
+            this.pitstopPanel.Controls.Add(this.label17);
+            this.pitstopPanel.Location = new System.Drawing.Point(363, 67);
+            this.pitstopPanel.Name = "pitstopPanel";
+            this.pitstopPanel.Size = new System.Drawing.Size(365, 135);
+            this.pitstopPanel.TabIndex = 1;
             // 
             // maxDriversCountNumericUpDown
             // 
@@ -1662,9 +1617,9 @@
             // 
             this.launchServerButton.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.launchServerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.launchServerButton.Location = new System.Drawing.Point(184, 538);
+            this.launchServerButton.Location = new System.Drawing.Point(185, 538);
             this.launchServerButton.Name = "launchServerButton";
-            this.launchServerButton.Size = new System.Drawing.Size(168, 91);
+            this.launchServerButton.Size = new System.Drawing.Size(167, 91);
             this.launchServerButton.TabIndex = 0;
             this.launchServerButton.TabStop = false;
             this.launchServerButton.Text = "Start/Stop Server";
@@ -1710,9 +1665,9 @@
             this.donationButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.donationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.donationButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.donationButton.Location = new System.Drawing.Point(184, 635);
+            this.donationButton.Location = new System.Drawing.Point(185, 635);
             this.donationButton.Name = "donationButton";
-            this.donationButton.Size = new System.Drawing.Size(168, 30);
+            this.donationButton.Size = new System.Drawing.Size(167, 30);
             this.donationButton.TabIndex = 23;
             this.donationButton.Text = "BUY ME A BEER";
             this.donationButton.UseVisualStyleBackColor = false;
@@ -1721,42 +1676,127 @@
             // donationLabel
             // 
             this.donationLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.donationLabel.Location = new System.Drawing.Point(9, 635);
+            this.donationLabel.Location = new System.Drawing.Point(12, 636);
             this.donationLabel.Name = "donationLabel";
-            this.donationLabel.Size = new System.Drawing.Size(169, 30);
+            this.donationLabel.Size = new System.Drawing.Size(166, 30);
             this.donationLabel.TabIndex = 24;
             this.donationLabel.Text = "Donations are never expected\r\n      but always appreciated";
             this.donationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(375, 6);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(74, 13);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Event Options";
+            // 
+            // embedConsoleCheckBox
+            // 
+            this.embedConsoleCheckBox.BackColor = System.Drawing.SystemColors.Control;
+            this.embedConsoleCheckBox.Checked = true;
+            this.embedConsoleCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.embedConsoleCheckBox.Location = new System.Drawing.Point(363, 648);
+            this.embedConsoleCheckBox.Name = "embedConsoleCheckBox";
+            this.embedConsoleCheckBox.Size = new System.Drawing.Size(117, 17);
+            this.embedConsoleCheckBox.TabIndex = 21;
+            this.embedConsoleCheckBox.TabStop = false;
+            this.embedConsoleCheckBox.Text = "Embed Console";
+            this.embedConsoleCheckBox.UseVisualStyleBackColor = false;
+            this.embedConsoleCheckBox.CheckedChanged += new System.EventHandler(this.embedConsoleCheckBox_CheckedChanged);
+            // 
+            // sessionsPanel
+            // 
+            this.sessionsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sessionsPanel.Controls.Add(this.sessionGridView);
+            this.sessionsPanel.Location = new System.Drawing.Point(363, 459);
+            this.sessionsPanel.Name = "sessionsPanel";
+            this.sessionsPanel.Size = new System.Drawing.Size(365, 183);
+            this.sessionsPanel.TabIndex = 45;
+            // 
+            // TrackComboBox
+            // 
+            this.TrackComboBox.DisplayMember = "name";
+            this.TrackComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TrackComboBox.FormattingEnabled = true;
+            this.TrackComboBox.Location = new System.Drawing.Point(6, 10);
+            this.TrackComboBox.Name = "TrackComboBox";
+            this.TrackComboBox.Size = new System.Drawing.Size(170, 21);
+            this.TrackComboBox.TabIndex = 41;
+            this.TrackComboBox.TabStop = false;
+            // 
+            // carClassComboBox
+            // 
+            this.carClassComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.carClassComboBox.FormattingEnabled = true;
+            this.carClassComboBox.Items.AddRange(new object[] {
+            "    FreeForAll",
+            "    GT3",
+            "    GT4",
+            "    Cup",
+            "    ST"});
+            this.carClassComboBox.Location = new System.Drawing.Point(183, 11);
+            this.carClassComboBox.Name = "carClassComboBox";
+            this.carClassComboBox.Size = new System.Drawing.Size(170, 21);
+            this.carClassComboBox.TabIndex = 42;
+            // 
+            // eventPanel
+            // 
+            this.eventPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.eventPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.eventPanel.Controls.Add(this.carClassComboBox);
+            this.eventPanel.Controls.Add(this.TrackComboBox);
+            this.eventPanel.Location = new System.Drawing.Point(363, 12);
+            this.eventPanel.Name = "eventPanel";
+            this.eventPanel.Size = new System.Drawing.Size(365, 44);
+            this.eventPanel.TabIndex = 18;
+            // 
+            // consoleParentPanel
+            // 
+            this.consoleParentPanel.Location = new System.Drawing.Point(363, 12);
+            this.consoleParentPanel.Name = "consoleParentPanel";
+            this.consoleParentPanel.Size = new System.Drawing.Size(365, 630);
+            this.consoleParentPanel.TabIndex = 46;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(769, 673);
-            this.Controls.Add(this.donationLabel);
+            this.ClientSize = new System.Drawing.Size(737, 673);
             this.Controls.Add(this.donationButton);
+            this.Controls.Add(this.donationLabel);
+            this.Controls.Add(this.embedConsoleCheckBox);
+            this.Controls.Add(this.sessionsPanel);
+            this.Controls.Add(this.label32);
             this.Controls.Add(this.BopButton);
             this.Controls.Add(this.entryListButton);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.label11);
+            this.Controls.Add(this.miscPanel);
             this.Controls.Add(this.launchServerButton);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.weatherPanel);
+            this.Controls.Add(this.eventPanel);
+            this.Controls.Add(this.pitstopPanel);
+            this.Controls.Add(this.drivingAidsPanel);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.serverSettingsPanel);
+            this.Controls.Add(this.consoleParentPanel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ACC Dedicated Server GUI V1.2.8.0";
+            this.Text = "ACC Dedicated Server GUI V1.2.8.1";
             this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.serverSettingsPanel.ResumeLayout(false);
+            this.serverSettingsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TCPNumericUpDown)).EndInit();
@@ -1764,31 +1804,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.SARequirementNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TRRequirementNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxCarSlotsNumericUpDown)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.drivingAidsPanel.ResumeLayout(false);
+            this.drivingAidsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxStabilityNumericUpDown)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sessionGridView)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.miscPanel.ResumeLayout(false);
+            this.miscPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tyreSetsNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.overTimeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.preRaceWaitTimeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postRaceWaitTimeNumericUpDown)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
+            this.weatherPanel.ResumeLayout(false);
+            this.weatherPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weatherRandomnessTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rainTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloudCoverageTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tempTrackBar)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.pitstopPanel.ResumeLayout(false);
+            this.pitstopPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxDriversCountNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxTotalDrivingTimeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mandatoryPitStopCountNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.driverStintTimeNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pitWindowsLengthNumericUpDown)).EndInit();
+            this.sessionsPanel.ResumeLayout(false);
+            this.eventPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1817,14 +1857,12 @@
         private System.Windows.Forms.CheckBox autoShiftingCheckBox;
         private System.Windows.Forms.CheckBox autoLightsCheckBox;
         private System.Windows.Forms.CheckBox autoSteeringCheckBox;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel serverSettingsPanel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel drivingAidsPanel;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel weatherPanel;
         private System.Windows.Forms.TrackBar weatherRandomnessTrackBar;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label weatherRandomnessLabel;
@@ -1840,12 +1878,11 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button launchServerButton;
-        private System.Windows.Forms.ComboBox TrackComboBox;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel miscPanel;
         private System.Windows.Forms.NumericUpDown preRaceWaitTimeNumericUpDown;
         private System.Windows.Forms.NumericUpDown postRaceWaitTimeNumericUpDown;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pitstopPanel;
         private System.Windows.Forms.NumericUpDown maxDriversCountNumericUpDown;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.CheckBox driverSwapRequiredCheckBox;
@@ -1897,9 +1934,15 @@
         private System.Windows.Forms.CheckBox fixedConditionQualificationCheckBox;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.NumericUpDown tyreSetsNumericUpDown;
-        private System.Windows.Forms.ComboBox carClassComboBox;
         private System.Windows.Forms.CheckBox isPrepPhaseLockedCheckBox;
         private System.Windows.Forms.DataGridView sessionGridView;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.CheckBox embedConsoleCheckBox;
+        private System.Windows.Forms.Panel sessionsPanel;
+        private System.Windows.Forms.ComboBox TrackComboBox;
+        private System.Windows.Forms.ComboBox carClassComboBox;
+        private System.Windows.Forms.Panel eventPanel;
+        private System.Windows.Forms.Panel consoleParentPanel;
         private System.Windows.Forms.DataGridViewComboBoxColumn SessionColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn DayColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn TimeScaleColumn;
