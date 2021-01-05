@@ -1,6 +1,9 @@
-﻿V1.2.8.1
-Acced funtion to move the sessions with the up/down arrow keys
-Embed console checkbox (it's a been a long time coming)
+﻿V1.2.8.2
+Fixed an issue where some setting weren't saved properly
+----------------------------------------------------------------------
+V1.2.8.1
+Added function to move the sessions with the up/down arrow keys
+Added embed console checkbox
 ----------------------------------------------------------------------
 V1.2.8.0
 Added support for more than 3 sessions

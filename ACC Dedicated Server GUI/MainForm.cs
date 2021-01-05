@@ -587,32 +587,35 @@ namespace ACC_Dedicated_Server_GUI
                     if (!process.HasExited)
                         process.Kill();
                 }
-                else if (embedConsoleCheckBox.Checked)
-                {
-                    {
-                        SaveConfig();
-                        consolePanel.Visible = true;
-                        consoleParentPanel.BringToFront();
-
-                        process.StartInfo.FileName = fileName + ".exe";
-
-                        process.Start();
-                        while (string.IsNullOrEmpty(process.MainWindowTitle))
-                        {
-                            Thread.Sleep(10);
-                            process.Refresh();
-                        }
-                        hWndOriginalParent = SetParent(process.MainWindowHandle, consolePanel.Handle);
-                        SendMessage(process.MainWindowHandle, WM_SYSCOMMAND, SC_MAXIMIZE, 0);
-                        label12.Visible = false;
-                        this.BringToFront();
-                        this.Activate();
-                    }
-                }
                 else
                 {
-                    process.StartInfo.FileName = fileName + ".exe";
-                    process.Start();
+                    SaveConfig();
+                    if (embedConsoleCheckBox.Checked)
+                    {
+                        {
+                            consolePanel.Visible = true;
+                            consoleParentPanel.BringToFront();
+
+                            process.StartInfo.FileName = fileName + ".exe";
+
+                            process.Start();
+                            while (string.IsNullOrEmpty(process.MainWindowTitle))
+                            {
+                                Thread.Sleep(10);
+                                process.Refresh();
+                            }
+                            hWndOriginalParent = SetParent(process.MainWindowHandle, consolePanel.Handle);
+                            SendMessage(process.MainWindowHandle, WM_SYSCOMMAND, SC_MAXIMIZE, 0);
+                            label12.Visible = false;
+                            this.BringToFront();
+                            this.Activate();
+                        }
+                    }
+                    else
+                    {
+                        process.StartInfo.FileName = fileName + ".exe";
+                        process.Start();
+                    }
                 }
             }
             catch (Exception ex)
