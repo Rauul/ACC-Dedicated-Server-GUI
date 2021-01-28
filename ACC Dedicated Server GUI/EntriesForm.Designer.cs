@@ -50,6 +50,7 @@
             this.forceEntryListCheckBox = new System.Windows.Forms.CheckBox();
             this.closeButton = new System.Windows.Forms.Button();
             this.driverSettingsPanel = new System.Windows.Forms.Panel();
+            this.warningPictureBox = new System.Windows.Forms.PictureBox();
             this.playerIDTextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.categoryComboBox = new System.Windows.Forms.ComboBox();
@@ -76,12 +77,14 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.expandAllToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.collapseAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entriesToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.carSettingsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restrictorNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ballastNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridPositionNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carNumberNumericUpDown)).BeginInit();
             this.driverSettingsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.warningPictureBox)).BeginInit();
             this.entryListContextMenuStrip.SuspendLayout();
             this.entryContextMenuStrip.SuspendLayout();
             this.driverContextMenuStrip.SuspendLayout();
@@ -335,6 +338,7 @@
             // driverSettingsPanel
             // 
             this.driverSettingsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.driverSettingsPanel.Controls.Add(this.warningPictureBox);
             this.driverSettingsPanel.Controls.Add(this.playerIDTextBox);
             this.driverSettingsPanel.Controls.Add(this.label14);
             this.driverSettingsPanel.Controls.Add(this.categoryComboBox);
@@ -350,6 +354,18 @@
             this.driverSettingsPanel.Size = new System.Drawing.Size(377, 402);
             this.driverSettingsPanel.TabIndex = 16;
             this.driverSettingsPanel.Visible = false;
+            // 
+            // warningPictureBox
+            // 
+            this.warningPictureBox.Image = global::ACC_Dedicated_Server_GUI.Properties.Resources.warning;
+            this.warningPictureBox.Location = new System.Drawing.Point(160, 88);
+            this.warningPictureBox.Name = "warningPictureBox";
+            this.warningPictureBox.Size = new System.Drawing.Size(20, 18);
+            this.warningPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.warningPictureBox.TabIndex = 21;
+            this.warningPictureBox.TabStop = false;
+            this.entriesToolTip.SetToolTip(this.warningPictureBox, "Invalid Player ID format\r\n\r\nPlayer ID must be 18 characters long and start with \'" +
+        "S\'");
             // 
             // playerIDTextBox
             // 
@@ -560,6 +576,12 @@
             this.collapseAllToolStripMenuItem.Text = "Collapse All";
             this.collapseAllToolStripMenuItem.Click += new System.EventHandler(this.collapseAllToolStripMenuItem_Click);
             // 
+            // entriesToolTip
+            // 
+            this.entriesToolTip.AutoPopDelay = 25000;
+            this.entriesToolTip.InitialDelay = 500;
+            this.entriesToolTip.ReshowDelay = 100;
+            // 
             // EntriesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -568,8 +590,8 @@
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.forceEntryListCheckBox);
             this.Controls.Add(this.entriesTreeView);
-            this.Controls.Add(this.carSettingsPanel);
             this.Controls.Add(this.driverSettingsPanel);
+            this.Controls.Add(this.carSettingsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -587,6 +609,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.carNumberNumericUpDown)).EndInit();
             this.driverSettingsPanel.ResumeLayout(false);
             this.driverSettingsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.warningPictureBox)).EndInit();
             this.entryListContextMenuStrip.ResumeLayout(false);
             this.entryContextMenuStrip.ResumeLayout(false);
             this.driverContextMenuStrip.ResumeLayout(false);
@@ -643,5 +666,7 @@
         private System.Windows.Forms.ToolStripMenuItem expandAllToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem collapseAllToolStripMenuItem;
         private System.Windows.Forms.CheckBox overrideCustomCarModelCheckBox;
+        private System.Windows.Forms.PictureBox warningPictureBox;
+        private System.Windows.Forms.ToolTip entriesToolTip;
     }
 }

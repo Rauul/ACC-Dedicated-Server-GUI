@@ -64,9 +64,9 @@ namespace ACC_Dedicated_Server_GUI
                 bop = JsonConvert.DeserializeObject<BopObject>(rawJSON);
             }
 
-            foreach (Car car in MainForm.carList)
+            foreach (Car car in mainForm.carList)
                 carListBox.Items.Add(car);
-            foreach (Track track in MainForm.trackList)
+            foreach (Track track in mainForm.trackList)
                 trackListBox.Items.Add(track);
 
             FillBopTable();

@@ -1,6 +1,6 @@
 ﻿namespace ACC_Dedicated_Server_GUI
 {
-    partial class MainForm
+    partial class mainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -185,6 +185,7 @@
             this.serverNameTextBox.Size = new System.Drawing.Size(207, 20);
             this.serverNameTextBox.TabIndex = 0;
             this.serverNameTextBox.Text = "My ACC Server";
+            this.serverNameTextBox.TextChanged += new System.EventHandler(this.serverNameTextBox_TextChanged);
             // 
             // adminPasswordTextBox
             // 
@@ -1759,7 +1760,7 @@
             this.consoleParentPanel.Size = new System.Drawing.Size(365, 630);
             this.consoleParentPanel.TabIndex = 46;
             // 
-            // MainForm
+            // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1789,7 +1790,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "MainForm";
+            this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ACC Dedicated Server GUI V1.2.8.2";
             this.Activated += new System.EventHandler(this.MainForm_Activated);

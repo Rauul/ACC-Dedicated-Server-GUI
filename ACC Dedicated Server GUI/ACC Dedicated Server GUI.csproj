@@ -153,6 +153,7 @@
   <ItemGroup>
     <Content Include="changelog.txt" />
     <Content Include="icon.ico" />
+    <None Include="warning.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

@@ -18,9 +18,8 @@ using static ACC_Dedicated_Server_GUI.Settings;
 
 namespace ACC_Dedicated_Server_GUI
 {
-    public partial class MainForm : Form
+    public partial class mainForm : Form
     {
-
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         static extern IntPtr SendMessage(IntPtr hWnd, UInt32 Msg, int wParam, int lParam);
 
@@ -44,35 +43,7 @@ namespace ACC_Dedicated_Server_GUI
         const int WM_SYSCOMMAND = 274;
         const int SC_MAXIMIZE = 61488;
 
-        //public static List<Car> carList = new List<Car>()
-        //{
-        //    new Car("    Porsche 991 GT3", 0),
-        //    new Car("    Mercedes AMG GT3", 1),
-        //    new Car("    Ferrari 488 GT3", 2),
-        //    new Car("    Audi R8 LMS", 3),
-        //    new Car("    Lamborghini Huracan GT3", 4),
-        //    new Car("    McLaren 650S GT3", 5),
-        //    new Car("    Nissan GT-R Nismo GT3 (2018)", 6),
-        //    new Car("    BMW M6 GT3", 7),
-        //    new Car("    Bentley Continental GT3 (2018)", 8),
-        //    new Car("    Porsche 991 II GT3 Cup", 9),
-        //    new Car("    Nissan GT-R Nismo GT3 (2017)", 10),
-        //    new Car("    Bentley Continental GT3 (2016)", 11),
-        //    new Car("    Aston Martin Vantage V12 GT3", 12),
-        //    new Car("    Lamborghini Gallardo R-EX", 13),
-        //    new Car("    Jaguar G3", 14),
-        //    new Car("    Lexus RC F GT3", 15),
-        //    new Car("    Lamborghini Huracan Evo (2019)", 16),
-        //    new Car("    Honda NSX GT3", 17),
-        //    new Car("    Lamborghini Huracan SuperTrofeo", 18),
-        //    new Car("    Audi R8 LMS Evo (2019)", 19),
-        //    new Car("    Aston Martin Vantage V8 GT3", 20),
-        //    new Car("    Honda NSX Evo (2019)", 21),
-        //    new Car("    McLaren 720S GT3", 22),
-        //    new Car("    Porsche 911 II GT3 R (2019)", 23)
-        //};
-
-        //public static List<CarClass>
+        public string title = "ACC Dedicated Server GUI V1.2.8.3";
 
         public static List<Car> carList = new List<Car>()
         {
@@ -159,7 +130,7 @@ namespace ACC_Dedicated_Server_GUI
         };
 
 
-        public MainForm()
+        public mainForm()
         {
             InitializeComponent();
         }
@@ -962,6 +933,9 @@ namespace ACC_Dedicated_Server_GUI
             }
         }
 
-        
+        private void serverNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            this.Text = serverNameTextBox.Text + " [" + title + "]";
+        }
     }
 }

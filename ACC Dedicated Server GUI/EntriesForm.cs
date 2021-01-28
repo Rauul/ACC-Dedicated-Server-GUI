@@ -14,7 +14,7 @@ namespace ACC_Dedicated_Server_GUI
     public partial class EntriesForm : Form
     {
         EntryListObject entrylist = new EntryListObject();
-        List<Car> carList = new List<Car>(MainForm.carList);
+        List<Car> carList = new List<Car>(mainForm.carList);
         bool closeButtonClicked = false;
 
         public EntriesForm()
@@ -78,6 +78,8 @@ namespace ACC_Dedicated_Server_GUI
                     customCarComboBox.Items.Add(filen);
                 }
             }
+
+            updateTitle();
         }
 
         private void LoadTreeView(EntryListObject entrylist)
@@ -360,6 +362,11 @@ namespace ACC_Dedicated_Server_GUI
             {
                 entriesTreeView.SelectedNode.Text = driver.playerID;
             }
+
+            if (playerIDTextBox.Text.StartsWith("S") && playerIDTextBox.Text.Length == 18)
+                warningPictureBox.Hide();
+            else
+                warningPictureBox.Show();
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -457,6 +464,7 @@ namespace ACC_Dedicated_Server_GUI
             entriesTreeView.SelectedNode = node;
 
             firstNameTextBox.Focus();
+            updateTitle();
         }
 
         private void addEntryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -481,16 +489,35 @@ namespace ACC_Dedicated_Server_GUI
             entriesTreeView.SelectedNode = node;
 
             carNumberNumericUpDown.Focus();
+            updateTitle();
+        }
+
+        private void updateTitle()
+        {
+            int entries = entriesTreeView.Nodes[0].Nodes.Count;
+            int drivers = 0;
+
+            foreach (TreeNode n in entriesTreeView.Nodes[0].Nodes)
+            {
+                foreach (TreeNode n2 in n.Nodes)
+                {
+                    drivers++;
+                }
+            }
+
+            this.Text = entries + " Entries | " + drivers + " Drivers";
         }
 
         private void removeDriverMenuItem_Click(object sender, EventArgs e)
         {
             entriesTreeView.SelectedNode.Remove();
+            updateTitle();
         }
 
         private void removeEntryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             entriesTreeView.SelectedNode.Remove();
+            updateTitle();
         }
 
         private void expandAllToolStripMenuItem_Click(object sender, EventArgs e)
@@ -527,6 +554,7 @@ namespace ACC_Dedicated_Server_GUI
             entriesTreeView.SelectedNode = node;
 
             carNumberNumericUpDown.Focus();
+            updateTitle();
         }
 
         private void AddNewDriver()
@@ -559,6 +587,7 @@ namespace ACC_Dedicated_Server_GUI
             entriesTreeView.SelectedNode = node;
 
             firstNameTextBox.Focus();
+            updateTitle();
         }
 
 
@@ -610,6 +639,7 @@ namespace ACC_Dedicated_Server_GUI
             {
                 if (entriesTreeView.SelectedNode != entriesTreeView.Nodes[0])
                     entriesTreeView.SelectedNode.Remove();
+                updateTitle();
                 return true;
             }
 
