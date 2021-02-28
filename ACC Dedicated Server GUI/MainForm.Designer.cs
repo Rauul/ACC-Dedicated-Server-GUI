@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.serverNameTextBox = new System.Windows.Forms.TextBox();
             this.adminPasswordTextBox = new System.Windows.Forms.TextBox();
             this.joinPasswordTextBox = new System.Windows.Forms.TextBox();
@@ -56,6 +56,7 @@
             this.autoLightsCheckBox = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.serverSettingsPanel = new System.Windows.Forms.Panel();
+            this.noPrematureDisconnectsCheckBox = new System.Windows.Forms.CheckBox();
             this.isPrepPhaseLockedCheckBox = new System.Windows.Forms.CheckBox();
             this.label40 = new System.Windows.Forms.Label();
             this.centralEntryListPathButton = new System.Windows.Forms.Button();
@@ -147,6 +148,8 @@
             this.carClassComboBox = new System.Windows.Forms.ComboBox();
             this.eventPanel = new System.Windows.Forms.Panel();
             this.consoleParentPanel = new System.Windows.Forms.Panel();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.minToTrayCheckBox = new System.Windows.Forms.CheckBox();
             this.serverSettingsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UDPNumericUpDown)).BeginInit();
@@ -293,7 +296,7 @@
             this.idealLineCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.idealLineCheckBox.Location = new System.Drawing.Point(3, 15);
             this.idealLineCheckBox.Name = "idealLineCheckBox";
-            this.idealLineCheckBox.Size = new System.Drawing.Size(150, 17);
+            this.idealLineCheckBox.Size = new System.Drawing.Size(162, 17);
             this.idealLineCheckBox.TabIndex = 0;
             this.idealLineCheckBox.TabStop = false;
             this.idealLineCheckBox.Text = "Ideal Line";
@@ -305,7 +308,7 @@
             this.autoSteeringCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.autoSteeringCheckBox.Location = new System.Drawing.Point(3, 39);
             this.autoSteeringCheckBox.Name = "autoSteeringCheckBox";
-            this.autoSteeringCheckBox.Size = new System.Drawing.Size(150, 17);
+            this.autoSteeringCheckBox.Size = new System.Drawing.Size(162, 17);
             this.autoSteeringCheckBox.TabIndex = 1;
             this.autoSteeringCheckBox.TabStop = false;
             this.autoSteeringCheckBox.Text = "Auto Steering";
@@ -317,7 +320,7 @@
             this.autoShiftingCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.autoShiftingCheckBox.Location = new System.Drawing.Point(3, 87);
             this.autoShiftingCheckBox.Name = "autoShiftingCheckBox";
-            this.autoShiftingCheckBox.Size = new System.Drawing.Size(150, 17);
+            this.autoShiftingCheckBox.Size = new System.Drawing.Size(162, 17);
             this.autoShiftingCheckBox.TabIndex = 3;
             this.autoShiftingCheckBox.TabStop = false;
             this.autoShiftingCheckBox.Text = "Auto Shifting";
@@ -329,7 +332,7 @@
             this.autoPitLimiterCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.autoPitLimiterCheckBox.Location = new System.Drawing.Point(3, 63);
             this.autoPitLimiterCheckBox.Name = "autoPitLimiterCheckBox";
-            this.autoPitLimiterCheckBox.Size = new System.Drawing.Size(150, 17);
+            this.autoPitLimiterCheckBox.Size = new System.Drawing.Size(162, 17);
             this.autoPitLimiterCheckBox.TabIndex = 2;
             this.autoPitLimiterCheckBox.TabStop = false;
             this.autoPitLimiterCheckBox.Text = "Auto Pit Limiter";
@@ -397,6 +400,7 @@
             // 
             this.serverSettingsPanel.BackColor = System.Drawing.SystemColors.Control;
             this.serverSettingsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.serverSettingsPanel.Controls.Add(this.noPrematureDisconnectsCheckBox);
             this.serverSettingsPanel.Controls.Add(this.isPrepPhaseLockedCheckBox);
             this.serverSettingsPanel.Controls.Add(this.label40);
             this.serverSettingsPanel.Controls.Add(this.centralEntryListPathButton);
@@ -435,6 +439,20 @@
             this.serverSettingsPanel.Name = "serverSettingsPanel";
             this.serverSettingsPanel.Size = new System.Drawing.Size(340, 371);
             this.serverSettingsPanel.TabIndex = 14;
+            // 
+            // noPrematureDisconnectsCheckBox
+            // 
+            this.noPrematureDisconnectsCheckBox.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.noPrematureDisconnectsCheckBox.Location = new System.Drawing.Point(3, 343);
+            this.noPrematureDisconnectsCheckBox.Name = "noPrematureDisconnectsCheckBox";
+            this.noPrematureDisconnectsCheckBox.Size = new System.Drawing.Size(162, 17);
+            this.noPrematureDisconnectsCheckBox.TabIndex = 44;
+            this.noPrematureDisconnectsCheckBox.TabStop = false;
+            this.noPrematureDisconnectsCheckBox.Text = "No Premature Disconnects";
+            this.toolTip.SetToolTip(this.noPrematureDisconnectsCheckBox, "Removes a (very good) fix where users can randomly lose the\r\nconnection. There is" +
+        " no sane reason to turn this off.\r\n");
+            this.noPrematureDisconnectsCheckBox.UseVisualStyleBackColor = true;
+            this.noPrematureDisconnectsCheckBox.CheckedChanged += new System.EventHandler(this.noPrematureDisconnectsCheckBox_CheckedChanged);
             // 
             // isPrepPhaseLockedCheckBox
             // 
@@ -632,7 +650,7 @@
             // 
             // UDPNumericUpDown
             // 
-            this.UDPNumericUpDown.Location = new System.Drawing.Point(121, 287);
+            this.UDPNumericUpDown.Location = new System.Drawing.Point(120, 287);
             this.UDPNumericUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -652,7 +670,7 @@
             // 
             // TCPNumericUpDown
             // 
-            this.TCPNumericUpDown.Location = new System.Drawing.Point(121, 314);
+            this.TCPNumericUpDown.Location = new System.Drawing.Point(120, 314);
             this.TCPNumericUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -921,9 +939,9 @@
             // TimeScaleColumn
             // 
             this.TimeScaleColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.NullValue = null;
-            this.TimeScaleColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.NullValue = null;
+            this.TimeScaleColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.TimeScaleColumn.HeaderText = "Time Scale";
             this.TimeScaleColumn.Name = "TimeScaleColumn";
             this.TimeScaleColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -933,8 +951,8 @@
             // StartTimeColumn
             // 
             this.StartTimeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.StartTimeColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.StartTimeColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.StartTimeColumn.HeaderText = "Start Time";
             this.StartTimeColumn.Name = "StartTimeColumn";
             this.StartTimeColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -944,9 +962,9 @@
             // DurationColumn
             // 
             this.DurationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.NullValue = null;
-            this.DurationColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.NullValue = null;
+            this.DurationColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.DurationColumn.HeaderText = "Duration";
             this.DurationColumn.Name = "DurationColumn";
             this.DurationColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -956,12 +974,12 @@
             // DeleteColumn
             // 
             this.DeleteColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.DeleteColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.DeleteColumn.DefaultCellStyle = dataGridViewCellStyle8;
             this.DeleteColumn.HeaderText = "";
             this.DeleteColumn.Name = "DeleteColumn";
             this.DeleteColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1760,12 +1778,33 @@
             this.consoleParentPanel.Size = new System.Drawing.Size(365, 630);
             this.consoleParentPanel.TabIndex = 46;
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Text = "ACC Dedicated Server GUI";
+            this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseClick);
+            // 
+            // minToTrayCheckBox
+            // 
+            this.minToTrayCheckBox.BackColor = System.Drawing.SystemColors.Control;
+            this.minToTrayCheckBox.Checked = true;
+            this.minToTrayCheckBox.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.minToTrayCheckBox.Location = new System.Drawing.Point(619, 648);
+            this.minToTrayCheckBox.Name = "minToTrayCheckBox";
+            this.minToTrayCheckBox.Size = new System.Drawing.Size(109, 17);
+            this.minToTrayCheckBox.TabIndex = 47;
+            this.minToTrayCheckBox.TabStop = false;
+            this.minToTrayCheckBox.Text = "Minimize to Tray";
+            this.minToTrayCheckBox.UseVisualStyleBackColor = false;
+            this.minToTrayCheckBox.CheckedChanged += new System.EventHandler(this.minToTrayCheckBox_CheckedChanged);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(737, 673);
+            this.Controls.Add(this.minToTrayCheckBox);
             this.Controls.Add(this.donationButton);
             this.Controls.Add(this.donationLabel);
             this.Controls.Add(this.embedConsoleCheckBox);
@@ -1796,6 +1835,7 @@
             this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.mainForm_Resize_1);
             this.serverSettingsPanel.ResumeLayout(false);
             this.serverSettingsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxConnectionsNumericUpDown)).EndInit();
@@ -1950,6 +1990,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn StartTimeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn DurationColumn;
         private System.Windows.Forms.DataGridViewButtonColumn DeleteColumn;
+        private System.Windows.Forms.CheckBox noPrematureDisconnectsCheckBox;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.CheckBox minToTrayCheckBox;
     }
 }
 

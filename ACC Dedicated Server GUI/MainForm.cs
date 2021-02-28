@@ -235,6 +235,7 @@ namespace ACC_Dedicated_Server_GUI
                 dumpLeaderboardsCheckBox.Checked = settings.dumpLeaderboards == 1 ? true : false;
                 randomizeTrackCheckBox.Checked = settings.randomizeTrackWhenEmpty == 1 ? true : false;
                 autoDQCheckBox.Checked = settings.allowAutoDQ == 1 ? true : false;
+                noPrematureDisconnectsCheckBox.Checked = settings.ignorePrematureDisconnects == 1 ? true : false;
                 isPrepPhaseLockedCheckBox.Checked = settings.isLockedPrepPhase == 1 ? true : false;
                 switch (settings.formationLapType)
                 {
@@ -420,6 +421,7 @@ namespace ACC_Dedicated_Server_GUI
             settings.dumpLeaderboards = dumpLeaderboardsCheckBox.Checked ? 1 : 0;
             settings.randomizeTrackWhenEmpty = randomizeTrackCheckBox.Checked ? 1 : 0;
             settings.allowAutoDQ = autoDQCheckBox.Checked ? 1 : 0;
+            settings.ignorePrematureDisconnects = noPrematureDisconnectsCheckBox.Checked ? 1 : 0;
             settings.configVersion = 1;
 
             // assistRules.json
@@ -519,6 +521,7 @@ namespace ACC_Dedicated_Server_GUI
             TrackComboBox.SelectedIndex = 0;
             carClassComboBox.SelectedIndex = 0;
             embedConsoleCheckBox.Checked = Properties.Settings.Default.EmbedConsole;
+            minToTrayCheckBox.Checked = Properties.Settings.Default.MinimizeToTray;
 
             consolePanel.Visible = false;
 
@@ -668,6 +671,7 @@ namespace ACC_Dedicated_Server_GUI
             try
             {
                 Properties.Settings.Default.EmbedConsole = embedConsoleCheckBox.Checked;
+                Properties.Settings.Default.MinimizeToTray = minToTrayCheckBox.Checked;
                 Properties.Settings.Default.Save();
                 if (consolePanel.Visible)
                     process.Kill();
@@ -889,12 +893,22 @@ namespace ACC_Dedicated_Server_GUI
         {
             checkBox_CheckChanged(fixedConditionQualificationCheckBox);
         }
-        #endregion
 
         private void isPrepPhaseLockedCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             checkBox_CheckChanged(isPrepPhaseLockedCheckBox);
         }
+
+        private void noPrematureDisconnectsCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(noPrematureDisconnectsCheckBox);
+        }
+
+        private void minToTrayCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            checkBox_CheckChanged(minToTrayCheckBox);
+        }
+        #endregion
 
         private void embedConsoleCheckBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -944,5 +958,28 @@ namespace ACC_Dedicated_Server_GUI
         {
             this.Text = serverNameTextBox.Text + " [" + title + "]";
         }
+
+        private void mainForm_Resize_1(object sender, EventArgs e)
+        {
+            //if the form is minimized  
+            //hide it from the task bar  
+            //and show the system tray icon (represented by the NotifyIcon control)  
+            if (minToTrayCheckBox.Checked)
+            {
+                if (this.WindowState == FormWindowState.Minimized)
+                {
+                    Hide();
+                    notifyIcon.Visible = true;
+                }
+            }
+        }
+
+        private void notifyIcon_MouseClick(object sender, MouseEventArgs e)
+        {
+            Show();
+            this.WindowState = FormWindowState.Normal;
+            notifyIcon.Visible = false;
+        }
+
     }
 }
