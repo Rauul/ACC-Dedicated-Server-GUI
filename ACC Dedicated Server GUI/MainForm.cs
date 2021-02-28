@@ -43,7 +43,7 @@ namespace ACC_Dedicated_Server_GUI
         const int WM_SYSCOMMAND = 274;
         const int SC_MAXIMIZE = 61488;
 
-        public string title = "ACC Dedicated Server GUI V1.2.8.4";
+        public string title = "ACC Dedicated Server GUI V1.2.8.5";
 
         public static List<Car> carList = new List<Car>()
         {

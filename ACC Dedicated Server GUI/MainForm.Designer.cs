@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.serverNameTextBox = new System.Windows.Forms.TextBox();
             this.adminPasswordTextBox = new System.Windows.Forms.TextBox();
             this.joinPasswordTextBox = new System.Windows.Forms.TextBox();
@@ -939,9 +939,9 @@
             // TimeScaleColumn
             // 
             this.TimeScaleColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.NullValue = null;
-            this.TimeScaleColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.NullValue = null;
+            this.TimeScaleColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.TimeScaleColumn.HeaderText = "Time Scale";
             this.TimeScaleColumn.Name = "TimeScaleColumn";
             this.TimeScaleColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -951,8 +951,8 @@
             // StartTimeColumn
             // 
             this.StartTimeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.StartTimeColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.StartTimeColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.StartTimeColumn.HeaderText = "Start Time";
             this.StartTimeColumn.Name = "StartTimeColumn";
             this.StartTimeColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -962,9 +962,9 @@
             // DurationColumn
             // 
             this.DurationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.NullValue = null;
-            this.DurationColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.NullValue = null;
+            this.DurationColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.DurationColumn.HeaderText = "Duration";
             this.DurationColumn.Name = "DurationColumn";
             this.DurationColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -974,12 +974,12 @@
             // DeleteColumn
             // 
             this.DeleteColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.DeleteColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.DeleteColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.DeleteColumn.HeaderText = "";
             this.DeleteColumn.Name = "DeleteColumn";
             this.DeleteColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1831,7 +1831,7 @@
             this.MaximizeBox = false;
             this.Name = "mainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ACC Dedicated Server GUI V1.2.8.4";
+            this.Text = "ACC Dedicated Server GUI";
             this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
