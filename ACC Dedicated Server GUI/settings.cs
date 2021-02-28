@@ -22,6 +22,7 @@
             public int dumpEntryList { get; set; }
             public int randomizeTrackWhenEmpty { get; set; }
             public int allowAutoDQ { get; set; }
+            public int ignorePrematureDisconnects { get; set; }
             public int formationLapType { get; set; }
             public int configVersion { get; set; }
         }

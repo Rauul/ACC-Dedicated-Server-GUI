@@ -1,4 +1,8 @@
-﻿V1.2.8.3
+﻿V1.2.8.4
+Added 'No Premature Disconnects' option
+Added 'Minimize to Tray' option
+----------------------------------------------------------------------
+V1.2.8.3
 Server name is now shown in the main form title bar
 Entry and driver count is now shown the entries form title bar
 Added a warning if the Player ID format is incorrect
