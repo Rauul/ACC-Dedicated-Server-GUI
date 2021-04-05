@@ -14,7 +14,7 @@ namespace ACC_Dedicated_Server_GUI
         {
             public string track { get; set; }
             public int carModel { get; set; }
-            public int ballast { get; set; }
+            public int ballastKg { get; set; }
             public int restrictor { get; set; }
         }
     }

@@ -87,7 +87,7 @@ namespace ACC_Dedicated_Server_GUI
                     Entry entry = new Entry();
                     entry.track = track.alias;
                     entry.carModel = ((Car)carListBox.Items[i]).ID;
-                    entry.ballast = 0;
+                    entry.ballastKg = 0;
                     entry.restrictor = 0;
 
                     if (!bop.entries.Any(e => e.track == entry.track && e.carModel == entry.carModel))
@@ -102,7 +102,7 @@ namespace ACC_Dedicated_Server_GUI
 
             int selectedIndex = trackListBox.SelectedIndex;
             List<Entry> entries = new List<Entry>(bop.entries);
-            entries.RemoveAll(ent => (ent.ballast == 0) && (ent.restrictor == 0));
+            entries.RemoveAll(ent => (ent.ballastKg == 0) && (ent.restrictor == 0));
 
             for (int i = 0; i < trackListBox.Items.Count; i++)
             {
@@ -133,7 +133,7 @@ namespace ACC_Dedicated_Server_GUI
             Track track = (Track)trackListBox.SelectedItem;
             List<Entry> entries = new List<Entry>(bop.entries);
             entries.RemoveAll(ent => ent.track != track.alias);
-            entries.RemoveAll(ent => (ent.ballast == 0) && (ent.restrictor == 0));
+            entries.RemoveAll(ent => (ent.ballastKg == 0) && (ent.restrictor == 0));
 
             for (int i = 0; i < carListBox.Items.Count; i++)
             {
@@ -163,7 +163,7 @@ namespace ACC_Dedicated_Server_GUI
             int selectedIndex = trackListBox.SelectedIndex;
 
             List<Entry> entries = new List<Entry>(bop.entries);
-            entries.RemoveAll(ent => (ent.ballast == 0) && (ent.restrictor == 0));
+            entries.RemoveAll(ent => (ent.ballastKg == 0) && (ent.restrictor == 0));
 
             if (track.name.Contains("★") && !entries.Any(e => e.track == track.alias))
             {
@@ -192,7 +192,7 @@ namespace ACC_Dedicated_Server_GUI
 
             Entry entry = new Entry();
             entry = bop.entries.Find(ent => ent.track == track.alias && ent.carModel == car.ID);
-            entry.ballast = ballastTrackBar.Value;
+            entry.ballastKg = ballastTrackBar.Value;
             entry.restrictor = restrictorTrackBar.Value;
 
             if (ballastTrackBar.Value + restrictorTrackBar.Value > 0)
@@ -224,7 +224,7 @@ namespace ACC_Dedicated_Server_GUI
             Entry entry = new Entry();
             entry = bop.entries.Find(ent => ent.track == track.alias && ent.carModel == car.ID);
 
-            ballastTrackBar.Value = InTrackBarRange(entry.ballast, ballastTrackBar);
+            ballastTrackBar.Value = InTrackBarRange(entry.ballastKg, ballastTrackBar);
             restrictorTrackBar.Value = InTrackBarRange(entry.restrictor, restrictorTrackBar);
         }
 
@@ -269,7 +269,7 @@ namespace ACC_Dedicated_Server_GUI
 
         private void cleanUpAndSaveFile()
         {
-            bop.entries.RemoveAll(ent => (ent.ballast == 0) && (ent.restrictor == 0));
+            bop.entries.RemoveAll(ent => (ent.ballastKg == 0) && (ent.restrictor == 0));
             File.WriteAllText(@"cfg\bop.json", JsonConvert.SerializeObject(bop, Formatting.Indented), Encoding.Unicode);
         }
 

@@ -43,7 +43,8 @@ namespace ACC_Dedicated_Server_GUI
         const int WM_SYSCOMMAND = 274;
         const int SC_MAXIMIZE = 61488;
 
-        public string title = "ACC Dedicated Server GUI V1.2.8.4";
+        public string title = "ACC Dedicated Server GUI ";
+        public string version = "V1.2.8.6";
 
         public static List<Car> carList = new List<Car>()
         {
@@ -767,145 +768,146 @@ namespace ACC_Dedicated_Server_GUI
         }
 
         #region Custom checkstates
-        private void checkBox_CheckChanged(CheckBox checkBox)
+        private void FullCheckBox(CheckBox checkBox)
         {
             checkBox.CheckState = checkBox.Checked ? CheckState.Indeterminate : CheckState.Unchecked;
         }
 
         private void isRaceLockedCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(isRaceLockedCheckBox);
+            FullCheckBox(isRaceLockedCheckBox);
         }
 
         private void shortFormationCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(shortFormationCheckBox);
+            FullCheckBox(shortFormationCheckBox);
         }
 
         private void registerToLobbyCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(registerToLobbyCheckBox);
+            FullCheckBox(registerToLobbyCheckBox);
+            registerToLobbyCheckBox.ForeColor = registerToLobbyCheckBox.Checked ? SystemColors.ControlText : Color.Red;
         }
 
         private void lanDiscoveryCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(lanDiscoveryCheckBox);
+            FullCheckBox(lanDiscoveryCheckBox);
         }
 
         private void dumpLeaderboardsCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(dumpLeaderboardsCheckBox);
+            FullCheckBox(dumpLeaderboardsCheckBox);
         }
 
         private void dumpEntryListCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(dumpEntryListCheckBox);
+            FullCheckBox(dumpEntryListCheckBox);
         }
 
         private void randomizeTrackCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(randomizeTrackCheckBox);
+            FullCheckBox(randomizeTrackCheckBox);
         }
 
         private void autoDQCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(autoDQCheckBox);
+            FullCheckBox(autoDQCheckBox);
         }
 
         private void idealLineCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(idealLineCheckBox);
+            FullCheckBox(idealLineCheckBox);
         }
 
         private void autoSteeringCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(autoSteeringCheckBox);
+            FullCheckBox(autoSteeringCheckBox);
         }
 
         private void autoPitLimiterCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(autoPitLimiterCheckBox);
+            FullCheckBox(autoPitLimiterCheckBox);
         }
 
         private void autoShiftingCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(autoShiftingCheckBox);
+            FullCheckBox(autoShiftingCheckBox);
         }
 
         private void autoStartEngineCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(autoStartEngineCheckBox);
+            FullCheckBox(autoStartEngineCheckBox);
         }
 
         private void autoWipersCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(autoWipersCheckBox);
+            FullCheckBox(autoWipersCheckBox);
         }
 
         private void autoLightsCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(autoLightsCheckBox);
+            FullCheckBox(autoLightsCheckBox);
         }
 
         private void autoClutchCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(autoClutchCheckBox);
+            FullCheckBox(autoClutchCheckBox);
         }
 
         private void refuellingAllowedCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(refuellingAllowedCheckBox);
+            FullCheckBox(refuellingAllowedCheckBox);
         }
 
         private void refuellingTimeFixedCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(refuellingTimeFixedCheckBox);
+            FullCheckBox(refuellingTimeFixedCheckBox);
         }
 
         private void refuellingRequiredCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(refuellingRequiredCheckBox);
+            FullCheckBox(refuellingRequiredCheckBox);
         }
 
         private void tyreChangeRequiredCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(tyreChangeRequiredCheckBox);
+            FullCheckBox(tyreChangeRequiredCheckBox);
         }
 
         private void driverSwapRequiredCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(driverSwapRequiredCheckBox);
+            FullCheckBox(driverSwapRequiredCheckBox);
         }
 
         private void simracerWeatherConditionsCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(simracerWeatherConditionsCheckBox);
+            FullCheckBox(simracerWeatherConditionsCheckBox);
         }
 
         private void fixedConditionQualificationCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(fixedConditionQualificationCheckBox);
+            FullCheckBox(fixedConditionQualificationCheckBox);
         }
 
         private void isPrepPhaseLockedCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(isPrepPhaseLockedCheckBox);
+            FullCheckBox(isPrepPhaseLockedCheckBox);
         }
 
         private void noPrematureDisconnectsCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(noPrematureDisconnectsCheckBox);
+            FullCheckBox(noPrematureDisconnectsCheckBox);
         }
 
         private void minToTrayCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(minToTrayCheckBox);
+            FullCheckBox(minToTrayCheckBox);
         }
         #endregion
 
         private void embedConsoleCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            checkBox_CheckChanged(embedConsoleCheckBox);
+            FullCheckBox(embedConsoleCheckBox);
 
             if (IsRunning(process))
             {
@@ -949,7 +951,7 @@ namespace ACC_Dedicated_Server_GUI
 
         private void serverNameTextBox_TextChanged(object sender, EventArgs e)
         {
-            this.Text = serverNameTextBox.Text + " [" + title + "]";
+            this.Text = serverNameTextBox.Text + " [" + title + version + "]";
         }
 
         private void mainForm_Resize_1(object sender, EventArgs e)
