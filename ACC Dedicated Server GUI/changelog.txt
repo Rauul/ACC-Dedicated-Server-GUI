@@ -1,4 +1,8 @@
-﻿V1.2.8.6
+﻿V1.2.8.7
+'Cloud Coverage' slider increments by 0.05
+'Rain Level' slider increments by 0.05
+----------------------------------------------------------------------
+V1.2.8.6
 Fixed an issue where ballast wasn't working correctly
 'Register To Lobby' now turns red if not checked
 ----------------------------------------------------------------------
