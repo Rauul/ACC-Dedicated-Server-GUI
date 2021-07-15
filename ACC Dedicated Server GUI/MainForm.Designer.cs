@@ -1287,12 +1287,13 @@
             // 
             this.rainTrackBar.LargeChange = 1;
             this.rainTrackBar.Location = new System.Drawing.Point(122, 58);
+            this.rainTrackBar.Maximum = 20;
             this.rainTrackBar.Name = "rainTrackBar";
             this.rainTrackBar.Size = new System.Drawing.Size(181, 45);
             this.rainTrackBar.TabIndex = 35;
             this.rainTrackBar.TabStop = false;
             this.rainTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.rainTrackBar.Value = 4;
+            this.rainTrackBar.Value = 8;
             this.rainTrackBar.Scroll += new System.EventHandler(this.rainTrackBar_Scroll);
             this.rainTrackBar.ValueChanged += new System.EventHandler(this.rainTrackBar_Scroll);
             // 
@@ -1320,12 +1321,13 @@
             // 
             this.cloudCoverageTrackBar.LargeChange = 1;
             this.cloudCoverageTrackBar.Location = new System.Drawing.Point(122, 33);
+            this.cloudCoverageTrackBar.Maximum = 20;
             this.cloudCoverageTrackBar.Name = "cloudCoverageTrackBar";
             this.cloudCoverageTrackBar.Size = new System.Drawing.Size(181, 45);
             this.cloudCoverageTrackBar.TabIndex = 32;
             this.cloudCoverageTrackBar.TabStop = false;
             this.cloudCoverageTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.cloudCoverageTrackBar.Value = 3;
+            this.cloudCoverageTrackBar.Value = 6;
             this.cloudCoverageTrackBar.Scroll += new System.EventHandler(this.cloudCoverageTrackBar_Scroll);
             this.cloudCoverageTrackBar.ValueChanged += new System.EventHandler(this.cloudCoverageTrackBar_Scroll);
             // 

@@ -44,7 +44,7 @@ namespace ACC_Dedicated_Server_GUI
         const int SC_MAXIMIZE = 61488;
 
         public string title = "ACC Dedicated Server GUI ";
-        public string version = "V1.2.8.6";
+        public string version = "V1.2.8.7";
 
         public static List<Car> carList = new List<Car>()
         {
@@ -150,12 +150,12 @@ namespace ACC_Dedicated_Server_GUI
 
         private void cloudCoverageTrackBar_Scroll(object sender, EventArgs e)
         {
-            cloudCoverageLabel.Text = ((float)cloudCoverageTrackBar.Value / 10).ToString("0.0#");
+            cloudCoverageLabel.Text = ((float)cloudCoverageTrackBar.Value / cloudCoverageTrackBar.Maximum).ToString("0.0#");
         }
 
         private void rainTrackBar_Scroll(object sender, EventArgs e)
         {
-            rainLabel.Text = ((float)rainTrackBar.Value / 10).ToString("0.0#");
+            rainLabel.Text = ((float)rainTrackBar.Value / rainTrackBar.Maximum).ToString("0.0#");
         }
 
         private void weatherRandomnessTrackBar_Scroll(object sender, EventArgs e)
@@ -297,8 +297,8 @@ namespace ACC_Dedicated_Server_GUI
                 postRaceWaitTimeNumericUpDown.Value = InNumUpDnRange(eventObject.postRaceSeconds, postRaceWaitTimeNumericUpDown);
                 overTimeNumericUpDown.Value = InNumUpDnRange(eventObject.sessionOverTimeSeconds, overTimeNumericUpDown);
                 tempTrackBar.Value = InTrackBarRange(eventObject.ambientTemp, tempTrackBar);
-                cloudCoverageTrackBar.Value = InTrackBarRange((int)(eventObject.cloudLevel * 10), cloudCoverageTrackBar);
-                rainTrackBar.Value = InTrackBarRange((int)(eventObject.rain * 10), rainTrackBar);
+                cloudCoverageTrackBar.Value = InTrackBarRange((int)(eventObject.cloudLevel * cloudCoverageTrackBar.Maximum), cloudCoverageTrackBar);
+                rainTrackBar.Value = InTrackBarRange((int)(eventObject.rain * rainTrackBar.Maximum), rainTrackBar);
                 weatherRandomnessTrackBar.Value = InTrackBarRange(eventObject.weatherRandomness, weatherRandomnessTrackBar);
                 simracerWeatherConditionsCheckBox.Checked = eventObject.simracerWeatherConditions == 1 ? true : false;
                 fixedConditionQualificationCheckBox.Checked = eventObject.isFixedConditionQualification == 1 ? true : false;
@@ -442,8 +442,8 @@ namespace ACC_Dedicated_Server_GUI
             eventObject.postRaceSeconds = (int)postRaceWaitTimeNumericUpDown.Value;
             eventObject.sessionOverTimeSeconds = (int)overTimeNumericUpDown.Value;
             eventObject.ambientTemp = tempTrackBar.Value;
-            eventObject.cloudLevel = (float)cloudCoverageTrackBar.Value / 10;
-            eventObject.rain = (float)rainTrackBar.Value / 10;
+            eventObject.cloudLevel = (float)cloudCoverageTrackBar.Value / cloudCoverageTrackBar.Maximum;
+            eventObject.rain = (float)rainTrackBar.Value / rainTrackBar.Maximum;
             eventObject.weatherRandomness = weatherRandomnessTrackBar.Value;
             eventObject.isFixedConditionQualification = fixedConditionQualificationCheckBox.Checked ? 1 : 0;
             eventObject.simracerWeatherConditions = simracerWeatherConditionsCheckBox.Checked ? 1 : 0;
